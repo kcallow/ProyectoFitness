@@ -52,6 +52,16 @@ public class Paciente implements Comparable<Paciente>{
             pacientes.remove(nuevoPacienteABorrar);
     }
     
+    @Override
+    public boolean equals(Object pacienteAComparar) {
+        if(pacienteAComparar == null)
+            return false;
+        if(! (pacienteAComparar instanceof Paciente)) 
+            return false;
+        String nombreAComparar = ((Paciente) pacienteAComparar).getNombre().toLowerCase();
+        return nombre.toLowerCase().equals(nombreAComparar);
+    }
+    
     public static String ver(String nombre) throws Exception {
         if(nombre.equals("")) {
             String resultado = "";

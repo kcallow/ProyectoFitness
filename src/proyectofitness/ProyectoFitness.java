@@ -164,9 +164,7 @@ public class ProyectoFitness {
 
 
     private static void addPatient(String[] command) throws Exception {
-
         Paciente.agregar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
-
     }
 
     private static void addMeasurement(String[] command) {

@@ -62,17 +62,16 @@ public class Paciente {
         return cedula.equals(cedulaAComparar);
     }
     
-    public static String ver(String cedulaString) throws Exception {
-        if(cedulaString.equals("")) {
+    public static String ver(String cedula) throws Exception {
+        if(cedula.equals("")) {
             String resultado = "";
             for(Paciente paciente : pacientes)
-                resultado += paciente;
+                resultado += paciente + "\n";
             return resultado;
         }
 
-        Cedula cedula = new Cedula(cedulaString);
         for(Paciente paciente : pacientes)
-            if(paciente.getCedula().equals(cedula))
+            if(paciente.getCedula().getCedula().equals(cedula))
                 return paciente.toString();
         throw new Exception("El paciente no existe.");
     }

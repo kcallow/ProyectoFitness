@@ -37,7 +37,7 @@ public class TipoEjercicio {
         if(nombre.equals("")) {
             String resultado = "";
             for(TipoEjercicio ejercicio : tiposEjercicio)
-                resultado += ejercicio;
+                resultado += ejercicio + "\n";
             return resultado;
         }
         nombre = nombre.toLowerCase();

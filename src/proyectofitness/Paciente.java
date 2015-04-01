@@ -21,7 +21,7 @@ public class Paciente {
     private Correo correo;
     private Cedula cedula;
     
-    public Paciente(String nombre, String sexo, Cedula cedula, String fechaDeNacimiento, Telefono telefono, Correo correo){
+    private Paciente(Cedula cedula, String nombre, String sexo, String fechaDeNacimiento, Telefono telefono, Correo correo){
         this.nombre = nombre;
         this.cedula = cedula;
         this.sexo = sexo;
@@ -30,22 +30,22 @@ public class Paciente {
         this.correo = correo;
     }
     
-    public Paciente(String nombre){
-        this.nombre = nombre;
+    private Paciente(Cedula cedula){
+        this.cedula = cedula;
     }
     
     
-    public static void agregar(String nombre, String sexo, Cedula cedula, String fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception {
-        Paciente nuevoPaciente = new Paciente(nombre, sexo, cedula, fechaDeNacimiento, telefono, correo);
+    public static void agregar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
+        Paciente nuevoPaciente = new Paciente(new Cedula(cedula), nombre, sexo, fechaDeNacimiento, new Telefono(telefono), new Correo(correo));
         if(pacientes.contains(nuevoPaciente))
-            throw new Exception("Ya existe un tipo de ejercicio con este nombre.  No agregado.");
+            throw new Exception("Ya existe un paciente con esta cedula.  No agregado.");
         else 
             pacientes.add(nuevoPaciente);
     }
     
-    public static void borrar(String nombre) throws Exception {
-        //La comparacion se basa en el nombre.  Por lo que creamos un tipo solamente para propositos de comparar.
-        Paciente nuevoPacienteABorrar = new Paciente(nombre);
+    public static void borrar(String cedula) throws Exception {
+        //La comparacion se basa en la cedula.  Por lo que creamos un tipo solamente para propositos de comparar.
+        Paciente nuevoPacienteABorrar = new Paciente(new Cedula(cedula));
         if(! pacientes.contains(nuevoPacienteABorrar))
             throw new Exception("El tipo dado no existe.  No borrado.");
         else
@@ -58,29 +58,27 @@ public class Paciente {
             return false;
         if(! (pacienteAComparar instanceof Paciente)) 
             return false;
-        String nombreAComparar = ((Paciente) pacienteAComparar).getNombre().toLowerCase();
-        return nombre.toLowerCase().equals(nombreAComparar);
+        Cedula cedulaAComparar = ((Paciente) pacienteAComparar).getCedula();
+        return cedula.equals(cedulaAComparar);
     }
     
-    public static String ver(String nombre) throws Exception {
-        if(nombre.equals("")) {
+    public static String ver(String cedulaString) throws Exception {
+        if(cedulaString.equals("")) {
             String resultado = "";
             for(Paciente paciente : pacientes)
-                resultado += paciente.getNombre() + ":\t" + paciente.getSexo() + "\t" 
-                        + paciente.getCedula() + "\t" + paciente.getCorreo() + "\t" + paciente.getProgramaEntrenamiento() + "\t" 
-                        + paciente.getTelefono() +"\n";
+                resultado += paciente;
             return resultado;
         }
-        nombre = nombre.toLowerCase();
 
+        Cedula cedula = new Cedula(cedulaString);
         for(Paciente paciente : pacientes)
-            if(paciente.getNombre().toLowerCase().equals(nombre))
+            if(paciente.getCedula().equals(cedula))
                 return paciente.toString();
         throw new Exception("El paciente no existe.");
     }
     
-    public static void modificar(String nombre, String sexo, Cedula cedula, String fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception {
-        borrar(nombre);
+    public static void modificar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
+        borrar(cedula);
         agregar(nombre, sexo, cedula, fechaDeNacimiento,  telefono, correo);
     }
 

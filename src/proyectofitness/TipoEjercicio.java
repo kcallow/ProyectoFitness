@@ -33,7 +33,7 @@ public class TipoEjercicio {
         if(nombre.equals("")) {
             String resultado = "";
             for(TipoEjercicio ejercicio : tiposEjercicio)
-                resultado += ejercicio.getNombre() + ":\t" + ejercicio.getDescripcion() + "\t" + ejercicio.getTipoMaquina().getNombre() + "\n";
+                resultado += ejercicio;
             return resultado;
         }
         nombre = nombre.toLowerCase();

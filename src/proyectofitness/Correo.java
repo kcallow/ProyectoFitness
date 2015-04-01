@@ -21,7 +21,7 @@ public class Correo {
     
     public boolean verificar(){
         return correo.matches("^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@" +
-                   "[a-z0-9]+(\\.[a-z0-9]+)*(\\.[a-z]{2,})$");
+                   "[-a-z0-9]+(\\.[a-z0-9]+)*(\\.[a-z]{2,})$");
     }
 
     public String getCorreo() {

@@ -14,11 +14,11 @@ import java.util.ArrayList;
  */
 public class ProgramaEntrenamiento {
     private ArrayList<Dia> dias = new ArrayList();
-    private LocalDateTime fecha;
+    private LocalDateTime fechaCreacion;
     private static int numero = 0;
     
     public ProgramaEntrenamiento(){
-        fecha = LocalDateTime.now();
+        fechaCreacion = LocalDateTime.now();
         numero++;
     }
       
@@ -26,15 +26,11 @@ public class ProgramaEntrenamiento {
         dias.add(new Dia());
     }
     
-    public void agregarEjercicio(Ejercicio ejercicio) throws Exception{
-        dias.get(dias.size() - 1).agregarEjercicio(ejercicio);
+    public Dia getDia(int i) throws Exception{
+        if(i > dias.size())
+            throw new Exception("El dia no existe");
+        return dias.get(i);
     }
-    
-    public int getNumero(){
-        return numero;
-    }
-    
-    
     
                   
     

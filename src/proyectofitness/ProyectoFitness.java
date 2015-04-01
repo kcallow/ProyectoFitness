@@ -164,7 +164,9 @@ public class ProyectoFitness {
 
 
     private static void addPatient(String[] command) throws Exception {
-        Paciente.agregar(scanner.nextLine(), scanner.nextLine(), (scanner.nextLine()), scanner.nextLine(), (scanner.nextLine()), (scanner.nextLine()));
+
+        Paciente.agregar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
+
     }
 
     private static void addMeasurement(String[] command) {
@@ -208,7 +210,9 @@ public class ProyectoFitness {
     }
 
     private static void modifyPatient(String[] command) throws Exception {
-        Paciente.modificar(scanner.nextLine(), scanner.nextLine(), (scanner.nextLine()), scanner.nextLine(), (scanner.nextLine()), (scanner.nextLine()));
+
+        Paciente.modificar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
+
     }
 
     private static void removePatient(String[] command) throws Exception {

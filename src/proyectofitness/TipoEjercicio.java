@@ -1,6 +1,8 @@
 package proyectofitness;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class TipoEjercicio {
     private static final ArrayList<TipoEjercicio> tiposEjercicio = new ArrayList();
@@ -25,8 +27,12 @@ public class TipoEjercicio {
     }
 
     public static void modificar(String nombre, String descripcion, String maquina) throws Exception {
-        borrar(nombre);
-        agregar(nombre, descripcion, maquina);
+        try {
+            borrar(nombre);
+            agregar(nombre, descripcion, maquina);
+        } catch (Exception ex) {
+            throw ex;
+        }
     }
 
     public static String ver(String nombre) throws Exception {

@@ -15,6 +15,8 @@ public class Telefono {
     
     public Telefono(String telefono){
         this.telefono = telefono;
+        if(!verificar())
+            throw new Exception("Telefono invalido.");
     }
     
     public boolean verificar(){

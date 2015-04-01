@@ -13,8 +13,10 @@ public class Correo {
     
     private String correo;
     
-    public Correo(String correo){
+    public Correo(String correo) throws Exception{
         this.correo = correo.toLowerCase();
+        if(!verificar())
+            throw new Exception("Correo invalido.");
     }
     
     public boolean verificar(){

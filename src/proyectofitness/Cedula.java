@@ -13,8 +13,10 @@ public class Cedula {
     
     private String cedula;
     
-    public Cedula(String cedula){
+    public Cedula(String cedula) throws Exception{
         this.cedula = cedula;
+        if(!verificar())
+            throw new Exception("Cedula invalida.");
     }
     public boolean verificar(){
         return cedula.matches("[0-9]+") && cedula.length() == 8;

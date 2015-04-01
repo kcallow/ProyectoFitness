@@ -163,8 +163,8 @@ public class ProyectoFitness {
 	}
 
 
-    private static void addPatient(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void addPatient(String[] command) throws Exception {
+        Paciente.agregar(scanner.nextLine(), scanner.nextLine(), new Cedula(scanner.nextLine()), scanner.nextLine(), new Telefono(scanner.nextLine()), new Correo(scanner.nextLine()));
     }
 
     private static void addMeasurement(String[] command) {
@@ -207,12 +207,12 @@ public class ProyectoFitness {
         TipoEjercicio.modificar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
     }
 
-    private static void modifyPatient(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void modifyPatient(String[] command) throws Exception {
+        Paciente.modificar(scanner.nextLine(), scanner.nextLine(), new Cedula(scanner.nextLine()), scanner.nextLine(), new Telefono(scanner.nextLine()), new Correo(scanner.nextLine()));
     }
 
-    private static void removePatient(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void removePatient(String[] command) throws Exception {
+        Paciente.borrar(scanner.nextLine());
     }
 
     private static void removeMeasurement(String[] command) {
@@ -239,8 +239,8 @@ public class ProyectoFitness {
         TipoMaquina.borrar(scanner.nextLine());
     }
 
-    private static void viewPatient(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void viewPatient(String[] command) throws Exception{
+        Paciente.ver(scanner.nextLine());
     }
 
     private static void viewMeasurement(String[] command) {

@@ -34,6 +34,7 @@ public class Paciente implements Comparable<Paciente>{
         this.nombre = nombre;
     }
     
+    
     public static void agregar(String nombre, String sexo, Cedula cedula, String fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception {
         Paciente nuevoPaciente = new Paciente(nombre, sexo, cedula, fechaDeNacimiento, telefono, correo);
         if(pacientes.contains(nuevoPaciente))
@@ -50,7 +51,29 @@ public class Paciente implements Comparable<Paciente>{
         else
             pacientes.remove(nuevoPacienteABorrar);
     }
+    
+    public static String ver(String nombre) throws Exception {
+        if(nombre.equals("")) {
+            String resultado = "";
+            for(Paciente paciente : pacientes)
+                resultado += paciente.getNombre() + ":\t" + paciente.getSexo() + "\t" 
+                        + paciente.getCedula() + "\t" + paciente.getCorreo() + "\t" + paciente.getProgramaEntrenamiento() + "\t" 
+                        + paciente.getTelefono() +"\n";
+            return resultado;
+        }
+        nombre = nombre.toLowerCase();
 
+        for(Paciente paciente : pacientes)
+            if(paciente.getNombre().toLowerCase().equals(nombre))
+                return paciente.toString();
+        throw new Exception("El paciente no existe.");
+    }
+    
+    public static void modificar(String nombre, String sexo, Cedula cedula, String fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception {
+        borrar(nombre);
+        agregar(nombre, sexo, cedula, fechaDeNacimiento,  telefono, correo);
+    }
+    
     @Override
     public int compareTo(Paciente pacienteAComparar) {
         String nombreAComparar = pacienteAComparar.getNombre().toLowerCase();
@@ -61,9 +84,6 @@ public class Paciente implements Comparable<Paciente>{
         return pacientes;
     }
 
-    public static void setPacientes(ArrayList<Paciente> pacientes) {
-        Paciente.pacientes = pacientes;
-    }
 
     public ProgramaEntrenamiento getProgramaEntrenamiento() {
         return programaEntrenamiento;
@@ -119,6 +139,11 @@ public class Paciente implements Comparable<Paciente>{
 
     public void setCorreo(String correo) {
         this.correo = new Correo(correo);
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{" + "programaEntrenamiento=" + programaEntrenamiento + ", nombre=" + nombre + ", sexo=" + sexo + ", fechaDeNacimiento=" + fechaDeNacimiento + ", telefono=" + telefono + ", correo=" + correo + ", cedula=" + cedula + '}';
     }
 
    

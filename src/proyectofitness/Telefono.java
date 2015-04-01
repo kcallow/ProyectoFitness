@@ -18,7 +18,7 @@ public class Telefono {
     }
     
     public boolean verificar(Telefono telefono){
-    
+        return telefono.getTelefono().matches("^\\(?(\\d{3})\\)?[- ]?(\\d{4})[- ]?(\\d{4})$");
     }
 
     public String getTelefono() {

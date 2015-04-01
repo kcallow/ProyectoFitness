@@ -78,7 +78,7 @@ public class ProyectoFitness {
 		}
 	}
 
-	private static void modify(String [] command) {
+	private static void modify(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "patient":
 				modifyPatient(command);
@@ -107,7 +107,7 @@ public class ProyectoFitness {
 		}
 	}
 
-	private static void remove(String [] command) {
+	private static void remove(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "patient":
 				removePatient(command);
@@ -171,8 +171,8 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void addExercise(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void addExercise(String[] command) throws Exception {
+        TipoEjercicio.agregar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
     }
 
     private static void addTrainingProgram(String[] command) {
@@ -191,8 +191,8 @@ public class ProyectoFitness {
         TipoMaquina.agregar(scanner.nextLine(), scanner.nextLine());
     }
 
-    private static void modifyMachine(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void modifyMachine(String[] command) throws Exception {
+        TipoMaquina.modificar(scanner.nextLine(), scanner.nextLine());
     }
 
     private static void modifyTrainingProgram(String[] command) {
@@ -203,8 +203,8 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void modifyExercise(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void modifyExercise(String[] command) throws Exception {
+        TipoEjercicio.modificar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
     }
 
     private static void modifyPatient(String[] command) {
@@ -219,8 +219,8 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void removeExercise(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void removeExercise(String[] command) throws Exception {
+        TipoEjercicio.borrar(scanner.nextLine());
     }
 
     private static void removeTrainingProgram(String[] command) {
@@ -235,8 +235,8 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void removeMachine(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void removeMachine(String[] command) throws Exception {
+        TipoMaquina.borrar(scanner.nextLine());
     }
 
     private static void viewPatient(String[] command) {
@@ -247,8 +247,8 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void viewExercise(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void viewExercise(String[] command) throws Exception {
+        TipoEjercicio.ver(scanner.nextLine());
     }
 
     private static void viewTrainingProgram(String[] command) {

@@ -24,6 +24,26 @@ public class TipoEjercicio {
             tiposEjercicio.remove(tipoEjercicioABorrar);
     }
 
+    public static void modificar(String nombre, String descripcion, String maquina) throws Exception {
+        borrar(nombre);
+        agregar(nombre, descripcion, maquina);
+    }
+
+    public static String ver(String nombre) throws Exception {
+        if(nombre.equals("")) {
+            String resultado = "";
+            for(TipoEjercicio ejercicio : tiposEjercicio)
+                resultado += ejercicio.getNombre() + ":\t" + ejercicio.getDescripcion() + "\t" + ejercicio.getTipoMaquina().getNombre() + "\n";
+            return resultado;
+        }
+        nombre = nombre.toLowerCase();
+
+        for(TipoEjercicio ejercicio : tiposEjercicio)
+            if(ejercicio.getNombre().toLowerCase().equals(nombre))
+                return ejercicio.getDescripcion();
+        throw new Exception("El tipo dado no existe.");
+    }
+
     @Override
     public boolean equals(Object tipoEjercicioAComparar) {
         if(tipoEjercicioAComparar == null)

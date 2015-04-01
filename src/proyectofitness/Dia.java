@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Dia {
     private ArrayList<Ejercicio> ejercicios = new ArrayList();
 
+
     public void agregarEjercicio (Ejercicio ejercicio) throws Exception {
         //Si el numero del ejercicio ya se encuentra en ese dia, tirar error
         if(ejercicios.contains(ejercicio))

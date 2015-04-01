@@ -19,7 +19,7 @@ public class Cedula {
             throw new Exception("Cedula invalida.");
     }
     public boolean verificar(){
-        return cedula.matches("[0-9]+") && cedula.length() == 8;
+        return cedula.matches("[0-9]+") && cedula.length() == 9;
     }
 
     public String getCedula() {

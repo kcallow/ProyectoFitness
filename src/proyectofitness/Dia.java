@@ -16,8 +16,10 @@ public class Dia {
 
     public void borrarEjercicio(int numero) throws Exception {
         for(Ejercicio ejercicio : ejercicios)
-            if(ejercicio.getNumero() == numero)
+            if(ejercicio.getNumero() == numero) {
                 ejercicios.remove(ejercicio);
+                return;
+            }
         throw new Exception("Indice invalido.  No se ha modificado la lista de ejercicios...");
     }
 

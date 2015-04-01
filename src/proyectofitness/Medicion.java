@@ -11,4 +11,6 @@ package proyectofitness;
  */
 public class Medicion {
     
+    
+    
 }

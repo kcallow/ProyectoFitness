@@ -85,7 +85,9 @@ public class Paciente {
             throw ex;
         }
     }
-    public void agregarMedicion(){}
+    public void agregarMedicion(String nombre, double valor){
+        mediciones.add(new Medicion(nombre, valor)); 
+    }
 
     public static ArrayList<Paciente> getPacientes() {
         return pacientes;

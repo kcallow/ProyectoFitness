@@ -9,10 +9,10 @@ public class Ejercicio implements Comparable<Ejercicio>{
         return numero - ejercicioAComparar.getNumero();
     }
 
-    public Ejercicio(String nombreTipoEjercicio, int numero, int series, int repeticiones, int peso1, int peso2, int peso3, int tiempoDescanso) throws Exception {
+    public Ejercicio(int numero, String nombreTipoEjercicio, int series, int repeticiones, int peso1, int peso2, int peso3, int tiempoDescanso) throws Exception {
         try {
-            this.tipoEjercicio = TipoEjercicio.getTipoEjercicio(nombreTipoEjercicio);
             this.numero = numero;
+            this.tipoEjercicio = TipoEjercicio.getTipoEjercicio(nombreTipoEjercicio);
             this.series = series;
             this.repeticiones = repeticiones;
             this.peso1 = peso1;

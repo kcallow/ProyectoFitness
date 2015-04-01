@@ -2,7 +2,7 @@ package proyectofitness;
 
 import java.util.ArrayList;
 
-public class TipoEjercicio implements Comparable<TipoEjercicio> {
+public class TipoEjercicio {
     private static final ArrayList<TipoEjercicio> tiposEjercicio = new ArrayList();
     private String nombre, descripcion;
     private TipoMaquina maquina;
@@ -25,9 +25,13 @@ public class TipoEjercicio implements Comparable<TipoEjercicio> {
     }
 
     @Override
-    public int compareTo(TipoEjercicio tipoEjercicioAComparar) {
-        String nombreAComparar = tipoEjercicioAComparar.getNombre().toLowerCase();
-        return nombre.toLowerCase().compareTo(nombreAComparar);
+    public boolean equals(Object tipoEjercicioAComparar) {
+        if(tipoEjercicioAComparar == null)
+            return false;
+        if(! (tipoEjercicioAComparar instanceof TipoEjercicio)) 
+            return false;
+        String nombreAComparar = ((TipoEjercicio) tipoEjercicioAComparar).getNombre().toLowerCase();
+        return nombre.toLowerCase().equals(nombreAComparar);
     }
 
     private TipoEjercicio(String nombre, String descripcion, String maquina) throws Exception {

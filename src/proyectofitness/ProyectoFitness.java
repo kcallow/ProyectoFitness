@@ -136,7 +136,7 @@ public class ProyectoFitness {
 		}
 	}
 
-	private static void view(String [] command) {
+	private static void view(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "patient":
 				viewPatient(command);
@@ -251,7 +251,6 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
     private static void viewTrainingProgram(String[] command) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -260,7 +259,7 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void viewMachine(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void viewMachine(String[] command) throws Exception {
+        System.out.println(TipoMaquina.ver(scanner.nextLine())); 
     }
 }

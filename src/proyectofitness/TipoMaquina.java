@@ -2,7 +2,7 @@ package proyectofitness;
 
 import java.util.ArrayList;
 
-class TipoMaquina implements Comparable<TipoMaquina> { 
+class TipoMaquina  { 
     private static final ArrayList<TipoMaquina> tiposMaquina = new ArrayList();
 
     private String nombre, descripcion;
@@ -29,10 +29,30 @@ class TipoMaquina implements Comparable<TipoMaquina> {
         agregar(nombre, descripcion);
     }
 
+    public static String ver(String nombre) throws Exception {
+        if(nombre.equals("")) {
+            String resultado = "";
+            for(TipoMaquina maquina : tiposMaquina)
+                resultado += maquina.getNombre() + ":\t" + maquina.getDescripcion() + "\n";
+            return resultado;
+        }
+
+        TipoMaquina tipoMaquina = new TipoMaquina(nombre, "");
+        for(TipoMaquina maquina : tiposMaquina)
+            if(maquina.equals(tipoMaquina))
+                return maquina.getDescripcion();
+        throw new Exception("El tipo dado no existe.");
+    }
+
+    
     @Override
-    public int compareTo(TipoMaquina tipoMaquinaAComparar) {
-        String nombreAComparar = tipoMaquinaAComparar.getNombre().toLowerCase();
-        return nombre.toLowerCase().compareTo(nombreAComparar);
+    public boolean equals(Object tipoMaquinaAComparar) {
+        if(tipoMaquinaAComparar == null)
+            return false;
+        if(! (tipoMaquinaAComparar instanceof TipoMaquina)) 
+            return false;
+        String nombreAComparar = ((TipoMaquina) tipoMaquinaAComparar).getNombre().toLowerCase();
+        return nombre.toLowerCase().equals(nombreAComparar);
     }
 
     private TipoMaquina(String nombre, String descripcion) {

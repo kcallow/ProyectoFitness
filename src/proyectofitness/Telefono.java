@@ -13,7 +13,7 @@ public class Telefono {
     
     String telefono;
     
-    public Telefono(String telefono){
+    public Telefono(String telefono) throws Exception{
         this.telefono = telefono;
         if(!verificar())
             throw new Exception("Telefono invalido.");

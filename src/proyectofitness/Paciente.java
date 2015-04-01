@@ -121,7 +121,7 @@ public class Paciente {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
+    public void setCedula(String cedula) throws Exception {
         this.cedula = new Cedula(cedula);
     }
 
@@ -137,7 +137,7 @@ public class Paciente {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(String telefono) throws Exception {
         this.telefono = new Telefono(telefono);
     }
 
@@ -145,7 +145,7 @@ public class Paciente {
         return correo;
     }
 
-    public void setCorreo(String correo) {
+    public void setCorreo(String correo) throws Exception {
         this.correo = new Correo(correo);
     }
 

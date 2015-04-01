@@ -9,7 +9,7 @@ package proyectofitness;
  *
  * @author scsaenz
  */
-class Cedula {
+public class Cedula {
     
     private String cedula;
     

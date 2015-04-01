@@ -9,7 +9,7 @@ package proyectofitness;
  *
  * @author scsaenz
  */
-class Correo {
+public class Correo {
     
     private String correo;
     

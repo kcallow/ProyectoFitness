@@ -6,8 +6,6 @@
 package proyectofitness;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -151,7 +149,7 @@ public class Paciente {
 
     @Override
     public String toString() {
-        return "Paciente{" + "programaEntrenamiento=" + programaEntrenamiento + ", nombre=" + nombre + ", sexo=" + sexo + ", fechaDeNacimiento=" + fechaDeNacimiento + ", telefono=" + telefono + ", correo=" + correo + ", cedula=" + cedula + '}';
+        return "Paciente{" + "programaEntrenamiento=" + programaEntrenamiento + ", nombre=" + nombre + ", sexo=" + sexo + ", fechaDeNacimiento=" + fechaDeNacimiento + ", telefono=" + telefono.getTelefono() + ", correo=" + correo.getCorreo() + ", cedula=" + cedula.getCedula() + '}';
     }
 
    

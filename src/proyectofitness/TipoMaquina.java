@@ -1,8 +1,6 @@
 package proyectofitness;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 class TipoMaquina  { 
     private static final ArrayList<TipoMaquina> tiposMaquina = new ArrayList();
@@ -89,4 +87,11 @@ class TipoMaquina  {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     } 
+
+    @Override
+    public String toString() {
+        return  nombre + ": " + descripcion;
+    }
+
+    
 }

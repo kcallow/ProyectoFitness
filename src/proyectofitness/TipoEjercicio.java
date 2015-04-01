@@ -1,8 +1,6 @@
 package proyectofitness;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class TipoEjercicio {
     private static final ArrayList<TipoEjercicio> tiposEjercicio = new ArrayList();
@@ -97,5 +95,10 @@ public class TipoEjercicio {
     public void setTipoMaquina(String maquina) throws Exception {
         this.maquina = TipoMaquina.getTipoMaquina(maquina);
     }
-    
+
+    @Override
+    public String toString() {
+        return nombre + ": " + descripcion + ".  Usa: " + maquina.getNombre();
+    }
+
 }

@@ -21,10 +21,10 @@ public class Paciente {
     private Correo correo;
     private Cedula cedula;
     
-    private Paciente(Cedula cedula, String nombre, String sexo, String fechaDeNacimiento, Telefono telefono, Correo correo){
+    private Paciente(Cedula cedula, String nombre, String sexo, String fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception{
         this.nombre = nombre;
         this.cedula = cedula;
-        this.sexo = sexo;
+        setSexo(sexo);
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.telefono = telefono;
         this.correo = correo;
@@ -110,7 +110,9 @@ public class Paciente {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(String sexo) throws Exception {
+        if(!sexo.equals("M") && !sexo.equals("F"))
+            throw new Exception("Sexo invalido.  Debe ser M, F o O.");
         this.sexo = sexo;
     }
 

@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author callow
  */
-public class Paciente implements Comparable<Paciente>{
+public class Paciente {
     private static ArrayList<Paciente> pacientes = new ArrayList();
     
     private ProgramaEntrenamiento programaEntrenamiento;
@@ -82,12 +82,6 @@ public class Paciente implements Comparable<Paciente>{
     public static void modificar(String nombre, String sexo, Cedula cedula, String fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception {
         borrar(nombre);
         agregar(nombre, sexo, cedula, fechaDeNacimiento,  telefono, correo);
-    }
-    
-    @Override
-    public int compareTo(Paciente pacienteAComparar) {
-        String nombreAComparar = pacienteAComparar.getNombre().toLowerCase();
-        return nombre.toLowerCase().compareTo(nombreAComparar);
     }
 
     public static ArrayList<Paciente> getPacientes() {

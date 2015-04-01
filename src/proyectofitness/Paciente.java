@@ -6,6 +6,8 @@
 package proyectofitness;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -78,8 +80,12 @@ public class Paciente {
     }
     
     public static void modificar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
-        borrar(cedula);
-        agregar(nombre, sexo, cedula, fechaDeNacimiento,  telefono, correo);
+        try {
+            borrar(cedula);
+            agregar(nombre, sexo, cedula, fechaDeNacimiento,  telefono, correo);
+        } catch (Exception ex) {
+            throw ex;
+        }
     }
 
     public static ArrayList<Paciente> getPacientes() {

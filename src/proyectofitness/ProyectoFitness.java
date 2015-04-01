@@ -14,9 +14,9 @@ public class ProyectoFitness {
 	}
 
 	public static void initShell(){
-		System.out.print(" > ");
 		String input = "";
 		while(! input.equals("exit")){
+            System.out.print(" > ");
             input = scanner.nextLine();
             try {
                 processCommand(input);
@@ -41,6 +41,8 @@ public class ProyectoFitness {
 			case "view":
 				view(command);
 				break;
+            case "exit":
+                break;
 			default:
 				System.out.println("Unrecognized command.");
 				break;

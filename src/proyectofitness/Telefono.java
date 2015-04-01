@@ -20,7 +20,7 @@ public class Telefono {
     }
     
     public boolean verificar(){
-        return telefono.matches("^\\(?(\\d{3})?\\)?[- ]?(\\d{4})[- ]?(\\d{4})$");
+        return telefono.matches("^\\(?(\\d{1,3})?\\)?[- ]?\\(?(\\d{3})?\\)?[- ]?(\\d{3,4})[- ]?(\\d{4})$");
     }
 
     public String getTelefono() {

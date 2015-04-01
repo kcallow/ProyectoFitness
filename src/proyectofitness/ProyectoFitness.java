@@ -2,9 +2,11 @@ package proyectofitness;
 
 
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ProyectoFitness {
+
 	private static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String [] args){
@@ -16,11 +18,15 @@ public class ProyectoFitness {
 		String input = "";
 		while(! input.equals("exit")){
             input = scanner.nextLine();
-			processCommand(input);
+            try {
+                processCommand(input);
+            } catch (Exception ex) {
+                Logger.getLogger(ProyectoFitness.class.getName()).log(Level.SEVERE, null, ex);
+            }
 		}
 	}
 
-	private static void processCommand(String input){
+	private static void processCommand(String input) throws Exception{
 		String [] command = input.split(" ");
 		switch(command[0].toLowerCase()) {
 			case "add":
@@ -41,7 +47,7 @@ public class ProyectoFitness {
 		}
 	}
 
-	private static void add(String [] command) {
+	private static void add(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "patient":
 				addPatient(command);
@@ -179,8 +185,8 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void addMachine(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void addMachine(String[] command) throws Exception {
+        TipoMaquina.agregar(scanner.nextLine(), scanner.nextLine());
     }
 
     private static void modifyMachine(String[] command) {

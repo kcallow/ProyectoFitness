@@ -5,10 +5,17 @@
  */
 package proyectofitness;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author callow
  */
 public class Paciente {
+    private static ArrayList<Paciente> pacientes = new ArrayList();
+    
+    private ProgramaEntrenamiento programaEntrenamiento;
+    
+
     
 }

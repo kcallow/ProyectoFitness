@@ -30,6 +30,10 @@ public class Paciente implements Comparable<Paciente>{
         this.correo = correo;
     }
     
+    public Paciente(String nombre){
+        this.nombre = nombre;
+    }
+    
     public static void agregar(String nombre, String sexo, Cedula cedula, String fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception {
         Paciente nuevoPaciente = new Paciente(nombre, sexo, cedula, fechaDeNacimiento, telefono, correo);
         if(pacientes.contains(nuevoPaciente))
@@ -40,7 +44,7 @@ public class Paciente implements Comparable<Paciente>{
     
     public static void borrar(String nombre) throws Exception {
         //La comparacion se basa en el nombre.  Por lo que creamos un tipo solamente para propositos de comparar.
-        Paciente nuevoPacienteABorrar = new Paciente(nombre, "", "", "", "", "");
+        Paciente nuevoPacienteABorrar = new Paciente(nombre);
         if(! pacientes.contains(nuevoPacienteABorrar))
             throw new Exception("El tipo dado no existe.  No borrado.");
         else
@@ -85,12 +89,12 @@ public class Paciente implements Comparable<Paciente>{
         this.sexo = sexo;
     }
 
-    public String getCedula() {
+    public Cedula getCedula() {
         return cedula;
     }
 
     public void setCedula(String cedula) {
-        this.cedula = cedula;
+        this.cedula = new Cedula(cedula);
     }
 
     public String getFechaDeNacimiento() {
@@ -101,20 +105,20 @@ public class Paciente implements Comparable<Paciente>{
         this.fechaDeNacimiento = fechaDeNacimiento;
     }
 
-    public String getTelefono() {
+    public Telefono getTelefono() {
         return telefono;
     }
 
     public void setTelefono(String telefono) {
-        this.telefono = telefono;
+        this.telefono = new Telefono(telefono);
     }
 
-    public String getCorreo() {
+    public Correo getCorreo() {
         return correo;
     }
 
     public void setCorreo(String correo) {
-        this.correo = correo;
+        this.correo = new Correo(correo);
     }
 
    

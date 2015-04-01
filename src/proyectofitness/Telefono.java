@@ -7,7 +7,7 @@ package proyectofitness;
 
 /**
  *
- * @author doctorHolmes
+ * @author scsaenz
  */
 public class Telefono {
     
@@ -17,8 +17,8 @@ public class Telefono {
         this.telefono = telefono;
     }
     
-    public boolean verificar(Telefono telefono){
-        return telefono.getTelefono().matches("^\\(?(\\d{3})\\)?[- ]?(\\d{4})[- ]?(\\d{4})$");
+    public boolean verificar(){
+        return telefono.matches("^\\(?(\\d{3})?\\)?[- ]?(\\d{4})[- ]?(\\d{4})$");
     }
 
     public String getTelefono() {

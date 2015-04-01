@@ -240,7 +240,7 @@ public class ProyectoFitness {
     }
 
     private static void viewPatient(String[] command) throws Exception{
-        Paciente.ver(scanner.nextLine());
+        System.out.println(Paciente.ver(scanner.nextLine()));
     }
 
     private static void viewMeasurement(String[] command) {
@@ -248,7 +248,7 @@ public class ProyectoFitness {
     }
 
     private static void viewExercise(String[] command) throws Exception {
-        TipoEjercicio.ver(scanner.nextLine());
+        System.out.println(TipoEjercicio.ver(scanner.nextLine()));
     }
 
     private static void viewTrainingProgram(String[] command) {

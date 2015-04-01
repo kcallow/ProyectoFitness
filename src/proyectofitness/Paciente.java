@@ -12,7 +12,8 @@ import java.util.ArrayList;
  * @author callow
  */
 public class Paciente {
-    private static ArrayList<Paciente> pacientes = new ArrayList();
+    private static ArrayList<Paciente> pacientes = new ArrayList();  
+    private final ArrayList<Medicion> mediciones = new ArrayList();
     
     private ProgramaEntrenamiento programaEntrenamiento;
     
@@ -84,6 +85,7 @@ public class Paciente {
             throw ex;
         }
     }
+    public void agregarMedicion(){}
 
     public static ArrayList<Paciente> getPacientes() {
         return pacientes;

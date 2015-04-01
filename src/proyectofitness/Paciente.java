@@ -6,8 +6,6 @@
 package proyectofitness;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -121,7 +119,7 @@ public class Paciente {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
+    public void setCedula(String cedula) throws Exception {
         this.cedula = new Cedula(cedula);
     }
 
@@ -137,7 +135,7 @@ public class Paciente {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(String telefono) throws Exception {
         this.telefono = new Telefono(telefono);
     }
 
@@ -145,13 +143,13 @@ public class Paciente {
         return correo;
     }
 
-    public void setCorreo(String correo) {
+    public void setCorreo(String correo) throws Exception {
         this.correo = new Correo(correo);
     }
 
     @Override
     public String toString() {
-        return "Paciente{" + "programaEntrenamiento=" + programaEntrenamiento + ", nombre=" + nombre + ", sexo=" + sexo + ", fechaDeNacimiento=" + fechaDeNacimiento + ", telefono=" + telefono + ", correo=" + correo + ", cedula=" + cedula + '}';
+        return "Paciente{" + "programaEntrenamiento=" + programaEntrenamiento + ", nombre=" + nombre + ", sexo=" + sexo + ", fechaDeNacimiento=" + fechaDeNacimiento + ", telefono=" + telefono.getTelefono() + ", correo=" + correo.getCorreo() + ", cedula=" + cedula.getCedula() + '}';
     }
 
    

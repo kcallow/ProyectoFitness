@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 class TipoMaquina implements Comparable<TipoMaquina> { 
     private static final ArrayList<TipoMaquina> tiposMaquina = new ArrayList();
+
     private String nombre, descripcion;
 
     public static void agregar(String nombre, String descripcion) throws Exception {
@@ -21,6 +22,11 @@ class TipoMaquina implements Comparable<TipoMaquina> {
             throw new Exception("El tipo dado no existe.  No borrado.");
         else
             tiposMaquina.remove(tipoMaquinaABorrar);
+    }
+
+    public static void modificar(String nombre, String descripcion) throws Exception {
+        borrar(nombre);
+        agregar(nombre, descripcion);
     }
 
     @Override

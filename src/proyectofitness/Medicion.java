@@ -5,11 +5,6 @@ package proyectofitness;
  * @author callow
  */
 public class Medicion {
-<<<<<<< HEAD
-    
-    
-    
-=======
 
     private final String nombre, unidadMedida;
     private int valor;
@@ -40,5 +35,4 @@ public class Medicion {
     public void setValor(int valor) {
         this.valor = valor;
     }
->>>>>>> 4636cd7e1fc05af967c9e6504d4b80aa5011404c
 }

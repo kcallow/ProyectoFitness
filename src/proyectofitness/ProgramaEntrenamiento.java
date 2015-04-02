@@ -43,8 +43,4 @@ public class ProgramaEntrenamiento {
             throw new Exception("El dia no existe");
         dias.remove(i);
     }
-    
-    
-    
-    
 }

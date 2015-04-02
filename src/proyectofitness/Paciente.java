@@ -85,6 +85,7 @@ public class Paciente {
             throw ex;
         }
     }
+
     public void agregarMedicion(){}
 
     public ProgramaEntrenamiento getProgramaEntrenamiento() {

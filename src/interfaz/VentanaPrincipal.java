@@ -164,6 +164,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenuItem27.setText("jMenuItem27");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Doge Fitness");
         setBounds(new java.awt.Rectangle(0, 0, 1000, 500));
         setMinimumSize(new java.awt.Dimension(1000, 500));
         setPreferredSize(new java.awt.Dimension(1000, 500));
@@ -183,7 +184,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -193,7 +194,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Paciente"));
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Administración de pacientes"));
 
         addPaciente.setText("Agregar Paciente");
         addPaciente.addActionListener(new java.awt.event.ActionListener() {
@@ -237,7 +238,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(verPaciente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(verListaPacientes)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -301,7 +302,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(verMedicion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(verListaMedicion)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -361,7 +362,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(delEjercicio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(verEjercicio)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -420,7 +421,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(delMaquina)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(verMaquinas)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -498,7 +499,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(addDiaPrograma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addEjercicioPrograma)
-                .addGap(0, 49, Short.MAX_VALUE))
+                .addGap(0, 74, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

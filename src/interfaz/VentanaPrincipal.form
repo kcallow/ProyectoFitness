@@ -114,194 +114,6 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu8">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Edici&#xf3;n"/>
-          </Properties>
-          <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu10">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Agregar"/>
-              </Properties>
-              <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="mbAddPaciente">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Paciente"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbAddMedicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Medici&#xf3;n"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbAddEjercicio">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Tipo de ejercicio"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbAddMaquina">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="M&#xe1;quina"/>
-                  </Properties>
-                </MenuItem>
-                <Menu class="javax.swing.JMenu" name="jMenu15">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Programa"/>
-                  </Properties>
-                  <SubComponents>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbAddPrograma">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Programa de entrenamiento"/>
-                      </Properties>
-                    </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbAddDiaPrograma">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="D&#xed;a"/>
-                      </Properties>
-                    </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbAddEjercicioPrograma">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Ejercicio"/>
-                      </Properties>
-                    </MenuItem>
-                  </SubComponents>
-                </Menu>
-              </SubComponents>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu12">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Modificar"/>
-              </Properties>
-              <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="mbEditPaciente">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Paciente"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbEditMedicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Medici&#xf3;n"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbEditEjercicio">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Tipo de ejercicio"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbEditMaquina">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="M&#xe1;quina"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbEjercicioPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ejercicio del programa"/>
-                  </Properties>
-                </MenuItem>
-              </SubComponents>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu13">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ver"/>
-              </Properties>
-              <SubComponents>
-                <Menu class="javax.swing.JMenu" name="jMenu2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Paciente"/>
-                  </Properties>
-                  <SubComponents>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbVerPaciente">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Paciente"/>
-                      </Properties>
-                    </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbVerListaPacientes">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Listado de pacientes"/>
-                      </Properties>
-                    </MenuItem>
-                  </SubComponents>
-                </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenu3">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Mediciones"/>
-                  </Properties>
-                  <SubComponents>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbVerMedicion">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Medici&#xf3;n"/>
-                      </Properties>
-                    </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbVerListaMediciones">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Listado de mediciones"/>
-                      </Properties>
-                    </MenuItem>
-                  </SubComponents>
-                </Menu>
-                <MenuItem class="javax.swing.JMenuItem" name="mbVerEjercicio">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Tipos de ejercicio"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbVerMaquinas">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="M&#xe1;quinas"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbVerPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Programa de entrenamiento"/>
-                  </Properties>
-                </MenuItem>
-              </SubComponents>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu11">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Borrar"/>
-              </Properties>
-              <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="mbDelPaciente">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Paciente"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbDelMedicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Medici&#xf3;n"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbDelEjercicio">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Tipo de ejercicio"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="mbDelMaquina">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="M&#xe1;quina"/>
-                  </Properties>
-                </MenuItem>
-                <Menu class="javax.swing.JMenu" name="jMenu4">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Programas"/>
-                  </Properties>
-                  <SubComponents>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbDelPrograma">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Programa de entrenamiento"/>
-                      </Properties>
-                    </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="mbDelEjercicioPrograma">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Borrar ejercicio"/>
-                      </Properties>
-                    </MenuItem>
-                  </SubComponents>
-                </Menu>
-              </SubComponents>
-            </Menu>
-          </SubComponents>
-        </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu7">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ayuda"/>
@@ -321,13 +133,13 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Doge Fitness"/>
     <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-      <Rectangle value="[0, 0, 1000, 500]"/>
+      <Rectangle value="[0, 0, 800, 600]"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1000, 500]"/>
+      <Dimension value="[800, 600]"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1000, 500]"/>
+      <Dimension value="[800, 600]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -351,16 +163,12 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTabbedPane1" min="-2" pref="348" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="jPanel3" max="32767" attributes="0"/>
-                  </Group>
-                  <Component id="jPanel12" alignment="1" max="32767" attributes="0"/>
+                  <Component id="jPanel12" max="32767" attributes="0"/>
+                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -369,624 +177,21 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTabbedPane1" max="32767" attributes="0"/>
-                  <Component id="jPanel3" max="32767" attributes="0"/>
-              </Group>
+              <Component id="jPanel1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel3">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="622" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JList" name="jList1">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                  <StringArray count="27">
-                    <StringItem index="0" value="Paciente 1"/>
-                    <StringItem index="1" value="Paciente 2"/>
-                    <StringItem index="2" value="Paciente 3"/>
-                    <StringItem index="3" value="Paciente 4"/>
-                    <StringItem index="4" value="Paciente 5"/>
-                    <StringItem index="5" value="Paciente 6"/>
-                    <StringItem index="6" value="Paciente 7"/>
-                    <StringItem index="7" value="Paciente 8"/>
-                    <StringItem index="8" value="Paciente 9"/>
-                    <StringItem index="9" value="Paciente 10"/>
-                    <StringItem index="10" value="Paciente 11"/>
-                    <StringItem index="11" value="Paciente 12"/>
-                    <StringItem index="12" value="Paciente 13"/>
-                    <StringItem index="13" value="Paciente 14"/>
-                    <StringItem index="14" value="Paciente 15"/>
-                    <StringItem index="15" value="Paciente 16"/>
-                    <StringItem index="16" value="Paciente 17"/>
-                    <StringItem index="17" value="Paciente 18"/>
-                    <StringItem index="18" value="Paciente 19"/>
-                    <StringItem index="19" value="Paciente 20"/>
-                    <StringItem index="20" value="Paciente 21"/>
-                    <StringItem index="21" value="Paciente 22"/>
-                    <StringItem index="22" value="Paciente 23"/>
-                    <StringItem index="23" value="Paciente 24"/>
-                    <StringItem index="24" value="Paciente 25"/>
-                    <StringItem index="25" value=" "/>
-                    <StringItem index="26" value=" "/>
-                  </StringArray>
-                </Property>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
-      <Properties>
-        <Property name="tabPlacement" type="int" value="2"/>
-      </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="menuPanel"/>
-        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
-      </AccessibilityProperties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Paciente">
-                <Property name="tabTitle" type="java.lang.String" value="Paciente"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel8" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel8" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel8">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Administraci&#xf3;n de pacientes"/>
-                  </Border>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="addPaciente" max="32767" attributes="0"/>
-                              <Component id="editPaciente" alignment="0" max="32767" attributes="0"/>
-                              <Component id="delPaciente" alignment="0" max="32767" attributes="0"/>
-                              <Component id="verPaciente" max="32767" attributes="0"/>
-                              <Component id="verListaPacientes" alignment="0" pref="231" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="addPaciente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="editPaciente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="delPaciente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="verPaciente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="verListaPacientes" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="152" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="addPaciente">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar Paciente"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPacienteActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="editPaciente">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Modificar Paciente"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="delPaciente">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Borrar Paciente"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="verPaciente">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ver Paciente"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="verListaPacientes">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ver Listado de Pacientes"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel4">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Medici&#xf3;n">
-                <Property name="tabTitle" type="java.lang.String" value="Medici&#xf3;n"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel9" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel9" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel9">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Medici&#xf3;n"/>
-                  </Border>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="addMedicion" linkSize="8" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
-                              <Component id="editMedicion" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="delMedicion" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="verMedicion" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="verListaMedicion" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="addMedicion" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="editMedicion" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="delMedicion" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="verMedicion" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="verListaMedicion" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="152" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="verListaMedicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ver Listado de Mediciones"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="verMedicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ver Medici&#xf3;n"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="delMedicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Borrar Medici&#xf3;n"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="editMedicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Modificar Medici&#xf3;n"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="addMedicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar Medici&#xf3;n"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel5">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Ejercicio">
-                <Property name="tabTitle" type="java.lang.String" value="Ejercicio"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel7" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel7" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel7">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Tipos de ejercicio"/>
-                  </Border>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="addEjercicio" linkSize="7" min="-2" pref="228" max="-2" attributes="0"/>
-                              <Component id="editEjercicio" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="delEjercicio" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="verEjercicio" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="9" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="addEjercicio" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="editEjercicio" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="delEjercicio" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="verEjercicio" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="194" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="addEjercicio">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar Ejercicio"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="editEjercicio">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Modificar Ejercicio"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="delEjercicio">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Borrar Ejercicio"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="verEjercicio">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ver Ejercicios"/>
-                    <Property name="toolTipText" type="java.lang.String" value=""/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel6">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="M&#xe1;quina">
-                <Property name="tabTitle" type="java.lang.String" value="M&#xe1;quina"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel10" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel10" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel10">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="M&#xe1;quina"/>
-                  </Border>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="addMaquina" linkSize="6" min="-2" pref="228" max="-2" attributes="0"/>
-                              <Component id="editMaquina" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="delMaquina" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="verMaquinas" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="9" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="addMaquina" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="editMaquina" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="delMaquina" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="verMaquinas" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="194" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="addMaquina">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar M&#xe1;quina"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="editMaquina">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Modificar M&#xe1;quina"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="delMaquina">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Borrar M&#xe1;quina"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="verMaquinas">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ver Listado de M&#xe1;quinas"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel1">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Programas">
-                <Property name="tabTitle" type="java.lang.String" value="Programas"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel11" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel11" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel11">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Programa de entrenamiento"/>
-                  </Border>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="addPrograma" linkSize="10" min="-2" pref="228" max="-2" attributes="0"/>
-                              <Component id="delPrograma" linkSize="10" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="verPrograma" linkSize="10" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                              <Component id="addEjercicioPrograma" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="addDiaPrograma" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="editEjercicioPrograma" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="delEjercicioPrograma" linkSize="10" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="9" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="addPrograma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="delPrograma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="verPrograma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="delEjercicioPrograma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="editEjercicioPrograma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="addDiaPrograma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="addEjercicioPrograma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="74" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JButton" name="addPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar Programa de Entrenamiento"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="delPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Borrar Programa de Entrenamiento"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delProgramaActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="verPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ver Programa de Entrenamiento"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="delEjercicioPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Borrar Ejercicio del Programa"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="editEjercicioPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Modificar Ejercicio del Programa"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="addDiaPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar D&#xed;a al Programa"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="addEjercicioPrograma">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Agregar Ejercicio al Programa"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
     <Container class="javax.swing.JPanel" name="jPanel12">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
       <BindingProperties>
         <BindingProperty name="background" source="Form" target="jPanel12" targetPath="background" updateStrategy="0" immediately="false"/>
       </BindingProperties>
@@ -1003,7 +208,10 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -1015,6 +223,222 @@
             </Property>
           </Properties>
         </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane4" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane1" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jTabbedPane1" min="-2" pref="82" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane4" pref="314" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="lista">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                </Property>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="Item 5"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="menuPanel"/>
+            <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel2">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Paciente">
+                    <Property name="tabTitle" type="java.lang.String" value="Paciente"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="addPaciente" linkSize="11" min="-2" pref="220" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="verPacientes" linkSize="11" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="293" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="verPacientes" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="addPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="addPaciente">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Agregar Paciente"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPacienteActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="verPacientes">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver Pacientes"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel5">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Tipo de Ejercicio">
+                    <Property name="tabTitle" type="java.lang.String" value="Tipo de Ejercicio"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="addTipoEjercicio" linkSize="12" min="-2" pref="220" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="verTiposEjercicio" linkSize="12" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="293" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="verTiposEjercicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="addTipoEjercicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="addTipoEjercicio">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Agregar Tipo de Ejercicio"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="verTiposEjercicio">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver Tipos de Ejercicio"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel6">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="M&#xe1;quina">
+                    <Property name="tabTitle" type="java.lang.String" value="M&#xe1;quina"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="addMaquina" linkSize="13" min="-2" pref="220" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="verMaquinas" linkSize="13" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="293" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="verMaquinas" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="addMaquina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="addMaquina">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Agregar M&#xe1;quina"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="verMaquinas">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver M&#xe1;quinas"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

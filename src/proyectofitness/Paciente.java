@@ -6,6 +6,7 @@
 package proyectofitness;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Paciente {
     public static final ArrayList<Paciente> pacientes = new ArrayList();  
-    private final ArrayList<Medicion> mediciones = new ArrayList();
+    private final HashMap<String, Medicion> mediciones = new HashMap();
     
     private ProgramaEntrenamiento programaEntrenamiento;
     
@@ -87,7 +88,26 @@ public class Paciente {
     }
 
     public void agregarMedicion(String nombre, double valor){
-        mediciones.add(new Medicion(nombre, valor)); 
+        mediciones.put(nombre, new Medicion(nombre, valor)); 
+    }
+
+    public void borrarMedicion(String nombre) {
+        mediciones.remove(nombre);
+    }
+
+    public void modificarMedicion(String nombre, double valor) {
+        borrarMedicion(nombre);
+        agregarMedicion(nombre, valor);
+    }
+
+    public String verMedicion(String nombre) {
+        if(nombre.equals("")) {
+            String result = "";
+            for (HashMap.Entry<String, Medicion> entrada : mediciones.entrySet())
+                result +=  entrada.getKey() + ": " + entrada.getValue();
+            return result;
+        }
+        else return mediciones.get(nombre).toString();
     }
 
     public static ArrayList<Paciente> getPacientes() {

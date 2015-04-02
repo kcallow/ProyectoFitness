@@ -15,13 +15,10 @@ import java.util.ArrayList;
 public class ProgramaEntrenamiento {
     private final ArrayList<Dia> dias = new ArrayList();
     private LocalDate fechaCreacion;
-    private static int numero = 0;
     
-    // fecha.format(DateTimeFormatter.ofPattern("dd MM uuuu"))
     
     public ProgramaEntrenamiento(){
         fechaCreacion = LocalDate.now();
-        numero++;
     }
       
     public void agregarDia(){
@@ -33,7 +30,6 @@ public class ProgramaEntrenamiento {
             throw new Exception("El dia no existe");
         return dias.get(i);
     }
-<<<<<<< HEAD
 
     public LocalDate getFechaCreacion() {
         return fechaCreacion;
@@ -43,7 +39,6 @@ public class ProgramaEntrenamiento {
         this.fechaCreacion = fechaCreacion;
     }
       
-=======
     public void agregarEjercicio(Ejercicio ejercicio) throws Exception{
         dias.get(dias.size() - 1).agregarEjercicio(ejercicio);
     }      
@@ -53,9 +48,4 @@ public class ProgramaEntrenamiento {
             throw new Exception("El dia no existe");
         dias.remove(i);
     }
-    
-    
->>>>>>> b37f3bb219d83c306e8457c9fed5e79592092a61
-    
-    
 }

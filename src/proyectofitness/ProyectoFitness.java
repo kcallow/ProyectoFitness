@@ -29,8 +29,10 @@ public class ProyectoFitness {
 	private static void processCommand(String input) throws Exception{
         if(input.equals(""))
             return;
-        if(input.charAt(0) == '#')
+        if(input.charAt(0) == '#') {
             System.out.println(input.substring(1));
+            return;
+        }
 		String [] command = input.split(" ");
 		switch(command[0].toLowerCase()) {
 			case "add":

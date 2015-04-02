@@ -1,3 +1,5 @@
+#Agregando pacientes...
+
 add patient
 116210601
 Kenneth Callow Monge
@@ -7,6 +9,7 @@ M
 kcallow@ic-itcr.ac.cr
 view patient
 116210601
+
 add patient
 166669999
 Juana Luana Della Sabana
@@ -16,6 +19,7 @@ F
 jldsabi@aol.com
 view patient
 166669999
+
 add patient
 201589456
 Hyori Sakagumi
@@ -25,6 +29,7 @@ F
 hyo_saka1957@ifconf.ig.it
 view patient
 201589456
+
 add patient
 888888889
 Yazuki Zepeda
@@ -34,6 +39,7 @@ M
 yazzzepeda@facebook.com
 view patient
 888888889
+
 add patient
 753129854
 Ramira Ramirez
@@ -43,6 +49,7 @@ F
 rrrrr@hotmail.com
 view patient
 753129854
+
 add patient
 102342161
 Gibraltar Ginecomas
@@ -52,6 +59,7 @@ M
 xXxXxXx@badoo.es
 view patient
 102342161
+
 add patient
 302123001
 Ninja Zef
@@ -61,74 +69,361 @@ M
 die@antwoorp.co.nz
 view patient
 302123001
+
+#Agregando mediciones a 116210601
 add measurement
+116210601
+Peso
+0.1
 add measurement
+116210601
+Pliegues Abdomen
+12
+#Probando ver todas las mediciones para 116210601
+view measurement
+116210601
+
+#Agregando mediciones a 166669999
 add measurement
+166669999
+Frecuencia Cardiaca
+100
 add measurement
+166669999
+Estatura
+1.76
+#Probando ver estatura de 166669999
+view measurement
+166669999
+Estatura
+
+#Agregando mediciones a 201589456
 add measurement
+201589456
+Presion Arterial Sistolica
+200
 add measurement
+201589456
+Circunferencia Cintura 1
+100
 add measurement
+201589456
+Circunferencia Cintura 2
+200
 add measurement
+201589456
+Circunferencia Cintura 3
+300
+#Probando borrar Presion Arterial Sistolica para 201589456
+rm measurement
+201589456
+Presion Arterial Sistolica
+#Intentar borrar medida no definida Peso para 201589456 (ERROR!)
+rm measurement
+201589456
+Peso
+#Probando ver todas las mediciones de 201589456
+view measurement
+201589456
+
+
+#Agregando mediciones a 888888889
 add measurement
+888888889
+Cicunferencia Cuello
+30
 add measurement
+888888889
+Cicunferencia Biceps izq
+40
 add measurement
+888888889
+Cicunferencia Biceps der
+50
 add measurement
-add measurement
-add measurement
-add measurement
-add measurement
-add measurement
-add measurement
-add measurement
-add measurement
-add measurement
-add measurement
-add measurement
+888888889
+Cicunferencia Pectoral
+60
+#Modificando Circunferencia Pectoral de 888888889
+mod measurement
+888888889
+Circunferencia Pectoral
+20
+#Intentar modificar medida no definida Peso para 888888889 (ERROR!)
+mod measurement
+888888889
+Peso
+15
+view measurement
+888888889
+
+#Agregando maquinas
 add machine
+Banco abdominal
+very Fitness wOw
 add machine
+Mancuerna
+very Fitness wOw
 add machine
+Banco olimpico
+very Fitness wOw
 add machine
+Caminadora
+very Fitness wOw
 add machine
+Bicicleta spinning
+very Fitness wOw
 add machine
+Aductor/abductor
+very Fitness wOw
 add machine
+Extensiones de pierna
+very Fitness wOw
 add machine
+Curl de pierna
+very Fitness wOw
 add machine
+Prensa 45º ergonomica
+very Fitness wOw
 add machine
+Prensa articulada
+very Fitness wOw
 add machine
+Prensa isolateral
+very Fitness wOw
 add machine
+Prensa multiarticulada
+very Fitness wOw
 add machine
+Prensa performance
+very Fitness wOw
 add machine
+Prensa peso integrado
+very Fitness wOw
 add machine
+Rack para sentadillas
+very Fitness wOw
 add machine
+Sentadilla articulada
+very Fitness wOw
 add machine
+Sentadilla hack
+very Fitness wOw
 add machine
+Sentadilla perfecta
+very Fitness wOw
 add machine
+Sentadillas y desplantes articulados
+very Fitness wOw
 add machine
+Maquina para gluteos de pie peso libre
+very Fitness wOw
 add machine
+Maquina para gluteos parado
+very Fitness wOw
 add machine
+Maquina para gluteos performance
+very Fitness wOw
 add machine
+Costurera Performance
+very Fitness wOw
+add machine
+Levantamiento de talones peso libre
+very Fitness wOw
+add machine
+Maquina para pantorrilla
+very Fitness wOw
+add machine
+Pantorrilla costurera
+very Fitness wOw
+add machine
+Pantorrilla performance
+very Fitness wOw
+add machine
+Isolateral wide chest
+very Fitness wOw
+add machine
+Pec fly
+very Fitness wOw
+add machine
+Pec fly performance
+very Fitness wOw
+add machine
+Press horizontal articulado
+very Fitness wOw
+add machine
+Press horizontal isolateral
+very Fitness wOw
+add machine
+Press horizontal performance
+very Fitness wOw
+add machine
+Press inclinado articulado
+very Fitness wOw
+add machine
+Press inclinado isolateral
+very Fitness wOw
+add machine
+Pressacostado Isolateral
+very Fitness wOw
+add machine
+Biceps articulado
+very Fitness wOw
+add machine
+Biceps isolateral
+very Fitness wOw
+add machine
+Biceps isolateral peso integrado
+very Fitness wOw
+add machine
+Biceps performance
+very Fitness wOw
+add machine
+Biceps peso integrado
+very Fitness wOw
+add machine
+Combo Bíceps/Triceps
+very Fitness wOw
+add machine
+Triceps articulado
+very Fitness wOw
+add machine
+Triceps isolateral
+very Fitness wOw
+add machine
+Encogimientos peso libre
+very Fitness wOw
+add machine
+Hombro peso integrado
+very Fitness wOw
+add machine
+Laterales isolateral de peso integrado
+very Fitness wOw
+add machine
+Maquina para Laterales isolateral
+very Fitness wOw
+add machine
+Press atras nuca isolateral
+very Fitness wOw
+add machine
+Press militar isolateral
+very Fitness wOw
+add machine
+Rack para Hombro
+very Fitness wOw
+add machine
+Lateral pulldown peso libre
+very Fitness wOw
+add machine
+Maquina para pullover
+very Fitness wOw
+add machine
+Pull down Isolateral
+very Fitness wOw
+add machine
+Pulldown performance
+very Fitness wOw
+add machine
+Remo Alto Isolateral
+very Fitness wOw
+add machine
+Remo bajo Isolateral
+very Fitness wOw
+add machine
+Remo con apoyo
+very Fitness wOw
+add machine
+Remo Isolateral
+very Fitness wOw
+add machine
+Remo tipo "T"
+very Fitness wOw
+add machine
+Abdominales Performance
+very Fitness wOw
+add machine
+Abdominales y lumbares
+very Fitness wOw
+add machine
+Combo Silla romana/hiperextensiones
+very Fitness wOw
+add machine
+Maquina para abdominales
+very Fitness wOw
+add machine
+Rotary Torso
+very Fitness wOw
+add machine
+Silla rusa performance
+very Fitness wOw
+add machine
+Silla rusa tubular
+very Fitness wOw
+add machine
+Banco Declinado
+very Fitness wOw
+add machine
+Banco graduable
+very Fitness wOw
+add machine
+Banco graduable 2
+very Fitness wOw
+add machine
+Banco horizontal olimpico
+very Fitness wOw
+add machine
+Banco horizontal sin soportes
+very Fitness wOw
+add machine
+Banco inclinado olimpico
+very Fitness wOw
+add machine
+Banco inclinado sin soportes
+very Fitness wOw
+add machine
+Banco Multiusos
+very Fitness wOw
+#Ver maquinas
+view machine
+
+#Ver descripcion de Mancuerna
+view machine
+mancuerna
+#Modificar banco abdominal
+mod machine
+banco abdominal
+Te da 6-pack abs, amigo!
+#Borrar Banco Multiusos
+rm machine
+banco multiusos
+#Modificar maquina inexistente (cuerda) (ERROR!)
+mod machine
+cuerda
+Brinca la cuerdita para enamorar a todo el gym.
+#Borrar maquina inexistente (cuerda) (ERROR!)
+rm machine
+cuerda
+
 add exercise
+
 add exercise
+
 add exercise
+
 add exercise
+
 add exercise
+
 add exercise
+
 add exercise
+
 add exercise
+
 add exercise
+
 add exercise
-add exercise
-add exercise
-add exercise
-add exercise
-add exercise
-add exercise
-add exercise
-add exercise
-add exercise
-add exercise
-add exercise
-add exercise
+
 add exercise
 
 exit

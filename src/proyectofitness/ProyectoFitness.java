@@ -171,15 +171,19 @@ public class ProyectoFitness {
     }
 
     private static void addTrainingProgram(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Paciente.get(scanner.nextLine()).setProgramaEntrenamiento(new ProgramaEntrenamiento());
     }
 
-    private static void addTrainingDay(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void addTrainingDay(String[] command) throws Exception {
+        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().agregarDia();
     }
 
-    private static void addDayExercise(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void addDayExercise(String[] command) throws Exception {
+        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().getDia(getInt()).agregarEjercicio(new Ejercicio(getInt(),scanner.nextLine(),getInt(),getInt(),getInt(),getInt(),getInt(),getInt()));
+    }
+
+    private static int getInt() {
+        return Integer.parseInt(scanner.nextLine());
     }
 
     private static void addMachine(String[] command) throws Exception {
@@ -190,8 +194,8 @@ public class ProyectoFitness {
         TipoMaquina.modificar(scanner.nextLine(), scanner.nextLine());
     }
 
-    private static void modifyDayExercise(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void modifyDayExercise(String[] command) throws Exception {
+        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().getDia(getInt()).modificarEjercicio(new Ejercicio(getInt(),scanner.nextLine(),getInt(),getInt(),getInt(),getInt(),getInt(),getInt()));
     }
 
     private static void modifyMeasurement(String[] command) throws Exception {
@@ -220,15 +224,15 @@ public class ProyectoFitness {
     }
 
     private static void removeTrainingProgram(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Paciente.get(scanner.nextLine()).setProgramaEntrenamiento(null);
     }
 
-    private static void removeTrainingDay(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void removeTrainingDay(String[] command) throws Exception {
+        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().borrarDia(getInt());
     }
 
-    private static void removeDayExercise(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void removeDayExercise(String[] command) throws Exception {
+        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().getDia(getInt()).borrarEjercicio(getInt());
     }
 
     private static void removeMachine(String[] command) throws Exception {
@@ -247,12 +251,12 @@ public class ProyectoFitness {
         System.out.println(TipoEjercicio.ver(scanner.nextLine()));
     }
 
-    private static void viewTrainingProgram(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void viewTrainingProgram(String[] command) throws Exception {
+        System.out.println(Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().toString());
     }
 
-    private static void viewTrainingDay(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void viewTrainingDay(String[] command) throws Exception {
+        System.out.println(Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().getDia(getInt()));
     }
 
     private static void viewMachine(String[] command) throws Exception {

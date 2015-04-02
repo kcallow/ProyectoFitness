@@ -8,10 +8,6 @@ package proyectofitness;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-/**
- *
- * @author callow
- */
 public class ProgramaEntrenamiento {
     private final ArrayList<Dia> dias = new ArrayList();
     private LocalDate fechaCreacion;
@@ -47,5 +43,12 @@ public class ProgramaEntrenamiento {
         if(i > dias.size() || i < 0)
             throw new Exception("El dia no existe");
         dias.remove(i);
+    }
+
+    public String toString(){
+        String result = "";
+        for (Dia dia : dias)
+            result += dia + "\n";
+        return result;
     }
 }

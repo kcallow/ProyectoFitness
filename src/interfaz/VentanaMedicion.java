@@ -7,7 +7,7 @@ package interfaz;
 
 /**
  *
- * @author doctorHolmes
+ * @author scsaenz
  */
 public class VentanaMedicion extends javax.swing.JFrame {
 
@@ -88,9 +88,12 @@ public class VentanaMedicion extends javax.swing.JFrame {
         txtDiastolica = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         btnCancelarVM = new javax.swing.JButton();
-        btnAceptarVM = new javax.swing.JButton();
+        btnGuardarVM = new javax.swing.JButton();
+        btnBorrarVM = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Medición");
+        setResizable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Estatura y peso"));
 
@@ -420,7 +423,9 @@ public class VentanaMedicion extends javax.swing.JFrame {
             }
         });
 
-        btnAceptarVM.setText("Aceptar");
+        btnGuardarVM.setText("Guardar");
+
+        btnBorrarVM.setText("Borrar");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -428,13 +433,15 @@ public class VentanaMedicion extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAceptarVM, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBorrarVM)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGuardarVM, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCancelarVM)
                 .addContainerGap())
         );
 
-        jPanel6Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAceptarVM, btnCancelarVM});
+        jPanel6Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBorrarVM, btnCancelarVM, btnGuardarVM});
 
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -442,7 +449,8 @@ public class VentanaMedicion extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelarVM)
-                    .addComponent(btnAceptarVM)))
+                    .addComponent(btnGuardarVM)
+                    .addComponent(btnBorrarVM)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -524,8 +532,9 @@ public class VentanaMedicion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAceptarVM;
+    private javax.swing.JButton btnBorrarVM;
     private javax.swing.JButton btnCancelarVM;
+    private javax.swing.JButton btnGuardarVM;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

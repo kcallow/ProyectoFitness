@@ -42,7 +42,7 @@ public class Paciente {
     
     
     public static void agregar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-uuuu");
         Paciente nuevoPaciente = new Paciente(new Cedula(cedula), nombre, sexo, LocalDate.parse(fechaDeNacimiento, formatter), new Telefono(telefono), new Correo(correo));
         if(pacientes.contains(nuevoPaciente))
             throw new Exception("Ya existe un paciente con esta cedula.  No agregado.");

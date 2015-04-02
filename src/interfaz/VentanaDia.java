@@ -7,7 +7,7 @@ package interfaz;
 
 /**
  *
- * @author doctorHolmes
+ * @author scsaenz
  */
 public class VentanaDia extends javax.swing.JFrame {
 

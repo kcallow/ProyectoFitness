@@ -7,7 +7,7 @@ package interfaz;
 
 /**
  *
- * @author doctorHolmes
+ * @author scsaenz
  */
 public class VentanaPaciente extends javax.swing.JFrame {
 

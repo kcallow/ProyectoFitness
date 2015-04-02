@@ -8,7 +8,7 @@ import java.util.HashMap;
  */
 public class Medicion {
 
-    private final String nombre, unidadMedida;
+    private final String unidadMedida;
     private double valor;
     public static final HashMap<String, String> unidades = new HashMap(){
         {
@@ -39,24 +39,12 @@ public class Medicion {
 
         }
     };
-    
-    
 
-    public Medicion(String nombre, double valor) {
-        this.nombre = nombre;
+    public Medicion(String nombre, double valor) throws Exception {
         this.unidadMedida = unidades.get(nombre);
+        if(unidadMedida == null)
+            throw new Exception("Nombre de medicion no es valido.");
         this.valor = valor;
-        }
-    
-    
-
-    public Medicion(String nombre) {
-        //Si no se da el valor, se inicializa a 0
-        this(nombre, 0);
-    }
-
-    public String getNombre() {
-        return nombre;
     }
 
     public String getUnidadMedida() {
@@ -69,5 +57,9 @@ public class Medicion {
 
     public void setValor(int valor) {
         this.valor = valor;
+    }
+
+    public String toString(){
+        return valor + " " + unidadMedida;
     }
 }

@@ -89,14 +89,8 @@ public class ProyectoFitness {
 			case "exercise":
 				modifyExercise(command);
 				break;
-			case "training":
-				modifyTrainingProgram(command);
-				break;
-			case "day":
-				addTrainingDay(command);
-				break;
 			case "day-exercise":
-				removeDayExercise(command);
+				modifyDayExercise(command);
 				break;
 			case "machine":
 				modifyMachine(command);
@@ -196,7 +190,7 @@ public class ProyectoFitness {
         TipoMaquina.modificar(scanner.nextLine(), scanner.nextLine());
     }
 
-    private static void modifyTrainingProgram(String[] command) {
+    private static void modifyDayExercise(String[] command) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

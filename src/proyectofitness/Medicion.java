@@ -42,17 +42,17 @@ public class Medicion {
     
     
 
-    public Medicion(String nombre, String unidadMedida, double valor) {
+    public Medicion(String nombre, double valor) {
         this.nombre = nombre;
-        this.unidadMedida = unidadMedida;
+        this.unidadMedida = unidades.get(nombre);
         this.valor = valor;
         }
     
     
 
-    public Medicion(String nombre, String unidadMedida) {
+    public Medicion(String nombre) {
         //Si no se da el valor, se inicializa a 0
-        this(nombre, unidadMedida, 0);
+        this(nombre, 0);
     }
 
     public String getNombre() {

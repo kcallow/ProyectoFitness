@@ -11,7 +11,7 @@ public class Paciente {
     private Telefono telefono;
     private Correo correo;
     
-    private Paciente(Cedula cedula, String nombre, String sexo, LocalDate fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception{
+    public Paciente(String nombre, String sexo, LocalDate fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception{
         this.nombre = nombre;
         setSexo(sexo);
         this.fechaDeNacimiento = fechaDeNacimiento;

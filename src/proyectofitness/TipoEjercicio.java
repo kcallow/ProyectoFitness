@@ -4,7 +4,7 @@ public class TipoEjercicio {
     private String descripcion;
     private String maquina;
 
-    public TipoEjercicio(String descripcion, String maquina) throws Exception {
+    public TipoEjercicio(String descripcion, String maquina) {
         this.descripcion = descripcion;
         this.maquina = maquina;
     }
@@ -21,7 +21,7 @@ public class TipoEjercicio {
         return maquina;
     }
 
-    public void setTipoMaquina(String maquina) throws Exception {
+    public void setTipoMaquina(String maquina) {
         this.maquina = maquina;
     }
 

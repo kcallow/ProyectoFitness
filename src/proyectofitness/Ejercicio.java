@@ -4,7 +4,7 @@ public class Ejercicio {
     private String tipoEjercicio;   
     private int series, repeticiones, peso1, peso2, peso3, tiempoDescanso;
 
-    public Ejercicio(String tipoEjercicio, int series, int repeticiones, int peso1, int peso2, int peso3, int tiempoDescanso) throws Exception {
+    public Ejercicio(String tipoEjercicio, int series, int repeticiones, int peso1, int peso2, int peso3, int tiempoDescanso) {
         this.tipoEjercicio = tipoEjercicio;
         this.series = series;
         this.repeticiones = repeticiones;

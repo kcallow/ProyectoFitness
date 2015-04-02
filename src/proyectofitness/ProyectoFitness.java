@@ -1,5 +1,7 @@
 package proyectofitness;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -66,25 +68,22 @@ public class ProyectoFitness {
 	private static void agregar(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "paciente":
-				agregarPaciente(command);
+				agregarPaciente(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "medida":
-				agregarMedida(command);
+				agregarMedida(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "tipo-ejercicio":
-				agregarTipoEjercicio(command);
-				break;
-			case "programa":
-				agregarPrograma(command);
+				agregarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "dia":
-				agregarDia(command);
+				agregarDia(scanner.nextLine(),scanner.nextLine());
 				break;
 			case "ejercicio":
-				agregarEjercicio(command);
+				agregarEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "maquina":
-				agregarMaquina(command);
+				agregarMaquina(scanner.nextLine(),scanner.nextLine());
 				break;
 			default:
 				System.out.println("Opcion invalida para agregar...");
@@ -170,35 +169,6 @@ public class ProyectoFitness {
 		}
 	}
 
-
-    private static void agregarPaciente(String[] command) throws Exception {
-        Paciente.agregar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
-    }
-
-    private static void agregarMedida(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).agregarMedicion(scanner.nextLine(), Double.parseDouble(scanner.nextLine()));
-    }
-
-    private static void agregarTipoEjercicio(String[] command) throws Exception {
-        TipoEjercicio.agregar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
-    }
-
-    private static void agregarPrograma(String[] command) {
-        Paciente.get(scanner.nextLine()).setProgramaEntrenamiento(new ProgramaEntrenamiento());
-    }
-
-    private static void agregarDia(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().agregarDia();
-    }
-
-    private static void agregarEjercicio(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().getDia(getInt()).agregarEjercicio(new Ejercicio(getInt(),scanner.nextLine(),getInt(),getInt(),getInt(),getInt(),getInt(),getInt()));
-    }
-
-    private static void agregarMaquina(String[] command) throws Exception {
-        Maquina.agregar(scanner.nextLine(), scanner.nextLine());
-    }
-
     private static void modificarMaquina(String[] command) throws Exception {
         Maquina.modificar(scanner.nextLine(), scanner.nextLine());
     }
@@ -271,5 +241,29 @@ public class ProyectoFitness {
 
     private static void verMaquina(String[] command) throws Exception {
         System.out.println(Maquina.ver(scanner.nextLine())); 
+    }
+
+    private static void agregarPaciente(String cedula, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
+        pacientes.put(new Cedula(cedula), new Paciente(nombre, sexo, LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu")), new Telefono(telefono), new Correo(correo)));
+    }
+
+    private static void agregarMedida(String cedula, String nombreMedida, String valor) throws Exception {
+        pacientes.get(new Cedula(cedula)).getMediciones().put(nombreMedida, Double.parseDouble(valor));
+    }
+
+    private static void agregarTipoEjercicio(String nombre, String descripcion, String maquina) {
+        tiposEjercicio.put(nombre, new TipoEjercicio(descripcion, maquina));
+    }
+
+    private static void agregarDia(String cedula, String numeroDia) throws Exception {
+        pacientes.get(new Cedula(cedula)).getProgramaEntrenamiento().put(Integer.parseInt(numeroDia), new Dia());
+    }
+
+    private static void agregarEjercicio(String cedula, String numeroDia, String numeroEjercicio, String tipoEjercicio, String series, String repeticiones, String peso1, String peso2, String peso3, String tiempoDescanso) throws Exception {
+        pacientes.get(new Cedula(cedula)).getProgramaEntrenamiento().get(Integer.parseInt(numeroDia)).put(Integer.parseInt(numeroEjercicio), new Ejercicio(tipoEjercicio, Integer.parseInt(series), Integer.parseInt(repeticiones), Integer.parseInt(peso1), Integer.parseInt(peso2), Integer.parseInt(peso3), Integer.parseInt(tiempoDescanso)));
+    }
+
+    private static void agregarMaquina(String nombre, String descripcion) {
+        maquinas.put(nombre, descripcion);
     }
 }

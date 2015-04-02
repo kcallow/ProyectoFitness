@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyectofitness;
 
-/**
- *
- * @author scsaenz
- */
 public class Cedula {
     
     private String cedula;
@@ -18,6 +9,7 @@ public class Cedula {
         if(!verificar())
             throw new Exception("Cedula invalida.");
     }
+
     public boolean verificar(){
         return cedula.matches("[0-9]+") && cedula.length() == 9;
     }
@@ -26,8 +18,17 @@ public class Cedula {
         return cedula;
     }
 
-    public void setID(String cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
+    }
+
+    @Override
+    public boolean equals(Object cedula){
+        if(cedula == null)
+            return false;
+        if(!(cedula instanceof Cedula))
+            return false;
+        return this.cedula.equals(((Cedula) cedula).getCedula());
     }
     
 }

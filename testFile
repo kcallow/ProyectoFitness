@@ -403,27 +403,60 @@ Brinca la cuerdita para enamorar a todo el gym.
 #Borrar maquina inexistente (cuerda) (ERROR!)
 rm machine
 cuerda
+#Ver maquinas
+view machine
+
+#Agregando ejercicios
+add exercise
+Abdominales
+Reduce los pliegues pectorales
+Banco abdominal
 
 add exercise
+Triceps
+Para piernas fuertes
+Triceps articulado
 
 add exercise
+Sentadilla
+Fortalece piernas y abdomen
+Sentadilla articulada
 
 add exercise
+Gluteos
+Fortalece la parte mas valiosa del cuerpo humano
+Maquina para gluteos parado
 
 add exercise
+Talones
+Para que no le pase lo de Aquiles
+Levantamiento de talones peso libre
 
 add exercise
+Pantorrilla
+Recomendado para futbolistas y karatekas
+Pantorrilla costurera
 
 add exercise
+Prensa
+Para fortalecer brazos
+Prensa performance
 
-add exercise
+#Ver ejercicios
+view exercise
 
-add exercise
+#Ver Pantorrial
+view exercise
+pantorrilla
+#Quitar Gluteos
+rm exercise
+gluteos
+#Modificar Talones
+Talones
+Recomendado por el antiguo guerrero Aquiles
+Levantamiento de talones peso libre
+#Ver ejercicios
+view exercise
 
-add exercise
-
-add exercise
-
-add exercise
 
 exit

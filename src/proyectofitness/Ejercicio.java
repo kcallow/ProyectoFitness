@@ -1,43 +1,25 @@
 package proyectofitness;
 
-public class Ejercicio implements Comparable<Ejercicio>{
-    private TipoEjercicio tipoEjercicio;   
-    private int numero, series, repeticiones, peso1, peso2, peso3, tiempoDescanso;
+public class Ejercicio {
+    private String tipoEjercicio;   
+    private int series, repeticiones, peso1, peso2, peso3, tiempoDescanso;
 
-    @Override
-    public int compareTo(Ejercicio ejercicioAComparar) {
-        return numero - ejercicioAComparar.getNumero();
+    public Ejercicio(String tipoEjercicio, int series, int repeticiones, int peso1, int peso2, int peso3, int tiempoDescanso) throws Exception {
+        this.tipoEjercicio = tipoEjercicio;
+        this.series = series;
+        this.repeticiones = repeticiones;
+        this.peso1 = peso1;
+        this.peso2 = peso2;
+        this.peso3 = peso3;
+        this.tiempoDescanso = tiempoDescanso;
     }
 
-    public Ejercicio(int numero, String nombreTipoEjercicio, int series, int repeticiones, int peso1, int peso2, int peso3, int tiempoDescanso) throws Exception {
-        try {
-            this.numero = numero;
-            this.tipoEjercicio = TipoEjercicio.getTipoEjercicio(nombreTipoEjercicio);
-            this.series = series;
-            this.repeticiones = repeticiones;
-            this.peso1 = peso1;
-            this.peso2 = peso2;
-            this.peso3 = peso3;
-            this.tiempoDescanso = tiempoDescanso;
-        } catch (Exception ex) {
-            throw ex;
-        }
-    }
-
-    public TipoEjercicio getTipoEjercicio() {
+    public String getTipoEjercicio() {
         return tipoEjercicio;
     }
 
-    public void setTipo(TipoEjercicio tipoEjercicio) {
+    public void setTipo(String tipoEjercicio) {
         this.tipoEjercicio = tipoEjercicio;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
     }
 
     public int getSeries() {

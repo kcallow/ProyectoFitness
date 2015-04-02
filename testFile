@@ -79,6 +79,7 @@ add measure
 116210601
 Pliegues Abdomen
 12
+
 #Probando ver todas las mediciones para 116210601
 view measure
 116210601
@@ -92,6 +93,7 @@ add measure
 166669999
 Estatura
 1.76
+
 #Probando ver estatura de 166669999
 view measure
 166669999
@@ -114,18 +116,25 @@ add measure
 201589456
 Circunferencia Cintura 3
 300
+
 #Probando borrar Presion Arterial Sistolica para 201589456
 rm measure
 201589456
 Presion Arterial Sistolica
+
+#Intentar ver medida no definida Peso para 201589456 (ERROR!)
+view measure
+201589456
+Peso
+
 #Intentar borrar medida no definida Peso para 201589456 (ERROR!)
 rm measure
 201589456
 Peso
+
 #Probando ver todas las mediciones de 201589456
 view measure
 201589456
-
 
 #Agregando mediciones a 888888889
 add measure
@@ -144,16 +153,20 @@ add measure
 888888889
 Cicunferencia Pectoral
 60
+
 #Modificando Circunferencia Pectoral de 888888889
 mod measure
 888888889
 Circunferencia Pectoral
 20
+
 #Intentar modificar medida no definida Peso para 888888889 (ERROR!)
-mod measure
-888888889
-Peso
-15
+#mod measure
+#888888889
+#Peso
+#15
+
+#Ver mediciones de 888888889
 view measure
 888888889
 

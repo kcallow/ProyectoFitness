@@ -71,90 +71,90 @@ view patient
 302123001
 
 #Agregando mediciones a 116210601
-add measurement
+add measure
 116210601
 Peso
 0.1
-add measurement
+add measure
 116210601
 Pliegues Abdomen
 12
 #Probando ver todas las mediciones para 116210601
-view measurement
+view measure
 116210601
 
 #Agregando mediciones a 166669999
-add measurement
+add measure
 166669999
 Frecuencia Cardiaca
 100
-add measurement
+add measure
 166669999
 Estatura
 1.76
 #Probando ver estatura de 166669999
-view measurement
+view measure
 166669999
 Estatura
 
 #Agregando mediciones a 201589456
-add measurement
+add measure
 201589456
 Presion Arterial Sistolica
 200
-add measurement
+add measure
 201589456
 Circunferencia Cintura 1
 100
-add measurement
+add measure
 201589456
 Circunferencia Cintura 2
 200
-add measurement
+add measure
 201589456
 Circunferencia Cintura 3
 300
 #Probando borrar Presion Arterial Sistolica para 201589456
-rm measurement
+rm measure
 201589456
 Presion Arterial Sistolica
 #Intentar borrar medida no definida Peso para 201589456 (ERROR!)
-rm measurement
+rm measure
 201589456
 Peso
 #Probando ver todas las mediciones de 201589456
-view measurement
+view measure
 201589456
 
 
 #Agregando mediciones a 888888889
-add measurement
+add measure
 888888889
 Cicunferencia Cuello
 30
-add measurement
+add measure
 888888889
 Cicunferencia Biceps izq
 40
-add measurement
+add measure
 888888889
 Cicunferencia Biceps der
 50
-add measurement
+add measure
 888888889
 Cicunferencia Pectoral
 60
 #Modificando Circunferencia Pectoral de 888888889
-mod measurement
+mod measure
 888888889
 Circunferencia Pectoral
 20
 #Intentar modificar medida no definida Peso para 888888889 (ERROR!)
-mod measurement
+mod measure
 888888889
 Peso
 15
-view measurement
+view measure
 888888889
 
 #Agregando maquinas

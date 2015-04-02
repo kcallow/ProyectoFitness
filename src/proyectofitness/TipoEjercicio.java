@@ -4,7 +4,9 @@ public class TipoEjercicio {
     private String descripcion;
     private String maquina;
 
-    public TipoEjercicio(String descripcion, String maquina) {
+    public TipoEjercicio(String descripcion, String maquina) throws Exception {
+        if(!ProyectoFitness.maquinas.containsKey(maquina))
+            throw new Exception("Maquina no existe para tipo de ejercicio");
         this.descripcion = descripcion;
         this.maquina = maquina;
     }
@@ -21,7 +23,9 @@ public class TipoEjercicio {
         return maquina;
     }
 
-    public void setTipoMaquina(String maquina) {
+    public void setTipoMaquina(String maquina) throws Exception {
+        if(!ProyectoFitness.maquinas.containsKey(maquina))
+            throw new Exception("Maquina no existe para tipo de ejercicio");
         this.maquina = maquina;
     }
 

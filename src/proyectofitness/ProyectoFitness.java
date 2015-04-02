@@ -70,8 +70,8 @@ public class ProyectoFitness {
 			case "paciente":
 				agregarPaciente(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
-			case "medida":
-				agregarMedida(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
+			case "medicion":
+				agregarMedicion(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "tipo-ejercicio":
 				agregarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
@@ -94,19 +94,19 @@ public class ProyectoFitness {
 	private static void modificar(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "paciente":
-				modificarPaciente(command);
-				break;
-			case "medida":
-				modificarMedida(command);
+				modificarPaciente(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
+                break;
+			case "medicion":
+				modificarMedicion(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "tipo-ejercicio":
-				modificarTipoEjercicio(command);
+				modificarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "ejercicio":
-				modificarEjercicio(command);
+				modificarEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "maquina":
-				modificarMaquina(command);
+				modificarMaquina(scanner.nextLine(),scanner.nextLine());
 				break;
 			default:
 				System.out.println("Opcion invalida para modificar...");
@@ -119,8 +119,8 @@ public class ProyectoFitness {
 			case "paciente":
 				borrarPaciente(command);
 				break;
-			case "medida":
-				borrarMedida(command);
+			case "medicion":
+				borrarMedicion(command);
 				break;
 			case "tipo-ejercicio":
 				borrarTipoEjercicio(command);
@@ -148,8 +148,8 @@ public class ProyectoFitness {
 			case "paciente":
 				verPaciente(command);
 				break;
-			case "medida":
-				verMedida(command);
+			case "medicion":
+				verMedicion(command);
 				break;
 			case "tipo-ejercicio":
 				verTipoEjercicio(command);
@@ -169,32 +169,11 @@ public class ProyectoFitness {
 		}
 	}
 
-    private static void modificarMaquina(String[] command) throws Exception {
-        Maquina.modificar(scanner.nextLine(), scanner.nextLine());
-    }
-
-    private static void modificarEjercicio(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().getDia(getInt()).modificarEjercicio(new Ejercicio(getInt(),scanner.nextLine(),getInt(),getInt(),getInt(),getInt(),getInt(),getInt()));
-    }
-
-    private static void modificarMedida(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).modificarMedicion(scanner.nextLine(), scanner.nextDouble());
-        scanner.nextLine();
-    }
-
-    private static void modificarTipoEjercicio(String[] command) throws Exception {
-        TipoEjercicio.modificar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
-    }
-
-    private static void modificarPaciente(String[] command) throws Exception {
-        Paciente.modificar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
-    }
-
     private static void borrarPaciente(String[] command) throws Exception {
         Paciente.borrar(scanner.nextLine());
     }
 
-    private static void borrarMedida(String[] command) throws Exception {
+    private static void borrarMedicion(String[] command) throws Exception {
         Paciente.get(scanner.nextLine()).borrarMedicion(scanner.nextLine());
     }
 
@@ -222,7 +201,7 @@ public class ProyectoFitness {
         System.out.println(Paciente.ver(scanner.nextLine()));
     }
 
-    private static void verMedida(String[] command) throws Exception {
+    private static void verMedicion(String[] command) throws Exception {
         System.out.println("Hola");
         System.out.println(Paciente.get(scanner.nextLine()).verMedicion(scanner.nextLine()));
     }
@@ -243,27 +222,107 @@ public class ProyectoFitness {
         System.out.println(Maquina.ver(scanner.nextLine())); 
     }
 
-    private static void agregarPaciente(String cedula, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
-        pacientes.put(new Cedula(cedula), new Paciente(nombre, sexo, LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu")), new Telefono(telefono), new Correo(correo)));
+    private static void agregarPaciente(String numeroCedula, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
+        Cedula cedula = new Cedula(numeroCedula);
+        if(pacientes.containsKey(cedula))
+            throw new Exception("Ya existe un paciente con cedula indicada.");
+        pacientes.put(cedula, new Paciente(nombre, sexo, LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu")), new Telefono(telefono), new Correo(correo)));
     }
 
-    private static void agregarMedida(String cedula, String nombreMedida, String valor) throws Exception {
-        pacientes.get(new Cedula(cedula)).getMediciones().put(nombreMedida, Double.parseDouble(valor));
+    private static void agregarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para agregar medicion.");
+        paciente.getMediciones().put(nombreMedicion, Double.parseDouble(valor));
     }
 
-    private static void agregarTipoEjercicio(String nombre, String descripcion, String maquina) {
+    private static void agregarTipoEjercicio(String nombre, String descripcion, String maquina) throws Exception {
+        if(tiposEjercicio.containsKey(nombre))
+            throw new Exception("Ya existe un tipo de ejercicio con ese nombre.");
         tiposEjercicio.put(nombre, new TipoEjercicio(descripcion, maquina));
     }
 
     private static void agregarDia(String cedula, String numeroDia) throws Exception {
-        pacientes.get(new Cedula(cedula)).getProgramaEntrenamiento().put(Integer.parseInt(numeroDia), new Dia());
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para agregar dia.");
+        ProgramaEntrenamiento programa = paciente.getProgramaEntrenamiento();
+        Integer numero = Integer.parseInt(numeroDia);
+        if(programa.containsKey(numero))
+            throw new Exception("Ya existe un dia con ese numero.");
+        programa.put(numero, new Dia());
     }
 
     private static void agregarEjercicio(String cedula, String numeroDia, String numeroEjercicio, String tipoEjercicio, String series, String repeticiones, String peso1, String peso2, String peso3, String tiempoDescanso) throws Exception {
-        pacientes.get(new Cedula(cedula)).getProgramaEntrenamiento().get(Integer.parseInt(numeroDia)).put(Integer.parseInt(numeroEjercicio), new Ejercicio(tipoEjercicio, Integer.parseInt(series), Integer.parseInt(repeticiones), Integer.parseInt(peso1), Integer.parseInt(peso2), Integer.parseInt(peso3), Integer.parseInt(tiempoDescanso)));
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para agregar ejercicio.");
+        Dia dia = paciente.getProgramaEntrenamiento().get(Integer.parseInt(numeroDia));
+        if(dia == null)
+            throw new Exception("Dia invalido para agregar ejercicio.");
+        Integer numero = Integer.parseInt(numeroEjercicio);
+        if(dia.containsKey(numero))
+            throw new Exception("El numero para el ejercicio ya corresponde a otro.");
+        dia.put(numero, new Ejercicio(tipoEjercicio, Integer.parseInt(series), Integer.parseInt(repeticiones), Integer.parseInt(peso1), Integer.parseInt(peso2), Integer.parseInt(peso3), Integer.parseInt(tiempoDescanso)));
     }
 
-    private static void agregarMaquina(String nombre, String descripcion) {
+    private static void agregarMaquina(String nombre, String descripcion) throws Exception {
+        if(maquinas.containsKey(nombre))
+            throw new Exception("Nombre invalido para agregar maquina.");
+        maquinas.put(nombre, descripcion);
+    }
+
+    private static void modificarPaciente(String cedula, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para modificar.");
+        paciente.setNombre(nombre);
+        paciente.setSexo(sexo);
+        paciente.setFechaDeNacimiento(LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu")));
+        paciente.setTelefono(telefono);
+        paciente.setCorreo(correo);
+    }
+
+    private static void modificarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para modificar medicion.");
+        if(!paciente.getMediciones().containsKey(nombreMedicion))
+            throw new Exception("El nombre de medicion dado no corresponde a ninguna medicion del paciente.");
+        paciente.getMediciones().put(nombreMedicion, Double.parseDouble(valor));
+    }
+
+    private static void modificarTipoEjercicio(String nombre, String descripcion, String maquina) throws Exception {
+        TipoEjercicio tipoEjercicio = tiposEjercicio.get(nombre);
+        if(tipoEjercicio == null)
+            throw new Exception("Tipo de ejercicio invalido para modificar.");
+        tipoEjercicio.setDescripcion(descripcion);
+        tipoEjercicio.setTipoMaquina(maquina);
+    }
+
+    private static void modificarEjercicio(String cedula, String numeroDia, String numeroEjercicio, String tipoEjercicio, String series, String repeticiones, String peso1, String peso2, String peso3, String tiempoDescanso) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para modificar ejercicio.");
+        Dia dia = paciente.getProgramaEntrenamiento().get(Integer.parseInt(numeroDia));
+        if(dia == null)
+            throw new Exception("Dia invalido para modificar ejercicio.");
+        Integer numero = Integer.parseInt(numeroEjercicio);
+        if(!dia.containsKey(numero))
+            throw new Exception("El numero de ejercicio no corresponde a ninguno.");
+        Ejercicio ejercicio = dia.get(numero);
+        ejercicio.setTipo(tipoEjercicio);
+        ejercicio.setSeries(Integer.parseInt(series));
+        ejercicio.setRepeticiones(Integer.parseInt(repeticiones)); 
+        ejercicio.setPeso1(Integer.parseInt(peso1)); 
+        ejercicio.setPeso2(Integer.parseInt(peso2)); 
+        ejercicio.setPeso3(Integer.parseInt(peso3)); 
+        ejercicio.setTiempoDescanso(Integer.parseInt(tiempoDescanso));
+    }
+
+    private static void modificarMaquina(String nombre, String descripcion) throws Exception {
+        if(!maquinas.containsKey(nombre))
+            throw new Exception("Nombre invalido para modificar maquina.");
         maquinas.put(nombre, descripcion);
     }
 }

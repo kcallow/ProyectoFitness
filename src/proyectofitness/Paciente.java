@@ -97,12 +97,14 @@ public class Paciente {
     }
 
     public void borrarMedicion(String nombre) throws Exception {
+        System.out.println("Borrando " + nombre);
         if(!mediciones.containsKey(nombre))
             throw new Exception("Medicion a borrar no existe.");
         mediciones.remove(nombre);
     }
 
     public void modificarMedicion(String nombre, double valor) throws Exception {
+        System.out.println("Modificando " + nombre);
         if(!mediciones.containsKey(nombre))
             throw new Exception("El nombre no corresponde a ninguna medida registrada.");
         agregarMedicion(nombre, valor);

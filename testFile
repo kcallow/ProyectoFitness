@@ -118,6 +118,10 @@ Circunferencia Cintura 3
 rm measure
 201589456
 Presion Arterial Sistolica
+#Intentar ver medida no definida Peso para 201589456 (ERROR!)
+view measure
+201589456
+Peso
 #Intentar borrar medida no definida Peso para 201589456 (ERROR!)
 rm measure
 201589456

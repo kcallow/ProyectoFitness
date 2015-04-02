@@ -220,7 +220,7 @@ public class ProyectoFitness {
         Paciente.borrar(scanner.nextLine());
     }
 
-    private static void removeMeasurement(String[] command) {
+    private static void removeMeasurement(String[] command) throws Exception {
         Paciente.get(scanner.nextLine()).borrarMedicion(scanner.nextLine());
     }
 

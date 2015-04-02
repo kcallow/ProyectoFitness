@@ -87,7 +87,7 @@ public class Paciente {
         }
     }
 
-    public void agregarMedicion(String nombre, double valor){
+    public void agregarMedicion(String nombre, double valor) throws Exception{
         mediciones.put(nombre, new Medicion(nombre, valor)); 
     }
 
@@ -95,7 +95,7 @@ public class Paciente {
         mediciones.remove(nombre);
     }
 
-    public void modificarMedicion(String nombre, double valor) {
+    public void modificarMedicion(String nombre, double valor) throws Exception {
         borrarMedicion(nombre);
         agregarMedicion(nombre, valor);
     }

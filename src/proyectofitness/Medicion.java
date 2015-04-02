@@ -40,14 +40,11 @@ public class Medicion {
         }
     };
 
-    public Medicion(String nombre, double valor) {
+    public Medicion(String nombre, double valor) throws Exception {
         this.unidadMedida = unidades.get(nombre);
+        if(unidadMedida == null)
+            throw new Exception("Nombre de medicion no es valido.");
         this.valor = valor;
-        }
-    
-    public Medicion(String nombre) {
-        //Si no se da el valor, se inicializa a 0
-        this(nombre, 0);
     }
 
     public String getUnidadMedida() {

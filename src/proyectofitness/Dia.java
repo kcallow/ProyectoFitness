@@ -33,11 +33,8 @@ public class Dia {
     }
 
     public String verEjercicio(int numero) throws Exception {
-        if(numero == 0){
-            String resultado = "";
-            for(Ejercicio ejercicio : ejercicios)
-                resultado += ejercicio.toString() + "\n";
-            return resultado;
+        if(numero == -1){
+            return toString();
         }
         else {
             for(Ejercicio ejercicio : ejercicios)
@@ -49,6 +46,9 @@ public class Dia {
 
     @Override
     public String toString(){
-        return ejercicios.toString();
+        String resultado = "";
+        for(Ejercicio ejercicio : ejercicios)
+            resultado += ejercicio.toString() + "\n";
+        return resultado;
     }
 }

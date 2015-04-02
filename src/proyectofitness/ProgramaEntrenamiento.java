@@ -6,23 +6,15 @@
 package proyectofitness;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-/**
- *
- * @author callow
- */
 public class ProgramaEntrenamiento {
     private final ArrayList<Dia> dias = new ArrayList();
     private LocalDate fechaCreacion;
-    private static int numero = 0;
     
-    // fecha.format(DateTimeFormatter.ofPattern("dd MM uuuu"))
     
     public ProgramaEntrenamiento(){
         fechaCreacion = LocalDate.now();
-        numero++;
     }
       
     public void agregarDia(){
@@ -34,6 +26,15 @@ public class ProgramaEntrenamiento {
             throw new Exception("El dia no existe");
         return dias.get(i);
     }
+
+    public LocalDate getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDate fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+      
     public void agregarEjercicio(Ejercicio ejercicio) throws Exception{
         dias.get(dias.size() - 1).agregarEjercicio(ejercicio);
     }      
@@ -42,5 +43,12 @@ public class ProgramaEntrenamiento {
         if(i > dias.size() || i < 0)
             throw new Exception("El dia no existe");
         dias.remove(i);
+    }
+
+    public String toString(){
+        String result = "";
+        for (Dia dia : dias)
+            result += dia + "\n";
+        return result;
     }
 }

@@ -122,7 +122,9 @@ public class Paciente {
     }
 
 
-    public ProgramaEntrenamiento getProgramaEntrenamiento() {
+    public ProgramaEntrenamiento getProgramaEntrenamiento() throws Exception {
+        if(programaEntrenamiento == null)
+            throw new Exception("Usuario no posee programa de entrenamiento.");
         return programaEntrenamiento;
     }
 

@@ -67,11 +67,10 @@ public class Paciente {
                 resultado += paciente + "\n";
             return resultado;
         }
-
-        for(Paciente paciente : pacientes)
-            if(paciente.getCedula().getCedula().equals(cedula))
-                return paciente.toString();
-        throw new Exception("El paciente no existe.");
+        Paciente paciente = get(cedula);
+        if(paciente == null)
+            throw new Exception("El paciente no existe.");
+        return paciente.toString();
     }
     
     public static void modificar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
@@ -83,6 +82,12 @@ public class Paciente {
         }
     }
 
+    public static Paciente get(String cedula) {
+        for(Paciente paciente : pacientes)
+            if(paciente.getCedula().getCedula().equals(cedula))
+                return paciente;
+        return null;
+    }
 
     public void agregarMedicion(String nombre, double valor) throws Exception{
         mediciones.put(nombre, new Medicion(nombre, valor)); 
@@ -98,14 +103,18 @@ public class Paciente {
         agregarMedicion(nombre, valor);
     }
 
-    public String verMedicion(String nombre) {
+    public String verMedicion(String nombre) throws Exception {
         if(nombre.equals("")) {
             String result = "";
             for (HashMap.Entry<String, Medicion> entrada : mediciones.entrySet())
                 result +=  entrada.getKey() + ": " + entrada.getValue();
             return result;
         }
-        else return mediciones.get(nombre).toString();
+        else {
+            if(mediciones.get(nombre) == null)
+                throw new Exception ("No existe medicion con este nombre...");
+            return mediciones.get(nombre).toString();
+        }
     }
 
     public static ArrayList<Paciente> getPacientes() {

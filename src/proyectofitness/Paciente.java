@@ -6,8 +6,7 @@
 package proyectofitness;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -42,8 +41,9 @@ public class Paciente {
     }
     
     
-    public static void agregar(String cedula, String nombre, String sexo, LocalDate fechaDeNacimiento, String telefono, String correo) throws Exception {
-        Paciente nuevoPaciente = new Paciente(new Cedula(cedula), nombre, sexo, fechaDeNacimiento, new Telefono(telefono), new Correo(correo));
+    public static void agregar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
+        Paciente nuevoPaciente = new Paciente(new Cedula(cedula), nombre, sexo, LocalDate.parse(fechaDeNacimiento, formatter), new Telefono(telefono), new Correo(correo));
         if(pacientes.contains(nuevoPaciente))
             throw new Exception("Ya existe un paciente con esta cedula.  No agregado.");
         else 
@@ -83,7 +83,7 @@ public class Paciente {
         throw new Exception("El paciente no existe.");
     }
     
-    public static void modificar(String cedula, String nombre, String sexo, LocalDate fechaDeNacimiento, String telefono, String correo) throws Exception {
+    public static void modificar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
         try {
             borrar(cedula);
             agregar(nombre, sexo, cedula, fechaDeNacimiento,  telefono, correo);

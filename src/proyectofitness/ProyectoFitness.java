@@ -169,59 +169,6 @@ public class ProyectoFitness {
 		}
 	}
 
-    private static void borrarPaciente(String[] command) throws Exception {
-        Paciente.borrar(scanner.nextLine());
-    }
-
-    private static void borrarMedicion(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).borrarMedicion(scanner.nextLine());
-    }
-
-    private static void borrarTipoEjercicio(String[] command) throws Exception {
-        TipoEjercicio.borrar(scanner.nextLine());
-    }
-
-    private static void borrarPrograma(String[] command) {
-        Paciente.get(scanner.nextLine()).setProgramaEntrenamiento(null);
-    }
-
-    private static void borrarDia(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().borrarDia(getInt());
-    }
-
-    private static void borrarEjercicio(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().getDia(getInt()).borrarEjercicio(getInt());
-    }
-
-    private static void borrarMaquina(String[] command) throws Exception {
-        Maquina.borrar(scanner.nextLine());
-    }
-
-    private static void verPaciente(String[] command) throws Exception{
-        System.out.println(Paciente.ver(scanner.nextLine()));
-    }
-
-    private static void verMedicion(String[] command) throws Exception {
-        System.out.println("Hola");
-        System.out.println(Paciente.get(scanner.nextLine()).verMedicion(scanner.nextLine()));
-    }
-
-    private static void verTipoEjercicio(String[] command) throws Exception {
-        System.out.println(TipoEjercicio.ver(scanner.nextLine()));
-    }
-
-    private static void verPrograma(String[] command) throws Exception {
-        System.out.println(Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().toString());
-    }
-
-    private static void verDia(String[] command) throws Exception {
-        System.out.println(Paciente.get(scanner.nextLine()).getProgramaEntrenamiento().getDia(getInt()));
-    }
-
-    private static void verMaquina(String[] command) throws Exception {
-        System.out.println(Maquina.ver(scanner.nextLine())); 
-    }
-
     private static void agregarPaciente(String numeroCedula, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
         Cedula cedula = new Cedula(numeroCedula);
         if(pacientes.containsKey(cedula))

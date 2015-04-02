@@ -2,16 +2,38 @@ package proyectofitness;
 
 import java.util.HashMap;
 
-/**
- *
- * @author callow
- */
 public class Medicion {
 
     private final String unidadMedida;
     private double valor;
-    public static final HashMap<String, String> unidades = new HashMap(){
-        {
+    public static final HashMap<String, String> unidades = new HashMap();
+
+    public Medicion(String nombre, double valor) throws Exception {
+        if(unidades.size() == 0)
+            llenarUnidades();
+        this.unidadMedida = unidades.get(nombre);
+        if(unidadMedida == null)
+            throw new Exception("Nombre de medicion no es valido.");
+        this.valor = valor;
+    }
+
+    public String getUnidadMedida() {
+        return unidadMedida;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(int valor) {
+        this.valor = valor;
+    }
+
+    public String toString(){
+        return valor + " " + unidadMedida;
+    }
+
+    private void llenarUnidades() {
         unidades.put("Estatura", "metros");
         unidades.put("Peso", "kilogramos");
         unidades.put("Pliegues Triceps", "milimetros");
@@ -36,30 +58,5 @@ public class Medicion {
         unidades.put("Frecuencia Cardiaca", "Latidos por minuto");
         unidades.put("Presion Arterial Sistolica", "mm de mercurio");
         unidades.put("Presion Arterial Diastolica", "mm de mercurio");
-
-        }
-    };
-
-    public Medicion(String nombre, double valor) throws Exception {
-        this.unidadMedida = unidades.get(nombre);
-        if(unidadMedida == null)
-            throw new Exception("Nombre de medicion no es valido.");
-        this.valor = valor;
-    }
-
-    public String getUnidadMedida() {
-        return unidadMedida;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
-
-    public String toString(){
-        return valor + " " + unidadMedida;
     }
 }

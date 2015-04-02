@@ -90,12 +90,15 @@ public class Paciente {
     }
 
     public void agregarMedicion(String nombre, double valor) throws Exception{
-        System.out.println(nombre + " " + valor);
+        if(mediciones.containsKey(nombre))
+            throw new Exception("El nombre ya corresponde a medida registrada.");
         Medicion medicion = new Medicion(nombre, valor); 
-        //mediciones.put(nombre, medicion);
+        mediciones.put(nombre, medicion);
     }
 
-    public void borrarMedicion(String nombre) {
+    public void borrarMedicion(String nombre) throws Exception {
+        if(!mediciones.containsKey(nombre))
+            throw new Exception("Medicion a borrar no existe.");
         mediciones.remove(nombre);
     }
 
@@ -109,7 +112,7 @@ public class Paciente {
         if(nombre.equals("")) {
             String result = "";
             for (HashMap.Entry<String, Medicion> entrada : mediciones.entrySet())
-                result +=  entrada.getKey() + ": " + entrada.getValue();
+                result +=  entrada.getKey() + ": " + entrada.getValue() + "\n";
             return result;
         }
         else {

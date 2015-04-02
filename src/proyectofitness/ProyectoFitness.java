@@ -249,7 +249,7 @@ public class ProyectoFitness {
     }
 
     private static void viewMeasurement(String[] command) throws Exception {
-        Paciente.get(scanner.nextLine()).verMedicion(scanner.nextLine());
+        System.out.println(Paciente.get(scanner.nextLine()).verMedicion(scanner.nextLine()));
     }
 
     private static void viewExercise(String[] command) throws Exception {

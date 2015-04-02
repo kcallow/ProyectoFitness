@@ -6,7 +6,6 @@
 package proyectofitness;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 /**
@@ -34,6 +33,14 @@ public class ProgramaEntrenamiento {
         if(i > dias.size())
             throw new Exception("El dia no existe");
         return dias.get(i);
+    }
+
+    public LocalDate getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDate fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
     }
       
     

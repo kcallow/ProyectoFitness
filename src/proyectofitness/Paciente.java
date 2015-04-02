@@ -91,7 +91,7 @@ public class Paciente {
 
     public void agregarMedicion(String nombre, double valor) throws Exception{
         System.out.println(nombre + " " + valor);
-        //Medicion medicion = new Medicion(nombre, valor); 
+        Medicion medicion = new Medicion(nombre, valor); 
         //mediciones.put(nombre, medicion);
     }
 

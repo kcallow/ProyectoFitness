@@ -1,10 +1,13 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor
+ * and open the template in the editor.
  */
 package proyectofitness;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,18 +21,20 @@ public class Paciente {
     
     private ProgramaEntrenamiento programaEntrenamiento;
     
-    private String nombre, sexo, fechaDeNacimiento;
+    private String nombre, sexo;
+    private LocalDate fechaDeNacimiento;
     private Telefono telefono;
     private Correo correo;
     private Cedula cedula;
     
-    private Paciente(Cedula cedula, String nombre, String sexo, String fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception{
+    private Paciente(Cedula cedula, String nombre, String sexo, LocalDate fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception{
         this.nombre = nombre;
         this.cedula = cedula;
         setSexo(sexo);
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.telefono = telefono;
         this.correo = correo;
+        
     }
     
     private Paciente(Cedula cedula){
@@ -37,7 +42,7 @@ public class Paciente {
     }
     
     
-    public static void agregar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
+    public static void agregar(String cedula, String nombre, String sexo, LocalDate fechaDeNacimiento, String telefono, String correo) throws Exception {
         Paciente nuevoPaciente = new Paciente(new Cedula(cedula), nombre, sexo, fechaDeNacimiento, new Telefono(telefono), new Correo(correo));
         if(pacientes.contains(nuevoPaciente))
             throw new Exception("Ya existe un paciente con esta cedula.  No agregado.");
@@ -78,7 +83,7 @@ public class Paciente {
         throw new Exception("El paciente no existe.");
     }
     
-    public static void modificar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
+    public static void modificar(String cedula, String nombre, String sexo, LocalDate fechaDeNacimiento, String telefono, String correo) throws Exception {
         try {
             borrar(cedula);
             agregar(nombre, sexo, cedula, fechaDeNacimiento,  telefono, correo);
@@ -86,6 +91,7 @@ public class Paciente {
             throw ex;
         }
     }
+
 
     public void agregarMedicion(String nombre, double valor) throws Exception{
         mediciones.put(nombre, new Medicion(nombre, valor)); 
@@ -114,6 +120,7 @@ public class Paciente {
     public static ArrayList<Paciente> getPacientes() {
         return pacientes;
     }
+
 
     public ProgramaEntrenamiento getProgramaEntrenamiento() {
         return programaEntrenamiento;
@@ -149,11 +156,11 @@ public class Paciente {
         this.cedula = new Cedula(cedula);
     }
 
-    public String getFechaDeNacimiento() {
+    public LocalDate getFechaDeNacimiento() {
         return fechaDeNacimiento;
     }
 
-    public void setFechaDeNacimiento(String fechaDeNacimiento) {
+    public void setFechaDeNacimiento(LocalDate fechaDeNacimiento) {
         this.fechaDeNacimiento = fechaDeNacimiento;
     }
 

@@ -107,7 +107,7 @@
             <Property name="text" type="java.lang.String" value="Archivo"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="mbSalir">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Salir"/>
               </Properties>
@@ -124,22 +124,22 @@
                 <Property name="text" type="java.lang.String" value="Agregar"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
+                <MenuItem class="javax.swing.JMenuItem" name="mbAddPaciente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Paciente"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
+                <MenuItem class="javax.swing.JMenuItem" name="mbAddMedicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Medici&#xf3;n"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem15">
+                <MenuItem class="javax.swing.JMenuItem" name="mbAddEjercicio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Tipo de ejercicio"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
+                <MenuItem class="javax.swing.JMenuItem" name="mbAddMaquina">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="M&#xe1;quina"/>
                   </Properties>
@@ -149,17 +149,17 @@
                     <Property name="text" type="java.lang.String" value="Programa"/>
                   </Properties>
                   <SubComponents>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbAddPrograma">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Programa de entrenamiento"/>
                       </Properties>
                     </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem20">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbAddDiaPrograma">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="D&#xed;a"/>
                       </Properties>
                     </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbAddEjercicioPrograma">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Ejercicio"/>
                       </Properties>
@@ -173,27 +173,27 @@
                 <Property name="text" type="java.lang.String" value="Modificar"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+                <MenuItem class="javax.swing.JMenuItem" name="mbEditPaciente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Paciente"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem21">
+                <MenuItem class="javax.swing.JMenuItem" name="mbEditMedicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Medici&#xf3;n"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem22">
+                <MenuItem class="javax.swing.JMenuItem" name="mbEditEjercicio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Tipo de ejercicio"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem23">
+                <MenuItem class="javax.swing.JMenuItem" name="mbEditMaquina">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="M&#xe1;quina"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem26">
+                <MenuItem class="javax.swing.JMenuItem" name="mbEjercicioPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ejercicio del programa"/>
                   </Properties>
@@ -210,12 +210,12 @@
                     <Property name="text" type="java.lang.String" value="Paciente"/>
                   </Properties>
                   <SubComponents>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem34">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbVerPaciente">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Paciente"/>
                       </Properties>
                     </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem35">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbVerListaPacientes">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Listado de pacientes"/>
                       </Properties>
@@ -227,29 +227,29 @@
                     <Property name="text" type="java.lang.String" value="Mediciones"/>
                   </Properties>
                   <SubComponents>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem28">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbVerMedicion">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Medici&#xf3;n"/>
                       </Properties>
                     </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem36">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbVerListaMediciones">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Listado de mediciones"/>
                       </Properties>
                     </MenuItem>
                   </SubComponents>
                 </Menu>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem29">
+                <MenuItem class="javax.swing.JMenuItem" name="mbVerEjercicio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Tipos de ejercicio"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem31">
+                <MenuItem class="javax.swing.JMenuItem" name="mbVerMaquinas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="M&#xe1;quinas"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem33">
+                <MenuItem class="javax.swing.JMenuItem" name="mbVerPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Programa de entrenamiento"/>
                   </Properties>
@@ -261,22 +261,22 @@
                 <Property name="text" type="java.lang.String" value="Borrar"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem37">
+                <MenuItem class="javax.swing.JMenuItem" name="mbDelPaciente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Paciente"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem40">
+                <MenuItem class="javax.swing.JMenuItem" name="mbDelMedicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Medici&#xf3;n"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem39">
+                <MenuItem class="javax.swing.JMenuItem" name="mbDelEjercicio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Tipo de ejercicio"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem38">
+                <MenuItem class="javax.swing.JMenuItem" name="mbDelMaquina">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="M&#xe1;quina"/>
                   </Properties>
@@ -286,12 +286,12 @@
                     <Property name="text" type="java.lang.String" value="Programas"/>
                   </Properties>
                   <SubComponents>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem41">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbDelPrograma">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Programa de entrenamiento"/>
                       </Properties>
                     </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMenuItem42">
+                    <MenuItem class="javax.swing.JMenuItem" name="mbDelEjercicioPrograma">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Borrar ejercicio"/>
                       </Properties>
@@ -307,7 +307,7 @@
             <Property name="text" type="java.lang.String" value="Ayuda"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem43">
+            <MenuItem class="javax.swing.JMenuItem" name="manualUsuario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Manual de usuario"/>
               </Properties>
@@ -507,11 +507,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton3" max="32767" attributes="0"/>
-                              <Component id="jButton4" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jButton5" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jButton6" max="32767" attributes="0"/>
-                              <Component id="jButton7" alignment="0" pref="231" max="32767" attributes="0"/>
+                              <Component id="addPaciente" max="32767" attributes="0"/>
+                              <Component id="editPaciente" alignment="0" max="32767" attributes="0"/>
+                              <Component id="delPaciente" alignment="0" max="32767" attributes="0"/>
+                              <Component id="verPaciente" max="32767" attributes="0"/>
+                              <Component id="verListaPacientes" alignment="0" pref="231" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -521,42 +521,45 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addPaciente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                          <Component id="editPaciente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                          <Component id="delPaciente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                          <Component id="verPaciente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                          <Component id="verListaPacientes" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="127" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="addPaciente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agregar Paciente"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPacienteActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton4">
+                <Component class="javax.swing.JButton" name="editPaciente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar Paciente"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton5">
+                <Component class="javax.swing.JButton" name="delPaciente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar Paciente"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton6">
+                <Component class="javax.swing.JButton" name="verPaciente">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Paciente"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton7">
+                <Component class="javax.swing.JButton" name="verListaPacientes">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Listado de Pacientes"/>
                   </Properties>
@@ -610,11 +613,11 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton12" linkSize="8" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
-                              <Component id="jButton11" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton10" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton9" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton8" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addMedicion" linkSize="8" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
+                              <Component id="editMedicion" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="delMedicion" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="verMedicion" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="verListaMedicion" linkSize="8" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -624,42 +627,42 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton12" min="-2" max="-2" attributes="0"/>
+                          <Component id="addMedicion" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton11" min="-2" max="-2" attributes="0"/>
+                          <Component id="editMedicion" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton10" min="-2" max="-2" attributes="0"/>
+                          <Component id="delMedicion" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton9" min="-2" max="-2" attributes="0"/>
+                          <Component id="verMedicion" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton8" min="-2" max="-2" attributes="0"/>
+                          <Component id="verListaMedicion" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="127" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton8">
+                <Component class="javax.swing.JButton" name="verListaMedicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Listado de Mediciones"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton9">
+                <Component class="javax.swing.JButton" name="verMedicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Medici&#xf3;n"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton10">
+                <Component class="javax.swing.JButton" name="delMedicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar Medici&#xf3;n"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton11">
+                <Component class="javax.swing.JButton" name="editMedicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar Medici&#xf3;n"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton12">
+                <Component class="javax.swing.JButton" name="addMedicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agregar Medici&#xf3;n"/>
                   </Properties>
@@ -713,10 +716,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton17" linkSize="7" min="-2" pref="228" max="-2" attributes="0"/>
-                              <Component id="jButton16" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton15" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton14" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addEjercicio" linkSize="7" min="-2" pref="228" max="-2" attributes="0"/>
+                              <Component id="editEjercicio" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="delEjercicio" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="verEjercicio" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="9" max="32767" attributes="0"/>
                       </Group>
@@ -726,35 +729,35 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton17" min="-2" max="-2" attributes="0"/>
+                          <Component id="addEjercicio" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton16" min="-2" max="-2" attributes="0"/>
+                          <Component id="editEjercicio" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton15" min="-2" max="-2" attributes="0"/>
+                          <Component id="delEjercicio" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton14" min="-2" max="-2" attributes="0"/>
+                          <Component id="verEjercicio" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="169" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton17">
+                <Component class="javax.swing.JButton" name="addEjercicio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agregar Ejercicio"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton16">
+                <Component class="javax.swing.JButton" name="editEjercicio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar Ejercicio"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton15">
+                <Component class="javax.swing.JButton" name="delEjercicio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar Ejercicio"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton14">
+                <Component class="javax.swing.JButton" name="verEjercicio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Ejercicios"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -809,10 +812,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton22" linkSize="6" min="-2" pref="228" max="-2" attributes="0"/>
-                              <Component id="jButton21" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton20" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton18" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addMaquina" linkSize="6" min="-2" pref="228" max="-2" attributes="0"/>
+                              <Component id="editMaquina" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="delMaquina" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="verMaquinas" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="9" max="32767" attributes="0"/>
                       </Group>
@@ -822,35 +825,35 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton22" min="-2" max="-2" attributes="0"/>
+                          <Component id="addMaquina" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton21" min="-2" max="-2" attributes="0"/>
+                          <Component id="editMaquina" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton20" min="-2" max="-2" attributes="0"/>
+                          <Component id="delMaquina" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton18" min="-2" max="-2" attributes="0"/>
+                          <Component id="verMaquinas" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="169" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton22">
+                <Component class="javax.swing.JButton" name="addMaquina">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agregar M&#xe1;quina"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton21">
+                <Component class="javax.swing.JButton" name="editMaquina">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar M&#xe1;quina"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton20">
+                <Component class="javax.swing.JButton" name="delMaquina">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar M&#xe1;quina"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton18">
+                <Component class="javax.swing.JButton" name="verMaquinas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Listado de M&#xe1;quinas"/>
                   </Properties>
@@ -904,13 +907,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton1" linkSize="10" min="-2" pref="228" max="-2" attributes="0"/>
-                              <Component id="jButton2" linkSize="10" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="jButton19" linkSize="10" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                              <Component id="jButton26" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jButton25" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jButton24" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jButton23" linkSize="10" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
+                              <Component id="addPrograma" linkSize="10" min="-2" pref="228" max="-2" attributes="0"/>
+                              <Component id="delPrograma" linkSize="10" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="verPrograma" linkSize="10" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                              <Component id="addEjercicioPrograma" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="addDiaPrograma" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="editEjercicioPrograma" linkSize="10" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="delEjercicioPrograma" linkSize="10" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="9" max="32767" attributes="0"/>
                       </Group>
@@ -919,59 +922,59 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="addPrograma" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="delPrograma" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton19" min="-2" max="-2" attributes="0"/>
+                          <Component id="verPrograma" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton23" min="-2" max="-2" attributes="0"/>
+                          <Component id="delEjercicioPrograma" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton24" min="-2" max="-2" attributes="0"/>
+                          <Component id="editEjercicioPrograma" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton25" min="-2" max="-2" attributes="0"/>
+                          <Component id="addDiaPrograma" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton26" min="-2" max="-2" attributes="0"/>
+                          <Component id="addEjercicioPrograma" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="49" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="addPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agregar Programa de Entrenamiento"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="delPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar Programa de Entrenamiento"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delProgramaActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton19">
+                <Component class="javax.swing.JButton" name="verPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Programa de Entrenamiento"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton23">
+                <Component class="javax.swing.JButton" name="delEjercicioPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar Ejercicio del Programa"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton24">
+                <Component class="javax.swing.JButton" name="editEjercicioPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar Ejercicio del Programa"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton25">
+                <Component class="javax.swing.JButton" name="addDiaPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agregar D&#xed;a al Programa"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton26">
+                <Component class="javax.swing.JButton" name="addEjercicioPrograma">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agregar Ejercicio al Programa"/>
                   </Properties>

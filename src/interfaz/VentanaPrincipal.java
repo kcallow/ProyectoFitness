@@ -52,80 +52,80 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        addPaciente = new javax.swing.JButton();
+        editPaciente = new javax.swing.JButton();
+        delPaciente = new javax.swing.JButton();
+        verPaciente = new javax.swing.JButton();
+        verListaPacientes = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        verListaMedicion = new javax.swing.JButton();
+        verMedicion = new javax.swing.JButton();
+        delMedicion = new javax.swing.JButton();
+        editMedicion = new javax.swing.JButton();
+        addMedicion = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jButton17 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        addEjercicio = new javax.swing.JButton();
+        editEjercicio = new javax.swing.JButton();
+        delEjercicio = new javax.swing.JButton();
+        verEjercicio = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
-        jButton22 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
+        addMaquina = new javax.swing.JButton();
+        editMaquina = new javax.swing.JButton();
+        delMaquina = new javax.swing.JButton();
+        verMaquinas = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
+        addPrograma = new javax.swing.JButton();
+        delPrograma = new javax.swing.JButton();
+        verPrograma = new javax.swing.JButton();
+        delEjercicioPrograma = new javax.swing.JButton();
+        editEjercicioPrograma = new javax.swing.JButton();
+        addDiaPrograma = new javax.swing.JButton();
+        addEjercicioPrograma = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        mbSalir = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
         jMenu10 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem16 = new javax.swing.JMenuItem();
-        jMenuItem15 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        mbAddPaciente = new javax.swing.JMenuItem();
+        mbAddMedicion = new javax.swing.JMenuItem();
+        mbAddEjercicio = new javax.swing.JMenuItem();
+        mbAddMaquina = new javax.swing.JMenuItem();
         jMenu15 = new javax.swing.JMenu();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem20 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        mbAddPrograma = new javax.swing.JMenuItem();
+        mbAddDiaPrograma = new javax.swing.JMenuItem();
+        mbAddEjercicioPrograma = new javax.swing.JMenuItem();
         jMenu12 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem21 = new javax.swing.JMenuItem();
-        jMenuItem22 = new javax.swing.JMenuItem();
-        jMenuItem23 = new javax.swing.JMenuItem();
-        jMenuItem26 = new javax.swing.JMenuItem();
+        mbEditPaciente = new javax.swing.JMenuItem();
+        mbEditMedicion = new javax.swing.JMenuItem();
+        mbEditEjercicio = new javax.swing.JMenuItem();
+        mbEditMaquina = new javax.swing.JMenuItem();
+        mbEjercicioPrograma = new javax.swing.JMenuItem();
         jMenu13 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem34 = new javax.swing.JMenuItem();
-        jMenuItem35 = new javax.swing.JMenuItem();
+        mbVerPaciente = new javax.swing.JMenuItem();
+        mbVerListaPacientes = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem28 = new javax.swing.JMenuItem();
-        jMenuItem36 = new javax.swing.JMenuItem();
-        jMenuItem29 = new javax.swing.JMenuItem();
-        jMenuItem31 = new javax.swing.JMenuItem();
-        jMenuItem33 = new javax.swing.JMenuItem();
+        mbVerMedicion = new javax.swing.JMenuItem();
+        mbVerListaMediciones = new javax.swing.JMenuItem();
+        mbVerEjercicio = new javax.swing.JMenuItem();
+        mbVerMaquinas = new javax.swing.JMenuItem();
+        mbVerPrograma = new javax.swing.JMenuItem();
         jMenu11 = new javax.swing.JMenu();
-        jMenuItem37 = new javax.swing.JMenuItem();
-        jMenuItem40 = new javax.swing.JMenuItem();
-        jMenuItem39 = new javax.swing.JMenuItem();
-        jMenuItem38 = new javax.swing.JMenuItem();
+        mbDelPaciente = new javax.swing.JMenuItem();
+        mbDelMedicion = new javax.swing.JMenuItem();
+        mbDelEjercicio = new javax.swing.JMenuItem();
+        mbDelMaquina = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem41 = new javax.swing.JMenuItem();
-        jMenuItem42 = new javax.swing.JMenuItem();
+        mbDelPrograma = new javax.swing.JMenuItem();
+        mbDelEjercicioPrograma = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
-        jMenuItem43 = new javax.swing.JMenuItem();
+        manualUsuario = new javax.swing.JMenuItem();
 
         jMenuItem3.setText("jMenuItem3");
 
@@ -195,15 +195,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Paciente"));
 
-        jButton3.setText("Agregar Paciente");
+        addPaciente.setText("Agregar Paciente");
+        addPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPacienteActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Modificar Paciente");
+        editPaciente.setText("Modificar Paciente");
 
-        jButton5.setText("Borrar Paciente");
+        delPaciente.setText("Borrar Paciente");
 
-        jButton6.setText("Ver Paciente");
+        verPaciente.setText("Ver Paciente");
 
-        jButton7.setText("Ver Listado de Pacientes");
+        verListaPacientes.setText("Ver Listado de Pacientes");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -212,26 +217,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE))
+                    .addComponent(addPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(editPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(delPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(verPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(verListaPacientes, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3)
+                .addComponent(addPaciente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(editPaciente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
+                .addComponent(delPaciente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6)
+                .addComponent(verPaciente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7)
+                .addComponent(verListaPacientes)
                 .addContainerGap(127, Short.MAX_VALUE))
         );
 
@@ -256,15 +261,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Medición"));
 
-        jButton8.setText("Ver Listado de Mediciones");
+        verListaMedicion.setText("Ver Listado de Mediciones");
 
-        jButton9.setText("Ver Medición");
+        verMedicion.setText("Ver Medición");
 
-        jButton10.setText("Borrar Medición");
+        delMedicion.setText("Borrar Medición");
 
-        jButton11.setText("Modificar Medición");
+        editMedicion.setText("Modificar Medición");
 
-        jButton12.setText("Agregar Medición");
+        addMedicion.setText("Agregar Medición");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -273,29 +278,29 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton11)
-                    .addComponent(jButton10)
-                    .addComponent(jButton9)
-                    .addComponent(jButton8))
+                    .addComponent(addMedicion, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editMedicion)
+                    .addComponent(delMedicion)
+                    .addComponent(verMedicion)
+                    .addComponent(verListaMedicion))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel9Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton10, jButton11, jButton12, jButton8, jButton9});
+        jPanel9Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addMedicion, delMedicion, editMedicion, verListaMedicion, verMedicion});
 
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton12)
+                .addComponent(addMedicion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton11)
+                .addComponent(editMedicion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10)
+                .addComponent(delMedicion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9)
+                .addComponent(verMedicion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8)
+                .addComponent(verListaMedicion)
                 .addContainerGap(127, Short.MAX_VALUE))
         );
 
@@ -320,14 +325,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipos de ejercicio"));
 
-        jButton17.setText("Agregar Ejercicio");
+        addEjercicio.setText("Agregar Ejercicio");
 
-        jButton16.setText("Modificar Ejercicio");
+        editEjercicio.setText("Modificar Ejercicio");
 
-        jButton15.setText("Borrar Ejercicio");
+        delEjercicio.setText("Borrar Ejercicio");
 
-        jButton14.setText("Ver Ejercicios");
-        jButton14.setToolTipText("");
+        verEjercicio.setText("Ver Ejercicios");
+        verEjercicio.setToolTipText("");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -336,26 +341,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton16)
-                    .addComponent(jButton15)
-                    .addComponent(jButton14))
+                    .addComponent(addEjercicio, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editEjercicio)
+                    .addComponent(delEjercicio)
+                    .addComponent(verEjercicio))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        jPanel7Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton14, jButton15, jButton16, jButton17});
+        jPanel7Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addEjercicio, delEjercicio, editEjercicio, verEjercicio});
 
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton17)
+                .addComponent(addEjercicio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton16)
+                .addComponent(editEjercicio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton15)
+                .addComponent(delEjercicio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton14)
+                .addComponent(verEjercicio)
                 .addContainerGap(169, Short.MAX_VALUE))
         );
 
@@ -380,13 +385,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Máquina"));
 
-        jButton22.setText("Agregar Máquina");
+        addMaquina.setText("Agregar Máquina");
 
-        jButton21.setText("Modificar Máquina");
+        editMaquina.setText("Modificar Máquina");
 
-        jButton20.setText("Borrar Máquina");
+        delMaquina.setText("Borrar Máquina");
 
-        jButton18.setText("Ver Listado de Máquinas");
+        verMaquinas.setText("Ver Listado de Máquinas");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -395,26 +400,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton21)
-                    .addComponent(jButton20)
-                    .addComponent(jButton18))
+                    .addComponent(addMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editMaquina)
+                    .addComponent(delMaquina)
+                    .addComponent(verMaquinas))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        jPanel10Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton18, jButton20, jButton21, jButton22});
+        jPanel10Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addMaquina, delMaquina, editMaquina, verMaquinas});
 
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton22)
+                .addComponent(addMaquina)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton21)
+                .addComponent(editMaquina)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton20)
+                .addComponent(delMaquina)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton18)
+                .addComponent(verMaquinas)
                 .addContainerGap(169, Short.MAX_VALUE))
         );
 
@@ -439,24 +444,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder("Programa de entrenamiento"));
 
-        jButton1.setText("Agregar Programa de Entrenamiento");
+        addPrograma.setText("Agregar Programa de Entrenamiento");
 
-        jButton2.setText("Borrar Programa de Entrenamiento");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        delPrograma.setText("Borrar Programa de Entrenamiento");
+        delPrograma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                delProgramaActionPerformed(evt);
             }
         });
 
-        jButton19.setText("Ver Programa de Entrenamiento");
+        verPrograma.setText("Ver Programa de Entrenamiento");
 
-        jButton23.setText("Borrar Ejercicio del Programa");
+        delEjercicioPrograma.setText("Borrar Ejercicio del Programa");
 
-        jButton24.setText("Modificar Ejercicio del Programa");
+        editEjercicioPrograma.setText("Modificar Ejercicio del Programa");
 
-        jButton25.setText("Agregar Día al Programa");
+        addDiaPrograma.setText("Agregar Día al Programa");
 
-        jButton26.setText("Agregar Ejercicio al Programa");
+        addEjercicioPrograma.setText("Agregar Ejercicio al Programa");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -465,34 +470,34 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(addPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(verPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addEjercicioPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(addDiaPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(editEjercicioPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(delEjercicioPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        jPanel11Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton19, jButton2, jButton23, jButton24, jButton25, jButton26});
+        jPanel11Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addDiaPrograma, addEjercicioPrograma, addPrograma, delEjercicioPrograma, delPrograma, editEjercicioPrograma, verPrograma});
 
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addComponent(addPrograma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(delPrograma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton19)
+                .addComponent(verPrograma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton23)
+                .addComponent(delEjercicioPrograma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton24)
+                .addComponent(editEjercicioPrograma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton25)
+                .addComponent(addDiaPrograma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton26)
+                .addComponent(addEjercicioPrograma)
                 .addGap(0, 49, Short.MAX_VALUE))
         );
 
@@ -536,8 +541,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenu1.setText("Archivo");
 
-        jMenuItem1.setText("Salir");
-        jMenu1.add(jMenuItem1);
+        mbSalir.setText("Salir");
+        jMenu1.add(mbSalir);
 
         jMenuBar1.add(jMenu1);
 
@@ -545,28 +550,28 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenu10.setText("Agregar");
 
-        jMenuItem6.setText("Paciente");
-        jMenu10.add(jMenuItem6);
+        mbAddPaciente.setText("Paciente");
+        jMenu10.add(mbAddPaciente);
 
-        jMenuItem16.setText("Medición");
-        jMenu10.add(jMenuItem16);
+        mbAddMedicion.setText("Medición");
+        jMenu10.add(mbAddMedicion);
 
-        jMenuItem15.setText("Tipo de ejercicio");
-        jMenu10.add(jMenuItem15);
+        mbAddEjercicio.setText("Tipo de ejercicio");
+        jMenu10.add(mbAddEjercicio);
 
-        jMenuItem14.setText("Máquina");
-        jMenu10.add(jMenuItem14);
+        mbAddMaquina.setText("Máquina");
+        jMenu10.add(mbAddMaquina);
 
         jMenu15.setText("Programa");
 
-        jMenuItem13.setText("Programa de entrenamiento");
-        jMenu15.add(jMenuItem13);
+        mbAddPrograma.setText("Programa de entrenamiento");
+        jMenu15.add(mbAddPrograma);
 
-        jMenuItem20.setText("Día");
-        jMenu15.add(jMenuItem20);
+        mbAddDiaPrograma.setText("Día");
+        jMenu15.add(mbAddDiaPrograma);
 
-        jMenuItem7.setText("Ejercicio");
-        jMenu15.add(jMenuItem7);
+        mbAddEjercicioPrograma.setText("Ejercicio");
+        jMenu15.add(mbAddEjercicioPrograma);
 
         jMenu10.add(jMenu15);
 
@@ -574,20 +579,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenu12.setText("Modificar");
 
-        jMenuItem2.setText("Paciente");
-        jMenu12.add(jMenuItem2);
+        mbEditPaciente.setText("Paciente");
+        jMenu12.add(mbEditPaciente);
 
-        jMenuItem21.setText("Medición");
-        jMenu12.add(jMenuItem21);
+        mbEditMedicion.setText("Medición");
+        jMenu12.add(mbEditMedicion);
 
-        jMenuItem22.setText("Tipo de ejercicio");
-        jMenu12.add(jMenuItem22);
+        mbEditEjercicio.setText("Tipo de ejercicio");
+        jMenu12.add(mbEditEjercicio);
 
-        jMenuItem23.setText("Máquina");
-        jMenu12.add(jMenuItem23);
+        mbEditMaquina.setText("Máquina");
+        jMenu12.add(mbEditMaquina);
 
-        jMenuItem26.setText("Ejercicio del programa");
-        jMenu12.add(jMenuItem26);
+        mbEjercicioPrograma.setText("Ejercicio del programa");
+        jMenu12.add(mbEjercicioPrograma);
 
         jMenu8.add(jMenu12);
 
@@ -595,56 +600,56 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenu2.setText("Paciente");
 
-        jMenuItem34.setText("Paciente");
-        jMenu2.add(jMenuItem34);
+        mbVerPaciente.setText("Paciente");
+        jMenu2.add(mbVerPaciente);
 
-        jMenuItem35.setText("Listado de pacientes");
-        jMenu2.add(jMenuItem35);
+        mbVerListaPacientes.setText("Listado de pacientes");
+        jMenu2.add(mbVerListaPacientes);
 
         jMenu13.add(jMenu2);
 
         jMenu3.setText("Mediciones");
 
-        jMenuItem28.setText("Medición");
-        jMenu3.add(jMenuItem28);
+        mbVerMedicion.setText("Medición");
+        jMenu3.add(mbVerMedicion);
 
-        jMenuItem36.setText("Listado de mediciones");
-        jMenu3.add(jMenuItem36);
+        mbVerListaMediciones.setText("Listado de mediciones");
+        jMenu3.add(mbVerListaMediciones);
 
         jMenu13.add(jMenu3);
 
-        jMenuItem29.setText("Tipos de ejercicio");
-        jMenu13.add(jMenuItem29);
+        mbVerEjercicio.setText("Tipos de ejercicio");
+        jMenu13.add(mbVerEjercicio);
 
-        jMenuItem31.setText("Máquinas");
-        jMenu13.add(jMenuItem31);
+        mbVerMaquinas.setText("Máquinas");
+        jMenu13.add(mbVerMaquinas);
 
-        jMenuItem33.setText("Programa de entrenamiento");
-        jMenu13.add(jMenuItem33);
+        mbVerPrograma.setText("Programa de entrenamiento");
+        jMenu13.add(mbVerPrograma);
 
         jMenu8.add(jMenu13);
 
         jMenu11.setText("Borrar");
 
-        jMenuItem37.setText("Paciente");
-        jMenu11.add(jMenuItem37);
+        mbDelPaciente.setText("Paciente");
+        jMenu11.add(mbDelPaciente);
 
-        jMenuItem40.setText("Medición");
-        jMenu11.add(jMenuItem40);
+        mbDelMedicion.setText("Medición");
+        jMenu11.add(mbDelMedicion);
 
-        jMenuItem39.setText("Tipo de ejercicio");
-        jMenu11.add(jMenuItem39);
+        mbDelEjercicio.setText("Tipo de ejercicio");
+        jMenu11.add(mbDelEjercicio);
 
-        jMenuItem38.setText("Máquina");
-        jMenu11.add(jMenuItem38);
+        mbDelMaquina.setText("Máquina");
+        jMenu11.add(mbDelMaquina);
 
         jMenu4.setText("Programas");
 
-        jMenuItem41.setText("Programa de entrenamiento");
-        jMenu4.add(jMenuItem41);
+        mbDelPrograma.setText("Programa de entrenamiento");
+        jMenu4.add(mbDelPrograma);
 
-        jMenuItem42.setText("Borrar ejercicio");
-        jMenu4.add(jMenuItem42);
+        mbDelEjercicioPrograma.setText("Borrar ejercicio");
+        jMenu4.add(mbDelEjercicioPrograma);
 
         jMenu11.add(jMenu4);
 
@@ -654,8 +659,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenu7.setText("Ayuda");
 
-        jMenuItem43.setText("Manual de usuario");
-        jMenu7.add(jMenuItem43);
+        manualUsuario.setText("Manual de usuario");
+        jMenu7.add(manualUsuario);
 
         jMenuBar1.add(jMenu7);
 
@@ -694,9 +699,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void delProgramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delProgramaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_delProgramaActionPerformed
+
+    private void addPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addPacienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -734,31 +743,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton addDiaPrograma;
+    private javax.swing.JButton addEjercicio;
+    private javax.swing.JButton addEjercicioPrograma;
+    private javax.swing.JButton addMaquina;
+    private javax.swing.JButton addMedicion;
+    private javax.swing.JButton addPaciente;
+    private javax.swing.JButton addPrograma;
+    private javax.swing.JButton delEjercicio;
+    private javax.swing.JButton delEjercicioPrograma;
+    private javax.swing.JButton delMaquina;
+    private javax.swing.JButton delMedicion;
+    private javax.swing.JButton delPaciente;
+    private javax.swing.JButton delPrograma;
+    private javax.swing.JButton editEjercicio;
+    private javax.swing.JButton editEjercicioPrograma;
+    private javax.swing.JButton editMaquina;
+    private javax.swing.JButton editMedicion;
+    private javax.swing.JButton editPaciente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList jList1;
     private javax.swing.JMenu jMenu1;
@@ -775,47 +777,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem20;
-    private javax.swing.JMenuItem jMenuItem21;
-    private javax.swing.JMenuItem jMenuItem22;
-    private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem24;
     private javax.swing.JMenuItem jMenuItem25;
-    private javax.swing.JMenuItem jMenuItem26;
     private javax.swing.JMenuItem jMenuItem27;
-    private javax.swing.JMenuItem jMenuItem28;
-    private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem30;
-    private javax.swing.JMenuItem jMenuItem31;
     private javax.swing.JMenuItem jMenuItem32;
-    private javax.swing.JMenuItem jMenuItem33;
-    private javax.swing.JMenuItem jMenuItem34;
-    private javax.swing.JMenuItem jMenuItem35;
-    private javax.swing.JMenuItem jMenuItem36;
-    private javax.swing.JMenuItem jMenuItem37;
-    private javax.swing.JMenuItem jMenuItem38;
-    private javax.swing.JMenuItem jMenuItem39;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem40;
-    private javax.swing.JMenuItem jMenuItem41;
-    private javax.swing.JMenuItem jMenuItem42;
-    private javax.swing.JMenuItem jMenuItem43;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
@@ -832,6 +807,40 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JMenuItem manualUsuario;
+    private javax.swing.JMenuItem mbAddDiaPrograma;
+    private javax.swing.JMenuItem mbAddEjercicio;
+    private javax.swing.JMenuItem mbAddEjercicioPrograma;
+    private javax.swing.JMenuItem mbAddMaquina;
+    private javax.swing.JMenuItem mbAddMedicion;
+    private javax.swing.JMenuItem mbAddPaciente;
+    private javax.swing.JMenuItem mbAddPrograma;
+    private javax.swing.JMenuItem mbDelEjercicio;
+    private javax.swing.JMenuItem mbDelEjercicioPrograma;
+    private javax.swing.JMenuItem mbDelMaquina;
+    private javax.swing.JMenuItem mbDelMedicion;
+    private javax.swing.JMenuItem mbDelPaciente;
+    private javax.swing.JMenuItem mbDelPrograma;
+    private javax.swing.JMenuItem mbEditEjercicio;
+    private javax.swing.JMenuItem mbEditMaquina;
+    private javax.swing.JMenuItem mbEditMedicion;
+    private javax.swing.JMenuItem mbEditPaciente;
+    private javax.swing.JMenuItem mbEjercicioPrograma;
+    private javax.swing.JMenuItem mbSalir;
+    private javax.swing.JMenuItem mbVerEjercicio;
+    private javax.swing.JMenuItem mbVerListaMediciones;
+    private javax.swing.JMenuItem mbVerListaPacientes;
+    private javax.swing.JMenuItem mbVerMaquinas;
+    private javax.swing.JMenuItem mbVerMedicion;
+    private javax.swing.JMenuItem mbVerPaciente;
+    private javax.swing.JMenuItem mbVerPrograma;
+    private javax.swing.JButton verEjercicio;
+    private javax.swing.JButton verListaMedicion;
+    private javax.swing.JButton verListaPacientes;
+    private javax.swing.JButton verMaquinas;
+    private javax.swing.JButton verMedicion;
+    private javax.swing.JButton verPaciente;
+    private javax.swing.JButton verPrograma;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,20 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyectofitness;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- *
- * @author callow
- */
 public class Paciente {
     public static final ArrayList<Paciente> pacientes = new ArrayList();  
     private final HashMap<String, Medicion> mediciones = new HashMap();
@@ -42,8 +32,9 @@ public class Paciente {
     }
     
     
-    public static void agregar(String cedula, String nombre, String sexo, LocalDate fechaDeNacimiento, String telefono, String correo) throws Exception {
-        Paciente nuevoPaciente = new Paciente(new Cedula(cedula), nombre, sexo, fechaDeNacimiento, new Telefono(telefono), new Correo(correo));
+    public static void agregar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-uuuu");
+        Paciente nuevoPaciente = new Paciente(new Cedula(cedula), nombre, sexo, LocalDate.parse(fechaDeNacimiento, formatter), new Telefono(telefono), new Correo(correo));
         if(pacientes.contains(nuevoPaciente))
             throw new Exception("Ya existe un paciente con esta cedula.  No agregado.");
         else 
@@ -76,14 +67,13 @@ public class Paciente {
                 resultado += paciente + "\n";
             return resultado;
         }
-
-        for(Paciente paciente : pacientes)
-            if(paciente.getCedula().getCedula().equals(cedula))
-                return paciente.toString();
-        throw new Exception("El paciente no existe.");
+        Paciente paciente = get(cedula);
+        if(paciente == null)
+            throw new Exception("El paciente no existe.");
+        return paciente.toString();
     }
     
-    public static void modificar(String cedula, String nombre, String sexo, LocalDate fechaDeNacimiento, String telefono, String correo) throws Exception {
+    public static void modificar(String cedula, String nombre, String sexo, String fechaDeNacimiento, String telefono, String correo) throws Exception {
         try {
             borrar(cedula);
             agregar(nombre, sexo, cedula, fechaDeNacimiento,  telefono, correo);
@@ -92,6 +82,12 @@ public class Paciente {
         }
     }
 
+    public static Paciente get(String cedula) {
+        for(Paciente paciente : pacientes)
+            if(paciente.getCedula().getCedula().equals(cedula))
+                return paciente;
+        return null;
+    }
 
     public void agregarMedicion(String nombre, double valor) throws Exception{
         mediciones.put(nombre, new Medicion(nombre, valor)); 
@@ -102,18 +98,23 @@ public class Paciente {
     }
 
     public void modificarMedicion(String nombre, double valor) throws Exception {
-        borrarMedicion(nombre);
+        if(!mediciones.containsKey(nombre))
+            throw new Exception("El nombre no corresponde a ninguna medida registrada.");
         agregarMedicion(nombre, valor);
     }
 
-    public String verMedicion(String nombre) {
+    public String verMedicion(String nombre) throws Exception {
         if(nombre.equals("")) {
             String result = "";
             for (HashMap.Entry<String, Medicion> entrada : mediciones.entrySet())
                 result +=  entrada.getKey() + ": " + entrada.getValue();
             return result;
         }
-        else return mediciones.get(nombre).toString();
+        else {
+            if(mediciones.get(nombre) == null)
+                throw new Exception ("No existe medicion con este nombre...");
+            return mediciones.get(nombre).toString();
+        }
     }
 
     public static ArrayList<Paciente> getPacientes() {

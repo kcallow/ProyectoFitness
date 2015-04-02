@@ -167,8 +167,9 @@ public class ProyectoFitness {
         Paciente.agregar(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextLine());
     }
 
-    private static void addMeasurement(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void addMeasurement(String[] command) throws Exception {
+        Paciente.get(scanner.nextLine()).agregarMedicion(scanner.nextLine(), scanner.nextDouble());
+        scanner.nextLine();
     }
 
     private static void addExercise(String[] command) throws Exception {
@@ -199,8 +200,9 @@ public class ProyectoFitness {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void modifyMeasurement(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void modifyMeasurement(String[] command) throws Exception {
+        Paciente.get(scanner.nextLine()).modificarMedicion(scanner.nextLine(), scanner.nextDouble());
+        scanner.nextLine();
     }
 
     private static void modifyExercise(String[] command) throws Exception {
@@ -216,7 +218,7 @@ public class ProyectoFitness {
     }
 
     private static void removeMeasurement(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Paciente.get(scanner.nextLine()).borrarMedicion(scanner.nextLine());
     }
 
     private static void removeExercise(String[] command) throws Exception {
@@ -243,8 +245,8 @@ public class ProyectoFitness {
         System.out.println(Paciente.ver(scanner.nextLine()));
     }
 
-    private static void viewMeasurement(String[] command) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static void viewMeasurement(String[] command) throws Exception {
+        Paciente.get(scanner.nextLine()).verMedicion(scanner.nextLine());
     }
 
     private static void viewExercise(String[] command) throws Exception {

@@ -108,6 +108,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setPreferredSize(new java.awt.Dimension(800, 600));
+        setResizable(false);
 
         jPanel12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 

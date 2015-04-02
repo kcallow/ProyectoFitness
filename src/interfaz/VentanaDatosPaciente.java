@@ -46,7 +46,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
         btnModificar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
+        listaVDP = new javax.swing.JList();
         btnVerMediciones = new javax.swing.JButton();
         btnProgramas = new javax.swing.JButton();
         btnAddMedicion = new javax.swing.JButton();
@@ -54,9 +54,11 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
         btnBorrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Datos del paciente");
         setBounds(new java.awt.Rectangle(0, 0, 669, 543));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(700, 600));
+        setResizable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos del paciente"));
 
@@ -107,12 +109,13 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
+        listaVDP.setBackground(new java.awt.Color(204, 204, 204));
+        listaVDP.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(listaVDP);
 
         btnVerMediciones.setText("Mediciones");
 
@@ -316,10 +319,10 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JList jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList listaVDP;
     private javax.swing.JRadioButton radioHombre;
     private javax.swing.JRadioButton radioMujer;
     private javax.swing.JTextField txtCedula;

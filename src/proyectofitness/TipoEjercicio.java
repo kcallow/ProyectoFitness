@@ -3,7 +3,7 @@ package proyectofitness;
 import java.util.ArrayList;
 
 public class TipoEjercicio {
-    private static final ArrayList<TipoEjercicio> tiposEjercicio = new ArrayList();
+    public static final ArrayList<TipoEjercicio> tiposEjercicio = new ArrayList();
     private String nombre, descripcion;
     private TipoMaquina maquina;
 

@@ -96,7 +96,8 @@ public class Paciente {
     }
 
     public void modificarMedicion(String nombre, double valor) throws Exception {
-        borrarMedicion(nombre);
+        if(!mediciones.containsKey(nombre))
+            throw new Exception("El nombre no corresponde a ninguna medida registrada.");
         agregarMedicion(nombre, valor);
     }
 

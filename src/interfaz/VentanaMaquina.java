@@ -5,6 +5,9 @@
  */
 package interfaz;
 
+import javax.swing.JOptionPane;
+import proyectofitness.ProyectoFitness;
+
 /**
  *
  * @author scsaenz
@@ -48,7 +51,6 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
         jLabel2.setText("Descripción:");
 
         txtNombreMaquina.setBackground(new java.awt.Color(204, 204, 204));
-        txtNombreMaquina.setEnabled(false);
 
         jScrollPane1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -56,7 +58,6 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         btnCancelar.setText("Cancelar");
@@ -163,7 +164,15 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     }//GEN-LAST:event_btnModificarVMActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
+        try {
+            ProyectoFitness.agregarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
+            VentanaPrincipal.llenarTabla();
+            clear();
+            dispose();
+            
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
@@ -207,6 +216,10 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
                 new VentanaMaquina().setVisible(true);
             }
         });
+    }
+    private void clear(){
+        txtNombreMaquina.setText("");
+        jTextArea1.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

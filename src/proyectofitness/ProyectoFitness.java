@@ -1,5 +1,6 @@
 package proyectofitness;
 
+import interfaz.VentanaPrincipal;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -15,18 +16,31 @@ public class ProyectoFitness {
     public static final TiposMedicion tiposMedicion = new TiposMedicion();
 
 	private static Scanner scanner = new Scanner(System.in);
+    private static final boolean TESTING = true; //Verdadero cuando probando, falso si en modo normal
+    public static String saveFile = "saveFile.txt";
 
     public static void cargarArchivo(String saveFile) throws Exception {
-        scanner = new Scanner(Paths.get(saveFile));
+        Scanner oldScanner = scanner; //Almacenar el valor anterior de scanner
+        scanner = new Scanner(Paths.get(saveFile)); //Poner scanner a leer archivo
         initShell();
+        scanner = oldScanner; //Restaurar valor de scanner
     }
     
     public static void guardarArchivo(String saveFile) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-	public static void main(String [] args){
-		initShell();
+	public static void main(String [] args) throws Exception{
+        if(TESTING)
+            initShell();
+        else {
+            cargarArchivo(saveFile);
+            VentanaPrincipal.main(args);
+            guardarArchivo(saveFile);
+            /*VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
+            ventanaPrincipal.setVisible(true);
+                    */
+        }
 	}
 
 	public static void initShell(){

@@ -1,13 +1,4 @@
-#Agregando tipos de ejercicio del sistema...
 #Agregando todas las maquinas al sistema...
-#Agregando maquina: ...
-agregar maquina
-
-
-#Agregando maquina: Levantamiento de talones peso libre...
-agregar maquina
-Levantamiento de talones peso libre
-very Fitness wOw
 #Agregando maquina: Extensiones de pierna...
 agregar maquina
 Extensiones de pierna
@@ -96,6 +87,10 @@ very Fitness wOw
 agregar maquina
 Remo bajo Isolateral
 very Fitness wOw
+#Agregando maquina: Fuckk...
+agregar maquina
+Fuckk
+This is  hooo   wwe  do
 #Agregando maquina: Prensa peso integrado...
 agregar maquina
 Prensa peso integrado
@@ -108,6 +103,10 @@ very Fitness wOw
 agregar maquina
 Prensa performance
 very Fitness wOw
+#Agregando maquina: LOL...
+agregar maquina
+LOL
+No
 #Agregando maquina: Mancuerna...
 agregar maquina
 Mancuerna
@@ -292,6 +291,10 @@ very Fitness wOw
 agregar maquina
 Triceps articulado
 very Fitness wOw
+#Agregando maquina: Mancuerna Cosi...
+agregar maquina
+Mancuerna Cosi
+Solo para los pacientes mas cosis
 #Agregando maquina: Banco inclinado olimpico...
 agregar maquina
 Banco inclinado olimpico
@@ -308,6 +311,13 @@ very Fitness wOw
 agregar maquina
 Combo Silla romana/hiperextensiones
 very Fitness wOw
+#Agregando tipos de ejercicio del sistema...
+#Agregando tipo de ejercicio: Saltar...
+agregar tipo-ejercicio
+Saltar
+Salta  salta   SALTA!!!
+Cuerda
+
 #Agregando a todos los pacientes...
 #Agregando paciente Kenneth Callow Monge, cedula 116210601...
 agregar paciente

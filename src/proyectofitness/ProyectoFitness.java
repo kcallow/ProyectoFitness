@@ -33,8 +33,8 @@ public class ProyectoFitness {
     public static void guardarArchivo(String saveFile) throws FileNotFoundException {
         System.out.println("Guardando datos...");
         //Obtiene los comandos para cargar los datos, y los guarda en un archivo
-        String comandosCargar = tiposEjercicio.toCommand() 
-                + maquinas.toCommand() 
+        String comandosCargar = maquinas.toCommand() 
+                + tiposEjercicio.toCommand() 
                 + pacientes.toCommand() 
                 + "salir";
         try (PrintWriter escritor = new PrintWriter(saveFile)) {
@@ -263,7 +263,7 @@ public class ProyectoFitness {
     public static void agregarMaquina(String nombre, String descripcion) throws Exception {
         if(maquinas.containsKey(nombre))
             throw new Exception("Nombre invalido para agregar maquina.");
-        maquinas.put(nombre, descripcion);
+        maquinas.put(nombre, descripcion.replace("\n", "  "));
     }
 
     public static void modificarPaciente(String cedula, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
@@ -319,7 +319,7 @@ public class ProyectoFitness {
     public static void modificarMaquina(String nombre, String descripcion) throws Exception {
         if(!maquinas.containsKey(nombre))
             throw new Exception("Nombre invalido para modificar maquina.");
-        maquinas.put(nombre, descripcion);
+        maquinas.put(nombre, descripcion.replace("\n", "  "));
     }
 
     public static void borrarPaciente(String cedula) throws Exception {

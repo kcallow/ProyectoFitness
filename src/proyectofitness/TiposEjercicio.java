@@ -15,7 +15,7 @@ public class TiposEjercicio extends HashMap<String,TipoEjercicio> {
         String resultado = "#Agregando tipos de ejercicio del sistema...\n";
         for(String nombre : this.keySet())
             resultado += "#Agregando tipo de ejercicio: " + nombre + "...\n"
-                    + "agregar ejercicio\n" 
+                    + "agregar tipo-ejercicio\n" 
                     + nombre + "\n" 
                     + get(nombre).toCommand() + "\n";
         return resultado;

@@ -283,5 +283,8 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
 
     public void cargarLlave(String llave) throws Exception {
         TipoEjercicio tipoEjercicio = ProyectoFitness.getTipoEjercicio(llave);
+        txtDescripcionVTE.setText(tipoEjercicio.getDescripcion());
+        comboMaquina.setSelectedItem(tipoEjercicio.getTipoMaquina());
+        txtNombre.setText(llave);
     }
 }

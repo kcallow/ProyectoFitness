@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import proyectofitness.*;
 
@@ -177,16 +179,26 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnModificarVTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVTEActionPerformed
-        // TODO add your handling code here:
+        modoModificar();
     }//GEN-LAST:event_btnModificarVTEActionPerformed
 
     private void btnBorrarVTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVTEActionPerformed
-        // TODO add your handling code here:
+        try {
+            ProyectoFitness.borrarTipoEjercicio(txtNombre.getText());
+            VentanaPrincipal.llenarTabla();
+            clear();
+            dispose();
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaTipoEjercicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnBorrarVTEActionPerformed
 
     private void btnGuardarVTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVTEActionPerformed
         try {
-            ProyectoFitness.agregarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
+            if(btnModificarVTE.isEnabled())
+                ProyectoFitness.modificarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
+            else 
+                ProyectoFitness.agregarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
             VentanaPrincipal.llenarTabla();
             clear();
             dispose();
@@ -254,31 +266,39 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
     private javax.swing.JTextArea txtDescripcionVTE;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
-
+/*
     javax.swing.JButton [] elementos = new javax.swing.JButton [] {
         btnBorrarVTE,
         btnModificarVTE
             };
-    
+    */
     @Override
     public void modoAgregar() {
+        clear();
         txtDescripcionVTE.setEnabled(true);
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(false);
+        txtNombre.setEnabled(true);
+        btnBorrarVTE.setEnabled(false);
+        btnModificarVTE.setEnabled(false);
+        btnGuardarVTE.setEnabled(true);
+        comboMaquina.setEnabled(true);
     }
 
     @Override
     public void modoVer() {
         txtDescripcionVTE.setEnabled(false);
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(true);
+        btnBorrarVTE.setEnabled(true);
+        btnModificarVTE.setEnabled(true);
+        comboMaquina.setEnabled(false);
+        txtNombre.setEnabled(false);
+        btnGuardarVTE.setEnabled(false);
     }
 
     @Override
     public void modoModificar() {
+        comboMaquina.setEnabled(true);
         txtDescripcionVTE.setEnabled(true);
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(true);
+        btnGuardarVTE.setEnabled(true);
+        txtNombre.setEnabled(false);
     }
 
     public void cargarLlave(String llave) throws Exception {

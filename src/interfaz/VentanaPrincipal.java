@@ -377,10 +377,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void addTipoEjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTipoEjercicioActionPerformed
         ventanaTipoEjercicio.setVisible(true);
+        ventanaTipoEjercicio.modoAgregar();
     }//GEN-LAST:event_addTipoEjercicioActionPerformed
 
     private void addMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMaquinaActionPerformed
         ventanaMaquina.setVisible(true);
+        ventanaMaquina.modoAgregar();
     }//GEN-LAST:event_addMaquinaActionPerformed
 
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
@@ -388,12 +390,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         try {
             if(hashMapActual.equals(ProyectoFitness.pacientes)){
                 ventanaDatosPaciente.setVisible(true);
+                ventanaDatosPaciente.modoVer();
                 ventanaDatosPaciente.cargarLlave(llave);
                 
             }    
             else if(hashMapActual.equals(ProyectoFitness.tiposEjercicio)){
                 ventanaTipoEjercicio.setVisible(true);
                 ventanaTipoEjercicio.cargarLlave(llave);
+                ventanaTipoEjercicio.modoVer();
             }
             else if(hashMapActual.equals(ProyectoFitness.maquinas)){
                 ventanaMaquina.setVisible(true);

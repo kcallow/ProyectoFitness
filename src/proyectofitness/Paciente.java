@@ -3,7 +3,7 @@ package proyectofitness;
 import java.time.LocalDate;
 
 public class Paciente {
-    private final ProgramaEntrenamiento programaEntrenamiento = new ProgramaEntrenamiento();
+    private ProgramaEntrenamiento programaEntrenamiento = null;
     private final Mediciones mediciones = new Mediciones();
     
     private String nombre, sexo;
@@ -17,7 +17,6 @@ public class Paciente {
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.telefono = telefono;
         this.correo = correo;
-        
     }
     
     public ProgramaEntrenamiento getProgramaEntrenamiento() {
@@ -86,5 +85,14 @@ public class Paciente {
                 + correo.getCorreo() + "\n" 
                 + programaEntrenamiento.toCommand(cedula) + "\n" 
                 + mediciones.toCommand(cedula) + "\n";
+    }
+
+    void borrarProgramaEntrenamiento() {
+        programaEntrenamiento.clear();
+        programaEntrenamiento = null;
+    }
+
+    void agregarProgramaEntrenamiento(LocalDate fechaInicio, LocalDate fechaFin, String descripcion, String objetivos) {
+        programaEntrenamiento = new ProgramaEntrenamiento(fechaInicio, fechaFin, descripcion, objetivos);
     }
 }

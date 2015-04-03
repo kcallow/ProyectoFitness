@@ -8,8 +8,13 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
     private String descripcion, objetivos;
     private Integer asistencia;
     
-    public ProgramaEntrenamiento(){
+    public ProgramaEntrenamiento(LocalDate fechaInicio, LocalDate fechaFin, String descripcion, String objetivos){
         fechaCreacion = LocalDate.now();
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.descripcion = descripcion;
+        this.objetivos = objetivos;
+        asistencia = 0;
     }
 
     public LocalDate getFechaCreacion() {
@@ -43,7 +48,8 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
     public void clear() {
         super.clear();
         fechaCreacion = fechaInicio = fechaFin = null;
-        descripcion = objetivos = "";
+        descripcion = objetivos = null;
+        asistencia = null;
     }
 
     public LocalDate getFechaInicio() {
@@ -82,7 +88,7 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
         return asistencia;
     }
 
-    public void setAsistencia(int asistencia) {
-        this.asistencia = asistencia;
+    public void incrementarAsistencia() {
+        asistencia++;
     }
 }

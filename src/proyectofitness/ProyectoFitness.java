@@ -107,6 +107,9 @@ public class ProyectoFitness {
 			case "tipo-ejercicio":
 				agregarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
+			case "programa":
+				agregarPrograma(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
+				break;
 			case "dia":
 				agregarDia(scanner.nextLine(),scanner.nextLine());
 				break;
@@ -236,6 +239,15 @@ public class ProyectoFitness {
         tiposEjercicio.put(nombre, new TipoEjercicio(descripcion, maquina));
     }
 
+    private static void agregarPrograma(String cedula, String fechaInicio, String fechaFin, String descripcion, String objetivos) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para agregar programa de entrenamiento.");
+        if(paciente.getProgramaEntrenamiento() != null)
+            throw new Exception("Paciente ya tiene programa de entrenamiento.  No se puede agregar.");
+        paciente.agregarProgramaEntrenamiento(LocalDate.parse(fechaInicio, DateTimeFormatter.ofPattern("dd-MM-uuuu")), LocalDate.parse(fechaFin, DateTimeFormatter.ofPattern("dd-MM-uuuu")), descripcion, objetivos);
+    }
+
     public static void agregarDia(String cedula, String numeroDia) throws Exception {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
@@ -347,9 +359,9 @@ public class ProyectoFitness {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para borrar programa de entrenamiento.");
-        if(paciente.getProgramaEntrenamiento().size() == 0)
+        if(paciente.getProgramaEntrenamiento() == null)
             throw new Exception("Paciente todavia no tiene programa de entrenamiento.  No se puede borrar.");
-        paciente.getProgramaEntrenamiento().clear();
+        paciente.borrarProgramaEntrenamiento();
     }
 
     public static void borrarDia(String cedula, String numeroDia) throws Exception {

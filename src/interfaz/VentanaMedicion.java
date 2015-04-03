@@ -736,4 +736,9 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
             elementos[i].setEditable(true);
         btnBorrarVM.setEnabled(false);
     }
+
+    @Override
+    public void cargarLlave(Object llave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

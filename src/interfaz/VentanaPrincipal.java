@@ -389,6 +389,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         try {
             if(hashMapActual.equals(ProyectoFitness.pacientes)){
                 ventanaDatosPaciente.setVisible(true);
+                
             }    
             else if(hashMapActual.equals(ProyectoFitness.tiposEjercicio)){
                 ventanaTipoEjercicio.setVisible(true);
@@ -399,9 +400,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         } catch (Exception ex) {
                 Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-        
-        System.err.println(tabla.getValueAt(tabla.getSelectedRow(), 0).toString());
     }//GEN-LAST:event_tablaMouseClicked
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked

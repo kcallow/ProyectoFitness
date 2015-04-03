@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import proyectofitness.ProyectoFitness;
 
@@ -161,12 +163,15 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnModificarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVMActionPerformed
-        // TODO add your handling code here:
+        modoModificar();
     }//GEN-LAST:event_btnModificarVMActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         try {
-            ProyectoFitness.agregarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
+            if(btnModificarVM.isEnabled())
+                ProyectoFitness.modificarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
+            else
+                ProyectoFitness.agregarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
             VentanaPrincipal.llenarTabla();
             clear();
             dispose();
@@ -181,7 +186,14 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        // TODO add your handling code here:
+        try {
+            ProyectoFitness.borrarMaquina(txtNombreMaquina.getText());
+            VentanaPrincipal.llenarTabla();
+            clear();
+            dispose();
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaMaquina.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     /**
@@ -255,7 +267,7 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     @Override
     public void modoModificar() {
         jTextArea1.setEnabled(true);
-        txtNombreMaquina.setEnabled(true);
+        txtNombreMaquina.setEnabled(false);
         btnBorrar.setEnabled(true);
         btnModificarVM.setEnabled(true);
     }

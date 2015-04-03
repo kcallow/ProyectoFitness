@@ -2,7 +2,7 @@
 #Agregando maquina: Extensiones de pierna...
 agregar maquina
 Extensiones de pierna
-very Fitness wOw
+very Fitness wOwsaddasdasads
 #Agregando maquina: Rotary Torso...
 agregar maquina
 Rotary Torso
@@ -87,10 +87,6 @@ very Fitness wOw
 agregar maquina
 Remo bajo Isolateral
 very Fitness wOw
-#Agregando maquina: Fuckk...
-agregar maquina
-Fuckk
-This is  hooo   wwe  do
 #Agregando maquina: Prensa peso integrado...
 agregar maquina
 Prensa peso integrado
@@ -135,6 +131,10 @@ very Fitness wOw
 agregar maquina
 Pulldown performance
 very Fitness wOw
+#Agregando maquina: Mancuernas cosi...
+agregar maquina
+Mancuernas cosi
+Solo para los pacientes mas cosi
 #Agregando maquina: Maquina para gluteos parado...
 agregar maquina
 Maquina para gluteos parado
@@ -291,10 +291,6 @@ very Fitness wOw
 agregar maquina
 Triceps articulado
 very Fitness wOw
-#Agregando maquina: Mancuerna Cosi...
-agregar maquina
-Mancuerna Cosi
-Solo para los pacientes mas cosis
 #Agregando maquina: Banco inclinado olimpico...
 agregar maquina
 Banco inclinado olimpico
@@ -312,6 +308,18 @@ agregar maquina
 Combo Silla romana/hiperextensiones
 very Fitness wOw
 #Agregando tipos de ejercicio del sistema...
+#Agregando tipo de ejercicio: saltar...
+agregar tipo-ejercicio
+saltar
+saltar saltar edidioc
+Extensiones de pierna
+
+#Agregando tipo de ejercicio: alzar ...
+agregar tipo-ejercicio
+alzar 
+alzar 
+Mancuerna
+
 #Agregando a todos los pacientes...
 #Agregando paciente Kenneth Callow Monge, cedula 116210601...
 agregar paciente

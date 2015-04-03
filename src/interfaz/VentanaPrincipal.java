@@ -402,6 +402,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             else if(hashMapActual.equals(ProyectoFitness.maquinas)){
                 ventanaMaquina.setVisible(true);
                 ventanaMaquina.cargarLlave(llave);
+                ventanaMaquina.modoVer();
             }
         } catch (Exception ex) {
                 Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);

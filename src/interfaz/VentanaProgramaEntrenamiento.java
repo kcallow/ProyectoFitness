@@ -16,6 +16,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
      */
     public VentanaProgramaEntrenamiento() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**

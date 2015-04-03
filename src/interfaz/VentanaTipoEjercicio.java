@@ -19,6 +19,7 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
      */
     public VentanaTipoEjercicio() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**

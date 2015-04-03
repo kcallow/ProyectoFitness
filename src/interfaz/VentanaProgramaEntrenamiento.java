@@ -418,6 +418,12 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
 
     public void cargarLlave(String llave) throws Exception {
             ProgramaEntrenamiento programaEntrenamiento = ProyectoFitness.getPrograma(llave);
+            txtFechaCreacion.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
+            txtDescripcionVPE.setText(programaEntrenamiento.getDescripcion());
+            txtFechaCreacion.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
+            txtFechaFinalizacion.setText(programaEntrenamiento.getFechaFin().format(ProyectoFitness.formatoFecha));
+            txtObjetivosVPE.setText(programaEntrenamiento.getObjetivos());
+            txtAsistencia.setText(programaEntrenamiento.getAsistencia() + "");
     }
 
 

@@ -6,6 +6,9 @@
 package interfaz;
 
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import proyectofitness.*;
 
 /**
@@ -239,14 +242,19 @@ public class VentanaPaciente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        String sexo;
+        if(radioHombre.isSelected())
+            sexo = "M";
+        else
+            sexo = "F";
         
-        txtCedula.getText();
-        txtCorreo.getText();
-        txtFechaNacimiento.getText();
-        txtTelefono.getText();
-        txtNombre.getText();
-        
-        
+        try {
+            ProyectoFitness.agregarPaciente(txtCedula.getText(), txtNombre.getText(), sexo, txtFechaNacimiento.getText(),txtTelefono.getText(), txtCorreo.getText());
+            
+            dispose();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void txtFechaNacimientoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFechaNacimientoMouseClicked

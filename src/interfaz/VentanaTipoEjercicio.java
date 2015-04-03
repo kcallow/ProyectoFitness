@@ -9,7 +9,7 @@ package interfaz;
  *
  * @author scsaenz
  */
-public class VentanaTipoEjercicio extends javax.swing.JFrame {
+public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVentana {
 
     /**
      * Creates new form VentanaTipoEjercicio
@@ -204,4 +204,30 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txtDescripcionVTE;
     // End of variables declaration//GEN-END:variables
+
+    javax.swing.JButton [] elementos = new javax.swing.JButton [] {
+        btnBorrarVTE,
+        btnModificarVTE
+            };
+    
+    @Override
+    public void modoAgregar() {
+        txtDescripcionVTE.setEnabled(true);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(false);
+    }
+
+    @Override
+    public void modoVer() {
+        txtDescripcionVTE.setEnabled(false);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(true);
+    }
+
+    @Override
+    public void modoModificar() {
+        txtDescripcionVTE.setEnabled(true);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(true);
+    }
 }

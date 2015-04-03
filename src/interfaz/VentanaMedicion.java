@@ -9,7 +9,7 @@ package interfaz;
  *
  * @author scsaenz
  */
-public class VentanaMedicion extends javax.swing.JFrame {
+public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana {
 
     /**
      * Creates new form VentanaMedicion
@@ -102,6 +102,9 @@ public class VentanaMedicion extends javax.swing.JFrame {
 
         jLabel2.setText("Peso:");
 
+        txtEstatura.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtPeso.setBackground(new java.awt.Color(204, 204, 204));
         txtPeso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPesoActionPerformed(evt);
@@ -165,6 +168,20 @@ public class VentanaMedicion extends javax.swing.JFrame {
         jLabel9.setText("Pectoral:");
 
         jLabel30.setText("Todas las medidas son en milímetros");
+
+        txtTriceps.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtIliaco.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtMuslo.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtPectoral.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtSubescapular.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtAbdomen.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtPantorrila.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -261,6 +278,32 @@ public class VentanaMedicion extends javax.swing.JFrame {
         jLabel22.setText("Bíceps izquierdo:");
 
         jLabel31.setText("Todas las medidas son en centímetros");
+
+        txtCuello.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtBicepsIzq.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtBicepsDer.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtCadera.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtEspalda.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtPectoralCircunferencia.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtCintura3.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtCintura2.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtCintura1.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtMusloDer.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtMusloIzq.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtPantorrillaDer.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtPantorrilaIzq.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -363,6 +406,8 @@ public class VentanaMedicion extends javax.swing.JFrame {
 
         jLabel26.setText("Latidos por minuto:");
 
+        txtFrecuenciaCardiaca.setBackground(new java.awt.Color(204, 204, 204));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -389,6 +434,10 @@ public class VentanaMedicion extends javax.swing.JFrame {
         jLabel23.setText("Sistólica:");
 
         jLabel24.setText("Diastólica:");
+
+        txtSistolica.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtDiastolica.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -632,4 +681,58 @@ public class VentanaMedicion extends javax.swing.JFrame {
     private javax.swing.JTextField txtSubescapular;
     private javax.swing.JTextField txtTriceps;
     // End of variables declaration//GEN-END:variables
+
+    
+    javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
+             txtAbdomen,
+             txtAbdomen,
+             txtBicepsDer,
+             txtBicepsIzq,
+             txtCadera,
+             txtCintura1,
+             txtCintura2,
+             txtCintura3,
+             txtCuello,
+             txtDiastolica,
+             txtEspalda,
+             txtEstatura,
+             txtFrecuenciaCardiaca,
+             txtIliaco,
+             txtMuslo,
+             txtMusloDer,
+             txtMusloIzq,
+             txtPantorrila,
+             txtPantorrilaIzq,
+             txtPantorrillaDer,
+             txtPectoral,
+             txtPectoralCircunferencia,
+             txtPeso,
+             txtSistolica,
+             txtSubescapular,
+             txtTriceps
+            }; 
+    
+    @Override
+    public void modoAgregar() {
+        btnBorrarVM.setEnabled(false);
+        btnModificarVM.setEnabled(false);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEditable(true);
+    }
+
+    @Override
+    public void modoVer() {
+        btnBorrarVM.setEnabled(true);
+        btnModificarVM.setEnabled(true);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEditable(false);
+        
+    }
+
+    @Override
+    public void modoModificar() {
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEditable(true);
+        btnBorrarVM.setEnabled(false);
+    }
 }

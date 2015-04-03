@@ -81,7 +81,7 @@ Pliegues Abdomen
 12
 
 #Probando ver todas las mediciones para 116210601
-ver medicion
+ver mediciones
 116210601
 
 #Agregando mediciones a 166669999
@@ -133,32 +133,43 @@ rm medicion
 Peso
 
 #Probando ver todas las mediciones de 201589456
-ver medicion
+ver mediciones
 201589456
 
 #Agregando mediciones a 888888889
 agregar medicion
 888888889
-Cicunferencia Cuello
+Circunferencia Cuello
 30
 agregar medicion
 888888889
-Cicunferencia Biceps izq
+Circunferencia Biceps izq
 40
 agregar medicion
 888888889
-Cicunferencia Biceps der
+Circunferencia Biceps der
 50
 agregar medicion
 888888889
-Cicunferencia Pectoral
+Circunferencia Pectoral
 60
+
+#Ver Circunferencia Pectoral de 888888889
+ver medicion
+888888889
+Circunferencia Pectoral
 
 #Modificando Circunferencia Pectoral de 888888889
 mod medicion
 888888889
 Circunferencia Pectoral
 20
+
+#Intentar modificar medida no valida dentro del sistema Numero favorito para 888888889 (ERROR!)
+mod medicion
+888888889
+Numero favorito
+69
 
 #Intentar modificar medida no definida Peso para 888888889 (ERROR!)
 mod medicion
@@ -167,7 +178,7 @@ Peso
 15
 
 #Ver mediciones de 888888889
-ver medicion
+ver mediciones
 888888889
 
 #Agregando maquinas

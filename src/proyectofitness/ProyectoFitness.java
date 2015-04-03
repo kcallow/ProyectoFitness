@@ -151,6 +151,9 @@ public class ProyectoFitness {
 			case "medicion":
                 System.out.println(getMedicion(scanner.nextLine(),scanner.nextLine()));
 				break;
+			case "mediciones":
+                System.out.println(getMediciones(scanner.nextLine()));
+				break;
 			case "tipo-ejercicio":
 				System.out.println(getTipoEjercicio(scanner.nextLine()));
 				break;
@@ -241,6 +244,8 @@ public class ProyectoFitness {
     }
 
     public static void modificarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {
+        if(!tiposMedicion.containsKey(nombreMedicion))
+            throw new Exception("Nombre de medicion no esta disponible.");
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para modificar medicion.");
@@ -356,12 +361,17 @@ public class ProyectoFitness {
     }
 
     public static Double getMedicion(String cedula, String nombreMedicion) throws Exception {
+        Mediciones mediciones = getMediciones(cedula);
+        if(!mediciones.containsKey(nombreMedicion))
+            throw new Exception("Nombre no corresponde a ninguna medicion.  No se puede get.");
+        return mediciones.get(nombreMedicion);
+    }
+
+    public static Mediciones getMediciones(String cedula) throws Exception {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
-            throw new Exception("Paciente invalido para get medicion.");
-        if(!paciente.getMediciones().containsKey(nombreMedicion))
-            throw new Exception("Nombre no corresponde a ninguna medicion.  No se puede get.");
-        return paciente.getMediciones().get(nombreMedicion);
+            throw new Exception("Paciente invalido para get mediciones.");
+        return paciente.getMediciones();
     }
 
     public static TipoEjercicio getTipoEjercicio(String nombre) throws Exception {

@@ -6,7 +6,7 @@
 package interfaz;
 
 import javax.swing.JOptionPane;
-import proyectofitness.*;
+import proyectofitness.TipoEjercicio;
 
 /**
  *
@@ -279,5 +279,10 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
         txtDescripcionVTE.setEnabled(true);
         for(int i = 0; i < elementos.length; i++)
             elementos[i].setEnabled(true);
+    }
+
+    @Override
+    public void cargarLlave(String llave) throws Exception {
+        TipoEjercicio tipoEjercicio = ProyectoFitness.getTipoEjercicio(llave);
     }
 }

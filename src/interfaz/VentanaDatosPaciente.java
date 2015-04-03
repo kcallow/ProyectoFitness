@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import proyectofitness.*;
+
 /**
  *
  * @author scsaenz
@@ -446,5 +448,10 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         btnModificar.setEnabled(true);
         radioHombre.setEnabled(true);
         radioMujer.setEnabled(true);
+    }
+
+    @Override
+    public void cargarLlave(String llave) throws Exception {
+        Paciente paciente = ProyectoFitness.getPaciente(llave);
     }
 }

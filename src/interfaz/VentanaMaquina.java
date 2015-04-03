@@ -259,4 +259,9 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
         btnBorrar.setEnabled(true);
         btnModificarVM.setEnabled(true);
     }
+
+    @Override
+    public void cargarLlave(String llave) throws Exception {
+        
+    }
 }

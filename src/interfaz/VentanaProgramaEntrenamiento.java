@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import proyectofitness.*;
+
 /**
  *
  * @author scsaenz
@@ -399,6 +401,11 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             elementos[i].setEnabled(true);
         for(int i = 0; i < textos.length; i++)
             textos[i].setEnabled(true);
+    }
+
+    @Override
+    public void cargarLlave(String llave) throws Exception {
+            ProgramaEntrenamiento programaEntrenamiento = ProyectoFitness.getPrograma(llave);
     }
 
 

@@ -14,6 +14,6 @@ public interface ModosVentana {
     public void modoAgregar();
     public void modoVer();
     public void modoModificar();
-    public void cargarLlave(Object llave);
+    public void cargarLlave(String llave) throws Exception;
     
 }

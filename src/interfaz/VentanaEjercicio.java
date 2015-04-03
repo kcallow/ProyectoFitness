@@ -394,4 +394,9 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
         for(int i = 0; i < elementos.length; i++)
             elementos[i].setEnabled(true);
     }
+
+    @Override
+    public void cargarLlave(String llave) throws Exception {
+        Ejercicio ejercicio = ProyectoFitness.
+    }
 }

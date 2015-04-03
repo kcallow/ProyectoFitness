@@ -399,6 +399,13 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
 
     public void cargarLlave(String llave, String numeroDia, String numeroEjercicio) throws Exception {
         Ejercicio ejercicio = ProyectoFitness.getEjercicio(llave, numeroDia, numeroEjercicio);
+        String s = "";
+        txtDescanso.setText(s + ejercicio.getTiempoDescanso());
+        txtPeso1.setText(s + ejercicio.getPeso1());
+        txtPeso2.setText(s + ejercicio.getPeso2());
+        txtPeso3.setText(s + ejercicio.getPeso3());
+        txtRepeticiones.setText(s + ejercicio.getRepeticiones());
+        txtSeries.setText(s + ejercicio.getSeries());
 
     }
 }

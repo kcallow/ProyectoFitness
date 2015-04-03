@@ -483,5 +483,14 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
     public void cargarLlave(String llave) throws Exception {
         Paciente paciente = ProyectoFitness.getPaciente(llave);
+        txtCedula.setText(llave);
+        txtCorreo.setText(paciente.getCorreo().toString());
+        txtFechaNacimiento.setText(paciente.getFechaDeNacimiento().toString());
+        txtNombre.setText(paciente.getNombre());
+        if(paciente.getSexo().equals("M"))
+            radioHombre.setSelected(true);
+        else
+            radioMujer.setSelected(true);
+        
     }
 }

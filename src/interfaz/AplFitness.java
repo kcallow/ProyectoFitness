@@ -6,6 +6,8 @@
 
 package interfaz;
 
+import proyectofitness.*;
+
 /**
  *
  * @author scsaenz

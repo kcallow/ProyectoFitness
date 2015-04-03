@@ -9,7 +9,6 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.table.TableColumn;
 import proyectofitness.*;
 
 /**
@@ -17,14 +16,16 @@ import proyectofitness.*;
  * @author scsaenz
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
-    private static Object[] camposTablaActual;
     private static final Object[] camposTablaPaciente = new Object[] {"Cédula", "Nombre", "Sexo", "Fecha de nacimiento", "Teléfono", "Correo electrónico"};
     private static final Object[] camposTablaMaquina = new Object[] {"Nombre de máquina", "Descripción"};
     private static final Object[] camposTablaEjercicio = new Object[] {"Nombre de ejercicio", "Descripción"};
+    
     VentanaPaciente ventanaPaciente = new VentanaPaciente();
     VentanaMaquina ventanaMaquina = new VentanaMaquina();
     VentanaTipoEjercicio ventanaTipoEjercicio = new VentanaTipoEjercicio();
+
     public static HashMap hashMapActual = ProyectoFitness.pacientes;
+    private static Object[] camposTablaActual = camposTablaPaciente;
 
     @Override
     public void dispose() {

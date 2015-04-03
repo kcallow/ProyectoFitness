@@ -9,7 +9,7 @@ package interfaz;
  *
  * @author scsaenz
  */
-public class VentanaDatosPaciente extends javax.swing.JFrame {
+public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVentana  {
     VentanaMedicion vMedicion = new VentanaMedicion();
     VentanaProgramaEntrenamiento vProgramaEntrenamiento = new VentanaProgramaEntrenamiento();
     
@@ -406,4 +406,44 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
+
+    javax.swing.JTextField[] elementos = new javax.swing.JTextField[]{
+            txtCedula,
+            txtCorreo,
+            txtFechaNacimiento,
+            txtNombre,
+            txtTelefono,
+            
+            };
+    
+    @Override
+    public void modoAgregar() {
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(true);
+        btnBorrar.setEnabled(false);
+        btnModificar.setEnabled(false);
+        radioHombre.setEnabled(true);
+        radioMujer.setEnabled(true);
+                
+    }
+
+    @Override
+    public void modoVer() {
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(false);
+        btnBorrar.setEnabled(true);
+        btnModificar.setEnabled(true);
+        radioHombre.setEnabled(false);
+        radioMujer.setEnabled(false);
+    }
+
+    @Override
+    public void modoModificar() {
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(true);
+        btnBorrar.setEnabled(true);
+        btnModificar.setEnabled(true);
+        radioHombre.setEnabled(true);
+        radioMujer.setEnabled(true);
+    }
 }

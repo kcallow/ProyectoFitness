@@ -9,7 +9,7 @@ package interfaz;
  *
  * @author scsaenz
  */
-public class VentanaProgramaEntrenamiento extends javax.swing.JFrame {
+public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements ModosVentana {
 
     /**
      * Creates new form VentanaProgramaEjercicios
@@ -355,4 +355,51 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame {
     private javax.swing.JTextField txtFechaInicio;
     private javax.swing.JTextArea txtObjetivosVPE;
     // End of variables declaration//GEN-END:variables
+
+    
+    
+    javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
+            txtAsistencia,
+            txtFechaFinalizacion,
+            txtFechaInicio,
+    };
+    
+    javax.swing.JTextArea [] textos = new javax.swing.JTextArea [] {
+            txtObjetivosVPE,
+            txtDescripcionVPE,
+    };
+    
+    
+    @Override
+    public void modoAgregar() {
+        btnModificarVPE.setEnabled(false);
+        btnBorrarVPE.setEnabled(false);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(true);
+        for(int i = 0; i < textos.length; i++)
+            textos[i].setEnabled(true);
+    }
+
+    @Override
+    public void modoVer() {
+        btnModificarVPE.setEnabled(true);
+        btnBorrarVPE.setEnabled(true);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(false);
+        for(int i = 0; i < textos.length; i++)
+            textos[i].setEnabled(false);
+    }
+
+    @Override
+    public void modoModificar() {
+        btnModificarVPE.setEnabled(true);
+        btnBorrarVPE.setEnabled(true);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setEnabled(true);
+        for(int i = 0; i < textos.length; i++)
+            textos[i].setEnabled(true);
+    }
+
+
+
 }

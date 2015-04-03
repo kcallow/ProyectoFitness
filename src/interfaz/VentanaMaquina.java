@@ -9,7 +9,7 @@ package interfaz;
  *
  * @author scsaenz
  */
-public class VentanaMaquina extends javax.swing.JFrame {
+public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana  {
 
     /**
      * Creates new form VentanaMaquina
@@ -67,7 +67,6 @@ public class VentanaMaquina extends javax.swing.JFrame {
         });
 
         btnGuardar.setText("Guardar");
-        btnGuardar.setEnabled(false);
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
@@ -222,4 +221,28 @@ public class VentanaMaquina extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField txtNombreMaquina;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void modoAgregar() {
+        jTextArea1.setEnabled(true);
+        txtNombreMaquina.setEnabled(true);
+        btnBorrar.setEnabled(false);
+        btnModificarVM.setEnabled(false);
+    }
+
+    @Override
+    public void modoVer() {
+        jTextArea1.setEnabled(false);
+        txtNombreMaquina.setEnabled(false);
+        btnBorrar.setEnabled(true);
+        btnModificarVM.setEnabled(true);
+    }
+
+    @Override
+    public void modoModificar() {
+        jTextArea1.setEnabled(true);
+        txtNombreMaquina.setEnabled(true);
+        btnBorrar.setEnabled(true);
+        btnModificarVM.setEnabled(true);
+    }
 }

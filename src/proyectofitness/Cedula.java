@@ -40,4 +40,9 @@ public class Cedula {
         return hash;
     }
 
+    @Override
+    public String toString() {
+        return cedula;
+    }
+
 }

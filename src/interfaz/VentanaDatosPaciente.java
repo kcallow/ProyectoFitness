@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import proyectofitness.*;
+
 /**
  *
  * @author scsaenz
@@ -449,7 +451,12 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     }
 
     @Override
+<<<<<<< HEAD
     public void cargarLlave(Object llave) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+=======
+    public void cargarLlave(String llave) throws Exception {
+        Paciente paciente = ProyectoFitness.getPaciente(llave);
+>>>>>>> 1108a4df2cfbc159dd3eed6f5e960c0199e164cc
     }
 }

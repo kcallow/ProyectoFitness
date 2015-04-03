@@ -335,6 +335,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_tablaMouseClicked
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked

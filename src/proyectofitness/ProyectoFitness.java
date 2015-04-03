@@ -179,11 +179,11 @@ public class ProyectoFitness {
         LocalDate fecha;
         try{
             fecha = LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu"));
+            pacientes.put(cedula, new Paciente(nombre, sexo, fecha, new Telefono(telefono), new Correo(correo)));
         }
         catch (Exception e) {
             throw new Exception("Fecha invalida.  El formato correcto es dd-MM-aaaa");
         }
-        pacientes.put(cedula, new Paciente(nombre, sexo, fecha, new Telefono(telefono), new Correo(correo)));
     }
 
     public static void agregarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {
@@ -348,7 +348,8 @@ public class ProyectoFitness {
         maquinas.remove(nombre);
     }
 
-    public static Paciente getPaciente(String cedula) throws Exception {
+    public static Paciente getPaciente(String valorCedula) throws Exception {
+        Cedula cedula = new Cedula(valorCedula);
         if(!pacientes.containsKey(cedula))
             throw new Exception("Cedula no corresponde a ningun paciente.  No se puede get.");
         return pacientes.get(cedula);

@@ -1,5 +1,7 @@
 package proyectofitness;
 
+import java.util.Objects;
+
 public class Cedula {
     
     private String cedula;
@@ -30,5 +32,12 @@ public class Cedula {
             return false;
         return this.cedula.equals(((Cedula) cedula).getCedula());
     }
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.cedula);
+        return hash;
+    }
+
 }

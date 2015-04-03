@@ -6,7 +6,6 @@
 
 package interfaz;
 
-import proyectofitness.*;
 
 /**
  *

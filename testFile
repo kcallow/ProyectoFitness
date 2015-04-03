@@ -420,57 +420,57 @@ cuerda
 ver maquina
 
 #Agregando ejercicios
-agregar exercise
+agregar tipo-ejercicio
 Abdominales
 Reduce los pliegues pectorales
 Banco abdominal
 
-agregar exercise
+agregar tipo-ejercicio
 Triceps
 Para piernas fuertes
 Triceps articulado
 
-agregar exercise
+agregar tipo-ejercicio
 Sentadilla
 Fortalece piernas y abdomen
 Sentadilla articulada
 
-agregar exercise
+agregar tipo-ejercicio
 Gluteos
 Fortalece la parte mas valiosa del cuerpo humano
 Maquina para gluteos parado
 
-agregar exercise
+agregar tipo-ejercicio
 Talones
 Para que no le pase lo de Aquiles
 Levantamiento de talones peso libre
 
-agregar exercise
+agregar tipo-ejercicio
 Pantorrilla
 Recomendado para futbolistas y karatekas
 Pantorrilla costurera
 
-agregar exercise
+agregar tipo-ejercicio
 Prensa
 Para fortalecer brazos
 Prensa performance
 
 #Ver ejercicios
-ver exercise
+ver tipo-ejercicio
 
 #Ver Pantorrial
-ver exercise
+ver tipo-ejercicio
 pantorrilla
 #Quitar Gluteos
-rm exercise
+rm tipo-ejercicio
 gluteos
 #Modificar Talones
-mod exercise
+mod tipo-ejercicio
 Talones
 Recomendado por el antiguo guerrero Aquiles
 Levantamiento de talones peso libre
 #Ver ejercicios
-ver exercise
+ver tipo-ejercicio
 
 
 salir

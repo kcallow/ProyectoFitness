@@ -10,7 +10,9 @@ package interfaz;
  * @author scsaenz
  */
 public class VentanaDatosPaciente extends javax.swing.JFrame {
-
+    VentanaMedicion vMedicion = new VentanaMedicion();
+    VentanaProgramaEntrenamiento vProgramaEntrenamiento = new VentanaProgramaEntrenamiento();
+    
     /**
      * Creates new form VentanaDatosPaciente
      */
@@ -95,6 +97,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
             }
         });
 
+        radioHombre.setSelected(true);
         radioHombre.setText("Masculino");
         radioHombre.setEnabled(false);
 
@@ -102,10 +105,25 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
         radioMujer.setEnabled(false);
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -118,12 +136,32 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
         jScrollPane1.setViewportView(listaVDP);
 
         btnVerMediciones.setText("Mediciones");
+        btnVerMediciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerMedicionesActionPerformed(evt);
+            }
+        });
 
         btnProgramas.setText("Programas de entrenamiento");
+        btnProgramas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProgramasActionPerformed(evt);
+            }
+        });
 
         btnAddMedicion.setText("Agregar Medición");
+        btnAddMedicion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddMedicionActionPerformed(evt);
+            }
+        });
 
         btnAddProgramaEntrenamiento.setText("Agregar Programas de entrenamiento");
+        btnAddProgramaEntrenamiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddProgramaEntrenamientoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -162,6 +200,11 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
         );
 
         btnBorrar.setText("Borrar");
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -268,6 +311,38 @@ public class VentanaDatosPaciente extends javax.swing.JFrame {
     private void txtFechaNacimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaNacimientoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFechaNacimientoActionPerformed
+
+    private void btnAddMedicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddMedicionActionPerformed
+        vMedicion.setVisible(true);
+    }//GEN-LAST:event_btnAddMedicionActionPerformed
+
+    private void btnAddProgramaEntrenamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProgramaEntrenamientoActionPerformed
+        vProgramaEntrenamiento.setVisible(true);
+    }//GEN-LAST:event_btnAddProgramaEntrenamientoActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void btnProgramasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProgramasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnProgramasActionPerformed
+
+    private void btnVerMedicionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerMedicionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerMedicionesActionPerformed
 
     /**
      * @param args the command line arguments

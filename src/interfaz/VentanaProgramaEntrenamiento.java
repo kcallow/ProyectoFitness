@@ -126,16 +126,20 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame {
         btnGuardarVPE.setText("Guardar");
 
         btnModificarVPE.setText("Modificar");
+        btnModificarVPE.setEnabled(false);
 
         btnBorrarVPE.setText("Borrar");
+        btnBorrarVPE.setEnabled(false);
 
         txtDescripcionVPE.setBackground(new java.awt.Color(204, 204, 204));
         txtDescripcionVPE.setColumns(20);
+        txtDescripcionVPE.setLineWrap(true);
         txtDescripcionVPE.setRows(5);
         jScrollPane2.setViewportView(txtDescripcionVPE);
 
         txtObjetivosVPE.setBackground(new java.awt.Color(204, 204, 204));
         txtObjetivosVPE.setColumns(20);
+        txtObjetivosVPE.setLineWrap(true);
         txtObjetivosVPE.setRows(5);
         jScrollPane3.setViewportView(txtObjetivosVPE);
 

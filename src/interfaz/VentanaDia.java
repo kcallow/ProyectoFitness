@@ -10,6 +10,7 @@ package interfaz;
  * @author scsaenz
  */
 public class VentanaDia extends javax.swing.JFrame {
+    VentanaEjercicio vEjercicio = new VentanaEjercicio();
 
     /**
      * Creates new form VentanaDia
@@ -49,10 +50,25 @@ public class VentanaDia extends javax.swing.JFrame {
         jScrollPane1.setViewportView(listaEjercicios);
 
         addEjercicioDia.setText("Agregar Ejercicio");
+        addEjercicioDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEjercicioDiaActionPerformed(evt);
+            }
+        });
 
         btnSalirDia.setText("Salir");
+        btnSalirDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirDiaActionPerformed(evt);
+            }
+        });
 
         btnBorrarDia.setText("Borrar");
+        btnBorrarDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarDiaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -109,6 +125,18 @@ public class VentanaDia extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void addEjercicioDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEjercicioDiaActionPerformed
+        vEjercicio.setVisible(true);
+    }//GEN-LAST:event_addEjercicioDiaActionPerformed
+
+    private void btnSalirDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirDiaActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnSalirDiaActionPerformed
+
+    private void btnBorrarDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarDiaActionPerformed
 
     /**
      * @param args the command line arguments

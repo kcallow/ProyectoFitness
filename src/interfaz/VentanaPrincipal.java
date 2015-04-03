@@ -389,13 +389,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         try {
             if(hashMapActual.equals(ProyectoFitness.pacientes)){
                 ventanaDatosPaciente.setVisible(true);
+                ventanaDatosPaciente.cargarLlave(llave);
                 
             }    
             else if(hashMapActual.equals(ProyectoFitness.tiposEjercicio)){
                 ventanaTipoEjercicio.setVisible(true);
+                ventanaTipoEjercicio.cargarLlave(llave);
             }
             else if(hashMapActual.equals(ProyectoFitness.maquinas)){
                 ventanaMaquina.setVisible(true);
+                ventanaMaquina.cargarLlave(llave);
             }
         } catch (Exception ex) {
                 Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);

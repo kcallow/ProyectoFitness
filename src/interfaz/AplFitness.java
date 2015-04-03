@@ -6,6 +6,12 @@
 
 package interfaz;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Scanner;
+import proyectofitness.ProyectoFitness;
+
 
 /**
  *
@@ -13,14 +19,14 @@ package interfaz;
  */
 public class AplFitness {
     
+    public static String saveFile = "saveFile.txt";
     
-    
-    public static void main(String [] args){
-        
+    public static void main(String [] args) throws Exception {
+        ProyectoFitness.cargarArchivo(saveFile);
         VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
         ventanaPrincipal.setVisible(true);
-        
-        
+        if(!ventanaPrincipal.isVisible())
+            ProyectoFitness.guardarArchivo(saveFile);
     }
 
 }

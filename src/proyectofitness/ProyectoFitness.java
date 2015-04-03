@@ -1,5 +1,6 @@
 package proyectofitness;
 
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -13,15 +14,20 @@ public class ProyectoFitness {
     public static final TiposEjercicio tiposEjercicio = new TiposEjercicio();
     public static final TiposMedicion tiposMedicion = new TiposMedicion();
 
-	private static final Scanner scanner = new Scanner(System.in);
+	private static Scanner scanner = new Scanner(System.in);
+
+    public static void cargarArchivo(String saveFile) throws Exception {
+        scanner = new Scanner(Paths.get(saveFile));
+        initShell();
+    }
+    
+    public static void guardarArchivo(String saveFile) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 	public static void main(String [] args){
 		initShell();
 	}
-
-    private static int getInt() {
-        return Integer.parseInt(scanner.nextLine());
-    }
 
 	public static void initShell(){
 		String input = "";
@@ -29,14 +35,14 @@ public class ProyectoFitness {
             System.out.print(" > ");
             input = scanner.nextLine();
             try {
-                processCommand(input);
+                procesarComando(input);
             } catch (Exception ex) {
                 Logger.getLogger(ProyectoFitness.class.getName()).log(Level.SEVERE, null, ex);
             }
 		}
 	}
 
-	private static void processCommand(String input) throws Exception{
+	public static void procesarComando(String input) throws Exception{
         if(input.equals(""))
             return;
         if(input.charAt(0) == '#') {

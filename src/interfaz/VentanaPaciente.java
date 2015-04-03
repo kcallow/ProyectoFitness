@@ -250,7 +250,7 @@ public class VentanaPaciente extends javax.swing.JFrame {
         
         try {
             ProyectoFitness.agregarPaciente(txtCedula.getText(), txtNombre.getText(), sexo, txtFechaNacimiento.getText(),txtTelefono.getText(), txtCorreo.getText());
-            
+            VentanaPrincipal.llenarTabla();
             dispose();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());

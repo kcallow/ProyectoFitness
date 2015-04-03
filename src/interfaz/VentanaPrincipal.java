@@ -16,7 +16,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     VentanaPaciente ventanaPaciente = new VentanaPaciente();
     VentanaMaquina ventanaMaquina = new VentanaMaquina();
     VentanaTipoEjercicio ventanaTipoEjercicio = new VentanaTipoEjercicio();
-    public HashMap hashMapActual = ProyectoFitness.pacientes;
+    public static HashMap hashMapActual = ProyectoFitness.pacientes;
     /**
      * Creates new form VentanaPrincipal
      */
@@ -63,16 +63,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
     }
     
-    public void llenarTabla(){
+    public static void llenarTabla(){
         Object [][] objetos = new Object[hashMapActual.size()][2];
         int i = 0;
         for(Object key: hashMapActual.keySet()){
             objetos[i][0] = key;
             objetos[i][1] = hashMapActual.get(key);
+            i++;
         }
         tabla.setModel(new javax.swing.table.DefaultTableModel(objetos ,
             new String [] {
-                "", ""
+                "ddd", "ddd"
             }
         ));
     }
@@ -318,6 +319,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void addPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPacienteActionPerformed
        ventanaPaciente.setVisible(true);
+       
+       
     }//GEN-LAST:event_addPacienteActionPerformed
 
     private void addTipoEjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTipoEjercicioActionPerformed
@@ -385,6 +388,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable tabla;
+    private static javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 }

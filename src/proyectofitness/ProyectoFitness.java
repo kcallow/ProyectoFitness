@@ -60,7 +60,7 @@ public class ProyectoFitness {
             case "salir":
                 break;
 			default:
-				System.out.println("Unrecognized command.");
+				System.out.println("Comando no reconocido.");
 				break;
 		}
 	}

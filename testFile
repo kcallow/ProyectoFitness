@@ -1,465 +1,465 @@
 #Agregando pacientes...
 
-add patient
+agregar paciente
 116210601
 Kenneth Callow Monge
 M
 07-10-1995
 8331-7772
 kcallow@ic-itcr.ac.cr
-view patient
+ver paciente
 116210601
 
-add patient
+agregar paciente
 166669999
 Juana Luana Della Sabana
 F
 20-12-1991
 7458-3241
 jldsabi@aol.com
-view patient
+ver paciente
 166669999
 
-add patient
+agregar paciente
 201589456
 Hyori Sakagumi
 F
 11-05-1957
 (505) 6524-4589
 hyo_saka1957@ifconf.ig.it
-view patient
+ver paciente
 201589456
 
-add patient
+agregar paciente
 888888889
 Yazuki Zepeda
 M
 01-10-1875
 (405) 876 5435
 yazzzepeda@facebook.com
-view patient
+ver paciente
 888888889
 
-add patient
+agregar paciente
 753129854
 Ramira Ramirez
 F
 21-02-1987
 2563 9584
 rrrrr@hotmail.com
-view patient
+ver paciente
 753129854
 
-add patient
+agregar paciente
 102342161
 Gibraltar Ginecomas
 M
 12-12-1912
 3201-2568
 xXxXxXx@badoo.es
-view patient
+ver paciente
 102342161
 
-add patient
+agregar paciente
 302123001
 Ninja Zef
 M
 01-02-1976
 (504) 401-2365
 die@antwoorp.co.nz
-view patient
+ver paciente
 302123001
 
 #Agregando mediciones a 116210601
-add measure
+agregar medicion
 116210601
 Peso
 0.1
-add measure
+agregar medicion
 116210601
 Pliegues Abdomen
 12
 
 #Probando ver todas las mediciones para 116210601
-view measure
+ver medicion
 116210601
 
 #Agregando mediciones a 166669999
-add measure
+agregar medicion
 166669999
 Frecuencia Cardiaca
 100
-add measure
+agregar medicion
 166669999
 Estatura
 1.76
 
 #Probando ver estatura de 166669999
-view measure
+ver medicion
 166669999
 Estatura
 
 #Agregando mediciones a 201589456
-add measure
+agregar medicion
 201589456
 Presion Arterial Sistolica
 200
-add measure
+agregar medicion
 201589456
 Circunferencia Cintura 1
 100
-add measure
+agregar medicion
 201589456
 Circunferencia Cintura 2
 200
-add measure
+agregar medicion
 201589456
 Circunferencia Cintura 3
 300
 
 #Probando borrar Presion Arterial Sistolica para 201589456
-rm measure
+rm medicion
 201589456
 Presion Arterial Sistolica
 
 #Intentar ver medida no definida Peso para 201589456 (ERROR!)
-view measure
+ver medicion
 201589456
 Peso
 
 #Intentar borrar medida no definida Peso para 201589456 (ERROR!)
-rm measure
+rm medicion
 201589456
 Peso
 
 #Probando ver todas las mediciones de 201589456
-view measure
+ver medicion
 201589456
 
 #Agregando mediciones a 888888889
-add measure
+agregar medicion
 888888889
 Cicunferencia Cuello
 30
-add measure
+agregar medicion
 888888889
 Cicunferencia Biceps izq
 40
-add measure
+agregar medicion
 888888889
 Cicunferencia Biceps der
 50
-add measure
+agregar medicion
 888888889
 Cicunferencia Pectoral
 60
 
 #Modificando Circunferencia Pectoral de 888888889
-mod measure
+mod medicion
 888888889
 Circunferencia Pectoral
 20
 
 #Intentar modificar medida no definida Peso para 888888889 (ERROR!)
-#mod measure
+#mod medicion
 #888888889
 #Peso
 #15
 
 #Ver mediciones de 888888889
-view measure
+ver medicion
 888888889
 
 #Agregando maquinas
-add machine
+agregar maquina
 Banco abdominal
 very Fitness wOw
-add machine
+agregar maquina
 Mancuerna
 very Fitness wOw
-add machine
+agregar maquina
 Banco olimpico
 very Fitness wOw
-add machine
+agregar maquina
 Caminadora
 very Fitness wOw
-add machine
+agregar maquina
 Bicicleta spinning
 very Fitness wOw
-add machine
+agregar maquina
 Aductor/abductor
 very Fitness wOw
-add machine
+agregar maquina
 Extensiones de pierna
 very Fitness wOw
-add machine
+agregar maquina
 Curl de pierna
 very Fitness wOw
-add machine
+agregar maquina
 Prensa 45º ergonomica
 very Fitness wOw
-add machine
+agregar maquina
 Prensa articulada
 very Fitness wOw
-add machine
+agregar maquina
 Prensa isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Prensa multiarticulada
 very Fitness wOw
-add machine
+agregar maquina
 Prensa performance
 very Fitness wOw
-add machine
+agregar maquina
 Prensa peso integrado
 very Fitness wOw
-add machine
+agregar maquina
 Rack para sentadillas
 very Fitness wOw
-add machine
+agregar maquina
 Sentadilla articulada
 very Fitness wOw
-add machine
+agregar maquina
 Sentadilla hack
 very Fitness wOw
-add machine
+agregar maquina
 Sentadilla perfecta
 very Fitness wOw
-add machine
+agregar maquina
 Sentadillas y desplantes articulados
 very Fitness wOw
-add machine
+agregar maquina
 Maquina para gluteos de pie peso libre
 very Fitness wOw
-add machine
+agregar maquina
 Maquina para gluteos parado
 very Fitness wOw
-add machine
+agregar maquina
 Maquina para gluteos performance
 very Fitness wOw
-add machine
+agregar maquina
 Costurera Performance
 very Fitness wOw
-add machine
+agregar maquina
 Levantamiento de talones peso libre
 very Fitness wOw
-add machine
+agregar maquina
 Maquina para pantorrilla
 very Fitness wOw
-add machine
+agregar maquina
 Pantorrilla costurera
 very Fitness wOw
-add machine
+agregar maquina
 Pantorrilla performance
 very Fitness wOw
-add machine
+agregar maquina
 Isolateral wide chest
 very Fitness wOw
-add machine
+agregar maquina
 Pec fly
 very Fitness wOw
-add machine
+agregar maquina
 Pec fly performance
 very Fitness wOw
-add machine
+agregar maquina
 Press horizontal articulado
 very Fitness wOw
-add machine
+agregar maquina
 Press horizontal isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Press horizontal performance
 very Fitness wOw
-add machine
+agregar maquina
 Press inclinado articulado
 very Fitness wOw
-add machine
+agregar maquina
 Press inclinado isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Pressacostado Isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Biceps articulado
 very Fitness wOw
-add machine
+agregar maquina
 Biceps isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Biceps isolateral peso integrado
 very Fitness wOw
-add machine
+agregar maquina
 Biceps performance
 very Fitness wOw
-add machine
+agregar maquina
 Biceps peso integrado
 very Fitness wOw
-add machine
+agregar maquina
 Combo Bíceps/Triceps
 very Fitness wOw
-add machine
+agregar maquina
 Triceps articulado
 very Fitness wOw
-add machine
+agregar maquina
 Triceps isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Encogimientos peso libre
 very Fitness wOw
-add machine
+agregar maquina
 Hombro peso integrado
 very Fitness wOw
-add machine
+agregar maquina
 Laterales isolateral de peso integrado
 very Fitness wOw
-add machine
+agregar maquina
 Maquina para Laterales isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Press atras nuca isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Press militar isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Rack para Hombro
 very Fitness wOw
-add machine
+agregar maquina
 Lateral pulldown peso libre
 very Fitness wOw
-add machine
+agregar maquina
 Maquina para pullover
 very Fitness wOw
-add machine
+agregar maquina
 Pull down Isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Pulldown performance
 very Fitness wOw
-add machine
+agregar maquina
 Remo Alto Isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Remo bajo Isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Remo con apoyo
 very Fitness wOw
-add machine
+agregar maquina
 Remo Isolateral
 very Fitness wOw
-add machine
+agregar maquina
 Remo tipo "T"
 very Fitness wOw
-add machine
+agregar maquina
 Abdominales Performance
 very Fitness wOw
-add machine
+agregar maquina
 Abdominales y lumbares
 very Fitness wOw
-add machine
+agregar maquina
 Combo Silla romana/hiperextensiones
 very Fitness wOw
-add machine
+agregar maquina
 Maquina para abdominales
 very Fitness wOw
-add machine
+agregar maquina
 Rotary Torso
 very Fitness wOw
-add machine
+agregar maquina
 Silla rusa performance
 very Fitness wOw
-add machine
+agregar maquina
 Silla rusa tubular
 very Fitness wOw
-add machine
+agregar maquina
 Banco Declinado
 very Fitness wOw
-add machine
+agregar maquina
 Banco graduable
 very Fitness wOw
-add machine
+agregar maquina
 Banco graduable 2
 very Fitness wOw
-add machine
+agregar maquina
 Banco horizontal olimpico
 very Fitness wOw
-add machine
+agregar maquina
 Banco horizontal sin soportes
 very Fitness wOw
-add machine
+agregar maquina
 Banco inclinado olimpico
 very Fitness wOw
-add machine
+agregar maquina
 Banco inclinado sin soportes
 very Fitness wOw
-add machine
+agregar maquina
 Banco Multiusos
 very Fitness wOw
 #Ver maquinas
-view machine
+ver maquina
 
 #Ver descripcion de Mancuerna
-view machine
+ver maquina
 mancuerna
 #Modificar banco abdominal
-mod machine
+mod maquina
 banco abdominal
 Te da 6-pack abs, amigo!
 #Borrar Banco Multiusos
-rm machine
+rm maquina
 banco multiusos
 #Modificar maquina inexistente (cuerda) (ERROR!)
-mod machine
+mod maquina
 cuerda
 Brinca la cuerdita para enamorar a todo el gym.
 #Borrar maquina inexistente (cuerda) (ERROR!)
-rm machine
+rm maquina
 cuerda
 #Ver maquinas
-view machine
+ver maquina
 
 #Agregando ejercicios
-add exercise
+agregar exercise
 Abdominales
 Reduce los pliegues pectorales
 Banco abdominal
 
-add exercise
+agregar exercise
 Triceps
 Para piernas fuertes
 Triceps articulado
 
-add exercise
+agregar exercise
 Sentadilla
 Fortalece piernas y abdomen
 Sentadilla articulada
 
-add exercise
+agregar exercise
 Gluteos
 Fortalece la parte mas valiosa del cuerpo humano
 Maquina para gluteos parado
 
-add exercise
+agregar exercise
 Talones
 Para que no le pase lo de Aquiles
 Levantamiento de talones peso libre
 
-add exercise
+agregar exercise
 Pantorrilla
 Recomendado para futbolistas y karatekas
 Pantorrilla costurera
 
-add exercise
+agregar exercise
 Prensa
 Para fortalecer brazos
 Prensa performance
 
 #Ver ejercicios
-view exercise
+ver exercise
 
 #Ver Pantorrial
-view exercise
+ver exercise
 pantorrilla
 #Quitar Gluteos
 rm exercise
@@ -470,7 +470,7 @@ Talones
 Recomendado por el antiguo guerrero Aquiles
 Levantamiento de talones peso libre
 #Ver ejercicios
-view exercise
+ver exercise
 
 
-exit
+salir

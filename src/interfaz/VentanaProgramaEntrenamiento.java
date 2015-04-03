@@ -43,8 +43,8 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         txtAsistencia = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         btnAddDia = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        listaDias = new javax.swing.JList();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         btnCancelarVPE = new javax.swing.JButton();
         btnGuardarVPE = new javax.swing.JButton();
         btnModificarVPE = new javax.swing.JButton();
@@ -93,13 +93,26 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             }
         });
 
-        listaDias.setBackground(new java.awt.Color(204, 204, 204));
-        listaDias.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        jScrollPane1.setViewportView(listaDias);
+        jScrollPane4.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -111,15 +124,15 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnAddDia)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
+                    .addComponent(jScrollPane4))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAddDia)
                 .addContainerGap())
         );
@@ -270,7 +283,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -347,10 +360,10 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JList listaDias;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtAsistencia;
     private javax.swing.JTextArea txtDescripcionVPE;
     private javax.swing.JLabel txtFechaCreacion;

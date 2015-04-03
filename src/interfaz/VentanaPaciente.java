@@ -48,6 +48,8 @@ public class VentanaPaciente extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VentanaPaciente().setVisible(true);
@@ -251,7 +253,9 @@ public class VentanaPaciente extends javax.swing.JFrame {
         try {
             ProyectoFitness.agregarPaciente(txtCedula.getText(), txtNombre.getText(), sexo, txtFechaNacimiento.getText(),txtTelefono.getText(), txtCorreo.getText());
             VentanaPrincipal.llenarTabla();
+            clear();
             dispose();
+            
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
@@ -261,6 +265,14 @@ public class VentanaPaciente extends javax.swing.JFrame {
         txtFechaNacimiento.setText("");
     }//GEN-LAST:event_txtFechaNacimientoMouseClicked
 
+    private void clear(){
+        txtCedula.setText("");
+        txtCorreo.setText("");
+        txtFechaNacimiento.setText("dd-MM-YYYY");
+        txtNombre.setText("");
+        txtTelefono.setText("");
+    
+    }
     /**
      * @param args the command line arguments
      */

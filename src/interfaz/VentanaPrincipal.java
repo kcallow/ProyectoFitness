@@ -6,6 +6,7 @@
 package interfaz;
 
 import java.util.HashMap;
+import javax.swing.table.TableColumn;
 import proyectofitness.*;
 
 /**
@@ -258,6 +259,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         ));
         tabla.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_LAST_COLUMN);
+        tabla.setAutoscrolls(false);
         tabla.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tablaMouseClicked(evt);

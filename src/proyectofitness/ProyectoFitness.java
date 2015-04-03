@@ -146,22 +146,25 @@ public class ProyectoFitness {
 	private static void ver(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "paciente":
-				verPaciente(command);
+                System.out.println(getPaciente(scanner.nextLine()));
 				break;
 			case "medicion":
-				verMedicion(command);
+                System.out.println(getMedicion(scanner.nextLine(),scanner.nextLine()));
 				break;
 			case "tipo-ejercicio":
-				verTipoEjercicio(command);
+				System.out.println(getTipoEjercicio(scanner.nextLine()));
 				break;
 			case "programa":
-				verPrograma(command);
+				System.out.println(getPrograma(scanner.nextLine()));
 				break;
 			case "dia":
-				verDia(command);
+				System.out.println(getDia(scanner.nextLine(),scanner.nextLine()));
+				break;
+			case "ejercicio":
+				System.out.println(getEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine()));
 				break;
 			case "maquina":
-				verMaquina(command);
+				System.out.println(getMaquina(scanner.nextLine()));
 				break;
 			default:
 				System.out.println("Opcion invalida para ver...");
@@ -336,5 +339,70 @@ public class ProyectoFitness {
         if(!maquinas.containsKey(nombre))
             throw new Exception("Nombre no corresponde a ninguna maquina.  No se puede borrar.");
         maquinas.remove(nombre);
+    }
+
+    private static Paciente getPaciente(String cedula) throws Exception {
+        if(!pacientes.containsKey(cedula))
+            throw new Exception("Cedula no corresponde a ningun paciente.  No se puede get.");
+        return pacientes.get(cedula);
+    }
+
+    private static Double getMedicion(String cedula, String nombreMedicion) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para get medicion.");
+        if(!paciente.getMediciones().containsKey(nombreMedicion))
+            throw new Exception("Nombre no corresponde a ninguna medicion.  No se puede get.");
+        return paciente.getMediciones().get(nombreMedicion);
+    }
+
+    private static TipoEjercicio getTipoEjercicio(String nombre) throws Exception {
+        if(!tiposEjercicio.containsKey(nombre))
+            throw new Exception("Nombre no corresponde a ningun ejercicio.  No se puede get.");
+        return tiposEjercicio.get(nombre);
+    }
+
+    private static ProgramaEntrenamiento getPrograma(String cedula) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para get programa de entrenamiento.");
+        if(paciente.getProgramaEntrenamiento().size() == 0)
+            throw new Exception("Paciente todavia no tiene programa de entrenamiento.  No se puede get.");
+        return paciente.getProgramaEntrenamiento();
+    }
+
+    private static Dia getDia(String cedula, String numeroDia) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para get dia de programa de entrenamiento.");
+        ProgramaEntrenamiento programa = paciente.getProgramaEntrenamiento();
+        if(programa.size() == 0)
+            throw new Exception("Paciente todavia no tiene programa de entrenamiento.  No se puede get.");
+        Integer numero = Integer.parseInt(numeroDia);
+        if(!programa.containsKey(numero))
+            throw new Exception("Numero de dia invalido para get dia de programa de entrenamiento.");
+        return programa.get(numero);
+    }
+
+    private static Ejercicio getEjercicio(String cedula, String numeroDia, String numeroEjercicio) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para get dia de programa de entrenamiento.");
+        ProgramaEntrenamiento programa = paciente.getProgramaEntrenamiento();
+        if(programa.size() == 0)
+            throw new Exception("Paciente todavia no tiene programa de entrenamiento.  No se puede get.");
+        Dia dia = programa.get(Integer.parseInt(numeroDia));
+        if(dia == null)
+            throw new Exception("Numero de dia invalido para get ejercicio de dia de programa de entrenamiento.");
+        Integer numero = Integer.parseInt(numeroEjercicio);
+        if(!dia.containsKey(numero))
+            throw new Exception("Numero de ejercicio invalido para get ejercicio de dia de programa de entrenamiento.");
+        return dia.get(numero);
+    }
+
+    private static String getMaquina(String nombre) throws Exception {
+        if(!maquinas.containsKey(nombre))
+            throw new Exception("Nombre no corresponde a ninguna maquina.  No se puede get.");
+        return maquinas.get(nombre);
     }
 }

@@ -166,6 +166,9 @@ public class ProyectoFitness {
 			case "ejercicio":
 				System.out.println(getEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine()));
 				break;
+			case "maquinas":
+				System.out.println(maquinas);
+				break;
 			case "maquina":
 				System.out.println(getMaquina(scanner.nextLine()));
 				break;

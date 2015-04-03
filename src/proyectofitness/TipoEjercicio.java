@@ -34,4 +34,8 @@ public class TipoEjercicio {
         return descripcion + ".  Usa: " + maquina;
     }
 
+    public String toCommand() {
+        return descripcion + "\n" + maquina + "\n";
+    }
+
 }

@@ -5,7 +5,10 @@
  */
 package interfaz;
 
+import java.io.FileNotFoundException;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.TableColumn;
 import proyectofitness.*;
 
@@ -21,9 +24,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     @Override
     public void dispose() {
-        //Guarda el archivo de datos antes de dispose la ventana
-        //ProyectoFitness.guardarArchivo(ProyectoFitness.saveFile);
+        try {
+            //Guarda el archivo de datos antes de dispose la ventana
+            ProyectoFitness.guardarArchivo(ProyectoFitness.saveFile);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
         super.dispose();
+        System.exit(0);
     }
     /**
      * Creates new form VentanaPrincipal
@@ -31,7 +39,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
         //Es necesario que se dispose al cerrar para poder llamar al metodo overriden dispose()
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE); 
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         llenarTabla();
     }
 

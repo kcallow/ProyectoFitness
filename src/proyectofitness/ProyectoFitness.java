@@ -1,6 +1,8 @@
 package proyectofitness;
 
 import interfaz.VentanaPrincipal;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -22,12 +24,20 @@ public class ProyectoFitness {
     public static void cargarArchivo(String saveFile) throws Exception {
         Scanner oldScanner = scanner; //Almacenar el valor anterior de scanner
         scanner = new Scanner(Paths.get(saveFile)); //Poner scanner a leer archivo
-        initShell();
+        initShell();//Ejecutar comandos en archivo mediante shell
+        scanner.close();
         scanner = oldScanner; //Restaurar valor de scanner
     }
     
-    public static void guardarArchivo(String saveFile) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void guardarArchivo(String saveFile) throws FileNotFoundException {
+        //Obtiene los comandos para cargar los datos, y los guarda en un archivo
+        String comandosCargar = tiposEjercicio.toCommand() 
+                + maquinas.toCommand() 
+                + pacientes.toCommand() 
+                + "salir";
+        try (PrintWriter escritor = new PrintWriter(saveFile)) {
+            escritor.println(comandosCargar);
+        }
     }
 
 	public static void main(String [] args) throws Exception{

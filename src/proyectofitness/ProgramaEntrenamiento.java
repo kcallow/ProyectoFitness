@@ -22,7 +22,18 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
     public String toString(){
         String result = "";
         for (Integer numeroDia : keySet())
-            result += numeroDia + get(numeroDia).toString() + "\n";
+            result += numeroDia + ": "+ get(numeroDia).toString() + "\n";
+        return result;
+    }
+    
+    public String toCommand(String cedula) {
+        String result = "#Agregando el programa de entrenamiento de " + cedula + "...\n";
+        for (Integer numeroDia : keySet())
+            result += "#Agregando dia #" + numeroDia + "\n"
+                    + "agregar dia\n" 
+                    + cedula + "\n" 
+                    + numeroDia + "\n"
+                    + get(numeroDia).toCommand(cedula) + "\n"; 
         return result;
     }
 }

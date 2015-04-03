@@ -161,10 +161,10 @@ Circunferencia Pectoral
 20
 
 #Intentar modificar medida no definida Peso para 888888889 (ERROR!)
-#mod medicion
-#888888889
-#Peso
-#15
+mod medicion
+888888889
+Peso
+15
 
 #Ver mediciones de 888888889
 ver medicion

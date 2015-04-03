@@ -184,10 +184,18 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
 
     private void btnBorrarVTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVTEActionPerformed
         try {
-            ProyectoFitness.borrarTipoEjercicio(txtNombre.getText());
-            VentanaPrincipal.llenarTabla();
-            clear();
-            dispose();
+            int opcion = JOptionPane.showConfirmDialog(null, 
+                                 "El tipo de ejercicio" + txtNombre.getText() + "está siendo utilizado en "
+                                         + "<número de programas de entrenamiento> \nprogramas de entrenamiento, "
+                                         + "se eliminará de estos programas. \n¿Confirma el borrado del ejercicio?", 
+                                  "", 
+                                  JOptionPane.YES_NO_OPTION); 
+            if (opcion == JOptionPane.YES_OPTION) {
+                ProyectoFitness.borrarTipoEjercicio(txtNombre.getText());
+                VentanaPrincipal.llenarTabla();
+                clear();
+                dispose();
+            }
         } catch (Exception ex) {
             Logger.getLogger(VentanaTipoEjercicio.class.getName()).log(Level.SEVERE, null, ex);
         }

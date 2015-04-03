@@ -187,10 +187,20 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         try {
-            ProyectoFitness.borrarMaquina(txtNombreMaquina.getText());
-            VentanaPrincipal.llenarTabla();
-            clear();
-            dispose();
+            int opcion = JOptionPane.showConfirmDialog(null, 
+                                 "La máquina" + txtNombreMaquina.getText() + "está siendo utilizado en "
+                                         + "<número de programas de entrenamiento> \nprogramas de entrenamiento, "
+                                         + "se eliminará de estos programas. \n¿Confirma el borrado de la máquina?", 
+                                  "", 
+                                  JOptionPane.YES_NO_OPTION); 
+            if (opcion == JOptionPane.YES_OPTION) {
+                ProyectoFitness.borrarMaquina(txtNombreMaquina.getText());
+                VentanaPrincipal.llenarTabla();
+                clear();
+                dispose();
+            }
+            
+            
         } catch (Exception ex) {
             Logger.getLogger(VentanaMaquina.class.getName()).log(Level.SEVERE, null, ex);
         }

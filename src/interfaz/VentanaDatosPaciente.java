@@ -481,7 +481,6 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         radioMujer.setEnabled(true);
     }
 
-    @Override
     public void cargarLlave(String llave) throws Exception {
         Paciente paciente = ProyectoFitness.getPaciente(llave);
     }

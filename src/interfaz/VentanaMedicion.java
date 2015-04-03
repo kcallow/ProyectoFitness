@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import proyectofitness.ProyectoFitness;
+
 /**
  *
  * @author scsaenz
@@ -737,8 +739,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
         btnBorrarVM.setEnabled(false);
     }
 
-    @Override
-    public void cargarLlave(Object llave) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void cargarLlave(String cedula, String nombreMedicion) throws Exception {
+        Double valor = ProyectoFitness.getMedicion(cedula, nombreMedicion);
     }
 }

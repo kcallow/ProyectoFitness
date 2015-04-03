@@ -47,6 +47,16 @@ public class VentanaDia extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
+        listaEjercicios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                listaEjerciciosMouseReleased(evt);
+            }
+        });
+        listaEjercicios.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                listaEjerciciosValueChanged(evt);
+            }
+        });
         jScrollPane1.setViewportView(listaEjercicios);
 
         addEjercicioDia.setText("Agregar Ejercicio");
@@ -135,8 +145,16 @@ public class VentanaDia extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirDiaActionPerformed
 
     private void btnBorrarDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarDiaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnBorrarDiaActionPerformed
+
+    private void listaEjerciciosValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listaEjerciciosValueChanged
+        
+    }//GEN-LAST:event_listaEjerciciosValueChanged
+
+    private void listaEjerciciosMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaEjerciciosMouseReleased
+        System.out.println("sadsdsada");
+    }//GEN-LAST:event_listaEjerciciosMouseReleased
 
     /**
      * @param args the command line arguments

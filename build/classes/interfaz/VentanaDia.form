@@ -117,6 +117,10 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="listaEjerciciosMouseReleased"/>
+                <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="listaEjerciciosValueChanged"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

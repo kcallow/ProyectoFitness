@@ -209,6 +209,7 @@
             <Property name="text" type="java.lang.String" value="dd-MM-YYYY"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtFechaNacimientoMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFechaNacimientoActionPerformed"/>
           </Events>
         </Component>
@@ -241,6 +242,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

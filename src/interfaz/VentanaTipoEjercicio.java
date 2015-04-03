@@ -6,7 +6,7 @@
 package interfaz;
 
 import javax.swing.JOptionPane;
-import proyectofitness.ProyectoFitness;
+import proyectofitness.*;
 
 /**
  *
@@ -94,7 +94,7 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
 
         jLabel3.setText("Tipo de Máquina:");
 
-        comboMaquina.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboMaquina.setModel(new javax.swing.DefaultComboBoxModel(ProyectoFitness.maquinas.keySet().toArray()));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

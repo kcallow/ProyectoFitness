@@ -86,17 +86,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
     
     public static void llenarTabla(){
+        Object[][] objetos = null;
         int rows = hashMapActual.size();
-        int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
-        Object [][] objetos = new Object[rows][columns];
-        int i = 0;
-        for(Object key: hashMapActual.keySet()){
-            objetos[i][0] = key;
-            Object [] campos = hashMapActual.values().toArray()[i].toString().split(",");
-            for(int j = 0; j < columns-1; j++) {
-                objetos[i][j+1] = campos[j];
+        if(rows > 0) {
+            int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
+            objetos = new Object[rows][columns];
+            int i = 0;
+            for(Object key: hashMapActual.keySet()){
+                objetos[i][0] = key;
+                Object [] campos = hashMapActual.values().toArray()[i].toString().split(",");
+                for(int j = 0; j < columns-1; j++) {
+                    objetos[i][j+1] = campos[j];
+                }
+                i++;
             }
-            i++;
         }
         tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, camposTablaActual));
                 

@@ -17,6 +17,10 @@ import proyectofitness.*;
  * @author scsaenz
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
+    private static Object[] camposTablaActual;
+    private static final Object[] camposTablaPaciente = new Object[] {"Cédula", "Nombre", "Sexo", "Fecha de nacimiento", "Teléfono", "Correo electrónico"};
+    private static final Object[] camposTablaMaquina = new Object[] {"Nombre de máquina", "Descripción"};
+    private static final Object[] camposTablaEjercicio = new Object[] {"Nombre de ejercicio", "Descripción"};
     VentanaPaciente ventanaPaciente = new VentanaPaciente();
     VentanaMaquina ventanaMaquina = new VentanaMaquina();
     VentanaTipoEjercicio ventanaTipoEjercicio = new VentanaTipoEjercicio();
@@ -82,18 +86,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
     
     public static void llenarTabla(){
-        Object [][] objetos = new Object[hashMapActual.size()][2];
+        int rows = hashMapActual.size();
+        int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
+        Object [][] objetos = new Object[rows][columns];
         int i = 0;
         for(Object key: hashMapActual.keySet()){
             objetos[i][0] = key;
-            objetos[i][1] = hashMapActual.get(key);
+            Object [] campos = hashMapActual.values().toArray()[i].toString().split(",");
+            for(int j = 0; j < columns-1; j++) {
+                objetos[i][j+1] = campos[j];
+            }
             i++;
         }
-        tabla.setModel(new javax.swing.table.DefaultTableModel(objetos ,
-            new String [] {
-                "ddd", "ddd"
-            }
-        ));
+        tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, camposTablaActual));
+                
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -358,12 +364,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         switch (jTabbedPane1.getSelectedIndex()){
             case 0:
                 hashMapActual = ProyectoFitness.pacientes;
+                camposTablaActual = camposTablaPaciente;
                 break;
             case 1:
                 hashMapActual = ProyectoFitness.tiposEjercicio;
+                camposTablaActual = camposTablaEjercicio;
                 break;
             case 2:
                 hashMapActual = ProyectoFitness.maquinas;
+                camposTablaActual = camposTablaMaquina;
                 break;
         }
         llenarTabla();

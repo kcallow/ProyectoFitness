@@ -72,7 +72,7 @@ public class Paciente {
 
     @Override
     public String toString() {
-        return nombre + ", " + sexo + ", " + fechaDeNacimiento + ", " + telefono.getTelefono() + ", " + correo.getCorreo();
+        return nombre + ", " + sexo + ", " + fechaDeNacimiento.format(ProyectoFitness.formatoFecha) + ", " + telefono.getTelefono() + ", " + correo.getCorreo();
     }
 
     public String toCommand(String cedula) {

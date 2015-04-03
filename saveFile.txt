@@ -16,6 +16,10 @@ very Fitness wOw
 agregar maquina
 Remo con apoyo
 very Fitness wOw
+#Agregando maquina: Cuerda...
+agregar maquina
+Cuerda
+Muy larga
 #Agregando maquina: Silla rusa performance...
 agregar maquina
 Silla rusa performance

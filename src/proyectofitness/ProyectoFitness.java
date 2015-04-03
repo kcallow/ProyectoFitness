@@ -31,6 +31,7 @@ public class ProyectoFitness {
     }
     
     public static void guardarArchivo(String saveFile) throws FileNotFoundException {
+        System.out.println("Guardando datos...");
         //Obtiene los comandos para cargar los datos, y los guarda en un archivo
         String comandosCargar = tiposEjercicio.toCommand() 
                 + maquinas.toCommand() 

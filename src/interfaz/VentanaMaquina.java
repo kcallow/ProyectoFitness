@@ -262,6 +262,8 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
 
     @Override
     public void cargarLlave(String llave) throws Exception {
-        
+        String descripcion = ProyectoFitness.maquinas.get(llave);
+        txtNombreMaquina.setText(llave);
+        jTextArea1.setText(descripcion);
     }
 }

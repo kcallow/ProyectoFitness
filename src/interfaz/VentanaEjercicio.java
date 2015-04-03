@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import proyectofitness.*;
+
 /**
  *
  * @author scsaenz
@@ -395,8 +397,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
             elementos[i].setEnabled(true);
     }
 
-    @Override
-    public void cargarLlave(String llave) throws Exception {
-        Ejercicio ejercicio = ProyectoFitness.
+    public void cargarLlave(String llave, String numeroDia, String numeroEjercicio) throws Exception {
+        Ejercicio ejercicio = ProyectoFitness.getEjercicio(llave, numeroDia, numeroEjercicio);
     }
 }

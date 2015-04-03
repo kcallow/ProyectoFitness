@@ -1,5 +1,9 @@
 package proyectofitness;
 
+import interfaz.VentanaPrincipal;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -13,15 +17,39 @@ public class ProyectoFitness {
     public static final TiposEjercicio tiposEjercicio = new TiposEjercicio();
     public static final TiposMedicion tiposMedicion = new TiposMedicion();
 
-	private static final Scanner scanner = new Scanner(System.in);
+	private static Scanner scanner = new Scanner(System.in);
+    private static final boolean TESTING = false; //Verdadero cuando probando en shell, falso si en modo normal con ventanas
+    public static String saveFile = "saveFile.txt";
+    public static final DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd-MM-uuuu");
 
-	public static void main(String [] args){
-		initShell();
-	}
-
-    private static int getInt() {
-        return Integer.parseInt(scanner.nextLine());
+    public static void cargarArchivo(String saveFile) throws Exception {
+        Scanner oldScanner = scanner; //Almacenar el valor anterior de scanner
+        scanner = new Scanner(Paths.get(saveFile)); //Poner scanner a leer archivo
+        initShell();//Ejecutar comandos en archivo mediante shell
+        scanner.close();
+        scanner = oldScanner; //Restaurar valor de scanner
     }
+    
+    public static void guardarArchivo(String saveFile) throws FileNotFoundException {
+        System.out.println("Guardando datos...");
+        //Obtiene los comandos para cargar los datos, y los guarda en un archivo
+        String comandosCargar = maquinas.toCommand() 
+                + tiposEjercicio.toCommand() 
+                + pacientes.toCommand() 
+                + "salir";
+        try (PrintWriter escritor = new PrintWriter(saveFile)) {
+            escritor.println(comandosCargar);
+        }
+    }
+
+	public static void main(String [] args) throws Exception{
+        if(TESTING)
+            initShell();
+        else {
+            cargarArchivo(saveFile);
+            VentanaPrincipal.main(args);
+        }
+	}
 
 	public static void initShell(){
 		String input = "";
@@ -29,14 +57,14 @@ public class ProyectoFitness {
             System.out.print(" > ");
             input = scanner.nextLine();
             try {
-                processCommand(input);
+                procesarComando(input);
             } catch (Exception ex) {
                 Logger.getLogger(ProyectoFitness.class.getName()).log(Level.SEVERE, null, ex);
             }
 		}
 	}
 
-	private static void processCommand(String input) throws Exception{
+	public static void procesarComando(String input) throws Exception{
         if(input.equals(""))
             return;
         if(input.charAt(0) == '#') {
@@ -58,6 +86,9 @@ public class ProyectoFitness {
 				ver(command);
 				break;
             case "salir":
+                break;
+            case "cargar":
+                cargarArchivo(command[1]);
                 break;
 			default:
 				System.out.println("Comando no reconocido.");
@@ -184,7 +215,7 @@ public class ProyectoFitness {
             throw new Exception("Ya existe un paciente con cedula indicada.");
         LocalDate fecha;
         try{
-            fecha = LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu"));
+            fecha = LocalDate.parse(fechaNacimiento, formatoFecha);
         }
         catch (Exception e) {
             throw new Exception("Fecha invalida.  El formato correcto es dd-MM-aaaa");
@@ -232,7 +263,7 @@ public class ProyectoFitness {
     public static void agregarMaquina(String nombre, String descripcion) throws Exception {
         if(maquinas.containsKey(nombre))
             throw new Exception("Nombre invalido para agregar maquina.");
-        maquinas.put(nombre, descripcion);
+        maquinas.put(nombre, descripcion.replace("\n", "  "));
     }
 
     public static void modificarPaciente(String cedula, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
@@ -288,7 +319,7 @@ public class ProyectoFitness {
     public static void modificarMaquina(String nombre, String descripcion) throws Exception {
         if(!maquinas.containsKey(nombre))
             throw new Exception("Nombre invalido para modificar maquina.");
-        maquinas.put(nombre, descripcion);
+        maquinas.put(nombre, descripcion.replace("\n", "  "));
     }
 
     public static void borrarPaciente(String cedula) throws Exception {

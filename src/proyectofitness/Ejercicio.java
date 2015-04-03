@@ -69,4 +69,19 @@ public class Ejercicio {
     public void setTiempoDescanso(int tiempoDescanso) {
         this.tiempoDescanso = tiempoDescanso;
     }
+
+    @Override
+    public String toString() {
+        return tipoEjercicio + ", " +  series + ", " +  repeticiones + ", " +  peso1 + ", " +  peso2 + ", " +  peso3 + ", " +  tiempoDescanso ;
+    }
+
+    public String toCommand() {
+        return tipoEjercicio + "\n" +  
+                series + "\n" +  
+                repeticiones + "\n" +  
+                peso1 + "\n" +  
+                peso2 + "\n" +  
+                peso3 + "\n" +  
+                tiempoDescanso + "\n";
+    }
 }

@@ -72,6 +72,19 @@ public class Paciente {
 
     @Override
     public String toString() {
-        return nombre + "    " + sexo + "    " + fechaDeNacimiento + "    " + telefono.getTelefono() + "    " + correo.getCorreo();
+        return nombre + ", " + sexo + ", " + fechaDeNacimiento.format(ProyectoFitness.formatoFecha) + ", " + telefono.getTelefono() + ", " + correo.getCorreo();
+    }
+
+    public String toCommand(String cedula) {
+        return "#Agregando paciente " + nombre + ", cedula " + cedula + "...\n"
+                + "agregar paciente\n" 
+                + cedula + "\n"
+                + nombre + "\n" 
+                + sexo + "\n" 
+                + fechaDeNacimiento.format(ProyectoFitness.formatoFecha) + "\n" 
+                + telefono.getTelefono() + "\n" 
+                + correo.getCorreo() + "\n" 
+                + programaEntrenamiento.toCommand(cedula) + "\n" 
+                + mediciones.toCommand(cedula) + "\n";
     }
 }

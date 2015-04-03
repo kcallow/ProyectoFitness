@@ -16,6 +16,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
      */
     public VentanaMedicion() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**

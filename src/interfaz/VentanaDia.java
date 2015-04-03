@@ -17,6 +17,7 @@ public class VentanaDia extends javax.swing.JFrame {
      */
     public VentanaDia() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**

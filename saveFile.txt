@@ -1,0 +1,400 @@
+#Agregando todas las maquinas al sistema...
+#Agregando maquina: Extensiones de pierna...
+agregar maquina
+Extensiones de pierna
+very Fitness wOw
+#Agregando maquina: Rotary Torso...
+agregar maquina
+Rotary Torso
+very Fitness wOw
+#Agregando maquina: Remo con apoyo...
+agregar maquina
+Remo con apoyo
+very Fitness wOw
+#Agregando maquina: Cuerda...
+agregar maquina
+Cuerda
+Muy larga
+#Agregando maquina: Silla rusa performance...
+agregar maquina
+Silla rusa performance
+very Fitness wOw
+#Agregando maquina: Pec fly...
+agregar maquina
+Pec fly
+very Fitness wOw
+#Agregando maquina: Biceps isolateral...
+agregar maquina
+Biceps isolateral
+very Fitness wOw
+#Agregando maquina: Press militar isolateral...
+agregar maquina
+Press militar isolateral
+very Fitness wOw
+#Agregando maquina: Banco inclinado sin soportes...
+agregar maquina
+Banco inclinado sin soportes
+very Fitness wOw
+#Agregando maquina: Press horizontal isolateral...
+agregar maquina
+Press horizontal isolateral
+very Fitness wOw
+#Agregando maquina: Biceps peso integrado...
+agregar maquina
+Biceps peso integrado
+very Fitness wOw
+#Agregando maquina: Pull down Isolateral...
+agregar maquina
+Pull down Isolateral
+very Fitness wOw
+#Agregando maquina: Combo Bíceps/Triceps...
+agregar maquina
+Combo Bíceps/Triceps
+very Fitness wOw
+#Agregando maquina: Remo tipo "T"...
+agregar maquina
+Remo tipo "T"
+very Fitness wOw
+#Agregando maquina: Banco graduable 2...
+agregar maquina
+Banco graduable 2
+very Fitness wOw
+#Agregando maquina: Sentadilla hack...
+agregar maquina
+Sentadilla hack
+very Fitness wOw
+#Agregando maquina: Prensa 45º ergonomica...
+agregar maquina
+Prensa 45º ergonomica
+very Fitness wOw
+#Agregando maquina: Lateral pulldown peso libre...
+agregar maquina
+Lateral pulldown peso libre
+very Fitness wOw
+#Agregando maquina: Aductor/abductor...
+agregar maquina
+Aductor/abductor
+very Fitness wOw
+#Agregando maquina: Encogimientos peso libre...
+agregar maquina
+Encogimientos peso libre
+very Fitness wOw
+#Agregando maquina: Sentadilla perfecta...
+agregar maquina
+Sentadilla perfecta
+very Fitness wOw
+#Agregando maquina: Remo bajo Isolateral...
+agregar maquina
+Remo bajo Isolateral
+very Fitness wOw
+#Agregando maquina: Fuckk...
+agregar maquina
+Fuckk
+This is  hooo   wwe  do
+#Agregando maquina: Prensa peso integrado...
+agregar maquina
+Prensa peso integrado
+very Fitness wOw
+#Agregando maquina: Press atras nuca isolateral...
+agregar maquina
+Press atras nuca isolateral
+very Fitness wOw
+#Agregando maquina: Prensa performance...
+agregar maquina
+Prensa performance
+very Fitness wOw
+#Agregando maquina: LOL...
+agregar maquina
+LOL
+No
+#Agregando maquina: Mancuerna...
+agregar maquina
+Mancuerna
+very Fitness wOw
+#Agregando maquina: Pantorrilla performance...
+agregar maquina
+Pantorrilla performance
+very Fitness wOw
+#Agregando maquina: Maquina para Laterales isolateral...
+agregar maquina
+Maquina para Laterales isolateral
+very Fitness wOw
+#Agregando maquina: Maquina para abdominales...
+agregar maquina
+Maquina para abdominales
+very Fitness wOw
+#Agregando maquina: Banco horizontal olimpico...
+agregar maquina
+Banco horizontal olimpico
+very Fitness wOw
+#Agregando maquina: Prensa articulada...
+agregar maquina
+Prensa articulada
+very Fitness wOw
+#Agregando maquina: Pulldown performance...
+agregar maquina
+Pulldown performance
+very Fitness wOw
+#Agregando maquina: Maquina para gluteos parado...
+agregar maquina
+Maquina para gluteos parado
+very Fitness wOw
+#Agregando maquina: Press horizontal articulado...
+agregar maquina
+Press horizontal articulado
+very Fitness wOw
+#Agregando maquina: Laterales isolateral de peso integrado...
+agregar maquina
+Laterales isolateral de peso integrado
+very Fitness wOw
+#Agregando maquina: Sentadilla articulada...
+agregar maquina
+Sentadilla articulada
+very Fitness wOw
+#Agregando maquina: Press horizontal performance...
+agregar maquina
+Press horizontal performance
+very Fitness wOw
+#Agregando maquina: Banco horizontal sin soportes...
+agregar maquina
+Banco horizontal sin soportes
+very Fitness wOw
+#Agregando maquina: Banco graduable...
+agregar maquina
+Banco graduable
+very Fitness wOw
+#Agregando maquina: Press inclinado isolateral...
+agregar maquina
+Press inclinado isolateral
+very Fitness wOw
+#Agregando maquina: Biceps performance...
+agregar maquina
+Biceps performance
+very Fitness wOw
+#Agregando maquina: Remo Isolateral...
+agregar maquina
+Remo Isolateral
+very Fitness wOw
+#Agregando maquina: Maquina para pantorrilla...
+agregar maquina
+Maquina para pantorrilla
+very Fitness wOw
+#Agregando maquina: Maquina para pullover...
+agregar maquina
+Maquina para pullover
+very Fitness wOw
+#Agregando maquina: Silla rusa tubular...
+agregar maquina
+Silla rusa tubular
+very Fitness wOw
+#Agregando maquina: Pec fly performance...
+agregar maquina
+Pec fly performance
+very Fitness wOw
+#Agregando maquina: Maquina para gluteos performance...
+agregar maquina
+Maquina para gluteos performance
+very Fitness wOw
+#Agregando maquina: Biceps isolateral peso integrado...
+agregar maquina
+Biceps isolateral peso integrado
+very Fitness wOw
+#Agregando maquina: Abdominales y lumbares...
+agregar maquina
+Abdominales y lumbares
+very Fitness wOw
+#Agregando maquina: Banco abdominal...
+agregar maquina
+Banco abdominal
+very Fitness wOw
+#Agregando maquina: Banco Multiusos...
+agregar maquina
+Banco Multiusos
+very Fitness wOw
+#Agregando maquina: Isolateral wide chest...
+agregar maquina
+Isolateral wide chest
+very Fitness wOw
+#Agregando maquina: Prensa isolateral...
+agregar maquina
+Prensa isolateral
+very Fitness wOw
+#Agregando maquina: Banco Declinado...
+agregar maquina
+Banco Declinado
+very Fitness wOw
+#Agregando maquina: Bicicleta spinning...
+agregar maquina
+Bicicleta spinning
+very Fitness wOw
+#Agregando maquina: Sentadillas y desplantes articulados...
+agregar maquina
+Sentadillas y desplantes articulados
+very Fitness wOw
+#Agregando maquina: Pressacostado Isolateral...
+agregar maquina
+Pressacostado Isolateral
+very Fitness wOw
+#Agregando maquina: Triceps isolateral...
+agregar maquina
+Triceps isolateral
+very Fitness wOw
+#Agregando maquina: Curl de pierna...
+agregar maquina
+Curl de pierna
+very Fitness wOw
+#Agregando maquina: Hombro peso integrado...
+agregar maquina
+Hombro peso integrado
+very Fitness wOw
+#Agregando maquina: Abdominales Performance...
+agregar maquina
+Abdominales Performance
+very Fitness wOw
+#Agregando maquina: Press inclinado articulado...
+agregar maquina
+Press inclinado articulado
+very Fitness wOw
+#Agregando maquina: Rack para Hombro...
+agregar maquina
+Rack para Hombro
+very Fitness wOw
+#Agregando maquina: Biceps articulado...
+agregar maquina
+Biceps articulado
+very Fitness wOw
+#Agregando maquina: Banco olimpico...
+agregar maquina
+Banco olimpico
+very Fitness wOw
+#Agregando maquina: Maquina para gluteos de pie peso libre...
+agregar maquina
+Maquina para gluteos de pie peso libre
+very Fitness wOw
+#Agregando maquina: Prensa multiarticulada...
+agregar maquina
+Prensa multiarticulada
+very Fitness wOw
+#Agregando maquina: Costurera Performance...
+agregar maquina
+Costurera Performance
+very Fitness wOw
+#Agregando maquina: Rack para sentadillas...
+agregar maquina
+Rack para sentadillas
+very Fitness wOw
+#Agregando maquina: Caminadora...
+agregar maquina
+Caminadora
+very Fitness wOw
+#Agregando maquina: Triceps articulado...
+agregar maquina
+Triceps articulado
+very Fitness wOw
+#Agregando maquina: Mancuerna Cosi...
+agregar maquina
+Mancuerna Cosi
+Solo para los pacientes mas cosis
+#Agregando maquina: Banco inclinado olimpico...
+agregar maquina
+Banco inclinado olimpico
+very Fitness wOw
+#Agregando maquina: Remo Alto Isolateral...
+agregar maquina
+Remo Alto Isolateral
+very Fitness wOw
+#Agregando maquina: Pantorrilla costurera...
+agregar maquina
+Pantorrilla costurera
+very Fitness wOw
+#Agregando maquina: Combo Silla romana/hiperextensiones...
+agregar maquina
+Combo Silla romana/hiperextensiones
+very Fitness wOw
+#Agregando tipos de ejercicio del sistema...
+#Agregando tipo de ejercicio: Saltar...
+agregar tipo-ejercicio
+Saltar
+Salta  salta   SALTA!!!
+Cuerda
+
+#Agregando a todos los pacientes...
+#Agregando paciente Kenneth Callow Monge, cedula 116210601...
+agregar paciente
+116210601
+Kenneth Callow Monge
+M
+07-10-1995
+8331-7772
+kcallow@ic-itcr.ac.cr
+#Agregando el programa de entrenamiento de 116210601...
+
+#Agregando mediciones a usuario 116210601...
+
+
+#Agregando paciente Juana Luana Della Sabana, cedula 166669999...
+agregar paciente
+166669999
+Juana Luana Della Sabana
+F
+20-12-1991
+7458-3241
+jldsabi@aol.com
+#Agregando el programa de entrenamiento de 166669999...
+
+#Agregando mediciones a usuario 166669999...
+
+
+#Agregando paciente Yazuki Zepeda, cedula 888888889...
+agregar paciente
+888888889
+Yazuki Zepeda
+M
+01-10-1875
+(405) 876 5435
+yazzzepeda@facebook.com
+#Agregando el programa de entrenamiento de 888888889...
+
+#Agregando mediciones a usuario 888888889...
+
+
+#Agregando paciente Bruce Callow, cedula 123456789...
+agregar paciente
+123456789
+Bruce Callow
+M
+15-03-1965
+2203-3439
+mundodecccc@yahoo.uk
+#Agregando el programa de entrenamiento de 123456789...
+
+#Agregando mediciones a usuario 123456789...
+
+
+#Agregando paciente Hyori Sakagumi, cedula 201589456...
+agregar paciente
+201589456
+Hyori Sakagumi
+F
+11-05-1957
+(505) 6524-4589
+hyo_saka1957@ifconf.ig.it
+#Agregando el programa de entrenamiento de 201589456...
+
+#Agregando mediciones a usuario 201589456...
+
+
+#Agregando paciente Ramira Ramirez, cedula 753129854...
+agregar paciente
+753129854
+Ramira Ramirez
+F
+21-02-1987
+2563 9584
+rrrrr@hotmail.com
+#Agregando el programa de entrenamiento de 753129854...
+
+#Agregando mediciones a usuario 753129854...
+
+
+salir

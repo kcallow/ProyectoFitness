@@ -6,8 +6,6 @@
 package interfaz;
 
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import proyectofitness.*;
 
@@ -22,6 +20,7 @@ public class VentanaPaciente extends javax.swing.JFrame {
      */
     public VentanaPaciente() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
  public static void main(String args[]) {
         /* Set the Nimbus look and feel */

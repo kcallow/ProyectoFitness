@@ -117,25 +117,25 @@ public class ProyectoFitness {
 	private static void borrar(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "paciente":
-				borrarPaciente(command);
+				borrarPaciente(scanner.nextLine());
 				break;
 			case "medicion":
-				borrarMedicion(command);
+				borrarMedicion(scanner.nextLine(),scanner.nextLine());
 				break;
 			case "tipo-ejercicio":
-				borrarTipoEjercicio(command);
+				borrarTipoEjercicio(scanner.nextLine());
 				break;
 			case "programa":
-				borrarPrograma(command);
+				borrarPrograma(scanner.nextLine());
 				break;
 			case "dia":
-				borrarDia(command);
+				borrarDia(scanner.nextLine(),scanner.nextLine());
 				break;
 			case "ejercicio":
-				borrarEjercicio(command);
+				borrarEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "maquina":
-				borrarMaquina(command);
+				borrarMaquina(scanner.nextLine());
 				break;
 			default:
 				System.out.println("Opcion invalida para borrar...");
@@ -271,5 +271,70 @@ public class ProyectoFitness {
         if(!maquinas.containsKey(nombre))
             throw new Exception("Nombre invalido para modificar maquina.");
         maquinas.put(nombre, descripcion);
+    }
+
+    private static void borrarPaciente(String cedula) throws Exception {
+        if(!pacientes.containsKey(cedula))
+            throw new Exception("Cedula no corresponde a ningun paciente.  No se puede borrar.");
+        pacientes.remove(cedula);
+    }
+
+    private static void borrarMedicion(String cedula, String nombreMedicion) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para borrar medicion.");
+        if(!paciente.getMediciones().containsKey(nombreMedicion))
+            throw new Exception("Nombre no corresponde a ninguna medicion.  No se puede borrar.");
+        paciente.getMediciones().remove(nombreMedicion);
+    }
+
+    private static void borrarTipoEjercicio(String nombre) throws Exception {
+        if(!tiposEjercicio.containsKey(nombre))
+            throw new Exception("Nombre no corresponde a ningun ejercicio.  No se puede borrar.");
+        tiposEjercicio.remove(nombre);
+    }
+
+    private static void borrarPrograma(String cedula) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para borrar programa de entrenamiento.");
+        if(paciente.getProgramaEntrenamiento().size() == 0)
+            throw new Exception("Paciente todavia no tiene programa de entrenamiento.  No se puede borrar.");
+        paciente.getProgramaEntrenamiento().clear();
+    }
+
+    private static void borrarDia(String cedula, String numeroDia) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para borrar dia de programa de entrenamiento.");
+        ProgramaEntrenamiento programa = paciente.getProgramaEntrenamiento();
+        if(programa.size() == 0)
+            throw new Exception("Paciente todavia no tiene programa de entrenamiento.  No se puede borrar.");
+        Integer numero = Integer.parseInt(numeroDia);
+        if(!programa.containsKey(numero))
+            throw new Exception("Numero de dia invalido para borrar dia de programa de entrenamiento.");
+        programa.remove(numero);
+    }
+
+    private static void borrarEjercicio(String cedula, String numeroDia, String numeroEjercicio) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para borrar dia de programa de entrenamiento.");
+        ProgramaEntrenamiento programa = paciente.getProgramaEntrenamiento();
+        if(programa.size() == 0)
+            throw new Exception("Paciente todavia no tiene programa de entrenamiento.  No se puede borrar.");
+        Dia dia = programa.get(Integer.parseInt(numeroDia));
+        if(dia == null)
+            throw new Exception("Numero de dia invalido para borrar ejercicio de dia de programa de entrenamiento.");
+        Integer numero = Integer.parseInt(numeroEjercicio);
+        if(!dia.containsKey(numero))
+            throw new Exception("Numero de ejercicio invalido para borrar ejercicio de dia de programa de entrenamiento.");
+        dia.remove(numero);
+    }
+
+    private static void borrarMaquina(String nombre) throws Exception {
+        if(!maquinas.containsKey(nombre))
+            throw new Exception("Nombre no corresponde a ninguna maquina.  No se puede borrar.");
+        maquinas.remove(nombre);
     }
 }

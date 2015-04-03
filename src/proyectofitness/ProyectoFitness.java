@@ -176,7 +176,14 @@ public class ProyectoFitness {
         Cedula cedula = new Cedula(numeroCedula);
         if(pacientes.containsKey(cedula))
             throw new Exception("Ya existe un paciente con cedula indicada.");
-        pacientes.put(cedula, new Paciente(nombre, sexo, LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu")), new Telefono(telefono), new Correo(correo)));
+        LocalDate fecha;
+        try{
+            fecha = LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu"));
+        }
+        catch (Exception e) {
+            throw new Exception("Fecha invalida.  El formato correcto es dd-MM-aaaa");
+        }
+        pacientes.put(cedula, new Paciente(nombre, sexo, fecha, new Telefono(telefono), new Correo(correo)));
     }
 
     public static void agregarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {

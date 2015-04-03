@@ -87,10 +87,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
     
     public static void llenarTabla(){
-        Object[][] objetos = null;
+        Object[][] objetos;
         int rows = hashMapActual.size();
         if(rows > 0) {
-            int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
+            final int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
             objetos = new Object[rows][columns];
             int i = 0;
             for(Object key: hashMapActual.keySet()){
@@ -101,11 +101,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 }
                 i++;
             }
+            boolean[] canEditTable = new boolean [columns];
+            for(i = 0; i < columns; i++){
+                canEditTable[i] = false;
+            }
+            
+            tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, camposTablaActual){
+                boolean [] canEdit = canEditTable;
+                
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         }
-        tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, camposTablaActual));
+        
                 
     }
-
+    
+    
+    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -284,7 +298,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             new String [] {
                 "Title 1ggh", "Title 2hhgh"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tabla.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_LAST_COLUMN);
         tabla.setAutoscrolls(false);
         tabla.addMouseListener(new java.awt.event.MouseAdapter() {

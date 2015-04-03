@@ -280,4 +280,9 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
         for(int i = 0; i < elementos.length; i++)
             elementos[i].setEnabled(true);
     }
+
+    @Override
+    public void cargarLlave(Object llave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

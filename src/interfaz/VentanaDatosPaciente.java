@@ -447,4 +447,9 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         radioHombre.setEnabled(true);
         radioMujer.setEnabled(true);
     }
+
+    @Override
+    public void cargarLlave(Object llave) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

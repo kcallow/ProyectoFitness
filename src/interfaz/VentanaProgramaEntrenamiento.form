@@ -304,23 +304,35 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarVPEActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnGuardarVPE">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarVPEActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnModificarVPE">
           <Properties>
             <Property name="text" type="java.lang.String" value="Modificar"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarVPEActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnBorrarVPE">
           <Properties>
             <Property name="text" type="java.lang.String" value="Borrar"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBorrarVPEActionPerformed"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
           <AuxValues>

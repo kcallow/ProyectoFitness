@@ -425,12 +425,27 @@ public class VentanaMedicion extends javax.swing.JFrame {
         });
 
         btnGuardarVM.setText("Guardar");
+        btnGuardarVM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarVMActionPerformed(evt);
+            }
+        });
 
         btnBorrarVM.setText("Borrar");
         btnBorrarVM.setEnabled(false);
+        btnBorrarVM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarVMActionPerformed(evt);
+            }
+        });
 
         btnModificarVM.setText("Modificar");
         btnModificarVM.setEnabled(false);
+        btnModificarVM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarVMActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -501,8 +516,20 @@ public class VentanaMedicion extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPesoActionPerformed
 
     private void btnCancelarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarVMActionPerformed
-        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_btnCancelarVMActionPerformed
+
+    private void btnModificarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModificarVMActionPerformed
+
+    private void btnBorrarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarVMActionPerformed
+
+    private void btnGuardarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarVMActionPerformed
 
     /**
      * @param args the command line arguments

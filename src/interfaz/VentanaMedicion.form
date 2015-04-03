@@ -645,18 +645,27 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarVMActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnBorrarVM">
           <Properties>
             <Property name="text" type="java.lang.String" value="Borrar"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBorrarVMActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnModificarVM">
           <Properties>
             <Property name="text" type="java.lang.String" value="Modificar"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarVMActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -5,8 +5,12 @@
  */
 package interfaz;
 
+<<<<<<< HEAD
+import proyectofitness.*;
+=======
 import proyectofitness.Ejercicio;
 import proyectofitness.ProyectoFitness;
+>>>>>>> 0cb7d755b1e170c45242195a289a676adebf9e40
 
 /**
  *
@@ -398,8 +402,13 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
             elementos[i].setEnabled(true);
     }
 
+<<<<<<< HEAD
+    public void cargarLlave(String llave, String numeroDia, String numeroEjercicio) throws Exception {
+        Ejercicio ejercicio = ProyectoFitness.getEjercicio(llave, numeroDia, numeroEjercicio);
+=======
     @Override
     public void cargarLlave(String llave) throws Exception {
         Ejercicio ejercicio = ProyectoFitness.getEjercicio(llave);
+>>>>>>> 0cb7d755b1e170c45242195a289a676adebf9e40
     }
 }

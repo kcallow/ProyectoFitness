@@ -261,8 +261,15 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     }
 
     @Override
+<<<<<<< HEAD
+    public void cargarLlave(String llave) throws Exception {
+        String descripcion = ProyectoFitness.maquinas.get(llave);
+        txtNombreMaquina.setText(llave);
+        jTextArea1.setText(descripcion);
+=======
     public void cargarLlave(Object llave) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+>>>>>>> 0cb7d755b1e170c45242195a289a676adebf9e40
     }
   
 }

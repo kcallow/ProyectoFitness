@@ -83,7 +83,7 @@ public class Paciente {
                 + fechaDeNacimiento.format(ProyectoFitness.formatoFecha) + "\n" 
                 + telefono.getTelefono() + "\n" 
                 + correo.getCorreo() + "\n" 
-                + programaEntrenamiento.toCommand(cedula) + "\n" 
+                + (programaEntrenamiento != null ? programaEntrenamiento.toCommand(cedula)  : "") + "\n"
                 + mediciones.toCommand(cedula) + "\n";
     }
 

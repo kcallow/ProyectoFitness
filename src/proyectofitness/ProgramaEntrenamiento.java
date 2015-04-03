@@ -12,8 +12,8 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
         fechaCreacion = LocalDate.now();
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.descripcion = descripcion;
-        this.objetivos = objetivos;
+        setDescripcion(descripcion);
+        setObjetivos(objetivos);
         asistencia = 0;
     }
 
@@ -34,7 +34,13 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
     }
     
     public String toCommand(String cedula) {
-        String result = "#Agregando el programa de entrenamiento de " + cedula + "...\n";
+        String result = "#Agregando el programa de entrenamiento de " + cedula + "...\n"
+                + "agregar programa\n"
+                + fechaInicio.format(ProyectoFitness.formatoFecha) + "\n"
+                + fechaFin.format(ProyectoFitness.formatoFecha) + "\n"
+                + descripcion + "\n"
+                + objetivos + "\n";
+                
         for (Integer numeroDia : keySet())
             result += "#Agregando dia #" + numeroDia + "\n"
                     + "agregar dia\n" 
@@ -73,7 +79,7 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        this.descripcion = descripcion.replace("\n", "  ");
     }
 
     public String getObjetivos() {
@@ -81,7 +87,7 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
     }
 
     public void setObjetivos(String objetivos) {
-        this.objetivos = objetivos;
+        this.objetivos = objetivos.replace("\n", "  ");
     }
 
     public int getAsistencia() {

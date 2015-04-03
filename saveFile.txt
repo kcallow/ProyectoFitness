@@ -3,10 +3,6 @@
 agregar maquina
 Extensiones de pierna
 very Fitness wOwsaddasdasads
-#Agregando maquina: Rotary Torso...
-agregar maquina
-Rotary Torso
-very Fitness wOw
 #Agregando maquina: Remo con apoyo...
 agregar maquina
 Remo con apoyo
@@ -329,7 +325,6 @@ M
 07-10-1995
 8331-7772
 kcallow@ic-itcr.ac.cr
-#Agregando el programa de entrenamiento de 116210601...
 
 #Agregando mediciones a usuario 116210601...
 
@@ -342,7 +337,6 @@ F
 20-12-1991
 7458-3241
 jldsabi@aol.com
-#Agregando el programa de entrenamiento de 166669999...
 
 #Agregando mediciones a usuario 166669999...
 
@@ -355,7 +349,6 @@ M
 01-10-1875
 (405) 876 5435
 yazzzepeda@facebook.com
-#Agregando el programa de entrenamiento de 888888889...
 
 #Agregando mediciones a usuario 888888889...
 
@@ -368,7 +361,6 @@ M
 15-03-1965
 2203-3439
 mundodecccc@yahoo.uk
-#Agregando el programa de entrenamiento de 123456789...
 
 #Agregando mediciones a usuario 123456789...
 
@@ -381,7 +373,6 @@ F
 11-05-1957
 (505) 6524-4589
 hyo_saka1957@ifconf.ig.it
-#Agregando el programa de entrenamiento de 201589456...
 
 #Agregando mediciones a usuario 201589456...
 
@@ -394,7 +385,6 @@ F
 21-02-1987
 2563 9584
 rrrrr@hotmail.com
-#Agregando el programa de entrenamiento de 753129854...
 
 #Agregando mediciones a usuario 753129854...
 

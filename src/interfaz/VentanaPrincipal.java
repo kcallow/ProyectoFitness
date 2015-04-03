@@ -16,12 +16,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     VentanaPaciente ventanaPaciente = new VentanaPaciente();
     VentanaMaquina ventanaMaquina = new VentanaMaquina();
     VentanaTipoEjercicio ventanaTipoEjercicio = new VentanaTipoEjercicio();
+    public HashMap hashMapActual = ProyectoFitness.pacientes;
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaPrincipal() {
         initComponents();
-        llenarTabla(ProyectoFitness.pacientes);
+        llenarTabla();
     }
 
     /**
@@ -62,12 +63,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
     }
     
-    public void llenarTabla(HashMap hashmap){
-        Object [][] objetos = new Object[hashmap.size()][2];
+    public void llenarTabla(){
+        Object [][] objetos = new Object[hashMapActual.size()][2];
         int i = 0;
-        for(Object key: hashmap.keySet()){
+        for(Object key: hashMapActual.keySet()){
             objetos[i][0] = key;
-            objetos[i][1] = hashmap.get(key);
+            objetos[i][1] = hashMapActual.get(key);
         }
         tabla.setModel(new javax.swing.table.DefaultTableModel(objetos ,
             new String [] {

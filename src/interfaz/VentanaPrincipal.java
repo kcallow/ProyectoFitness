@@ -385,7 +385,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
         String llave = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
-        String [] args = new String[]{llave};
         try {
             if(hashMapActual.equals(ProyectoFitness.pacientes)){
                 ventanaDatosPaciente.setVisible(true);

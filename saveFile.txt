@@ -1,4 +1,25 @@
 #Agregando tipos de ejercicio del sistema...
+#Agregando tipo de ejercicio: Brincar...
+agregar ejercicio
+Brincar
+Brinca la cuerdita
+Ya me la brinqué
+Brinca la cuerdita
+Yo ya me cansé
+Dos y dos son cuatro
+Cuatro y dos son seis
+Seis y dos son ocho
+Y ocho, dieciseis
+Y dieciseis, treinta y dos
+Y treinta y dos, sesenta y cuatro
+Y sesenta y cuatro, ciento veintiocho
+Y ciento veintiocho, docientos cincuenta y seis
+Y docientos cincuenta y  seis, quinientos doce
+Y quinientos doce, mil veinticuatro
+Y mil veinticuatro, dos mil cuarenta y ocho.
+2048, n00bz gg
+Cuerda
+
 #Agregando todas las maquinas al sistema...
 #Agregando maquina: ...
 agregar maquina

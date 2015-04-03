@@ -122,14 +122,34 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame {
         );
 
         btnCancelarVPE.setText("Cancelar");
+        btnCancelarVPE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarVPEActionPerformed(evt);
+            }
+        });
 
         btnGuardarVPE.setText("Guardar");
+        btnGuardarVPE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarVPEActionPerformed(evt);
+            }
+        });
 
         btnModificarVPE.setText("Modificar");
         btnModificarVPE.setEnabled(false);
+        btnModificarVPE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarVPEActionPerformed(evt);
+            }
+        });
 
         btnBorrarVPE.setText("Borrar");
         btnBorrarVPE.setEnabled(false);
+        btnBorrarVPE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarVPEActionPerformed(evt);
+            }
+        });
 
         txtDescripcionVPE.setBackground(new java.awt.Color(204, 204, 204));
         txtDescripcionVPE.setColumns(20);
@@ -257,6 +277,22 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame {
     private void btnAddDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDiaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAddDiaActionPerformed
+
+    private void btnBorrarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVPEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarVPEActionPerformed
+
+    private void btnModificarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVPEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModificarVPEActionPerformed
+
+    private void btnGuardarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVPEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarVPEActionPerformed
+
+    private void btnCancelarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarVPEActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarVPEActionPerformed
 
     /**
      * @param args the command line arguments

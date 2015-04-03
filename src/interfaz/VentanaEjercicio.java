@@ -98,13 +98,33 @@ public class VentanaEjercicio extends javax.swing.JFrame {
 
         btnBorrarVE.setText("Borrar");
         btnBorrarVE.setEnabled(false);
+        btnBorrarVE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarVEActionPerformed(evt);
+            }
+        });
 
         btnCancelarVE.setText("Cancelar");
+        btnCancelarVE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarVEActionPerformed(evt);
+            }
+        });
 
         btnGuardarVE.setText("Guardar");
+        btnGuardarVE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarVEActionPerformed(evt);
+            }
+        });
 
         btnModificarVE.setText("Modificar");
         btnModificarVE.setEnabled(false);
+        btnModificarVE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarVEActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -244,6 +264,22 @@ public class VentanaEjercicio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCancelarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarVEActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarVEActionPerformed
+
+    private void btnGuardarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarVEActionPerformed
+
+    private void btnBorrarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarVEActionPerformed
+
+    private void btnModificarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModificarVEActionPerformed
 
     /**
      * @param args the command line arguments

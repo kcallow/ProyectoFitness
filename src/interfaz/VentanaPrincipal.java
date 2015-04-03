@@ -23,6 +23,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     VentanaPaciente ventanaPaciente = new VentanaPaciente();
     VentanaMaquina ventanaMaquina = new VentanaMaquina();
     VentanaTipoEjercicio ventanaTipoEjercicio = new VentanaTipoEjercicio();
+    VentanaDatosPaciente ventanaDatosPaciente = new VentanaDatosPaciente();
 
     public static HashMap hashMapActual = ProyectoFitness.pacientes;
     private static Object[] camposTablaActual = camposTablaPaciente;
@@ -383,8 +384,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_addMaquinaActionPerformed
 
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
-        // TODO add your handling code here:
+        String llave = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
+        String [] args = new String[]{llave};
+        try {
+            if(hashMapActual.equals(ProyectoFitness.pacientes)){
+                ventanaDatosPaciente.setVisible(true);
+            }    
+            else if(hashMapActual.equals(ProyectoFitness.tiposEjercicio)){
+                ventanaTipoEjercicio.setVisible(true);
+            }
+            else if(hashMapActual.equals(ProyectoFitness.maquinas)){
+                ventanaMaquina.setVisible(true);
+            }
+        } catch (Exception ex) {
+                Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
         
+        System.err.println(tabla.getValueAt(tabla.getSelectedRow(), 0).toString());
     }//GEN-LAST:event_tablaMouseClicked
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked

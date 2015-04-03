@@ -16,7 +16,7 @@ public class ProyectoFitness {
     public static final TiposMedicion tiposMedicion = new TiposMedicion();
 
 	private static Scanner scanner = new Scanner(System.in);
-    private static final boolean TESTING = true; //Verdadero cuando probando, falso si en modo normal
+    private static final boolean TESTING = false; //Verdadero cuando probando en shell, falso si en modo normal con ventanas
     public static String saveFile = "saveFile.txt";
 
     public static void cargarArchivo(String saveFile) throws Exception {
@@ -36,10 +36,6 @@ public class ProyectoFitness {
         else {
             cargarArchivo(saveFile);
             VentanaPrincipal.main(args);
-            guardarArchivo(saveFile);
-            /*VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
-            ventanaPrincipal.setVisible(true);
-                    */
         }
 	}
 
@@ -78,6 +74,9 @@ public class ProyectoFitness {
 				ver(command);
 				break;
             case "salir":
+                break;
+            case "cargar":
+                cargarArchivo(command[1]);
                 break;
 			default:
 				System.out.println("Comando no reconocido.");

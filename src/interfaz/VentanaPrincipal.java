@@ -18,11 +18,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     VentanaMaquina ventanaMaquina = new VentanaMaquina();
     VentanaTipoEjercicio ventanaTipoEjercicio = new VentanaTipoEjercicio();
     public static HashMap hashMapActual = ProyectoFitness.pacientes;
+
+    @Override
+    public void dispose() {
+        //Guarda el archivo de datos antes de dispose la ventana
+        //ProyectoFitness.guardarArchivo(ProyectoFitness.saveFile);
+        super.dispose();
+    }
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaPrincipal() {
         initComponents();
+        //Es necesario que se dispose al cerrar para poder llamar al metodo overriden dispose()
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE); 
         llenarTabla();
     }
 

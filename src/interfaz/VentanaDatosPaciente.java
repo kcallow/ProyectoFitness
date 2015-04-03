@@ -487,10 +487,13 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         txtCorreo.setText(paciente.getCorreo().toString());
         txtFechaNacimiento.setText(paciente.getFechaDeNacimiento().toString());
         txtNombre.setText(paciente.getNombre());
-        if(paciente.getSexo().equals("M"))
+        if(paciente.getSexo().equals("M")){
             radioHombre.setSelected(true);
-        else
+            radioMujer.setSelected(false);
+        }else{
             radioMujer.setSelected(true);
+            radioHombre.setSelected(false);
+        }
         
     }
 }

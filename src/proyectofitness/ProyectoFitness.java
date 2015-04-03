@@ -20,6 +20,7 @@ public class ProyectoFitness {
 	private static Scanner scanner = new Scanner(System.in);
     private static final boolean TESTING = false; //Verdadero cuando probando en shell, falso si en modo normal con ventanas
     public static String saveFile = "saveFile.txt";
+    public static final DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd-MM-uuuu");
 
     public static void cargarArchivo(String saveFile) throws Exception {
         Scanner oldScanner = scanner; //Almacenar el valor anterior de scanner
@@ -213,7 +214,7 @@ public class ProyectoFitness {
             throw new Exception("Ya existe un paciente con cedula indicada.");
         LocalDate fecha;
         try{
-            fecha = LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu"));
+            fecha = LocalDate.parse(fechaNacimiento, formatoFecha);
         }
         catch (Exception e) {
             throw new Exception("Fecha invalida.  El formato correcto es dd-MM-aaaa");

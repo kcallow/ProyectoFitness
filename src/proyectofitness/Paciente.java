@@ -78,9 +78,10 @@ public class Paciente {
     public String toCommand(String cedula) {
         return "#Agregando paciente " + nombre + ", cedula " + cedula + "...\n"
                 + "agregar paciente\n" 
+                + cedula + "\n"
                 + nombre + "\n" 
                 + sexo + "\n" 
-                + fechaDeNacimiento + "\n" 
+                + fechaDeNacimiento.format(ProyectoFitness.formatoFecha) + "\n" 
                 + telefono.getTelefono() + "\n" 
                 + correo.getCorreo() + "\n" 
                 + programaEntrenamiento.toCommand(cedula) + "\n" 

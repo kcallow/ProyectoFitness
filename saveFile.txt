@@ -301,4 +301,82 @@ agregar maquina
 Combo Silla romana/hiperextensiones
 very Fitness wOw
 #Agregando a todos los pacientes...
+#Agregando paciente Kenneth Callow Monge, cedula 116210601...
+agregar paciente
+116210601
+Kenneth Callow Monge
+M
+07-10-1995
+8331-7772
+kcallow@ic-itcr.ac.cr
+#Agregando el programa de entrenamiento de 116210601...
+
+#Agregando mediciones a usuario 116210601...
+
+
+#Agregando paciente Juana Luana Della Sabana, cedula 166669999...
+agregar paciente
+166669999
+Juana Luana Della Sabana
+F
+20-12-1991
+7458-3241
+jldsabi@aol.com
+#Agregando el programa de entrenamiento de 166669999...
+
+#Agregando mediciones a usuario 166669999...
+
+
+#Agregando paciente Yazuki Zepeda, cedula 888888889...
+agregar paciente
+888888889
+Yazuki Zepeda
+M
+01-10-1875
+(405) 876 5435
+yazzzepeda@facebook.com
+#Agregando el programa de entrenamiento de 888888889...
+
+#Agregando mediciones a usuario 888888889...
+
+
+#Agregando paciente Bruce Callow, cedula 123456789...
+agregar paciente
+123456789
+Bruce Callow
+M
+15-03-1965
+2203-3439
+mundodecccc@yahoo.uk
+#Agregando el programa de entrenamiento de 123456789...
+
+#Agregando mediciones a usuario 123456789...
+
+
+#Agregando paciente Hyori Sakagumi, cedula 201589456...
+agregar paciente
+201589456
+Hyori Sakagumi
+F
+11-05-1957
+(505) 6524-4589
+hyo_saka1957@ifconf.ig.it
+#Agregando el programa de entrenamiento de 201589456...
+
+#Agregando mediciones a usuario 201589456...
+
+
+#Agregando paciente Ramira Ramirez, cedula 753129854...
+agregar paciente
+753129854
+Ramira Ramirez
+F
+21-02-1987
+2563 9584
+rrrrr@hotmail.com
+#Agregando el programa de entrenamiento de 753129854...
+
+#Agregando mediciones a usuario 753129854...
+
+
 salir

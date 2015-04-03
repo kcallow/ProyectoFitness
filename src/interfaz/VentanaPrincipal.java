@@ -102,13 +102,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         addPaciente = new javax.swing.JButton();
-        verPacientes = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         addTipoEjercicio = new javax.swing.JButton();
-        verTiposEjercicio = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         addMaquina = new javax.swing.JButton();
-        verMaquinas = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -158,17 +155,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jTabbedPane1.setName(""); // NOI18N
+        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MouseClicked(evt);
+            }
+        });
+
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
+
         addPaciente.setText("Agregar Paciente");
         addPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addPacienteActionPerformed(evt);
-            }
-        });
-
-        verPacientes.setText("Ver Pacientes");
-        verPacientes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verPacientesActionPerformed(evt);
             }
         });
 
@@ -179,20 +182,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(addPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(verPacientes)
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addContainerGap(519, Short.MAX_VALUE))
         );
-
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addPaciente, verPacientes});
-
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(verPacientes)
-                    .addComponent(addPaciente))
+                .addComponent(addPaciente)
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
@@ -205,13 +201,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        verTiposEjercicio.setText("Ver Tipos de Ejercicio");
-        verTiposEjercicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verTiposEjercicioActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -219,20 +208,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(addTipoEjercicio, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(verTiposEjercicio)
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addContainerGap(519, Short.MAX_VALUE))
         );
-
-        jPanel5Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addTipoEjercicio, verTiposEjercicio});
-
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(verTiposEjercicio)
-                    .addComponent(addTipoEjercicio))
+                .addComponent(addTipoEjercicio)
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
@@ -245,13 +227,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        verMaquinas.setText("Ver Máquinas");
-        verMaquinas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verMaquinasActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -259,20 +234,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(addMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(verMaquinas)
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addContainerGap(519, Short.MAX_VALUE))
         );
-
-        jPanel6Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addMaquina, verMaquinas});
-
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(verMaquinas)
-                    .addComponent(addMaquina))
+                .addComponent(addMaquina)
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
@@ -352,29 +320,36 @@ public class VentanaPrincipal extends javax.swing.JFrame {
        ventanaPaciente.setVisible(true);
     }//GEN-LAST:event_addPacienteActionPerformed
 
-    private void verPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verPacientesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_verPacientesActionPerformed
-
     private void addTipoEjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTipoEjercicioActionPerformed
         ventanaTipoEjercicio.setVisible(true);
     }//GEN-LAST:event_addTipoEjercicioActionPerformed
-
-    private void verTiposEjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verTiposEjercicioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_verTiposEjercicioActionPerformed
 
     private void addMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMaquinaActionPerformed
         ventanaMaquina.setVisible(true);
     }//GEN-LAST:event_addMaquinaActionPerformed
 
-    private void verMaquinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verMaquinasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_verMaquinasActionPerformed
-
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_tablaMouseClicked
+
+    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+        switch (jTabbedPane1.getSelectedIndex()){
+            case 0:
+                hashMapActual = ProyectoFitness.pacientes;
+                break;
+            case 1:
+                hashMapActual = ProyectoFitness.tiposEjercicio;
+                break;
+            case 2:
+                hashMapActual = ProyectoFitness.maquinas;
+                break;
+        }
+        llenarTabla();
+    }//GEN-LAST:event_jTabbedPane1MouseClicked
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -411,8 +386,5 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable tabla;
-    private javax.swing.JButton verMaquinas;
-    private javax.swing.JButton verPacientes;
-    private javax.swing.JButton verTiposEjercicio;
     // End of variables declaration//GEN-END:variables
 }

@@ -72,6 +72,6 @@ public class Paciente {
 
     @Override
     public String toString() {
-        return nombre + "\t" + sexo + "\t" + fechaDeNacimiento + "\t" + telefono.getTelefono() + "\t" + correo.getCorreo();
+        return nombre + "    " + sexo + "    " + fechaDeNacimiento + "    " + telefono.getTelefono() + "    " + correo.getCorreo();
     }
 }

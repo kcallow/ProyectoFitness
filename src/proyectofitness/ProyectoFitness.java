@@ -179,11 +179,11 @@ public class ProyectoFitness {
         LocalDate fecha;
         try{
             fecha = LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu"));
-            pacientes.put(cedula, new Paciente(nombre, sexo, fecha, new Telefono(telefono), new Correo(correo)));
         }
         catch (Exception e) {
             throw new Exception("Fecha invalida.  El formato correcto es dd-MM-aaaa");
         }
+        pacientes.put(cedula, new Paciente(nombre, sexo, fecha, new Telefono(telefono), new Correo(correo)));
     }
 
     public static void agregarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {

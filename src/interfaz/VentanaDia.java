@@ -19,7 +19,7 @@ import proyectofitness.ProyectoFitness;
 public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
     private String llave = "", numeroDia;
-    private Dia dia;
+    private static Dia dia;
 
     /**
      * Creates new form VentanaDia
@@ -27,6 +27,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     public VentanaDia() {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        llenarTabla();
     }
 
     /**
@@ -43,7 +44,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         btnSalirDia = new javax.swing.JButton();
         btnBorrarDia = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla = new javax.swing.JTable();
         btnGuardar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtNumeroDia = new javax.swing.JTextField();
@@ -75,7 +76,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -94,12 +95,12 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+        tabla.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTable1MouseClicked(evt);
+                tablaMouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tabla);
 
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -219,9 +220,9 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+    private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTable1MouseClicked
+    }//GEN-LAST:event_tablaMouseClicked
 
 
     /**
@@ -267,16 +268,45 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
+    private static javax.swing.JTable tabla;
     private javax.swing.JTextField txtNumeroDia;
     // End of variables declaration//GEN-END:variables
 
-    void clear() {
-        txtNumeroDia.setText("");
+    public static void llenarTabla() {
+        Object[][] objetos;
+        if(dia != null) {
+            int rows = dia.size();
+            final int columns = 8;
+            objetos = new Object[rows][columns];
+            int i = 0;
+            for(Object key: dia.keySet()){
+                objetos[i][0] = key;
+                Object [] campos = dia.values().toArray()[i].toString().split(",");
+                for(int j = 0; j < columns-1; j++) {
+                    objetos[i][j+1] = campos[j];
+                }
+                i++;
+            }
+            boolean[] canEditTable = new boolean [columns];
+            for(i = 0; i < columns; i++){
+                canEditTable[i] = false;
+            }
+            
+            tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, new String [] {
+                "Número de ejercicio", "Ejercicio", "Series", "Repeticiones", "Peso 1", "Peso 2", "Peso 3", "Tiempo de descanso"
+            }){
+                boolean [] canEdit = canEditTable;
+                
+                @Override
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit [columnIndex];
+            }
+        });
+        }
     }
 
-    void cargarLlave(String llave) {
-        this.llave = llave;
+    void clear() {
+        txtNumeroDia.setText("");
     }
 
 
@@ -299,11 +329,16 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     public void modoModificar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    void cargarLlave(String llave) {
+        this.llave = llave;
+    }
     
     void cargarDia(String numeroDia) throws Exception {
         this.dia = ProyectoFitness.getDia(llave, numeroDia);
         txtNumeroDia.setText(numeroDia);
         this.numeroDia = numeroDia;
+        llenarTabla();
 
     }
 }

@@ -342,7 +342,7 @@ public class ProyectoFitness {
         maquinas.put(nombreNuevo, descripcion.replace("\n", "  "));
         if(!nombreNuevo.equals(nombreViejo))
             maquinas.remove(nombreViejo);
-        tiposEjercicio.updateNombreMaquina(nombreViejo,nombreNuevo);
+        tiposEjercicio.updateTipoMaquina(nombreViejo,nombreNuevo);
     }
 
     public static void borrarPaciente(String cedula) throws Exception {
@@ -408,6 +408,7 @@ public class ProyectoFitness {
         if(!maquinas.containsKey(nombre))
             throw new Exception("Nombre no corresponde a ninguna maquina.  No se puede borrar.");
         maquinas.remove(nombre);
+        tiposEjercicio.borrarTiposConMaquina(nombre);
     }
 
     public static Paciente getPaciente(String valorCedula) throws Exception {

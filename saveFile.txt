@@ -51,10 +51,6 @@ very Fitness wOw
 agregar maquina
 Sentadilla hack
 very Fitness wOw
-#Agregando maquina: Mancuernas cosiii...
-agregar maquina
-Mancuernas cosiii
-Solo para los pacientes mas cosi
 #Agregando maquina: Prensa 45º ergonomica...
 agregar maquina
 Prensa 45º ergonomica
@@ -167,14 +163,14 @@ very Fitness wOw
 agregar maquina
 Maquina para pullover
 very Fitness wOw
-#Agregando maquina: !!!!Power!...
-agregar maquina
-!!!!Power!
-das power    juu    jii
 #Agregando maquina: Silla rusa tubular...
 agregar maquina
 Silla rusa tubular
 very Fitness wOw
+#Agregando maquina: Mancuerna cosi...
+agregar maquina
+Mancuerna cosi
+solo para pacientes cosi  
 #Agregando maquina: Pec fly performance...
 agregar maquina
 Pec fly performance
@@ -306,11 +302,11 @@ Remo
 remo con apoyo
 Remo con apoyo
 
-#Agregando tipo de ejercicio: Yeah...
+#Agregando tipo de ejercicio: heyyy...
 agregar tipo-ejercicio
-Yeah
-Para hombres con los huevos bien puestos encima de un pene ajeno.
-!!!!Power!
+heyyy
+adasdasd
+.
 
 #Agregando tipo de ejercicio: Ejercicio cosi...
 agregar tipo-ejercicio
@@ -318,11 +314,11 @@ Ejercicio cosi
 Piernas muy cosis
 Banco Multiusos
 
-#Agregando tipo de ejercicio: Hola...
+#Agregando tipo de ejercicio: ....
 agregar tipo-ejercicio
-Hola
-jijiji
-Remo con apoyo
+.
+.
+.
 
 #Agregando a todos los pacientes...
 #Agregando paciente Doctor Who, cedula 424242420...

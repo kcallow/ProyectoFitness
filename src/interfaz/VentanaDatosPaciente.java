@@ -393,7 +393,11 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
     private void btnAddMedicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddMedicionActionPerformed
         vMedicion.setVisible(true);
-        vMedicion.cargarLlave(llave);
+        try {
+            vMedicion.cargarLlave(llave);
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnAddMedicionActionPerformed
 
     private void btnAddProgramaEntrenamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProgramaEntrenamientoActionPerformed
@@ -490,7 +494,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
                         String key = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
                         vMedicion.setVisible(true);
                         vMedicion.modoVer();
-                        vMedicion.cargarLlave(key, "Nombre mendicion");
+                        vMedicion.cargarLlave(key);
 
                 }else{
                         vProgramaEntrenamiento.setVisible(true);

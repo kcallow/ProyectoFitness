@@ -5,13 +5,9 @@
  */
 package interfaz;
 
-<<<<<<< HEAD
 import proyectofitness.*;
-=======
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import proyectofitness.ProyectoFitness;
->>>>>>> 073bd4d4421b70ef83dd0e70c57431ecec5bb382
 
 /**
  *
@@ -20,7 +16,7 @@ import proyectofitness.ProyectoFitness;
 public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana {
     
     
-    private String cedula;
+    private String cedula = "";
     
     /**
      * Creates new form VentanaMedicion
@@ -783,10 +779,10 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
         btnBorrarVM.setEnabled(false);
     }
 
-    public void cargarLlave(String cedula, String nombreMedicion) throws Exception {
-        llave = cedula;
+    public void cargarLlave(String cedula) throws Exception {
+        this.cedula = cedula;
         Mediciones mediciones = ProyectoFitness.getMediciones(cedula);
         for(int i = 0; i < elementos.length; i++)
-            elementos[i].setText(llave);
+            elementos[i].setText(cedula);
     }
 }

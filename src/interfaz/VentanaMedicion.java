@@ -17,7 +17,16 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     
     
     private String cedula = "";
-    
+    String [] nombreMedicion = new String[]{
+        "Estatura", "Peso", "Pliegues Triceps", "Pliegues Subescapular", "Pliegues Abdomen",
+        "Pliegues Muslo", "Pliegues Pantorrilla", "Pliegues Pectoral", "Circunferencia Cuello",
+        "Circunferencia Biceps der", "Circunferencia Biceps izq", "Circunferencia Pectoral",
+        "Circunferencia Espalda", "Circunferencia Cintura 1", "Circunferencia Cintura 2",
+        "Circunferencia Cintura 3", "Circunferencia Cadera", "Circunferencia Muslo der",
+        "Circunferencia Muslo izq", "Circunferencia Pantorrilla der", "Circunferencia Pantorrilla izq",
+        "Frecuencia Cardiaca", "Presion Arterial Sistolica", "Presion Arterial Diastolica"
+    };
+
     /**
      * Creates new form VentanaMedicion
      */
@@ -598,15 +607,6 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     private void btnGuardarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVMActionPerformed
 
         try {
-            String [] nombreMedicion = new String[]{
-                "Estatura", "Peso", "Pliegues Triceps", "Pliegues Subescapular", "Pliegues Abdomen",
-                "Pliegues Muslo", "Pliegues Pantorrilla", "Pliegues Pectoral", "Circunferencia Cuello",
-                "Circunferencia Biceps der", "Circunferencia Biceps izq", "Circunferencia Pectoral",
-                "Circunferencia Espalda", "Circunferencia Cintura 1", "Circunferencia Cintura 2",
-                "Circunferencia Cintura 3", "Circunferencia Cadera", "Circunferencia Muslo der",
-                "Circunferencia Muslo izq", "Circunferencia Pantorrilla der", "Circunferencia Pantorrilla izq",
-                "Frecuencia Cardiaca", "Presion Arterial Sistolica", "Presion Arterial Diastolica"
-            };
             String [] valor = new String[] {
                 txtEstatura.getText(), txtPeso.getText(), txtTriceps.getText(), txtSubescapular.getText(),
                 txtAbdomen.getText(), txtMuslo.getText(), txtPantorrila.getText(), txtPectoral.getText(),
@@ -775,10 +775,12 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
         btnBorrarVM.setEnabled(false);
     }
 
-    public void cargarLlave(String cedula) throws Exception {
+    public void cargarLlave(String cedula) {
         this.cedula = cedula;
-        Mediciones mediciones = ProyectoFitness.getMediciones(cedula);
         for(int i = 0; i < elementos.length; i++)
-            elementos[i].setText(cedula);
+            try {
+                elementos[i].setText(ProyectoFitness.getMedicion(cedula,nombreMedicion[i]).toString());
+            } catch (Exception ex) {
+            }
     }
 }

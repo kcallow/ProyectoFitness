@@ -15,6 +15,8 @@ import proyectofitness.*;
  * @author scsaenz
  */
 public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVentana  {
+
+   
     VentanaMedicion vMedicion = new VentanaMedicion();
     VentanaProgramaEntrenamiento vProgramaEntrenamiento = new VentanaProgramaEntrenamiento();
     private String llave;
@@ -26,6 +28,8 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,6 +42,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        grupoSexo = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -61,7 +66,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         btnAddMedicion = new javax.swing.JButton();
         btnAddProgramaEntrenamiento = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tabla = new javax.swing.JTable();
         btnBorrar = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -119,10 +124,12 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             }
         });
 
+        grupoSexo.add(radioHombre);
         radioHombre.setSelected(true);
         radioHombre.setText("Masculino");
         radioHombre.setEnabled(false);
 
+        grupoSexo.add(radioMujer);
         radioMujer.setText("Femenino");
         radioMujer.setEnabled(false);
 
@@ -177,7 +184,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             }
         });
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -196,7 +203,12 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(jTable2);
+        tabla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaMouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(tabla);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -343,7 +355,38 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+     static void llenarTabla() {
+         /*
+        Object[][] objetos;
+        int rows = hashMapActual.size();
+        if(rows > 0) {
+            final int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
+            objetos = new Object[rows][columns];
+            int i = 0;
+            for(Object key: hashMapActual.keySet()){
+                objetos[i][0] = key;
+                Object [] campos = hashMapActual.values().toArray()[i].toString().split(",");
+                for(int j = 0; j < columns-1; j++) {
+                    objetos[i][j+1] = campos[j];
+                }
+                i++;
+            }
+            boolean[] canEditTable = new boolean [columns];
+            for(i = 0; i < columns; i++){
+                canEditTable[i] = false;
+            }
+            
+            tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, camposTablaActual){
+                boolean [] canEdit = canEditTable;
+                
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        } */
+    }
+    
     private void txtFechaNacimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaNacimientoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFechaNacimientoActionPerformed
@@ -354,8 +397,11 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
     private void btnAddProgramaEntrenamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProgramaEntrenamientoActionPerformed
         vProgramaEntrenamiento.setVisible(true);
+        vProgramaEntrenamiento.setCedula(txtCedula.getText());
+        
+        
     }//GEN-LAST:event_btnAddProgramaEntrenamientoActionPerformed
-
+   
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
@@ -401,12 +447,60 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnProgramasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProgramasActionPerformed
-        // TODO add your handling code here:
+
+        try {
+            btnVerMediciones.setEnabled(true);
+            btnProgramas.setEnabled(false);
+            ProgramaEntrenamiento programa = ProyectoFitness.getPrograma(llave);
+            if (programa != null){
+                tabla.setModel(new javax.swing.table.DefaultTableModel(
+                        new Object [][] {
+                            {programa.getObjetivos(), programa.getDescripcion(), programa.getFechaInicio(), programa.getFechaFin()}
+                        },
+                        new String [] {
+                            "Objetivos", "Descripcion", "Fecha de inicio", "Fecha de finalizacion"
+                        }
+                ) {
+                    boolean[] canEdit = new boolean [] {
+                        false, false
+                    };
+
+                    public boolean isCellEditable(int rowIndex, int columnIndex) {
+                        return canEdit [columnIndex];
+                    }
+                });
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnProgramasActionPerformed
 
     private void btnVerMedicionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerMedicionesActionPerformed
-        // TODO add your handling code here:
+        btnVerMediciones.setEnabled(false);
+        btnProgramas.setEnabled(true);
     }//GEN-LAST:event_btnVerMedicionesActionPerformed
+
+    private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
+        
+        try {
+            if(ProyectoFitness.getPaciente(llave).getMediciones().size() != 0) {
+                if(btnVerMediciones.isEnabled()){
+
+                        String key = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
+                        vMedicion.setVisible(true);
+                        vMedicion.modoVer();
+                        vMedicion.cargarLlave(key, "Nombre mendicion");
+
+                }else{
+                        vProgramaEntrenamiento.setVisible(true);
+                        vProgramaEntrenamiento.modoVer();
+                        vProgramaEntrenamiento.cargarLlave(llave);
+                }
+            }
+        } catch (Exception ex) {
+                    Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+               }
+    }//GEN-LAST:event_tablaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -461,6 +555,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnProgramas;
     private javax.swing.JButton btnVerMediciones;
+    private javax.swing.ButtonGroup grupoSexo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -472,9 +567,9 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JRadioButton radioHombre;
     private javax.swing.JRadioButton radioMujer;
+    private javax.swing.JTable tabla;
     private javax.swing.JTextField txtCedula;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtFechaNacimiento;

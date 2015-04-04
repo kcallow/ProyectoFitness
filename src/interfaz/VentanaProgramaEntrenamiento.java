@@ -5,6 +5,9 @@
  */
 package interfaz;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import proyectofitness.*;
 
 /**
@@ -16,6 +19,9 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     /**
      * Creates new form VentanaProgramaEjercicios
      */
+    VentanaDia vDia = new VentanaDia();
+    
+    private String cedula;
     public VentanaProgramaEntrenamiento() {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -44,7 +50,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         jPanel2 = new javax.swing.JPanel();
         btnAddDia = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla = new javax.swing.JTable();
         btnCancelarVPE = new javax.swing.JButton();
         btnGuardarVPE = new javax.swing.JButton();
         btnModificarVPE = new javax.swing.JButton();
@@ -93,7 +99,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -112,7 +118,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane4.setViewportView(jTable1);
+        jScrollPane4.setViewportView(tabla);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -291,11 +297,39 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDiaActionPerformed
-        // TODO add your handling code here:
+        try {
+            vDia.setVisible(true);
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnAddDiaActionPerformed
 
+    
+    private String llave;
+    
+    public void setCedula(String cedula){
+        this.cedula = cedula;
+    }
+    
     private void btnBorrarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVPEActionPerformed
-        // TODO add your handling code here:
+        try {
+            int opcion = JOptionPane.showConfirmDialog(null, 
+                                 "El programa de entrenamiento " + txtDescripcionVPE.getText() + " creado en <fecha de creación> "
+                                         + "\ncuenta con <cantidad de días> días de entrenamiento y <cantidad de ejercicios> ejercicios. "
+                                         + "\n¿Confirma la eliminación del programa?", 
+                                  "", 
+                                  JOptionPane.YES_NO_OPTION); 
+            if (opcion == JOptionPane.YES_OPTION) {
+                ProyectoFitness.borrarPrograma(cedula);
+                //VentanaPrincipal.llenarTabla();
+                clear();
+                dispose();
+            }
+            
+            
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnBorrarVPEActionPerformed
 
     private void btnModificarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVPEActionPerformed
@@ -303,7 +337,18 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     }//GEN-LAST:event_btnModificarVPEActionPerformed
 
     private void btnGuardarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVPEActionPerformed
-        // TODO add your handling code here:
+        
+        try {
+            
+            ProyectoFitness.agregarPrograma(cedula, txtFechaInicio.getText(), 
+                    txtFechaFinalizacion.getText(), txtDescripcionVPE.getText(), 
+                    txtObjetivosVPE.getText());
+            clear();
+            dispose();
+            
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+        }
     }//GEN-LAST:event_btnGuardarVPEActionPerformed
 
     private void btnCancelarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarVPEActionPerformed
@@ -345,6 +390,45 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             }
         });
     }
+    
+     static void llenarTabla() {
+         /*
+        Object[][] objetos;
+        int rows = hashMapActual.size();
+        if(rows > 0) {
+            final int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
+            objetos = new Object[rows][columns];
+            int i = 0;
+            for(Object key: hashMapActual.keySet()){
+                objetos[i][0] = key;
+                Object [] campos = hashMapActual.values().toArray()[i].toString().split(",");
+                for(int j = 0; j < columns-1; j++) {
+                    objetos[i][j+1] = campos[j];
+                }
+                i++;
+            }
+            boolean[] canEditTable = new boolean [columns];
+            for(i = 0; i < columns; i++){
+                canEditTable[i] = false;
+            }
+            
+            tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, camposTablaActual){
+                boolean [] canEdit = canEditTable;
+                
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        } */
+    }
+    
+    private void clear(){
+        txtAsistencia.setText("");
+        txtFechaFinalizacion.setText("");
+        txtFechaInicio.setText("");
+        txtObjetivosVPE.setText("");
+        txtDescripcionVPE.setText("");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddDia;
@@ -363,7 +447,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabla;
     private javax.swing.JTextField txtAsistencia;
     private javax.swing.JTextArea txtDescripcionVPE;
     private javax.swing.JLabel txtFechaCreacion;
@@ -372,51 +456,36 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private javax.swing.JTextArea txtObjetivosVPE;
     // End of variables declaration//GEN-END:variables
 
-    
-    
-    javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
-            txtAsistencia,
-            txtFechaFinalizacion,
-            txtFechaInicio,
-    };
-    
-    javax.swing.JTextArea [] textos = new javax.swing.JTextArea [] {
-            txtObjetivosVPE,
-            txtDescripcionVPE,
-    };
-    
+   
     
     @Override
     public void modoAgregar() {
         btnModificarVPE.setEnabled(false);
         btnBorrarVPE.setEnabled(false);
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(true);
-        for(int i = 0; i < textos.length; i++)
-            textos[i].setEnabled(true);
+        txtAsistencia.setEnabled(true);
+        txtFechaFinalizacion.setEnabled(true);
+        txtFechaInicio.setEnabled(true);
+        txtObjetivosVPE.setEnabled(true);
+        txtDescripcionVPE.setEnabled(true);
     }
 
     @Override
     public void modoVer() {
         btnModificarVPE.setEnabled(true);
         btnBorrarVPE.setEnabled(true);
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(false);
-        for(int i = 0; i < textos.length; i++)
-            textos[i].setEnabled(false);
+        txtAsistencia.setEnabled(false);
+        txtFechaFinalizacion.setEnabled(false);
+        txtFechaInicio.setEnabled(false);
+        txtObjetivosVPE.setEnabled(false);
+        txtDescripcionVPE.setEnabled(false);
     }
 
     @Override
     public void modoModificar() {
-        btnModificarVPE.setEnabled(true);
-        btnBorrarVPE.setEnabled(true);
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(true);
-        for(int i = 0; i < textos.length; i++)
-            textos[i].setEnabled(true);
     }
-
+    
     public void cargarLlave(String llave) throws Exception {
+            this.llave = llave;
             ProgramaEntrenamiento programaEntrenamiento = ProyectoFitness.getPrograma(llave);
             txtFechaCreacion.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
             txtDescripcionVPE.setText(programaEntrenamiento.getDescripcion());

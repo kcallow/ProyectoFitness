@@ -27,6 +27,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     public static HashMap hashMapActual = ProyectoFitness.pacientes;
     private static Object[] camposTablaActual = camposTablaPaciente;
+    
 
     @Override
     public void dispose() {

@@ -420,6 +420,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             case 1:
                 hashMapActual = ProyectoFitness.tiposEjercicio;
                 camposTablaActual = camposTablaEjercicio;
+                ventanaTipoEjercicio.updateMaquinasDisponibles();
                 break;
             case 2:
                 hashMapActual = ProyectoFitness.maquinas;

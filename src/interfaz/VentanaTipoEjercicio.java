@@ -25,6 +25,10 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
+    public void updateMaquinasDisponibles() {
+        comboMaquina.setModel(new javax.swing.DefaultComboBoxModel(ProyectoFitness.maquinas.keySet().toArray()));
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

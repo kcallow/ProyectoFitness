@@ -481,8 +481,32 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     }//GEN-LAST:event_btnProgramasActionPerformed
 
     private void btnVerMedicionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerMedicionesActionPerformed
-        btnVerMediciones.setEnabled(false);
-        btnProgramas.setEnabled(true);
+
+        try {
+            btnVerMediciones.setEnabled(false);
+            btnProgramas.setEnabled(true);
+            Mediciones programa = ProyectoFitness.getMediciones(llave);
+            if (programa != null){
+                tabla.setModel(new javax.swing.table.DefaultTableModel(
+                        new Object [][] {
+                            {"Medicion" + tabla.getSelectedRow() + 1}
+                        },
+                        new String [] {
+                            "Objetivos", "Descripcion", "Fecha de inicio", "Fecha de finalizacion"
+                        }
+                ) {
+                    boolean[] canEdit = new boolean [] {
+                        false, false
+                    };
+
+                    public boolean isCellEditable(int rowIndex, int columnIndex) {
+                        return canEdit [columnIndex];
+                    }
+                });
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnVerMedicionesActionPerformed
 
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked

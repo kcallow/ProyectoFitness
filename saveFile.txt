@@ -356,128 +356,6 @@ F
 jldsabi@aol.com
 
 #Agregando mediciones a usuario 166669999...
-<<<<<<< HEAD
-#Agregando medicion 'Pliegues Pantorrilla', con valor3.0
-agregar medicion
-166669999
-Pliegues Pantorrilla
-3.0
-#Agregando medicion 'Circunferencia Muslo izq', con valor3.0
-agregar medicion
-166669999
-Circunferencia Muslo izq
-3.0
-#Agregando medicion 'Circunferencia Espalda', con valor3.0
-agregar medicion
-166669999
-Circunferencia Espalda
-3.0
-#Agregando medicion 'Pliegues Pectoral', con valor3.0
-agregar medicion
-166669999
-Pliegues Pectoral
-3.0
-#Agregando medicion 'Circunferencia Biceps der', con valor3.0
-agregar medicion
-166669999
-Circunferencia Biceps der
-3.0
-#Agregando medicion 'Circunferencia Cuello', con valor3.0
-agregar medicion
-166669999
-Circunferencia Cuello
-3.0
-#Agregando medicion 'Circunferencia Pantorrilla der', con valor3.0
-agregar medicion
-166669999
-Circunferencia Pantorrilla der
-3.0
-#Agregando medicion 'Circunferencia Pantorrilla izq', con valor3.0
-agregar medicion
-166669999
-Circunferencia Pantorrilla izq
-3.0
-#Agregando medicion 'Frecuencia Cardiaca', con valor2.0
-agregar medicion
-166669999
-Frecuencia Cardiaca
-2.0
-#Agregando medicion 'Circunferencia Pectoral', con valor3.0
-agregar medicion
-166669999
-Circunferencia Pectoral
-3.0
-#Agregando medicion 'Pliegues Abdomen', con valor3.0
-agregar medicion
-166669999
-Pliegues Abdomen
-3.0
-#Agregando medicion 'Circunferencia Cadera', con valor3.0
-agregar medicion
-166669999
-Circunferencia Cadera
-3.0
-#Agregando medicion 'Pliegues Muslo', con valor3.0
-agregar medicion
-166669999
-Pliegues Muslo
-3.0
-#Agregando medicion 'Pliegues Triceps', con valor3.0
-agregar medicion
-166669999
-Pliegues Triceps
-3.0
-#Agregando medicion 'Presion Arterial Diastolica', con valor3.0
-agregar medicion
-166669999
-Presion Arterial Diastolica
-3.0
-#Agregando medicion 'Peso', con valor2.0
-agregar medicion
-166669999
-Peso
-2.0
-#Agregando medicion 'Pliegues Subescapular', con valor3.0
-agregar medicion
-166669999
-Pliegues Subescapular
-3.0
-#Agregando medicion 'Circunferencia Biceps izq', con valor3.0
-agregar medicion
-166669999
-Circunferencia Biceps izq
-3.0
-#Agregando medicion 'Estatura', con valor1.0
-agregar medicion
-166669999
-Estatura
-1.0
-#Agregando medicion 'Circunferencia Muslo der', con valor3.0
-agregar medicion
-166669999
-Circunferencia Muslo der
-3.0
-#Agregando medicion 'Circunferencia Cintura 1', con valor3.0
-agregar medicion
-166669999
-Circunferencia Cintura 1
-3.0
-#Agregando medicion 'Circunferencia Cintura 2', con valor3.0
-agregar medicion
-166669999
-Circunferencia Cintura 2
-3.0
-#Agregando medicion 'Circunferencia Cintura 3', con valor3.0
-agregar medicion
-166669999
-Circunferencia Cintura 3
-3.0
-#Agregando medicion 'Presion Arterial Sistolica', con valor3.0
-agregar medicion
-166669999
-Presion Arterial Sistolica
-3.0
-=======
 #Agregando medicion 'Pliegues Pantorrilla', con valor1111.0
 agregar medicion
 166669999
@@ -598,7 +476,6 @@ agregar medicion
 166669999
 Presion Arterial Sistolica
 11.0
->>>>>>> 175d98ce3e1c8f85161cd59ac4185f2aad3effff
 
 
 #Agregando paciente John Carmack, cedula 859330231...
@@ -635,11 +512,11 @@ F
 adalovecraft@cthulhu.com
 
 #Agregando mediciones a usuario 869503493...
-#Agregando medicion 'Pliegues Pantorrilla', con valor11.0
+#Agregando medicion 'Pliegues Pantorrilla', con valor111.0
 agregar medicion
 869503493
 Pliegues Pantorrilla
-11.0
+111.0
 #Agregando medicion 'Circunferencia Muslo izq', con valor11.0
 agregar medicion
 869503493
@@ -655,11 +532,11 @@ agregar medicion
 869503493
 Pliegues Pectoral
 11.0
-#Agregando medicion 'Circunferencia Biceps der', con valor111.0
+#Agregando medicion 'Circunferencia Biceps der', con valor11.0
 agregar medicion
 869503493
 Circunferencia Biceps der
-111.0
+11.0
 #Agregando medicion 'Circunferencia Cuello', con valor11.0
 agregar medicion
 869503493
@@ -670,11 +547,11 @@ agregar medicion
 869503493
 Circunferencia Pantorrilla der
 11.0
-#Agregando medicion 'Circunferencia Pantorrilla izq', con valor11.0
+#Agregando medicion 'Circunferencia Pantorrilla izq', con valor111.0
 agregar medicion
 869503493
 Circunferencia Pantorrilla izq
-11.0
+111.0
 #Agregando medicion 'Frecuencia Cardiaca', con valor11.0
 agregar medicion
 869503493
@@ -700,11 +577,11 @@ agregar medicion
 869503493
 Pliegues Muslo
 11.0
-#Agregando medicion 'Pliegues Triceps', con valor11.0
+#Agregando medicion 'Pliegues Triceps', con valor111.0
 agregar medicion
 869503493
 Pliegues Triceps
-11.0
+111.0
 #Agregando medicion 'Presion Arterial Diastolica', con valor11.0
 agregar medicion
 869503493
@@ -725,21 +602,21 @@ agregar medicion
 869503493
 Circunferencia Biceps izq
 11.0
-#Agregando medicion 'Estatura', con valor11.0
+#Agregando medicion 'Estatura', con valor1111.0
 agregar medicion
 869503493
 Estatura
-11.0
-#Agregando medicion 'Circunferencia Muslo der', con valor11.0
+1111.0
+#Agregando medicion 'Circunferencia Muslo der', con valor111.0
 agregar medicion
 869503493
 Circunferencia Muslo der
-11.0
-#Agregando medicion 'Circunferencia Cintura 1', con valor11.0
+111.0
+#Agregando medicion 'Circunferencia Cintura 1', con valor111.0
 agregar medicion
 869503493
 Circunferencia Cintura 1
-11.0
+111.0
 #Agregando medicion 'Circunferencia Cintura 2', con valor11.0
 agregar medicion
 869503493
@@ -750,11 +627,11 @@ agregar medicion
 869503493
 Circunferencia Cintura 3
 11.0
-#Agregando medicion 'Presion Arterial Sistolica', con valor11.0
+#Agregando medicion 'Presion Arterial Sistolica', con valor111.0
 agregar medicion
 869503493
 Presion Arterial Sistolica
-11.0
+111.0
 
 
 #Agregando paciente Hyori Sakagumi, cedula 201589456...

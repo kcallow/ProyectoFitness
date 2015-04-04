@@ -316,6 +316,12 @@ alzar
 alzar 
 Mancuerna
 
+#Agregando tipo de ejercicio: fofofofofoof...
+agregar tipo-ejercicio
+fofofofofoof
+dasdadasdsadas
+Extensiones de pierna
+
 #Agregando a todos los pacientes...
 #Agregando paciente Kenneth Callow Monge, cedula 116210601...
 agregar paciente

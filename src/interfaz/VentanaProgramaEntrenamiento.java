@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -339,7 +341,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         
         try {
             
-            ProyectoFitness.agregarPrograma(llave, txtFechaInicio.getText(), 
+            ProyectoFitness.agregarPrograma(llave, LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-uuuu")), txtFechaInicio.getText(), 
                     txtFechaFinalizacion.getText(), txtDescripcionVPE.getText(), 
                     txtObjetivosVPE.getText());
             clear();

@@ -112,7 +112,7 @@ public class ProyectoFitness {
 				agregarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "programa":
-				agregarPrograma(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
+				agregarPrograma(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "dia":
 				agregarDia(scanner.nextLine(),scanner.nextLine());
@@ -249,13 +249,13 @@ public class ProyectoFitness {
         tiposEjercicio.put(nombre, new TipoEjercicio(descripcion, maquina));
     }
 
-    public static void agregarPrograma(String cedula, String fechaInicio, String fechaFin, String descripcion, String objetivos) throws Exception {
+    public static void agregarPrograma(String cedula, String fechaCreacion, String fechaInicio, String fechaFin, String descripcion, String objetivos) throws Exception {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para agregar programa de entrenamiento.");
         if(paciente.getProgramaEntrenamiento() != null)
             throw new Exception("Paciente ya tiene programa de entrenamiento.  No se puede agregar.");
-        paciente.agregarProgramaEntrenamiento(LocalDate.parse(fechaInicio, DateTimeFormatter.ofPattern("dd-MM-uuuu")), LocalDate.parse(fechaFin, DateTimeFormatter.ofPattern("dd-MM-uuuu")), descripcion, objetivos);
+        paciente.agregarProgramaEntrenamiento(LocalDate.parse(fechaCreacion, DateTimeFormatter.ofPattern("dd-MM-uuuu")), LocalDate.parse(fechaInicio, DateTimeFormatter.ofPattern("dd-MM-uuuu")), LocalDate.parse(fechaFin, DateTimeFormatter.ofPattern("dd-MM-uuuu")), descripcion, objetivos);
     }
 
     public static void agregarDia(String cedula, String numeroDia) throws Exception {

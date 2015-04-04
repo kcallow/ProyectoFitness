@@ -94,7 +94,7 @@ public class Paciente {
         programaEntrenamiento = null;
     }
 
-    void agregarProgramaEntrenamiento(LocalDate fechaInicio, LocalDate fechaFin, String descripcion, String objetivos) {
-        programaEntrenamiento = new ProgramaEntrenamiento(fechaInicio, fechaFin, descripcion, objetivos);
+    void agregarProgramaEntrenamiento(LocalDate fechaCreacion, LocalDate fechaInicio, LocalDate fechaFin, String descripcion, String objetivos) {
+        programaEntrenamiento = new ProgramaEntrenamiento(fechaCreacion, fechaInicio, fechaFin, descripcion, objetivos);
     }
 }

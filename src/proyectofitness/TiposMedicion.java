@@ -24,6 +24,7 @@ public class TiposMedicion extends HashMap<String,String> {
         put("Pliegues Muslo", "milimetros");
         put("Pliegues Pantorrilla", "milimetros");
         put("Pliegues Pectoral", "milimetros");
+        put("Pliegues Iliaco", "milimetros");
         put("Circunferencia Cuello", "centimetros");
         put("Circunferencia Biceps der", "centimetros");
         put("Circunferencia Biceps izq", "centimetros");

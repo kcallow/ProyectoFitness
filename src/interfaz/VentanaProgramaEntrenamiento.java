@@ -75,8 +75,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
 
         jLabel1.setText("Fecha de creación:");
 
-        txtFechaCreacion.setText("jLabel2");
-
         jLabel3.setText("Descripción:");
 
         jLabel4.setText("Fecha de inicio:");
@@ -204,7 +202,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtFechaCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtFechaCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel2)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,9 +245,9 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtFechaCreacion))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtFechaCreacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -472,13 +470,18 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
 
     @Override
     public void modoVer() {
-        btnModificarVPE.setEnabled(true);
-        btnBorrarVPE.setEnabled(true);
-        txtAsistencia.setEnabled(false);
-        txtFechaFinalizacion.setEnabled(false);
-        txtFechaInicio.setEnabled(false);
-        txtObjetivosVPE.setEnabled(false);
-        txtDescripcionVPE.setEnabled(false);
+        try {
+            txtFechaCreacion.setText(ProyectoFitness.getPrograma(llave).getFechaCreacion().toString());
+            btnModificarVPE.setEnabled(true);
+            btnBorrarVPE.setEnabled(true);
+            txtAsistencia.setEnabled(false);
+            txtFechaFinalizacion.setEnabled(false);
+            txtFechaInicio.setEnabled(false);
+            txtObjetivosVPE.setEnabled(false);
+            txtDescripcionVPE.setEnabled(false);
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override
@@ -490,7 +493,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             ProgramaEntrenamiento programaEntrenamiento = ProyectoFitness.getPrograma(llave);
             txtFechaCreacion.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
             txtDescripcionVPE.setText(programaEntrenamiento.getDescripcion());
-            txtFechaCreacion.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
+            txtFechaInicio.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
             txtFechaFinalizacion.setText(programaEntrenamiento.getFechaFin().format(ProyectoFitness.formatoFecha));
             txtObjetivosVPE.setText(programaEntrenamiento.getObjetivos());
             txtAsistencia.setText(programaEntrenamiento.getAsistencia() + "");

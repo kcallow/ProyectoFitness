@@ -188,7 +188,7 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         try {
             int opcion = JOptionPane.showConfirmDialog(null, 
-                                 "La máquina" + txtNombreMaquina.getText() + "está siendo utilizado en "
+                                 "La máquina " + txtNombreMaquina.getText() + " está siendo utilizado en "
                                          + "<número de programas de entrenamiento> \nprogramas de entrenamiento, "
                                          + "se eliminará de estos programas. \n¿Confirma el borrado de la máquina?", 
                                   "", 

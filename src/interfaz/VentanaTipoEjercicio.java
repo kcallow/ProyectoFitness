@@ -185,7 +185,7 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
     private void btnBorrarVTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVTEActionPerformed
         try {
             int opcion = JOptionPane.showConfirmDialog(null, 
-                                 "El tipo de ejercicio" + txtNombre.getText() + "está siendo utilizado en "
+                                 "El tipo de ejercicio " + txtNombre.getText() + " está siendo utilizado en "
                                          + "<número de programas de entrenamiento> \nprogramas de entrenamiento, "
                                          + "se eliminará de estos programas. \n¿Confirma el borrado del ejercicio?", 
                                   "", 

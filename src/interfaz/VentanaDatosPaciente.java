@@ -5,6 +5,9 @@
  */
 package interfaz;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import proyectofitness.*;
 
 /**
@@ -357,15 +360,43 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
+        try {
+            String sexo;
+            if(radioHombre.isSelected())
+                sexo = "M";
+            else
+                sexo = "F";
+            ProyectoFitness.modificarPaciente(txtCedula.getText(), txtNombre.getText(), sexo, txtFechaNacimiento.getText(),txtTelefono.getText(), txtCorreo.getText());
+            VentanaPrincipal.llenarTabla();
+            clear();
+            dispose();
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        // TODO add your handling code here:
+        modoModificar();
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        // TODO add your handling code here:
+        try {    
+            int opcion = JOptionPane.showConfirmDialog(null, 
+                                 "“El paciente " + txtNombre.getText() + " será eliminado del sistema. Cuenta con <cantidad de mediciones> mediciones"
+                                         + " \ny <cantidad de programas de entrenamiento> programas de entrenamiento. "
+                                         + "\n¿Está seguro que desea eliminarlo?”", 
+                                  "", 
+                                  JOptionPane.YES_NO_OPTION); 
+            if (opcion == JOptionPane.YES_OPTION) {
+                
+                    ProyectoFitness.borrarPaciente(txtCedula.getText());
+                    VentanaPrincipal.llenarTabla();
+                    clear();
+                    dispose();}
+            } catch (Exception ex) {
+                    Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnProgramasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProgramasActionPerformed
@@ -410,6 +441,15 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             }
         });
     }
+    
+    private void clear(){
+        txtCedula.setText("");
+        txtCorreo.setText("");
+        txtFechaNacimiento.setText("dd-MM-YYYY");
+        txtNombre.setText("");
+        txtTelefono.setText("");
+    
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddMedicion;
@@ -441,30 +481,15 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 
-    javax.swing.JTextField[] elementos = new javax.swing.JTextField[]{
-            txtCedula,
-            txtCorreo,
-            txtFechaNacimiento,
-            txtNombre,
-            txtTelefono,
-            
-            };
-    
-    @Override
-    public void modoAgregar() {
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(true);
-        btnBorrar.setEnabled(false);
-        btnModificar.setEnabled(false);
-        radioHombre.setEnabled(true);
-        radioMujer.setEnabled(true);
-                
-    }
+
 
     @Override
     public void modoVer() {
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(false);
+        txtCedula.setEnabled(false);
+        txtCorreo.setEnabled(false);
+        txtFechaNacimiento.setEnabled(false);
+        txtNombre.setEnabled(false);
+        txtTelefono.setEnabled(false);
         btnBorrar.setEnabled(true);
         btnModificar.setEnabled(true);
         radioHombre.setEnabled(false);
@@ -473,8 +498,11 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
     @Override
     public void modoModificar() {
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEnabled(true);
+        txtCedula.setEnabled(true);
+        txtCorreo.setEnabled(true);
+        txtFechaNacimiento.setEnabled(true);
+        txtNombre.setEnabled(true);
+        txtTelefono.setEnabled(true);
         btnBorrar.setEnabled(true);
         btnModificar.setEnabled(true);
         radioHombre.setEnabled(true);
@@ -496,5 +524,10 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             radioHombre.setSelected(false);
         }
         
+    }
+
+    @Override
+    public void modoAgregar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

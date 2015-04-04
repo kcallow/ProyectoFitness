@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import proyectofitness.ProyectoFitness;
 
 /**
@@ -12,10 +14,15 @@ import proyectofitness.ProyectoFitness;
  * @author scsaenz
  */
 public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana {
-
+    
+    
+    private String cedula;
+    
     /**
      * Creates new form VentanaMedicion
      */
+    
+    
     public VentanaMedicion() {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -568,6 +575,10 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void setCedula(String cedula){
+        this.cedula = cedula;
+    }
+    
     private void txtPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPesoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPesoActionPerformed
@@ -585,7 +596,31 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     }//GEN-LAST:event_btnBorrarVMActionPerformed
 
     private void btnGuardarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVMActionPerformed
-        // TODO add your handling code here:
+
+        try {
+            String [] nombreMedicion = new String[]{
+                "Estatura", "Peso", "Pliegues Triceps", "Pliegues Subescapular", "Pliegues Abdomen",
+                "Pliegues Muslo", "Pliegues Pantorrilla", "Pliegues Pectoral", "Circunferencia Cuello",
+                "Circunferencia Biceps der", "Circunferencia Biceps izq", "Circunferencia Pectoral",
+                "Circunferencia Espalda", "Circunferencia Cintura 1", "Circunferencia Cintura 2",
+                "Circunferencia Cintura 3", "Circunferencia Cadera", "Circunferencia Muslo der",
+                "Circunferencia Muslo izq", "Circunferencia Pantorrilla der", "Circunferencia Pantorrilla izq",
+                "Frecuencia Cardiaca", "Presion Arterial Sistolica", "Presion Arterial Diastolica"
+            };
+            String [] valor = new String[] {
+                txtEstatura.getText(), txtPeso.getText(), txtTriceps.getText(), txtSubescapular.getText(),
+                txtAbdomen.getText(), txtMuslo.getText(), txtPantorrila.getText(), txtPectoral.getText(),
+                txtCuello.getText(), txtBicepsDer.getText(), txtBicepsIzq.getText(), txtPectoralCircunferencia.getText(),
+                txtEspalda.getText(), txtCintura1.getText(), txtCintura2.getText(), txtCintura3.getText(), txtCadera.getText(),
+                txtMusloDer.getText(), txtMusloIzq.getText(), txtPantorrillaDer.getText(), txtPantorrilaIzq.getText(),
+                txtFrecuenciaCardiaca.getText(), txtSistolica.getText(), txtDiastolica.getText()
+            };
+            for(int i = 0; i < nombreMedicion.length; i++)
+                ProyectoFitness.agregarMedicion(cedula, nombreMedicion[i], valor[i]);
+            
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnGuardarVMActionPerformed
 
     /**

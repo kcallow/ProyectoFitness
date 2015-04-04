@@ -347,8 +347,8 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     }//GEN-LAST:event_btnCancelarVPEActionPerformed
 
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
-        String numeroDia = tabla.getValueAt(tabla.getSelectedRow(), 0).toString(); 
         try {
+            String numeroDia = tabla.getValueAt(tabla.getSelectedRow(), 0).toString(); 
             vDia.modoVer();
             vDia.cargarLlave(llave);
             vDia.cargarDia(numeroDia);

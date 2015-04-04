@@ -356,6 +356,126 @@ F
 jldsabi@aol.com
 
 #Agregando mediciones a usuario 166669999...
+#Agregando medicion 'Pliegues Pantorrilla', con valor3.0
+agregar medicion
+166669999
+Pliegues Pantorrilla
+3.0
+#Agregando medicion 'Circunferencia Muslo izq', con valor3.0
+agregar medicion
+166669999
+Circunferencia Muslo izq
+3.0
+#Agregando medicion 'Circunferencia Espalda', con valor3.0
+agregar medicion
+166669999
+Circunferencia Espalda
+3.0
+#Agregando medicion 'Pliegues Pectoral', con valor3.0
+agregar medicion
+166669999
+Pliegues Pectoral
+3.0
+#Agregando medicion 'Circunferencia Biceps der', con valor3.0
+agregar medicion
+166669999
+Circunferencia Biceps der
+3.0
+#Agregando medicion 'Circunferencia Cuello', con valor3.0
+agregar medicion
+166669999
+Circunferencia Cuello
+3.0
+#Agregando medicion 'Circunferencia Pantorrilla der', con valor3.0
+agregar medicion
+166669999
+Circunferencia Pantorrilla der
+3.0
+#Agregando medicion 'Circunferencia Pantorrilla izq', con valor3.0
+agregar medicion
+166669999
+Circunferencia Pantorrilla izq
+3.0
+#Agregando medicion 'Frecuencia Cardiaca', con valor2.0
+agregar medicion
+166669999
+Frecuencia Cardiaca
+2.0
+#Agregando medicion 'Circunferencia Pectoral', con valor3.0
+agregar medicion
+166669999
+Circunferencia Pectoral
+3.0
+#Agregando medicion 'Pliegues Abdomen', con valor3.0
+agregar medicion
+166669999
+Pliegues Abdomen
+3.0
+#Agregando medicion 'Circunferencia Cadera', con valor3.0
+agregar medicion
+166669999
+Circunferencia Cadera
+3.0
+#Agregando medicion 'Pliegues Muslo', con valor3.0
+agregar medicion
+166669999
+Pliegues Muslo
+3.0
+#Agregando medicion 'Pliegues Triceps', con valor3.0
+agregar medicion
+166669999
+Pliegues Triceps
+3.0
+#Agregando medicion 'Presion Arterial Diastolica', con valor3.0
+agregar medicion
+166669999
+Presion Arterial Diastolica
+3.0
+#Agregando medicion 'Peso', con valor2.0
+agregar medicion
+166669999
+Peso
+2.0
+#Agregando medicion 'Pliegues Subescapular', con valor3.0
+agregar medicion
+166669999
+Pliegues Subescapular
+3.0
+#Agregando medicion 'Circunferencia Biceps izq', con valor3.0
+agregar medicion
+166669999
+Circunferencia Biceps izq
+3.0
+#Agregando medicion 'Estatura', con valor1.0
+agregar medicion
+166669999
+Estatura
+1.0
+#Agregando medicion 'Circunferencia Muslo der', con valor3.0
+agregar medicion
+166669999
+Circunferencia Muslo der
+3.0
+#Agregando medicion 'Circunferencia Cintura 1', con valor3.0
+agregar medicion
+166669999
+Circunferencia Cintura 1
+3.0
+#Agregando medicion 'Circunferencia Cintura 2', con valor3.0
+agregar medicion
+166669999
+Circunferencia Cintura 2
+3.0
+#Agregando medicion 'Circunferencia Cintura 3', con valor3.0
+agregar medicion
+166669999
+Circunferencia Cintura 3
+3.0
+#Agregando medicion 'Presion Arterial Sistolica', con valor3.0
+agregar medicion
+166669999
+Presion Arterial Sistolica
+3.0
 
 
 #Agregando paciente John Carmack, cedula 859330231...

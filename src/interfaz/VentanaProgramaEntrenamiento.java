@@ -347,9 +347,14 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
 
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
         String numeroDia = tabla.getValueAt(tabla.getSelectedRow(), 0).toString(); 
-                vDia.setVisible(true);
-                vDia.modoVer();
-                vDia.cargarLlave(llave);
+        try {
+            vDia.modoVer();
+            vDia.cargarLlave(llave);
+            vDia.cargarDia(numeroDia);
+            vDia.setVisible(true);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+        }
     }//GEN-LAST:event_tablaMouseClicked
 
     /**

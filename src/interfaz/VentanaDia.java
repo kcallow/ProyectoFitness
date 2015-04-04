@@ -262,19 +262,4 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         this.dia = ProyectoFitness.getDia(llave, numeroDia);
 
     }
-
-    @Override
-    public void modoAgregar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void modoVer() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void modoModificar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

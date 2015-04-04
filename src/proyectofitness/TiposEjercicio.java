@@ -20,5 +20,11 @@ public class TiposEjercicio extends HashMap<String,TipoEjercicio> {
                     + get(nombre).toCommand() + "\n";
         return resultado;
     }
+
+    void updateNombreMaquina(String nombreViejo, String nombreNuevo) throws Exception {
+        for(TipoEjercicio tipoEjercicio : this.values())
+            if(tipoEjercicio.getTipoMaquina().equals(nombreViejo))
+                tipoEjercicio.setTipoMaquina(nombreNuevo);
+    }
     
 }

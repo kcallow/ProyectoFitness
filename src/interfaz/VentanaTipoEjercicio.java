@@ -15,7 +15,7 @@ import proyectofitness.*;
  * @author scsaenz
  */
 public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVentana {
-    private String llave;
+    private String llave = "";
 
     /**
      * Creates new form VentanaTipoEjercicio

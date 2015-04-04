@@ -12,7 +12,7 @@ public class Paciente {
     private Correo correo;
     
     public Paciente(String nombre, String sexo, LocalDate fechaDeNacimiento, Telefono telefono, Correo correo) throws Exception{
-        this.nombre = nombre;
+        setNombre(nombre);
         setSexo(sexo);
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.telefono = telefono;
@@ -31,7 +31,9 @@ public class Paciente {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre) throws Exception {
+        if(nombre.equals(""))
+            throw new Exception("Nombre no puede ser vacio.");
         this.nombre = nombre;
     }
 

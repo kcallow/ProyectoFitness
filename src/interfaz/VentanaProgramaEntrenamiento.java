@@ -21,7 +21,8 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
      */
     VentanaDia vDia = new VentanaDia();
     
-    private String cedula;
+    private String llave = "";
+    
     public VentanaProgramaEntrenamiento() {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -305,10 +306,8 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     }//GEN-LAST:event_btnAddDiaActionPerformed
 
     
-    private String llave;
-    
-    public void setCedula(String cedula){
-        this.cedula = cedula;
+    public void setCedula(String llave){
+        this.llave = llave;
     }
     
     private void btnBorrarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVPEActionPerformed
@@ -320,7 +319,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                                   "", 
                                   JOptionPane.YES_NO_OPTION); 
             if (opcion == JOptionPane.YES_OPTION) {
-                ProyectoFitness.borrarPrograma(cedula);
+                ProyectoFitness.borrarPrograma(llave);
                 //VentanaPrincipal.llenarTabla();
                 clear();
                 dispose();
@@ -340,7 +339,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         
         try {
             
-            ProyectoFitness.agregarPrograma(cedula, txtFechaInicio.getText(), 
+            ProyectoFitness.agregarPrograma(llave, txtFechaInicio.getText(), 
                     txtFechaFinalizacion.getText(), txtDescripcionVPE.getText(), 
                     txtObjetivosVPE.getText());
             clear();

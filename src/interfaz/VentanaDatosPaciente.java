@@ -19,7 +19,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
    
     VentanaMedicion vMedicion = new VentanaMedicion();
     VentanaProgramaEntrenamiento vProgramaEntrenamiento = new VentanaProgramaEntrenamiento();
-    private String llave;
+    private String llave = "";
     
     /**
      * Creates new form VentanaDatosPaciente
@@ -447,7 +447,6 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnProgramasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProgramasActionPerformed
-        System.out.println("Hola k ase");
 
         try {
             btnVerMediciones.setEnabled(true);

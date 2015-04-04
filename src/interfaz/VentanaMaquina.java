@@ -16,7 +16,7 @@ import proyectofitness.ProyectoFitness;
  */
 public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana  {
 
-    private String llave;
+    private String llave = "";
 
     /**
      * Creates new form VentanaMaquina

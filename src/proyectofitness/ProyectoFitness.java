@@ -237,6 +237,12 @@ public class ProyectoFitness {
         paciente.getMediciones().put(nombreMedicion, Double.parseDouble(valor));
     }
 
+    public static void agregarMediciones(String cedula, String [] valores) throws Exception{
+        int i = 0;
+        for(String nombreMedicion : tiposMedicion.keySet())
+            agregarMedicion(cedula,nombreMedicion,valores[++i]);
+    }
+
     public static void agregarTipoEjercicio(String nombre, String descripcion, String maquina) throws Exception {
         if(tiposEjercicio.containsKey(nombre))
             throw new Exception("Ya existe un tipo de ejercicio con ese nombre.");

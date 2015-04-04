@@ -8,6 +8,7 @@ package interfaz;
 import proyectofitness.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -666,7 +667,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     }//GEN-LAST:event_btnCancelarVMActionPerformed
 
     private void btnModificarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVMActionPerformed
-        // TODO add your handling code here:
+        modoModificar();
     }//GEN-LAST:event_btnModificarVMActionPerformed
 
     private void btnBorrarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVMActionPerformed
@@ -674,24 +675,35 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     }//GEN-LAST:event_btnBorrarVMActionPerformed
 
     private void btnGuardarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVMActionPerformed
+         String [] valor = new String[] {
+                    txtEstatura.getText(), txtPeso.getText(), txtTriceps.getText(), txtSubescapular.getText(),
+                    txtAbdomen.getText(), txtMuslo.getText(), txtPantorrila.getText(), txtPectoral.getText(),
+                    txtCuello.getText(), txtBicepsDer.getText(), txtBicepsIzq.getText(), txtPectoralCircunferencia.getText(),
+                    txtEspalda.getText(), txtCintura1.getText(), txtCintura2.getText(), txtCintura3.getText(), txtCadera.getText(),
+                    txtMusloDer.getText(), txtMusloIzq.getText(), txtPantorrillaDer.getText(), txtPantorrilaIzq.getText(),
+                    txtFrecuenciaCardiaca.getText(), txtSistolica.getText(), txtDiastolica.getText(), txtIliaco.getText()
+                };
+        if(!btnModificarVM.isEnabled()){
+            try {
+                
+                for(int i = 0; i < nombreMedicion.length; i++)
+                    ProyectoFitness.agregarMedicion(cedula, nombreMedicion[i], valor[i]);
 
-        try {
-            String [] valor = new String[] {
-                txtEstatura.getText(), txtPeso.getText(), txtTriceps.getText(), txtSubescapular.getText(),
-                txtAbdomen.getText(), txtMuslo.getText(), txtPantorrila.getText(), txtPectoral.getText(),
-                txtCuello.getText(), txtBicepsDer.getText(), txtBicepsIzq.getText(), txtPectoralCircunferencia.getText(),
-                txtEspalda.getText(), txtCintura1.getText(), txtCintura2.getText(), txtCintura3.getText(), txtCadera.getText(),
-                txtMusloDer.getText(), txtMusloIzq.getText(), txtPantorrillaDer.getText(), txtPantorrilaIzq.getText(),
-                txtFrecuenciaCardiaca.getText(), txtSistolica.getText(), txtDiastolica.getText(), txtIliaco.getText()
-            };
-            for(int i = 0; i < nombreMedicion.length; i++)
-                ProyectoFitness.agregarMedicion(cedula, nombreMedicion[i], valor[i]);
-            
-            clear();
-            dispose();
-            
-        } catch (Exception ex) {
-            Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
+                clear();
+                dispose();
+
+            } catch (Exception ex) {
+                Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            try{
+                for(int i = 0; i < nombreMedicion.length; i++)
+                    ProyectoFitness.modificarMedicion(cedula, nombreMedicion[i], valor[i]);
+                clear();
+                dispose();
+            } catch (Exception ex){
+                Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_btnGuardarVMActionPerformed
 
@@ -820,14 +832,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     // End of variables declaration//GEN-END:variables
 
     
-    javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
-             txtEstatura, txtPeso, txtTriceps, txtSubescapular,
-                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
-                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
-                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
-                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
-                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
-            }; 
+   
     
     @Override
     public void modoAgregar() {
@@ -846,7 +851,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     }
 
     @Override
-    public void modoVer() {
+    public void modoVer() throws Exception {
         javax.swing.JTextField [] el = new javax.swing.JTextField [] {
              txtEstatura, txtPeso, txtTriceps, txtSubescapular,
                 txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
@@ -859,22 +864,29 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
         btnModificarVM.setEnabled(true);
         for(int i = 0; i < el.length; i++)
             el[i].setEditable(false);
+        for(int i = 0; i < el.length; i++)
+            el[i].setText(ProyectoFitness.getMedicion(cedula,nombreMedicion[i]).toString());
         
     }
 
     @Override
     public void modoModificar() {
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEditable(true);
+        javax.swing.JTextField [] el = new javax.swing.JTextField [] {
+             txtEstatura, txtPeso, txtTriceps, txtSubescapular,
+                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
+                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
+                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
+                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
+                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
+            }; 
+        for(int i = 0; i < el.length; i++)
+            el[i].setEditable(true);
         btnBorrarVM.setEnabled(false);
     }
 
     public void cargarLlave(String cedula) {
         this.cedula = cedula;
-        for(int i = 0; i < elementos.length; i++)
-            try {
-                elementos[i].setText(ProyectoFitness.getMedicion(cedula,nombreMedicion[i]).toString());
-            } catch (Exception ex) {
-            }
+        
+            
     }
 }

@@ -65,8 +65,6 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         btnProgramas = new javax.swing.JButton();
         btnAddMedicion = new javax.swing.JButton();
         btnAddProgramaEntrenamiento = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tabla = new javax.swing.JTable();
         btnBorrar = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -156,14 +154,14 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btnVerMediciones.setText("Mediciones");
+        btnVerMediciones.setText("Ver Mediciones");
         btnVerMediciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerMedicionesActionPerformed(evt);
             }
         });
 
-        btnProgramas.setText("Programas de entrenamiento");
+        btnProgramas.setText("Ver Programa de entrenamiento");
         btnProgramas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProgramasActionPerformed(evt);
@@ -184,32 +182,6 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             }
         });
 
-        tabla.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tabla.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tablaMouseClicked(evt);
-            }
-        });
-        jScrollPane3.setViewportView(tabla);
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -217,20 +189,19 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnVerMediciones, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnProgramas))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnAddMedicion)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAddProgramaEntrenamiento)))
-                        .addGap(0, 135, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(btnVerMediciones, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnProgramas))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnAddMedicion)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAddProgramaEntrenamiento)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
+
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAddMedicion, btnAddProgramaEntrenamiento, btnProgramas, btnVerMediciones});
+
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -238,8 +209,6 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVerMediciones)
                     .addComponent(btnProgramas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddMedicion)
@@ -327,7 +296,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
                 .addComponent(radioMujer)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelar)
                     .addComponent(btnGuardar)
@@ -356,36 +325,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-     static void llenarTabla() {
-         /*
-        Object[][] objetos;
-        int rows = hashMapActual.size();
-        if(rows > 0) {
-            final int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
-            objetos = new Object[rows][columns];
-            int i = 0;
-            for(Object key: hashMapActual.keySet()){
-                objetos[i][0] = key;
-                Object [] campos = hashMapActual.values().toArray()[i].toString().split(",");
-                for(int j = 0; j < columns-1; j++) {
-                    objetos[i][j+1] = campos[j];
-                }
-                i++;
-            }
-            boolean[] canEditTable = new boolean [columns];
-            for(i = 0; i < columns; i++){
-                canEditTable[i] = false;
-            }
-            
-            tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, camposTablaActual){
-                boolean [] canEdit = canEditTable;
-                
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        } */
-    }
+    
     
     private void txtFechaNacimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaNacimientoActionPerformed
         // TODO add your handling code here:
@@ -454,83 +394,31 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
     private void btnProgramasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProgramasActionPerformed
 
-        try {
-            btnVerMediciones.setEnabled(true);
-            btnProgramas.setEnabled(false);
-            ProgramaEntrenamiento programa = ProyectoFitness.getPrograma(llave);
-            if (programa != null){
-                tabla.setModel(new javax.swing.table.DefaultTableModel(
-                        new Object [][] {
-                            {programa.getObjetivos(), programa.getDescripcion(), programa.getFechaInicio(), programa.getFechaFin()}
-                        },
-                        new String [] {
-                            "Objetivos", "Descripcion", "Fecha de inicio", "Fecha de finalizacion"
-                        }
-                ) {
-                    boolean[] canEdit = new boolean [] {
-                        false, false, false, false
-                    };
+            try {
+                
+                vProgramaEntrenamiento.cargarLlave(llave);
+                vProgramaEntrenamiento.setVisible(true);
+                vProgramaEntrenamiento.modoVer();
 
-                    public boolean isCellEditable(int rowIndex, int columnIndex) {
-                        return canEdit [columnIndex];
-                    }
-                });
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(rootPane, "EL paciente no tiene programa de entrenamiento");
+                
             }
-        } catch (Exception ex) {
-            Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }//GEN-LAST:event_btnProgramasActionPerformed
 
     private void btnVerMedicionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerMedicionesActionPerformed
 
         try {
-            btnVerMediciones.setEnabled(false);
-            btnProgramas.setEnabled(true);
-            Mediciones programa = ProyectoFitness.getMediciones(llave);
-            if (programa != null){
-                tabla.setModel(new javax.swing.table.DefaultTableModel(
-                        new Object [][] {
-                            {"Medicion " + (tabla.getSelectedRow() + 1)}
-                        },
-                        new String [] {
-                            "Objetivos", "Descripcion", "Fecha de inicio", "Fecha de finalizacion"
-                        }
-                ) {
-                    boolean[] canEdit = new boolean [] {
-                        false, false, false, false
-                    };
-
-                    public boolean isCellEditable(int rowIndex, int columnIndex) {
-                        return canEdit [columnIndex];
-                    }
-                });
-            }
+            vMedicion.cargarLlave(llave);
+            vMedicion.modoVer();
+            vMedicion.setVisible(true);
+            
         } catch (Exception ex) {
-            Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+                            JOptionPane.showMessageDialog(rootPane, "EL paciente no tiene mediciones");
+
         }
-    }//GEN-LAST:event_btnVerMedicionesActionPerformed
-
-    private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
         
-        try {
-            if(ProyectoFitness.getPaciente(llave).getMediciones().size() != 0) {
-                if(btnProgramas.isEnabled()){
-
-                        //String key = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
-                        vMedicion.setVisible(true);
-                        vMedicion.modoVer();
-                        vMedicion.cargarLlave(llave);
-
-                }else{
-                        vProgramaEntrenamiento.setVisible(true);
-                        vProgramaEntrenamiento.modoVer();
-                        vProgramaEntrenamiento.cargarLlave(llave);
-                }
-            }
-        } catch (Exception ex) {
-                    Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
-               }
-    }//GEN-LAST:event_tablaMouseClicked
+    }//GEN-LAST:event_btnVerMedicionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -595,11 +483,9 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JRadioButton radioHombre;
     private javax.swing.JRadioButton radioMujer;
-    private javax.swing.JTable tabla;
     private javax.swing.JTextField txtCedula;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtFechaNacimiento;

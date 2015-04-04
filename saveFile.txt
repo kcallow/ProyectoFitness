@@ -482,101 +482,36 @@ F
 jldsabi@aol.com
 
 #Agregando mediciones a usuario 166669999...
-#Agregando medicion 'Pliegues Pantorrilla', con valor1111.0
-agregar medicion
-166669999
-Pliegues Pantorrilla
-1111.0
 #Agregando medicion 'Circunferencia Muslo izq', con valor11.0
 agregar medicion
 166669999
 Circunferencia Muslo izq
-11.0
-#Agregando medicion 'Circunferencia Espalda', con valor11.0
-agregar medicion
-166669999
-Circunferencia Espalda
-11.0
-#Agregando medicion 'Pliegues Pectoral', con valor11.0
-agregar medicion
-166669999
-Pliegues Pectoral
-11.0
-#Agregando medicion 'Circunferencia Biceps der', con valor11.0
-agregar medicion
-166669999
-Circunferencia Biceps der
 11.0
 #Agregando medicion 'Circunferencia Cuello', con valor11.0
 agregar medicion
 166669999
 Circunferencia Cuello
 11.0
-#Agregando medicion 'Circunferencia Pantorrilla der', con valor11.0
-agregar medicion
-166669999
-Circunferencia Pantorrilla der
-11.0
-#Agregando medicion 'Circunferencia Pantorrilla izq', con valor11.0
-agregar medicion
-166669999
-Circunferencia Pantorrilla izq
-11.0
-#Agregando medicion 'Frecuencia Cardiaca', con valor11.0
-agregar medicion
-166669999
-Frecuencia Cardiaca
-11.0
-#Agregando medicion 'Circunferencia Pectoral', con valor11.0
-agregar medicion
-166669999
-Circunferencia Pectoral
-11.0
-#Agregando medicion 'Pliegues Abdomen', con valor11.0
-agregar medicion
-166669999
-Pliegues Abdomen
-11.0
 #Agregando medicion 'Circunferencia Cadera', con valor11.0
 agregar medicion
 166669999
 Circunferencia Cadera
-11.0
-#Agregando medicion 'Pliegues Muslo', con valor11.0
-agregar medicion
-166669999
-Pliegues Muslo
 11.0
 #Agregando medicion 'Pliegues Triceps', con valor11.0
 agregar medicion
 166669999
 Pliegues Triceps
 11.0
-#Agregando medicion 'Presion Arterial Diastolica', con valor11.0
+#Agregando medicion 'Presion Arterial Diastolica', con valor111.0
 agregar medicion
 166669999
 Presion Arterial Diastolica
-11.0
-#Agregando medicion 'Peso', con valor11.0
+111.0
+#Agregando medicion 'Peso', con valor1222222.0
 agregar medicion
 166669999
 Peso
-11.0
-#Agregando medicion 'Pliegues Subescapular', con valor11.0
-agregar medicion
-166669999
-Pliegues Subescapular
-11.0
-#Agregando medicion 'Circunferencia Biceps izq', con valor11.0
-agregar medicion
-166669999
-Circunferencia Biceps izq
-11.0
-#Agregando medicion 'Estatura', con valor11.0
-agregar medicion
-166669999
-Estatura
-11.0
+1222222.0
 #Agregando medicion 'Circunferencia Muslo der', con valor11.0
 agregar medicion
 166669999
@@ -602,6 +537,76 @@ agregar medicion
 166669999
 Presion Arterial Sistolica
 11.0
+#Agregando medicion 'Pliegues Pantorrilla', con valor11.0
+agregar medicion
+166669999
+Pliegues Pantorrilla
+11.0
+#Agregando medicion 'Circunferencia Espalda', con valor11.0
+agregar medicion
+166669999
+Circunferencia Espalda
+11.0
+#Agregando medicion 'Pliegues Pectoral', con valor11.0
+agregar medicion
+166669999
+Pliegues Pectoral
+11.0
+#Agregando medicion 'Circunferencia Biceps der', con valor11.0
+agregar medicion
+166669999
+Circunferencia Biceps der
+11.0
+#Agregando medicion 'Circunferencia Pantorrilla der', con valor11.0
+agregar medicion
+166669999
+Circunferencia Pantorrilla der
+11.0
+#Agregando medicion 'Circunferencia Pantorrilla izq', con valor11.0
+agregar medicion
+166669999
+Circunferencia Pantorrilla izq
+11.0
+#Agregando medicion 'Frecuencia Cardiaca', con valor11.0
+agregar medicion
+166669999
+Frecuencia Cardiaca
+11.0
+#Agregando medicion 'Circunferencia Pectoral', con valor111.0
+agregar medicion
+166669999
+Circunferencia Pectoral
+111.0
+#Agregando medicion 'Pliegues Abdomen', con valor11.0
+agregar medicion
+166669999
+Pliegues Abdomen
+11.0
+#Agregando medicion 'Pliegues Muslo', con valor11.0
+agregar medicion
+166669999
+Pliegues Muslo
+11.0
+#Agregando medicion 'Pliegues Subescapular', con valor11.0
+agregar medicion
+166669999
+Pliegues Subescapular
+11.0
+#Agregando medicion 'Circunferencia Biceps izq', con valor11.0
+agregar medicion
+166669999
+Circunferencia Biceps izq
+11.0
+#Agregando medicion 'Estatura', con valor12222.0
+agregar medicion
+166669999
+Estatura
+12222.0
+#Agregando medicion 'Pliegues Iliaco', con valor11.0
+agregar medicion
+166669999
+Pliegues Iliaco
+11.0
 
 
 #Agregando paciente John Carmack, cedula 859330231...
@@ -614,6 +619,131 @@ M
 quake@idsoftware.wolf
 
 #Agregando mediciones a usuario 859330231...
+#Agregando medicion 'Circunferencia Muslo izq', con valor11.0
+agregar medicion
+859330231
+Circunferencia Muslo izq
+11.0
+#Agregando medicion 'Circunferencia Cuello', con valor11.0
+agregar medicion
+859330231
+Circunferencia Cuello
+11.0
+#Agregando medicion 'Circunferencia Cadera', con valor11.0
+agregar medicion
+859330231
+Circunferencia Cadera
+11.0
+#Agregando medicion 'Pliegues Triceps', con valor11.0
+agregar medicion
+859330231
+Pliegues Triceps
+11.0
+#Agregando medicion 'Presion Arterial Diastolica', con valor11.0
+agregar medicion
+859330231
+Presion Arterial Diastolica
+11.0
+#Agregando medicion 'Peso', con valor11.0
+agregar medicion
+859330231
+Peso
+11.0
+#Agregando medicion 'Circunferencia Muslo der', con valor11.0
+agregar medicion
+859330231
+Circunferencia Muslo der
+11.0
+#Agregando medicion 'Circunferencia Cintura 1', con valor11.0
+agregar medicion
+859330231
+Circunferencia Cintura 1
+11.0
+#Agregando medicion 'Circunferencia Cintura 2', con valor11.0
+agregar medicion
+859330231
+Circunferencia Cintura 2
+11.0
+#Agregando medicion 'Circunferencia Cintura 3', con valor11.0
+agregar medicion
+859330231
+Circunferencia Cintura 3
+11.0
+#Agregando medicion 'Presion Arterial Sistolica', con valor11.0
+agregar medicion
+859330231
+Presion Arterial Sistolica
+11.0
+#Agregando medicion 'Pliegues Pantorrilla', con valor11.0
+agregar medicion
+859330231
+Pliegues Pantorrilla
+11.0
+#Agregando medicion 'Circunferencia Espalda', con valor11.0
+agregar medicion
+859330231
+Circunferencia Espalda
+11.0
+#Agregando medicion 'Pliegues Pectoral', con valor11.0
+agregar medicion
+859330231
+Pliegues Pectoral
+11.0
+#Agregando medicion 'Circunferencia Biceps der', con valor11.0
+agregar medicion
+859330231
+Circunferencia Biceps der
+11.0
+#Agregando medicion 'Circunferencia Pantorrilla der', con valor11.0
+agregar medicion
+859330231
+Circunferencia Pantorrilla der
+11.0
+#Agregando medicion 'Circunferencia Pantorrilla izq', con valor11.0
+agregar medicion
+859330231
+Circunferencia Pantorrilla izq
+11.0
+#Agregando medicion 'Frecuencia Cardiaca', con valor11.0
+agregar medicion
+859330231
+Frecuencia Cardiaca
+11.0
+#Agregando medicion 'Circunferencia Pectoral', con valor11.0
+agregar medicion
+859330231
+Circunferencia Pectoral
+11.0
+#Agregando medicion 'Pliegues Abdomen', con valor11.0
+agregar medicion
+859330231
+Pliegues Abdomen
+11.0
+#Agregando medicion 'Pliegues Muslo', con valor11.0
+agregar medicion
+859330231
+Pliegues Muslo
+11.0
+#Agregando medicion 'Pliegues Subescapular', con valor11.0
+agregar medicion
+859330231
+Pliegues Subescapular
+11.0
+#Agregando medicion 'Circunferencia Biceps izq', con valor11.0
+agregar medicion
+859330231
+Circunferencia Biceps izq
+11.0
+#Agregando medicion 'Estatura', con valor11.0
+agregar medicion
+859330231
+Estatura
+11.0
+#Agregando medicion 'Pliegues Iliaco', con valor11.0
+agregar medicion
+859330231
+Pliegues Iliaco
+11.0
 
 
 #Agregando paciente Augusto Pinochet, cedula 119119119...
@@ -634,6 +764,131 @@ dsadasdasd
 dsadasdasda
 
 #Agregando mediciones a usuario 119119119...
+#Agregando medicion 'Circunferencia Muslo izq', con valor11.0
+agregar medicion
+119119119
+Circunferencia Muslo izq
+11.0
+#Agregando medicion 'Circunferencia Cuello', con valor111.0
+agregar medicion
+119119119
+Circunferencia Cuello
+111.0
+#Agregando medicion 'Circunferencia Cadera', con valor111.0
+agregar medicion
+119119119
+Circunferencia Cadera
+111.0
+#Agregando medicion 'Pliegues Triceps', con valor111.0
+agregar medicion
+119119119
+Pliegues Triceps
+111.0
+#Agregando medicion 'Presion Arterial Diastolica', con valor11.0
+agregar medicion
+119119119
+Presion Arterial Diastolica
+11.0
+#Agregando medicion 'Peso', con valor111.0
+agregar medicion
+119119119
+Peso
+111.0
+#Agregando medicion 'Circunferencia Muslo der', con valor11.0
+agregar medicion
+119119119
+Circunferencia Muslo der
+11.0
+#Agregando medicion 'Circunferencia Cintura 1', con valor111.0
+agregar medicion
+119119119
+Circunferencia Cintura 1
+111.0
+#Agregando medicion 'Circunferencia Cintura 2', con valor11.0
+agregar medicion
+119119119
+Circunferencia Cintura 2
+11.0
+#Agregando medicion 'Circunferencia Cintura 3', con valor11.0
+agregar medicion
+119119119
+Circunferencia Cintura 3
+11.0
+#Agregando medicion 'Presion Arterial Sistolica', con valor111.0
+agregar medicion
+119119119
+Presion Arterial Sistolica
+111.0
+#Agregando medicion 'Pliegues Pantorrilla', con valor111.0
+agregar medicion
+119119119
+Pliegues Pantorrilla
+111.0
+#Agregando medicion 'Circunferencia Espalda', con valor111.0
+agregar medicion
+119119119
+Circunferencia Espalda
+111.0
+#Agregando medicion 'Pliegues Pectoral', con valor111.0
+agregar medicion
+119119119
+Pliegues Pectoral
+111.0
+#Agregando medicion 'Circunferencia Biceps der', con valor11.0
+agregar medicion
+119119119
+Circunferencia Biceps der
+11.0
+#Agregando medicion 'Circunferencia Pantorrilla der', con valor111.0
+agregar medicion
+119119119
+Circunferencia Pantorrilla der
+111.0
+#Agregando medicion 'Circunferencia Pantorrilla izq', con valor111.0
+agregar medicion
+119119119
+Circunferencia Pantorrilla izq
+111.0
+#Agregando medicion 'Frecuencia Cardiaca', con valor11.0
+agregar medicion
+119119119
+Frecuencia Cardiaca
+11.0
+#Agregando medicion 'Circunferencia Pectoral', con valor111.0
+agregar medicion
+119119119
+Circunferencia Pectoral
+111.0
+#Agregando medicion 'Pliegues Abdomen', con valor111.0
+agregar medicion
+119119119
+Pliegues Abdomen
+111.0
+#Agregando medicion 'Pliegues Muslo', con valor111.0
+agregar medicion
+119119119
+Pliegues Muslo
+111.0
+#Agregando medicion 'Pliegues Subescapular', con valor111.0
+agregar medicion
+119119119
+Pliegues Subescapular
+111.0
+#Agregando medicion 'Circunferencia Biceps izq', con valor11.0
+agregar medicion
+119119119
+Circunferencia Biceps izq
+11.0
+#Agregando medicion 'Estatura', con valor11.0
+agregar medicion
+119119119
+Estatura
+11.0
+#Agregando medicion 'Pliegues Iliaco', con valor111.0
+agregar medicion
+119119119
+Pliegues Iliaco
+111.0
 
 
 #Agregando paciente Ada Lovecraft, cedula 869503493...
@@ -644,6 +899,14 @@ F
 12-08-2019
 57482038
 adalovecraft@cthulhu.com
+#Agregando el programa de entrenamiento de 869503493...
+agregar programa
+869503493
+04-04-2015
+11-11-1111
+11-11-1111
+dsadsadas
+dsadsadsa
 
 #Agregando mediciones a usuario 869503493...
 #Agregando medicion 'Pliegues Pantorrilla', con valor111.0
@@ -776,6 +1039,14 @@ F
 11-05-1957
 (505) 6524-4589
 hyo_saka1957@ifconf.ig.it
+#Agregando el programa de entrenamiento de 201589456...
+agregar programa
+201589456
+04-04-2015
+11-11-1111
+11-11-1111
+dasdsadsa
+dsadadsada
 
 #Agregando mediciones a usuario 201589456...
 #Agregando medicion 'Pliegues Pantorrilla', con valor11.0
@@ -942,6 +1213,131 @@ F
 rrrrr@hotmail.com
 
 #Agregando mediciones a usuario 753129854...
+#Agregando medicion 'Circunferencia Muslo izq', con valor111.0
+agregar medicion
+753129854
+Circunferencia Muslo izq
+111.0
+#Agregando medicion 'Circunferencia Cuello', con valor111.0
+agregar medicion
+753129854
+Circunferencia Cuello
+111.0
+#Agregando medicion 'Circunferencia Cadera', con valor111.0
+agregar medicion
+753129854
+Circunferencia Cadera
+111.0
+#Agregando medicion 'Pliegues Triceps', con valor11.0
+agregar medicion
+753129854
+Pliegues Triceps
+11.0
+#Agregando medicion 'Presion Arterial Diastolica', con valor111.0
+agregar medicion
+753129854
+Presion Arterial Diastolica
+111.0
+#Agregando medicion 'Peso', con valor111.0
+agregar medicion
+753129854
+Peso
+111.0
+#Agregando medicion 'Circunferencia Muslo der', con valor111.0
+agregar medicion
+753129854
+Circunferencia Muslo der
+111.0
+#Agregando medicion 'Circunferencia Cintura 1', con valor111.0
+agregar medicion
+753129854
+Circunferencia Cintura 1
+111.0
+#Agregando medicion 'Circunferencia Cintura 2', con valor111.0
+agregar medicion
+753129854
+Circunferencia Cintura 2
+111.0
+#Agregando medicion 'Circunferencia Cintura 3', con valor1111.0
+agregar medicion
+753129854
+Circunferencia Cintura 3
+1111.0
+#Agregando medicion 'Presion Arterial Sistolica', con valor111.0
+agregar medicion
+753129854
+Presion Arterial Sistolica
+111.0
+#Agregando medicion 'Pliegues Pantorrilla', con valor11.0
+agregar medicion
+753129854
+Pliegues Pantorrilla
+11.0
+#Agregando medicion 'Circunferencia Espalda', con valor1111.0
+agregar medicion
+753129854
+Circunferencia Espalda
+1111.0
+#Agregando medicion 'Pliegues Pectoral', con valor11.0
+agregar medicion
+753129854
+Pliegues Pectoral
+11.0
+#Agregando medicion 'Circunferencia Biceps der', con valor111.0
+agregar medicion
+753129854
+Circunferencia Biceps der
+111.0
+#Agregando medicion 'Circunferencia Pantorrilla der', con valor111.0
+agregar medicion
+753129854
+Circunferencia Pantorrilla der
+111.0
+#Agregando medicion 'Circunferencia Pantorrilla izq', con valor1111.0
+agregar medicion
+753129854
+Circunferencia Pantorrilla izq
+1111.0
+#Agregando medicion 'Frecuencia Cardiaca', con valor111.0
+agregar medicion
+753129854
+Frecuencia Cardiaca
+111.0
+#Agregando medicion 'Circunferencia Pectoral', con valor1111.0
+agregar medicion
+753129854
+Circunferencia Pectoral
+1111.0
+#Agregando medicion 'Pliegues Abdomen', con valor111.0
+agregar medicion
+753129854
+Pliegues Abdomen
+111.0
+#Agregando medicion 'Pliegues Muslo', con valor111.0
+agregar medicion
+753129854
+Pliegues Muslo
+111.0
+#Agregando medicion 'Pliegues Subescapular', con valor111.0
+agregar medicion
+753129854
+Pliegues Subescapular
+111.0
+#Agregando medicion 'Circunferencia Biceps izq', con valor111.0
+agregar medicion
+753129854
+Circunferencia Biceps izq
+111.0
+#Agregando medicion 'Estatura', con valor111.0
+agregar medicion
+753129854
+Estatura
+111.0
+#Agregando medicion 'Pliegues Iliaco', con valor111.0
+agregar medicion
+753129854
+Pliegues Iliaco
+111.0
 
 
 #Agregando paciente Gabe Newell, cedula 333333333...
@@ -976,6 +1372,14 @@ M
 15-03-1965
 2203-3439
 mundodecccc@yahoo.uk
+#Agregando el programa de entrenamiento de 123456798...
+agregar programa
+123456798
+04-04-2015
+11-11-1111
+12-12-1222
+dadasdasd
+asdassdasdsa
 
 #Agregando mediciones a usuario 123456798...
 
@@ -1000,6 +1404,14 @@ F
 12-04-1998
 22824249
 uncorreok@ark.go
+#Agregando el programa de entrenamiento de 098323982...
+agregar programa
+098323982
+04-04-2015
+11-11-1111
+11-11-1111
+dasdsadsa
+dsadsadsa
 
 #Agregando mediciones a usuario 098323982...
 

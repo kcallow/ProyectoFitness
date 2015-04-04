@@ -231,6 +231,7 @@ public class ProyectoFitness {
     }
 
     public static void agregarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {
+        System.out.println(cedula + " " + nombreMedicion + " " + valor);
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para agregar medicion.");

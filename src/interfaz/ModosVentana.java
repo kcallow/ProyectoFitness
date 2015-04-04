@@ -12,7 +12,7 @@ package interfaz;
  */
 public interface ModosVentana {
     public void modoAgregar();
-    public void modoVer();
+    public void modoVer() throws Exception;
     public void modoModificar();
     
 }

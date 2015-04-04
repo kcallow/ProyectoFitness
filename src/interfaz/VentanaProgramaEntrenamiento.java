@@ -56,7 +56,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         tabla = new javax.swing.JTable();
         btnCancelarVPE = new javax.swing.JButton();
         btnGuardarVPE = new javax.swing.JButton();
-        btnModificarVPE = new javax.swing.JButton();
         btnBorrarVPE = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtDescripcionVPE = new javax.swing.JTextArea();
@@ -158,14 +157,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             }
         });
 
-        btnModificarVPE.setText("Modificar");
-        btnModificarVPE.setEnabled(false);
-        btnModificarVPE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarVPEActionPerformed(evt);
-            }
-        });
-
         btnBorrarVPE.setText("Borrar");
         btnBorrarVPE.setEnabled(false);
         btnBorrarVPE.addActionListener(new java.awt.event.ActionListener() {
@@ -228,8 +219,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnBorrarVPE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnModificarVPE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnGuardarVPE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCancelarVPE))
@@ -239,7 +228,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAsistencia, txtFechaFinalizacion, txtFechaInicio});
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBorrarVPE, btnCancelarVPE, btnGuardarVPE, btnModificarVPE});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBorrarVPE, btnCancelarVPE, btnGuardarVPE});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,7 +261,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelarVPE)
                     .addComponent(btnGuardarVPE)
-                    .addComponent(btnModificarVPE)
                     .addComponent(btnBorrarVPE))
                 .addContainerGap())
         );
@@ -330,10 +318,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnBorrarVPEActionPerformed
-
-    private void btnModificarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVPEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificarVPEActionPerformed
 
     private void btnGuardarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVPEActionPerformed
         
@@ -434,7 +418,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private javax.swing.JButton btnBorrarVPE;
     private javax.swing.JButton btnCancelarVPE;
     private javax.swing.JButton btnGuardarVPE;
-    private javax.swing.JButton btnModificarVPE;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -459,7 +442,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     
     @Override
     public void modoAgregar() {
-        btnModificarVPE.setEnabled(false);
         btnBorrarVPE.setEnabled(false);
         txtAsistencia.setEnabled(true);
         txtFechaFinalizacion.setEnabled(true);
@@ -472,7 +454,6 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     public void modoVer() {
         try {
             txtFechaCreacion.setText(ProyectoFitness.getPrograma(llave).getFechaCreacion().toString());
-            btnModificarVPE.setEnabled(true);
             btnBorrarVPE.setEnabled(true);
             txtAsistencia.setEnabled(false);
             txtFechaFinalizacion.setEnabled(false);
@@ -493,7 +474,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             ProgramaEntrenamiento programaEntrenamiento = ProyectoFitness.getPrograma(llave);
             txtFechaCreacion.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
             txtDescripcionVPE.setText(programaEntrenamiento.getDescripcion());
-            txtFechaInicio.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
+            txtFechaInicio.setText(programaEntrenamiento.getFechaInicio().format(ProyectoFitness.formatoFecha));
             txtFechaFinalizacion.setText(programaEntrenamiento.getFechaFin().format(ProyectoFitness.formatoFecha));
             txtObjetivosVPE.setText(programaEntrenamiento.getObjetivos());
             txtAsistencia.setText(programaEntrenamiento.getAsistencia() + "");

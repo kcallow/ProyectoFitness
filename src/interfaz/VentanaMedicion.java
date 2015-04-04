@@ -743,32 +743,12 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
     
     javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
-             txtAbdomen,
-             txtAbdomen,
-             txtBicepsDer,
-             txtBicepsIzq,
-             txtCadera,
-             txtCintura1,
-             txtCintura2,
-             txtCintura3,
-             txtCuello,
-             txtDiastolica,
-             txtEspalda,
-             txtEstatura,
-             txtFrecuenciaCardiaca,
-             txtIliaco,
-             txtMuslo,
-             txtMusloDer,
-             txtMusloIzq,
-             txtPantorrila,
-             txtPantorrilaIzq,
-             txtPantorrillaDer,
-             txtPectoral,
-             txtPectoralCircunferencia,
-             txtPeso,
-             txtSistolica,
-             txtSubescapular,
-             txtTriceps
+             txtEstatura, txtPeso, txtTriceps, txtSubescapular,
+                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
+                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
+                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
+                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
+                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica
             }; 
     
     @Override

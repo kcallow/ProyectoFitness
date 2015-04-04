@@ -447,6 +447,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnProgramasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProgramasActionPerformed
+        System.out.println("Hola k ase");
 
         try {
             btnVerMediciones.setEnabled(true);

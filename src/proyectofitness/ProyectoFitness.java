@@ -448,8 +448,6 @@ public class ProyectoFitness {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para get programa de entrenamiento.");
-        if(paciente.getProgramaEntrenamiento().size() == 0)
-            throw new Exception("Paciente todavia no tiene programa de entrenamiento.  No se puede get.");
         return paciente.getProgramaEntrenamiento();
     }
 

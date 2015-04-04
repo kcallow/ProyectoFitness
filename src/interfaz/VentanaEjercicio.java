@@ -25,6 +25,10 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
+    public void updateTiposEjercicioDisponibles() {
+        comboEjercicio.setModel(new javax.swing.DefaultComboBoxModel(ProyectoFitness.tiposEjercicio.keySet().toArray()));
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -132,7 +136,12 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
 
         jLabel9.setText("Tipo de ejercicio:");
 
-        comboEjercicio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboEjercicio.setModel(new javax.swing.DefaultComboBoxModel(ProyectoFitness.tiposEjercicio.keySet().toArray()));
+        comboEjercicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboEjercicioActionPerformed(evt);
+            }
+        });
 
         txtNumeroEjercicio.setBackground(new java.awt.Color(204, 204, 204));
         txtNumeroEjercicio.setText("0");
@@ -296,6 +305,10 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     private void btnModificarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVEActionPerformed
         modoModificar();
     }//GEN-LAST:event_btnModificarVEActionPerformed
+
+    private void comboEjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboEjercicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboEjercicioActionPerformed
 
     /**
      * @param args the command line arguments

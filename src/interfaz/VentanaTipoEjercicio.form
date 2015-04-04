@@ -204,6 +204,9 @@
               <Connection code="new javax.swing.DefaultComboBoxModel(ProyectoFitness.maquinas.keySet().toArray())" type="code"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboMaquinaActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

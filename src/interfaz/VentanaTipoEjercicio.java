@@ -103,6 +103,11 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
         jLabel3.setText("Tipo de Máquina:");
 
         comboMaquina.setModel(new javax.swing.DefaultComboBoxModel(ProyectoFitness.maquinas.keySet().toArray()));
+        comboMaquina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboMaquinaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -224,6 +229,10 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
     private void btnCancelarVTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarVTEActionPerformed
         dispose();
     }//GEN-LAST:event_btnCancelarVTEActionPerformed
+
+    private void comboMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMaquinaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboMaquinaActionPerformed
 
     /**
      * @param args the command line arguments

@@ -111,10 +111,6 @@ very Fitness wOw
 agregar maquina
 Banco horizontal olimpico
 very Fitness wOw
-#Agregando maquina: Power vulgaridad...
-agregar maquina
-Power vulgaridad
-das power    juu    jii
 #Agregando maquina: Prensa articulada...
 agregar maquina
 Prensa articulada
@@ -171,6 +167,10 @@ very Fitness wOw
 agregar maquina
 Maquina para pullover
 very Fitness wOw
+#Agregando maquina: !!!!Power!...
+agregar maquina
+!!!!Power!
+das power    juu    jii
 #Agregando maquina: Silla rusa tubular...
 agregar maquina
 Silla rusa tubular
@@ -310,7 +310,7 @@ Remo con apoyo
 agregar tipo-ejercicio
 Yeah
 Para hombres con los huevos bien puestos encima de un pene ajeno.
-Power vulgaridad
+!!!!Power!
 
 #Agregando tipo de ejercicio: Ejercicio cosi...
 agregar tipo-ejercicio

@@ -17,6 +17,7 @@ import proyectofitness.*;
 public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana  {
 
     private String llave = "";
+    private String dia = VentanaDia.getNumeroDia();
     /**
      * Creates new form VentanaEjercicio
      */
@@ -281,7 +282,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     private void btnGuardarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVEActionPerformed
     
         try {
-            ProyectoFitness.agregarEjercicio(llave, VentanaDia.getNumeroDia(), txtNumeroEjercicio.getText(),
+            ProyectoFitness.agregarEjercicio(llave, dia, txtNumeroEjercicio.getText(),
                     comboEjercicio.getSelectedItem().toString(), txtSeries.getText(), txtRepeticiones.getText(), txtPeso1.getText(),
                     txtPeso2.getText(), txtPeso3.getText(), txtDescanso.getText());
         } catch (Exception ex) {
@@ -290,7 +291,20 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     }//GEN-LAST:event_btnGuardarVEActionPerformed
 
     private void btnBorrarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVEActionPerformed
-        // TODO add your handling code here:
+        try {    
+            int opcion = JOptionPane.showConfirmDialog(null, 
+                                 "Desea borrar el ejercicio?", 
+                                  "", 
+                                  JOptionPane.YES_NO_OPTION); 
+            if (opcion == JOptionPane.YES_OPTION) {
+                
+                    ProyectoFitness.borrarEjercicio(llave, dia, txtNumeroEjercicio.getText());
+                    VentanaDia.llenarTabla();
+                    clear();
+                    dispose();}
+            } catch (Exception ex) {
+                    Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }//GEN-LAST:event_btnBorrarVEActionPerformed
 
     private void btnModificarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVEActionPerformed
@@ -360,13 +374,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     private javax.swing.JTextField txtSeries;
     // End of variables declaration//GEN-END:variables
 
-    javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
-        txtPeso1,
-        txtPeso2,
-        txtPeso3,
-        txtRepeticiones,
-        txtSeries,
-            };
+    
     
     void cargarLlave(String llave) {
         this.llave = llave;
@@ -374,9 +382,16 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     
     @Override
     public void modoAgregar() {
+        javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
+            txtPeso1,
+            txtPeso2,
+            txtPeso3,
+            txtRepeticiones,
+            txtSeries,
+            txtDescanso,
+            };
         txtDescripcion.setEnabled(true);
         comboEjercicio.setEnabled(true);
-        comboMaquina.setEnabled(true);
         btnBorrarVE.setEnabled(false);
         btnModificarVE.setEnabled(false);
         btnGuardarVE.setEnabled(true);
@@ -387,9 +402,16 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
 
     @Override
     public void modoVer() {
+        javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
+            txtPeso1,
+            txtPeso2,
+            txtPeso3,
+            txtRepeticiones,
+            txtSeries,
+            txtDescanso,
+            };
         txtDescripcion.setEnabled(false);
         comboEjercicio.setEnabled(false);
-        comboMaquina.setEnabled(false);
         btnBorrarVE.setEnabled(true);
         btnModificarVE.setEnabled(true);
         btnGuardarVE.setEnabled(false);
@@ -399,9 +421,16 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
 
     @Override
     public void modoModificar() {
+        javax.swing.JTextField [] elementos = new javax.swing.JTextField [] {
+            txtPeso1,
+            txtPeso2,
+            txtPeso3,
+            txtRepeticiones,
+            txtSeries,
+            txtDescanso,
+            };
         txtDescripcion.setEnabled(true);
         comboEjercicio.setEnabled(true);
-        comboMaquina.setEnabled(true);
         btnBorrarVE.setEnabled(true);
         btnModificarVE.setEnabled(true);
         btnGuardarVE.setEnabled(true);
@@ -420,5 +449,15 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
         txtRepeticiones.setText(s + ejercicio.getRepeticiones());
         txtSeries.setText(s + ejercicio.getSeries());
 
+    }
+
+    private void clear() {
+        txtDescripcion.setText("");
+        txtPeso1.setText("");
+        txtPeso2.setText("");
+        txtPeso3.setText("");
+        txtRepeticiones.setText("");
+        txtSeries.setText("");
+        txtDescanso.setText("");
     }
 }

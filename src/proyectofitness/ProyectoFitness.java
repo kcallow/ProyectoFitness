@@ -6,6 +6,9 @@ import java.io.PrintWriter;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -364,6 +367,14 @@ public class ProyectoFitness {
         if(!tiposEjercicio.containsKey(nombre))
             throw new Exception("Nombre no corresponde a ningun ejercicio.  No se puede borrar.");
         tiposEjercicio.remove(nombre);
+        for(Paciente paciente : pacientes.values())
+            if(paciente.getProgramaEntrenamiento() != null)
+                for(Dia dia : paciente.getProgramaEntrenamiento().values())
+                    for(Iterator<Entry<Integer, Ejercicio>> iterator = dia.entrySet().iterator(); iterator.hasNext();){
+                        String tipoActual = iterator.next().getValue().getTipoEjercicio();
+                        if(tipoActual.equals(nombre))
+                            iterator.remove();
+            }
     }
 
     public static void borrarPrograma(String cedula) throws Exception {

@@ -302,23 +302,11 @@ Remo
 remo con apoyo
 Remo con apoyo
 
-#Agregando tipo de ejercicio: heyyy...
-agregar tipo-ejercicio
-heyyy
-adasdasd
-.
-
 #Agregando tipo de ejercicio: Ejercicio cosi...
 agregar tipo-ejercicio
 Ejercicio cosi
 Piernas muy cosis
 Banco Multiusos
-
-#Agregando tipo de ejercicio: ....
-agregar tipo-ejercicio
-.
-.
-.
 
 #Agregando a todos los pacientes...
 #Agregando paciente Doctor Who, cedula 424242420...

@@ -17,7 +17,7 @@ import proyectofitness.ProyectoFitness;
  */
 public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
-    private String llave = "";
+    private String llave = "", numeroDia = "";
     private Dia dia;
 
     /**
@@ -176,7 +176,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         try {
-            ProyectoFitness.agregarDia(llave,"");
+            ProyectoFitness.agregarDia(llave,numeroDia);
             dispose();
         } catch (Exception ex) {
             Logger.getLogger(VentanaDia.class.getName()).log(Level.SEVERE, null, ex);
@@ -260,6 +260,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     
     void cargarDia(String numeroDia) throws Exception {
         this.dia = ProyectoFitness.getDia(llave, numeroDia);
+        this.numeroDia = numeroDia;
 
     }
 }

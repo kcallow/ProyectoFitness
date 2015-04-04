@@ -323,14 +323,6 @@ M
 11-11-1963
 42 423 42424242
 doctorwho@tardis.uk
-#Agregando el programa de entrenamiento de 424242420...
-agregar programa
-424242420
-04-04-2015
-11-11-1111
-11-12-2013
-LOl
-45646	
 
 #Agregando mediciones a usuario 424242420...
 #Agregando medicion 'Circunferencia Muslo izq', con valor4.0

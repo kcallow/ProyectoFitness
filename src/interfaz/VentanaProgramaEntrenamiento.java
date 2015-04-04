@@ -289,6 +289,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private void btnAddDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDiaActionPerformed
         try {
             vDia.setVisible(true);
+            vDia.modoAgregar();
             vDia.cargarLlave(llave);
         } catch (Exception ex) {
             Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
@@ -445,7 +446,9 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     
     @Override
     public void modoAgregar() {
+        btnGuardarVPE.setEnabled(true);
         btnBorrarVPE.setEnabled(false);
+        btnAddDia.setEnabled(false);
         txtAsistencia.setEnabled(true);
         txtFechaFinalizacion.setEnabled(true);
         txtFechaInicio.setEnabled(true);
@@ -456,7 +459,9 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     @Override
     public void modoVer() {
         try {
+            btnGuardarVPE.setEnabled(false);
             txtFechaCreacion.setText(ProyectoFitness.getPrograma(llave).getFechaCreacion().toString());
+            btnAddDia.setEnabled(true);
             btnBorrarVPE.setEnabled(true);
             txtAsistencia.setEnabled(false);
             txtFechaFinalizacion.setEnabled(false);

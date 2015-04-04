@@ -5,11 +5,15 @@
  */
 package interfaz;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import proyectofitness.ProyectoFitness;
+
 /**
  *
  * @author scsaenz
  */
-public class VentanaDia extends javax.swing.JFrame {
+public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
     private String llave = "";
 
@@ -36,6 +40,7 @@ public class VentanaDia extends javax.swing.JFrame {
         btnBorrarDia = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        btnGuardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dia");
@@ -85,6 +90,13 @@ public class VentanaDia extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable1);
 
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -96,6 +108,8 @@ public class VentanaDia extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnGuardar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnBorrarDia)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSalirDia))
@@ -103,7 +117,7 @@ public class VentanaDia extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addEjercicioDia, btnBorrarDia, btnSalirDia});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addEjercicioDia, btnBorrarDia, btnGuardar, btnSalirDia});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +129,8 @@ public class VentanaDia extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalirDia)
-                    .addComponent(btnBorrarDia)))
+                    .addComponent(btnBorrarDia)
+                    .addComponent(btnGuardar)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -149,6 +164,15 @@ public class VentanaDia extends javax.swing.JFrame {
     private void btnBorrarDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarDiaActionPerformed
         
     }//GEN-LAST:event_btnBorrarDiaActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        try {
+            ProyectoFitness.agregarDia(llave,"");
+            dispose();
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaDia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +212,7 @@ public class VentanaDia extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addEjercicioDia;
     private javax.swing.JButton btnBorrarDia;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnSalirDia;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -200,5 +225,22 @@ public class VentanaDia extends javax.swing.JFrame {
 
     void cargarLlave(String llave) {
         this.llave = llave;
+    }
+
+    @Override
+    public void modoAgregar() {
+        btnBorrarDia.setEnabled(false);
+        addEjercicioDia.setEnabled(false);
+    }
+
+    @Override
+    public void modoVer() throws Exception {
+        btnBorrarDia.setEnabled(true);
+        addEjercicioDia.setEnabled(true);
+    }
+
+    @Override
+    public void modoModificar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

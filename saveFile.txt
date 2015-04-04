@@ -493,11 +493,11 @@ agregar medicion
 373373373
 Circunferencia Cadera
 11.0
-#Agregando medicion 'Pliegues Triceps', con valor11.0
+#Agregando medicion 'Pliegues Triceps', con valor1222211.0
 agregar medicion
 373373373
 Pliegues Triceps
-11.0
+1222211.0
 #Agregando medicion 'Presion Arterial Diastolica', con valor11.0
 agregar medicion
 373373373
@@ -613,6 +613,14 @@ F
 20-12-1991
 7458-3241
 jldsabi@aol.com
+#Agregando el programa de entrenamiento de 166669999...
+agregar programa
+166669999
+04-04-2015
+11-11-1111
+11-11-1111
+ver funcionamiento de dias
+ver funcionamiento de dias
 
 #Agregando mediciones a usuario 166669999...
 #Agregando medicion 'Circunferencia Muslo izq', con valor11.0
@@ -1040,6 +1048,12 @@ agregar programa
 11-11-1111
 dsadsadas
 dsadsadsa
+#Agregando dia #1
+agregar dia
+869503493
+1
+#Agregando ejercicios a 869503493...
+
 
 #Agregando mediciones a usuario 869503493...
 #Agregando medicion 'Pliegues Pantorrilla', con valor111.0

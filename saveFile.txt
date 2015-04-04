@@ -335,13 +335,6 @@ M
 23-06-1912
 37337000
 alanturing@apple.eat
-#Agregando el programa de entrenamiento de 373373373...
-agregar programa
-373373373
-01-01-1111
-01-01-2222
-h
-h
 
 #Agregando mediciones a usuario 373373373...
 
@@ -654,6 +647,14 @@ M
 07-10-1995
 8331-7772
 kcallow@ic-itcr.ac.cr
+#Agregando el programa de entrenamiento de 116210602...
+agregar programa
+116210602
+04-04-2015
+11-11-1111
+11-11-1111
+gg
+jj
 
 #Agregando mediciones a usuario 116210602...
 

@@ -296,12 +296,6 @@ agregar maquina
 Combo Silla romana/hiperextensiones
 very Fitness wOw
 #Agregando tipos de ejercicio del sistema...
-#Agregando tipo de ejercicio: saltar...
-agregar tipo-ejercicio
-saltar
-saltar saltar edidiocucu
-Extensiones de pierna
-
 #Agregando tipo de ejercicio: Alzar con poder...
 agregar tipo-ejercicio
 Alzar con poder
@@ -309,16 +303,16 @@ alzar
 Mancuernas cosi
 
 #Agregando a todos los pacientes...
-#Agregando paciente Bruce Callow Barnecut, cedula 123456798...
+#Agregando paciente Santa Esmeralda, cedula 235649877...
 agregar paciente
-123456798
-Bruce Callow Barnecut
-M
-15-03-1965
-2203-3439
-mundodecccc@yahoo.uk
+235649877
+Santa Esmeralda
+F
+27-01-1978
+9638-5689
+house@neworleans.usa
 
-#Agregando mediciones a usuario 123456798...
+#Agregando mediciones a usuario 235649877...
 
 
 #Agregando paciente Juana Luana Della Sabana, cedula 166669999...
@@ -333,16 +327,40 @@ jldsabi@aol.com
 #Agregando mediciones a usuario 166669999...
 
 
-#Agregando paciente Yazuki Zepeda, cedula 888888889...
+#Agregando paciente Karim Brenes Barrantes, cedula 113254568...
 agregar paciente
-888888889
-Yazuki Zepeda
+113254568
+Karim Brenes Barrantes
 M
-01-10-1875
-(405) 876 5435
-yazzzepeda@facebook.com
+10-01-1945
+8523-6541
+kbren@hotmail.com
 
-#Agregando mediciones a usuario 888888889...
+#Agregando mediciones a usuario 113254568...
+
+
+#Agregando paciente Daniela Pacheco, cedula 357985462...
+agregar paciente
+357985462
+Daniela Pacheco
+F
+07-05-1956
+2235-6859
+dapach@aol.co.nz
+
+#Agregando mediciones a usuario 357985462...
+
+
+#Agregando paciente Hernan Cocoro, cedula 222236523...
+agregar paciente
+222236523
+Hernan Cocoro
+M
+29-02-1964
+4526-6325
+herny_less_than_three@yahoo.ni
+
+#Agregando mediciones a usuario 222236523...
 
 
 #Agregando paciente Hyori Sakagumi, cedula 201589456...
@@ -355,6 +373,18 @@ F
 hyo_saka1957@ifconf.ig.it
 
 #Agregando mediciones a usuario 201589456...
+
+
+#Agregando paciente Jaime Santiago Valencia, cedula 654886484...
+agregar paciente
+654886484
+Jaime Santiago Valencia
+M
+14-02-1978
+456-256-9874
+jimmysanti@latinlovers.org
+
+#Agregando mediciones a usuario 654886484...
 
 
 #Agregando paciente Kenneth Callow Monge, cedula 116210602...
@@ -379,6 +409,138 @@ F
 rrrrr@hotmail.com
 
 #Agregando mediciones a usuario 753129854...
+
+
+#Agregando paciente Fabian Monge Carrazo, cedula 506464444...
+agregar paciente
+506464444
+Fabian Monge Carrazo
+M
+03-12-1997
+8546-3254
+famonca@gmail.com
+
+#Agregando mediciones a usuario 506464444...
+
+
+#Agregando paciente Luna Cascante Quiros, cedula 856472311...
+agregar paciente
+856472311
+Luna Cascante Quiros
+F
+10-10-2005
+2200-5566
+lunithaaa@retrica.com
+
+#Agregando mediciones a usuario 856472311...
+
+
+#Agregando paciente Bruce Callow Barnecut, cedula 123456798...
+agregar paciente
+123456798
+Bruce Callow Barnecut
+M
+15-03-1965
+2203-3439
+mundodecccc@yahoo.uk
+
+#Agregando mediciones a usuario 123456798...
+
+
+#Agregando paciente Gustava Guerin, cedula 321516542...
+agregar paciente
+321516542
+Gustava Guerin
+F
+23-10-1985
+6523-8745
+gggg@goodgame.tk
+
+#Agregando mediciones a usuario 321516542...
+
+
+#Agregando paciente Quentin Tarantino, cedula 526398741...
+agregar paciente
+526398741
+Quentin Tarantino
+M
+27-03-1963
+5623-9854
+reservoirfiction@jackie.kill
+
+#Agregando mediciones a usuario 526398741...
+
+
+#Agregando paciente H. P. Lovecraft, cedula 000000000...
+agregar paciente
+000000000
+H. P. Lovecraft
+M
+15-03-1937
+666-666-6666
+callme@cthulhu.co.at
+
+#Agregando mediciones a usuario 000000000...
+
+
+#Agregando paciente Yazuki Zepeda, cedula 888888889...
+agregar paciente
+888888889
+Yazuki Zepeda
+M
+01-10-1875
+(405) 876 5435
+yazzzepeda@facebook.com
+
+#Agregando mediciones a usuario 888888889...
+
+
+#Agregando paciente Mamatodo Nemistefario, cedula 658462354...
+agregar paciente
+658462354
+Mamatodo Nemistefario
+F
+06-09-1969
+2235-6665
+mamammamammaa@badoo.es
+
+#Agregando mediciones a usuario 658462354...
+
+
+#Agregando paciente Zoro Koztra Zoenz, cedula 987777456...
+agregar paciente
+987777456
+Zoro Koztra Zoenz
+F
+22-02-1923
+2563-6541
+zizayzoenz@gmoil.kam
+
+#Agregando mediciones a usuario 987777456...
+
+
+#Agregando paciente Fujikami Momochigeryu, cedula 958476321...
+agregar paciente
+958476321
+Fujikami Momochigeryu
+M
+02-03-1987
+3526-8495
+fuuumomo@friendster.co.jp
+
+#Agregando mediciones a usuario 958476321...
+
+
+#Agregando paciente Kannabh Jepas Celliw Pinfa, cedula 106012611...
+agregar paciente
+106012611
+Kannabh Jepas Celliw Pinfa
+M
+12-12-2012
+2777-1338
+kannabhis@gmail.com
+
+#Agregando mediciones a usuario 106012611...
 
 
 salir

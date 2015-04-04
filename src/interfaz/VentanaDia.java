@@ -18,14 +18,10 @@ import proyectofitness.ProyectoFitness;
  */
 public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
-<<<<<<< HEAD
     private String llave = "";
     private static String numeroDia;
-    private Dia dia;
-=======
-    private String llave = "", numeroDia;
     private static Dia dia;
->>>>>>> eb7fe173b763c7d84d96757fbd7502a5f1504313
+
 
     /**
      * Creates new form VentanaDia
@@ -282,10 +278,11 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     private javax.swing.JTextField txtNumeroDia;
     // End of variables declaration//GEN-END:variables
 
-<<<<<<< HEAD
+
     private void clear() {
         txtNumeroDia.setText("");
-=======
+    }
+    
     public static void llenarTabla() {
         Object[][] objetos;
         if(dia != null) {
@@ -317,12 +314,9 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
             }
         });
         }
->>>>>>> eb7fe173b763c7d84d96757fbd7502a5f1504313
+
     }
 
-    void clear() {
-        txtNumeroDia.setText("");
-    }
 
     
 

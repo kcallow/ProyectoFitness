@@ -639,6 +639,12 @@ agregar dia
 3
 #Agregando ejercicios a 166669999...
 
+#Agregando dia #5
+agregar dia
+166669999
+5
+#Agregando ejercicios a 166669999...
+
 
 #Agregando mediciones a usuario 166669999...
 #Agregando medicion 'Circunferencia Muslo izq', con valor11.0

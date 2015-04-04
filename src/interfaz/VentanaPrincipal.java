@@ -379,6 +379,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void addTipoEjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTipoEjercicioActionPerformed
         ventanaTipoEjercicio.setVisible(true);
         ventanaTipoEjercicio.modoAgregar();
+        ventanaTipoEjercicio.updateMaquinasDisponibles();
     }//GEN-LAST:event_addTipoEjercicioActionPerformed
 
     private void addMaquinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMaquinaActionPerformed

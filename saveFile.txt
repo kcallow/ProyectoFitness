@@ -111,6 +111,10 @@ very Fitness wOw
 agregar maquina
 Banco horizontal olimpico
 very Fitness wOw
+#Agregando maquina: Power vulgaridad...
+agregar maquina
+Power vulgaridad
+das power    juu    jii
 #Agregando maquina: Prensa articulada...
 agregar maquina
 Prensa articulada
@@ -301,6 +305,12 @@ agregar tipo-ejercicio
 Remo
 remo con apoyo
 Remo con apoyo
+
+#Agregando tipo de ejercicio: Yeah...
+agregar tipo-ejercicio
+Yeah
+Para hombres con los huevos bien puestos encima de un pene ajeno.
+Power vulgaridad
 
 #Agregando tipo de ejercicio: Ejercicio cosi...
 agregar tipo-ejercicio

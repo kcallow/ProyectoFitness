@@ -5,7 +5,7 @@
  */
 package interfaz;
 
-import proyectofitness.ProyectoFitness;
+import proyectofitness.*;
 
 /**
  *
@@ -746,6 +746,9 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     }
 
     public void cargarLlave(String cedula, String nombreMedicion) throws Exception {
-        Double valor = ProyectoFitness.getMedicion(cedula, nombreMedicion);
+        llave = cedula;
+        Mediciones mediciones = ProyectoFitness.getMediciones(cedula);
+        for(int i = 0; i < elementos.length; i++)
+            elementos[i].setText(llave);
     }
 }

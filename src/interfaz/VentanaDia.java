@@ -7,6 +7,7 @@ package interfaz;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import proyectofitness.Dia;
 
 import proyectofitness.ProyectoFitness;
@@ -17,7 +18,7 @@ import proyectofitness.ProyectoFitness;
  */
 public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
-    private String llave = "", numeroDia = "";
+    private String llave = "", numeroDia;
     private Dia dia;
 
     /**
@@ -44,6 +45,8 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         btnGuardar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtNumeroDia = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dia");
@@ -105,13 +108,23 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
             }
         });
 
+        jLabel1.setText("Número día:");
+
+        txtNumeroDia.setBackground(new java.awt.Color(204, 204, 204));
+        txtNumeroDia.setText("0");
+        txtNumeroDia.setToolTipText("");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(addEjercicioDia)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtNumeroDia, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -133,7 +146,10 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addEjercicioDia)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addEjercicioDia)
+                    .addComponent(jLabel1)
+                    .addComponent(txtNumeroDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalirDia)
@@ -170,16 +186,36 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     }//GEN-LAST:event_btnSalirDiaActionPerformed
 
     private void btnBorrarDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarDiaActionPerformed
-        
+
+        try {    
+            int opcion = JOptionPane.showConfirmDialog(null, 
+                                 "El día " + txtNumeroDia.getText() + "del programa <nombre del programa> contiene <cantidad de ejercicios>"
+                                         + " ejercicios. "
+                    + "\n¿Confirma el borrado del día?", 
+                                  "", 
+                                  JOptionPane.YES_NO_OPTION); 
+            if (opcion == JOptionPane.YES_OPTION) {
+                
+                    ProyectoFitness.borrarDia(llave, numeroDia);
+                    VentanaProgramaEntrenamiento.llenarTabla();
+                    clear();
+                    dispose();}
+            } catch (Exception ex) {
+                    Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }//GEN-LAST:event_btnBorrarDiaActionPerformed
 
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        
+        
         try {
+            numeroDia = txtNumeroDia.getText();
             ProyectoFitness.agregarDia(llave,numeroDia);
+            VentanaProgramaEntrenamiento.llenarTabla();
             dispose();
         } catch (Exception ex) {
-            Logger.getLogger(VentanaDia.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(rootPane, "Número inválido");
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
@@ -228,13 +264,15 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     private javax.swing.JButton btnBorrarDia;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnSalirDia;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField txtNumeroDia;
     // End of variables declaration//GEN-END:variables
 
     void clear() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        txtNumeroDia.setText("");
     }
 
     void cargarLlave(String llave) {
@@ -245,12 +283,16 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     public void modoAgregar() {
         btnBorrarDia.setEnabled(false);
         addEjercicioDia.setEnabled(false);
+        txtNumeroDia.setEnabled(true);
+        btnGuardar.setEnabled(true);
     }
 
     @Override
     public void modoVer() throws Exception {
         btnBorrarDia.setEnabled(true);
         addEjercicioDia.setEnabled(true);
+        txtNumeroDia.setEnabled(false);
+        btnGuardar.setEnabled(false);
     }
 
     @Override
@@ -260,6 +302,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     
     void cargarDia(String numeroDia) throws Exception {
         this.dia = ProyectoFitness.getDia(llave, numeroDia);
+        txtNumeroDia.setText(numeroDia);
         this.numeroDia = numeroDia;
 
     }

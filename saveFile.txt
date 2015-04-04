@@ -613,6 +613,18 @@ agregar programa
 11-11-1111
 ver funcionamiento de dias
 ver funcionamiento de dias
+#Agregando dia #2
+agregar dia
+166669999
+2
+#Agregando ejercicios a 166669999...
+
+#Agregando dia #3
+agregar dia
+166669999
+3
+#Agregando ejercicios a 166669999...
+
 
 #Agregando mediciones a usuario 166669999...
 #Agregando medicion 'Circunferencia Muslo izq', con valor11.0
@@ -895,6 +907,12 @@ agregar programa
 11-11-1111
 dsadasdasd
 dsadasdasda
+#Agregando dia #0
+agregar dia
+119119119
+0
+#Agregando ejercicios a 119119119...
+
 
 #Agregando mediciones a usuario 119119119...
 #Agregando medicion 'Circunferencia Muslo izq', con valor11.0

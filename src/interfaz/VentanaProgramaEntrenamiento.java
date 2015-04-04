@@ -24,11 +24,12 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     VentanaDia vDia = new VentanaDia();
     
     private String llave = "";
-    private ProgramaEntrenamiento programaEntrenamiento ;
+    private static ProgramaEntrenamiento programaEntrenamiento ;
     
     public VentanaProgramaEntrenamiento() {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        llenarTabla();
     }
 
     /**
@@ -394,7 +395,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         });
     }
     
-    private void llenarTabla() {
+    public static void llenarTabla() {
         Object[][] objetos;
         if(programaEntrenamiento != null) {
             int rows = programaEntrenamiento.size();
@@ -451,7 +452,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable tabla;
+    private static javax.swing.JTable tabla;
     private javax.swing.JTextField txtAsistencia;
     private javax.swing.JTextArea txtDescripcionVPE;
     private javax.swing.JLabel txtFechaCreacion;

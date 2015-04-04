@@ -48,7 +48,7 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
                     + "agregar dia\n" 
                     + cedula + "\n" 
                     + numeroDia + "\n"
-                    + get(numeroDia).toCommand(cedula) + "\n"; 
+                    + get(numeroDia).toCommand(cedula, numeroDia) + "\n"; 
         return result;
     }
 

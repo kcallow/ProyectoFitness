@@ -638,6 +638,19 @@ agregar dia
 166669999
 2
 #Agregando ejercicios a 166669999...
+#Agregando ejercicio #0:  Remo
+agregar ejercicio
+166669999
+2
+0
+Remo
+11
+111
+11
+111
+111
+111
+
 
 #Agregando dia #3
 agregar dia

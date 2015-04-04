@@ -29,7 +29,7 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
     public String toString(){
         String result = "";
         for (Integer numeroDia : keySet())
-            result += numeroDia + ": "+ get(numeroDia).toString() + "\n";
+            result += numeroDia + ", "+ get(numeroDia).toString() + "\n";
         return result;
     }
     

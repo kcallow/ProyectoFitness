@@ -11,6 +11,7 @@ package interfaz;
  */
 public class VentanaDia extends javax.swing.JFrame {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
+    private String llave = "";
 
     /**
      * Creates new form VentanaDia
@@ -195,5 +196,9 @@ public class VentanaDia extends javax.swing.JFrame {
 
     void clear() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void cargarLlave(String llave) {
+        this.llave = llave;
     }
 }

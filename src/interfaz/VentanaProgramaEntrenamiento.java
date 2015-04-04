@@ -24,6 +24,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     VentanaDia vDia = new VentanaDia();
     
     private String llave = "";
+    private ProgramaEntrenamiento programaEntrenamiento ;
     
     public VentanaProgramaEntrenamiento() {
         initComponents();
@@ -107,7 +108,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                 {null, null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                "Número de día", "Ejercicios"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -288,6 +289,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private void btnAddDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDiaActionPerformed
         try {
             vDia.setVisible(true);
+            vDia.cargarLlave(llave);
         } catch (Exception ex) {
             Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -374,17 +376,16 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         });
     }
     
-     static void llenarTabla() {
-         /*
+    private void llenarTabla() {
         Object[][] objetos;
-        int rows = hashMapActual.size();
+        int rows = programaEntrenamiento.size();
         if(rows > 0) {
-            final int columns = 1 + hashMapActual.values().toArray()[0].toString().split(",").length;
+            final int columns = 2;
             objetos = new Object[rows][columns];
             int i = 0;
-            for(Object key: hashMapActual.keySet()){
+            for(Object key: programaEntrenamiento.keySet()){
                 objetos[i][0] = key;
-                Object [] campos = hashMapActual.values().toArray()[i].toString().split(",");
+                Object [] campos = programaEntrenamiento.values().toArray()[i].toString().split(",");
                 for(int j = 0; j < columns-1; j++) {
                     objetos[i][j+1] = campos[j];
                 }
@@ -395,14 +396,16 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                 canEditTable[i] = false;
             }
             
-            tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, camposTablaActual){
+            tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, new String [] {
+                "Número de día", "Ejercicios"
+            }){
                 boolean [] canEdit = canEditTable;
                 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit [columnIndex];
             }
         });
-        } */
+        }
     }
     
     private void clear(){
@@ -471,7 +474,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     
     public void cargarLlave(String llave) throws Exception {
             this.llave = llave;
-            ProgramaEntrenamiento programaEntrenamiento = ProyectoFitness.getPrograma(llave);
+            programaEntrenamiento = ProyectoFitness.getPrograma(llave);
             txtFechaCreacion.setText(programaEntrenamiento.getFechaCreacion().format(ProyectoFitness.formatoFecha));
             txtDescripcionVPE.setText(programaEntrenamiento.getDescripcion());
             txtFechaInicio.setText(programaEntrenamiento.getFechaInicio().format(ProyectoFitness.formatoFecha));

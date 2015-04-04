@@ -323,8 +323,141 @@ M
 11-11-1963
 42 423 42424242
 doctorwho@tardis.uk
+#Agregando el programa de entrenamiento de 424242420...
+agregar programa
+424242420
+04-04-2015
+11-11-1111
+11-12-2013
+LOl
+45646	
 
 #Agregando mediciones a usuario 424242420...
+#Agregando medicion 'Circunferencia Muslo izq', con valor4.0
+agregar medicion
+424242420
+Circunferencia Muslo izq
+4.0
+#Agregando medicion 'Circunferencia Cuello', con valor5466.0
+agregar medicion
+424242420
+Circunferencia Cuello
+5466.0
+#Agregando medicion 'Circunferencia Cadera', con valor4.0
+agregar medicion
+424242420
+Circunferencia Cadera
+4.0
+#Agregando medicion 'Pliegues Triceps', con valor45.0
+agregar medicion
+424242420
+Pliegues Triceps
+45.0
+#Agregando medicion 'Presion Arterial Diastolica', con valor4.0
+agregar medicion
+424242420
+Presion Arterial Diastolica
+4.0
+#Agregando medicion 'Peso', con valor454.0
+agregar medicion
+424242420
+Peso
+454.0
+#Agregando medicion 'Circunferencia Muslo der', con valor4.0
+agregar medicion
+424242420
+Circunferencia Muslo der
+4.0
+#Agregando medicion 'Circunferencia Cintura 1', con valor4.0
+agregar medicion
+424242420
+Circunferencia Cintura 1
+4.0
+#Agregando medicion 'Circunferencia Cintura 2', con valor4.0
+agregar medicion
+424242420
+Circunferencia Cintura 2
+4.0
+#Agregando medicion 'Circunferencia Cintura 3', con valor4.0
+agregar medicion
+424242420
+Circunferencia Cintura 3
+4.0
+#Agregando medicion 'Presion Arterial Sistolica', con valor4.0
+agregar medicion
+424242420
+Presion Arterial Sistolica
+4.0
+#Agregando medicion 'Pliegues Pantorrilla', con valor45.0
+agregar medicion
+424242420
+Pliegues Pantorrilla
+45.0
+#Agregando medicion 'Circunferencia Espalda', con valor4.0
+agregar medicion
+424242420
+Circunferencia Espalda
+4.0
+#Agregando medicion 'Pliegues Pectoral', con valor45.0
+agregar medicion
+424242420
+Pliegues Pectoral
+45.0
+#Agregando medicion 'Circunferencia Biceps der', con valor4.0
+agregar medicion
+424242420
+Circunferencia Biceps der
+4.0
+#Agregando medicion 'Circunferencia Pantorrilla der', con valor4.0
+agregar medicion
+424242420
+Circunferencia Pantorrilla der
+4.0
+#Agregando medicion 'Circunferencia Pantorrilla izq', con valor4.0
+agregar medicion
+424242420
+Circunferencia Pantorrilla izq
+4.0
+#Agregando medicion 'Frecuencia Cardiaca', con valor54.0
+agregar medicion
+424242420
+Frecuencia Cardiaca
+54.0
+#Agregando medicion 'Circunferencia Pectoral', con valor4.0
+agregar medicion
+424242420
+Circunferencia Pectoral
+4.0
+#Agregando medicion 'Pliegues Abdomen', con valor54.0
+agregar medicion
+424242420
+Pliegues Abdomen
+54.0
+#Agregando medicion 'Pliegues Muslo', con valor545.0
+agregar medicion
+424242420
+Pliegues Muslo
+545.0
+#Agregando medicion 'Pliegues Subescapular', con valor545.0
+agregar medicion
+424242420
+Pliegues Subescapular
+545.0
+#Agregando medicion 'Circunferencia Biceps izq', con valor4.0
+agregar medicion
+424242420
+Circunferencia Biceps izq
+4.0
+#Agregando medicion 'Estatura', con valor454.0
+agregar medicion
+424242420
+Estatura
+454.0
+#Agregando medicion 'Pliegues Iliaco', con valor45.0
+agregar medicion
+424242420
+Pliegues Iliaco
+45.0
 
 
 #Agregando paciente Alan Turing, cedula 373373373...

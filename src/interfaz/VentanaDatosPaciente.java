@@ -17,6 +17,7 @@ import proyectofitness.*;
 public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVentana  {
     VentanaMedicion vMedicion = new VentanaMedicion();
     VentanaProgramaEntrenamiento vProgramaEntrenamiento = new VentanaProgramaEntrenamiento();
+    private String llave;
     
     /**
      * Creates new form VentanaDatosPaciente
@@ -366,7 +367,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
                 sexo = "M";
             else
                 sexo = "F";
-            ProyectoFitness.modificarPaciente(txtCedula.getText(), txtNombre.getText(), sexo, txtFechaNacimiento.getText(),txtTelefono.getText(), txtCorreo.getText());
+            ProyectoFitness.modificarPaciente(llave,txtCedula.getText(), txtNombre.getText(), sexo, txtFechaNacimiento.getText(),txtTelefono.getText(), txtCorreo.getText());
             VentanaPrincipal.llenarTabla();
             clear();
             dispose();
@@ -510,6 +511,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     }
 
     public void cargarLlave(String llave) throws Exception {
+        this.llave = llave;
         Paciente paciente = ProyectoFitness.getPaciente(llave);
         txtCedula.setText(llave);
         txtTelefono.setText(paciente.getTelefono().getTelefono());

@@ -24,7 +24,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
         "Circunferencia Espalda", "Circunferencia Cintura 1", "Circunferencia Cintura 2",
         "Circunferencia Cintura 3", "Circunferencia Cadera", "Circunferencia Muslo der",
         "Circunferencia Muslo izq", "Circunferencia Pantorrilla der", "Circunferencia Pantorrilla izq",
-        "Frecuencia Cardiaca", "Presion Arterial Sistolica", "Presion Arterial Diastolica"
+        "Frecuencia Cardiaca", "Presion Arterial Sistolica", "Presion Arterial Diastolica", "Pliegues Iliaco"
     };
 
     /**
@@ -620,10 +620,12 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel25)
                             .addComponent(txtPGM))
@@ -680,7 +682,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
                 txtCuello.getText(), txtBicepsDer.getText(), txtBicepsIzq.getText(), txtPectoralCircunferencia.getText(),
                 txtEspalda.getText(), txtCintura1.getText(), txtCintura2.getText(), txtCintura3.getText(), txtCadera.getText(),
                 txtMusloDer.getText(), txtMusloIzq.getText(), txtPantorrillaDer.getText(), txtPantorrilaIzq.getText(),
-                txtFrecuenciaCardiaca.getText(), txtSistolica.getText(), txtDiastolica.getText()
+                txtFrecuenciaCardiaca.getText(), txtSistolica.getText(), txtDiastolica.getText(), txtIliaco.getText()
             };
             for(int i = 0; i < nombreMedicion.length; i++)
                 ProyectoFitness.agregarMedicion(cedula, nombreMedicion[i], valor[i]);
@@ -735,7 +737,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
                 txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
                 txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
                 txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
-                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica
+                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
         };
         for(int i = 0; i < campos.length; i++)
             campos[i].setText("");
@@ -824,23 +826,39 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
                 txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
                 txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
                 txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
-                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica
+                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
             }; 
     
     @Override
     public void modoAgregar() {
+        javax.swing.JTextField [] el = new javax.swing.JTextField [] {
+             txtEstatura, txtPeso, txtTriceps, txtSubescapular,
+                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
+                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
+                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
+                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
+                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
+            }; 
         btnBorrarVM.setEnabled(false);
         btnModificarVM.setEnabled(false);
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEditable(true);
+        for(int i = 0; i < el.length; i++)
+            el[i].setEditable(true);
     }
 
     @Override
     public void modoVer() {
+        javax.swing.JTextField [] el = new javax.swing.JTextField [] {
+             txtEstatura, txtPeso, txtTriceps, txtSubescapular,
+                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
+                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
+                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
+                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
+                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
+            }; 
         btnBorrarVM.setEnabled(true);
         btnModificarVM.setEnabled(true);
-        for(int i = 0; i < elementos.length; i++)
-            elementos[i].setEditable(false);
+        for(int i = 0; i < el.length; i++)
+            el[i].setEditable(false);
         
     }
 

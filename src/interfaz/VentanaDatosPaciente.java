@@ -393,6 +393,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
     private void btnAddMedicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddMedicionActionPerformed
         vMedicion.setVisible(true);
+        vMedicion.modoAgregar();
         try {
             vMedicion.cargarLlave(llave);
         } catch (Exception ex) {
@@ -467,7 +468,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
                         }
                 ) {
                     boolean[] canEdit = new boolean [] {
-                        false, false
+                        false, false, false, false
                     };
 
                     public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -489,14 +490,14 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             if (programa != null){
                 tabla.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {
-                            {"Medicion" + tabla.getSelectedRow() + 1}
+                            {"Medicion " + (tabla.getSelectedRow() + 1)}
                         },
                         new String [] {
                             "Objetivos", "Descripcion", "Fecha de inicio", "Fecha de finalizacion"
                         }
                 ) {
                     boolean[] canEdit = new boolean [] {
-                        false, false
+                        false, false, false, false
                     };
 
                     public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -513,12 +514,12 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         
         try {
             if(ProyectoFitness.getPaciente(llave).getMediciones().size() != 0) {
-                if(btnVerMediciones.isEnabled()){
+                if(btnProgramas.isEnabled()){
 
-                        String key = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
+                        //String key = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
                         vMedicion.setVisible(true);
                         vMedicion.modoVer();
-                        vMedicion.cargarLlave(key);
+                        vMedicion.cargarLlave(llave);
 
                 }else{
                         vProgramaEntrenamiento.setVisible(true);

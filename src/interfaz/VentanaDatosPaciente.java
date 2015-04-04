@@ -393,6 +393,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
     private void btnAddMedicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddMedicionActionPerformed
         vMedicion.setVisible(true);
+        vMedicion.setCedula(txtCedula.getText());
     }//GEN-LAST:event_btnAddMedicionActionPerformed
 
     private void btnAddProgramaEntrenamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProgramaEntrenamientoActionPerformed

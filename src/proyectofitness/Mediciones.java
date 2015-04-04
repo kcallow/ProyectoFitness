@@ -3,6 +3,7 @@ package proyectofitness;
 import java.util.HashMap;
 
 public class Mediciones extends HashMap<String, Double> {
+    
     @Override
     public String toString(){
         String resultado = "";

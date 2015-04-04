@@ -5,6 +5,9 @@
  */
 package interfaz;
 
+import proyectofitness.Dia;
+import proyectofitness.ProyectoFitness;
+
 /**
  *
  * @author scsaenz
@@ -12,6 +15,7 @@ package interfaz;
 public class VentanaDia extends javax.swing.JFrame {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
     private String llave = "";
+    private Dia dia;
 
     /**
      * Creates new form VentanaDia
@@ -83,6 +87,11 @@ public class VentanaDia extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -150,6 +159,10 @@ public class VentanaDia extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnBorrarDiaActionPerformed
 
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -200,5 +213,9 @@ public class VentanaDia extends javax.swing.JFrame {
 
     void cargarLlave(String llave) {
         this.llave = llave;
+    }
+
+    void cargarDia(String numeroDia) throws Exception {
+        this.dia = ProyectoFitness.getDia(llave, numeroDia);
     }
 }

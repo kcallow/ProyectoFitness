@@ -119,6 +119,11 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                 return canEdit [columnIndex];
             }
         });
+        tabla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaMouseClicked(evt);
+            }
+        });
         jScrollPane4.setViewportView(tabla);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -340,6 +345,13 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         dispose();
     }//GEN-LAST:event_btnCancelarVPEActionPerformed
 
+    private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
+        String numeroDia = tabla.getValueAt(tabla.getSelectedRow(), 0).toString(); 
+                vDia.setVisible(true);
+                vDia.modoVer();
+                vDia.cargarLlave(llave);
+    }//GEN-LAST:event_tablaMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -378,8 +390,8 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     
     private void llenarTabla() {
         Object[][] objetos;
-        int rows = programaEntrenamiento.size();
-        if(rows > 0) {
+        if(programaEntrenamiento != null) {
+            int rows = programaEntrenamiento.size();
             final int columns = 2;
             objetos = new Object[rows][columns];
             int i = 0;
@@ -401,6 +413,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             }){
                 boolean [] canEdit = canEditTable;
                 
+                @Override
                 public boolean isCellEditable(int rowIndex, int columnIndex) {
                     return canEdit [columnIndex];
             }

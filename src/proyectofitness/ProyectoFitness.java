@@ -128,19 +128,19 @@ public class ProyectoFitness {
 	private static void modificar(String [] command) throws Exception {
 		switch(command[1].toLowerCase()) {
 			case "paciente":
-				modificarPaciente(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
+				modificarPaciente(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
                 break;
 			case "medicion":
 				modificarMedicion(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "tipo-ejercicio":
-				modificarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
+				modificarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "ejercicio":
 				modificarEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "maquina":
-				modificarMaquina(scanner.nextLine(),scanner.nextLine());
+				modificarMaquina(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			default:
 				System.out.println("Opcion invalida para modificar...");
@@ -278,8 +278,8 @@ public class ProyectoFitness {
         maquinas.put(nombre, descripcion.replace("\n", "  "));
     }
 
-    public static void modificarPaciente(String cedula, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
-        Paciente paciente = pacientes.get(new Cedula(cedula));
+    public static void modificarPaciente(String cedulaVieja, String cedulaNueva, String nombre, String sexo, String fechaNacimiento, String telefono, String correo) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedulaVieja));
         if(paciente == null)
             throw new Exception("Paciente invalido para modificar.");
         paciente.setNombre(nombre);
@@ -287,6 +287,10 @@ public class ProyectoFitness {
         paciente.setFechaDeNacimiento(LocalDate.parse(fechaNacimiento, DateTimeFormatter.ofPattern("dd-MM-uuuu")));
         paciente.setTelefono(telefono);
         paciente.setCorreo(correo);
+        if(!cedulaNueva.equals(cedulaVieja)) {
+            pacientes.put(new Cedula(cedulaNueva), paciente);
+            pacientes.remove(new Cedula(cedulaVieja));
+        }
     }
 
     public static void modificarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {
@@ -300,12 +304,16 @@ public class ProyectoFitness {
         paciente.getMediciones().put(nombreMedicion, Double.parseDouble(valor));
     }
 
-    public static void modificarTipoEjercicio(String nombre, String descripcion, String maquina) throws Exception {
-        TipoEjercicio tipoEjercicio = tiposEjercicio.get(nombre);
+    public static void modificarTipoEjercicio(String nombreViejo, String nombreNuevo, String descripcion, String maquina) throws Exception {
+        TipoEjercicio tipoEjercicio = tiposEjercicio.get(nombreViejo);
         if(tipoEjercicio == null)
             throw new Exception("Tipo de ejercicio invalido para modificar.");
         tipoEjercicio.setDescripcion(descripcion);
         tipoEjercicio.setTipoMaquina(maquina);
+        if(!nombreNuevo.equals(nombreViejo)) {
+            tiposEjercicio.put(nombreNuevo, tipoEjercicio);
+            tiposEjercicio.remove(nombreViejo);
+        }
     }
 
     public static void modificarEjercicio(String cedula, String numeroDia, String numeroEjercicio, String tipoEjercicio, String series, String repeticiones, String peso1, String peso2, String peso3, String tiempoDescanso) throws Exception {
@@ -328,10 +336,12 @@ public class ProyectoFitness {
         ejercicio.setTiempoDescanso(Integer.parseInt(tiempoDescanso));
     }
 
-    public static void modificarMaquina(String nombre, String descripcion) throws Exception {
-        if(!maquinas.containsKey(nombre))
+    public static void modificarMaquina(String nombreViejo, String nombreNuevo, String descripcion) throws Exception {
+        if(!maquinas.containsKey(nombreViejo))
             throw new Exception("Nombre invalido para modificar maquina.");
-        maquinas.put(nombre, descripcion.replace("\n", "  "));
+        maquinas.put(nombreNuevo, descripcion.replace("\n", "  "));
+        if(!nombreNuevo.equals(nombreViejo))
+            maquinas.remove(nombreViejo);
     }
 
     public static void borrarPaciente(String cedula) throws Exception {

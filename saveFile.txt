@@ -1,16 +1,8 @@
 #Agregando todas las maquinas al sistema...
-#Agregando maquina: Extensiones de pierna...
-agregar maquina
-Extensiones de pierna
-very Fitness wOwsaddasdasads
 #Agregando maquina: Remo con apoyo...
 agregar maquina
 Remo con apoyo
 very Fitness wOw
-#Agregando maquina: Cuerda...
-agregar maquina
-Cuerda
-Muy larga
 #Agregando maquina: Silla rusa performance...
 agregar maquina
 Silla rusa performance
@@ -22,7 +14,7 @@ very Fitness wOw
 #Agregando maquina: Biceps isolateral...
 agregar maquina
 Biceps isolateral
-very Fitness wOw
+very Fitness wOw0w
 #Agregando maquina: Press militar isolateral...
 agregar maquina
 Press militar isolateral
@@ -95,10 +87,6 @@ very Fitness wOw
 agregar maquina
 Prensa performance
 very Fitness wOw
-#Agregando maquina: LOL...
-agregar maquina
-LOL
-No
 #Agregando maquina: Mancuerna...
 agregar maquina
 Mancuerna
@@ -207,6 +195,10 @@ very Fitness wOw
 agregar maquina
 Banco Multiusos
 very Fitness wOw
+#Agregando maquina: !Extensiones de pierna!...
+agregar maquina
+!Extensiones de pierna!
+!very Fitness wOwsaddasdasadsiiii!
 #Agregando maquina: Isolateral wide chest...
 agregar maquina
 Isolateral wide chest
@@ -307,14 +299,14 @@ very Fitness wOw
 #Agregando tipo de ejercicio: saltar...
 agregar tipo-ejercicio
 saltar
-saltar saltar edidioc
+saltar saltar edidiocucu
 Extensiones de pierna
 
-#Agregando tipo de ejercicio: alzar ...
+#Agregando tipo de ejercicio: Alzar con poder...
 agregar tipo-ejercicio
+Alzar con poder
 alzar 
-alzar 
-Mancuerna
+Mancuernas cosi
 
 #Agregando tipo de ejercicio: fofofofofoof...
 agregar tipo-ejercicio
@@ -323,16 +315,16 @@ dasdadasdsadas
 Extensiones de pierna
 
 #Agregando a todos los pacientes...
-#Agregando paciente Kenneth Callow Monge, cedula 116210601...
+#Agregando paciente Bruce Callow Barnecut, cedula 123456798...
 agregar paciente
-116210601
-Kenneth Callow Monge
+123456798
+Bruce Callow Barnecut
 M
-07-10-1995
-8331-7772
-kcallow@ic-itcr.ac.cr
+15-03-1965
+2203-3439
+mundodecccc@yahoo.uk
 
-#Agregando mediciones a usuario 116210601...
+#Agregando mediciones a usuario 123456798...
 
 
 #Agregando paciente Juana Luana Della Sabana, cedula 166669999...
@@ -359,18 +351,6 @@ yazzzepeda@facebook.com
 #Agregando mediciones a usuario 888888889...
 
 
-#Agregando paciente Bruce Callow, cedula 123456789...
-agregar paciente
-123456789
-Bruce Callow
-M
-15-03-1965
-2203-3439
-mundodecccc@yahoo.uk
-
-#Agregando mediciones a usuario 123456789...
-
-
 #Agregando paciente Hyori Sakagumi, cedula 201589456...
 agregar paciente
 201589456
@@ -383,10 +363,22 @@ hyo_saka1957@ifconf.ig.it
 #Agregando mediciones a usuario 201589456...
 
 
-#Agregando paciente Ramira Ramirez, cedula 753129854...
+#Agregando paciente Kenneth Callow Monge, cedula 116210602...
+agregar paciente
+116210602
+Kenneth Callow Monge
+M
+07-10-1995
+8331-7772
+kcallow@ic-itcr.ac.cr
+
+#Agregando mediciones a usuario 116210602...
+
+
+#Agregando paciente Ramira Ramirez Ramirete, cedula 753129854...
 agregar paciente
 753129854
-Ramira Ramirez
+Ramira Ramirez Ramirete
 F
 21-02-1987
 2563 9584

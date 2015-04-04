@@ -16,6 +16,8 @@ import proyectofitness.ProyectoFitness;
  */
 public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana  {
 
+    private String llave;
+
     /**
      * Creates new form VentanaMaquina
      */
@@ -169,7 +171,7 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         try {
             if(btnModificarVM.isEnabled())
-                ProyectoFitness.modificarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
+                ProyectoFitness.modificarMaquina(llave,txtNombreMaquina.getText(), jTextArea1.getText());
             else
                 ProyectoFitness.agregarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
             VentanaPrincipal.llenarTabla();
@@ -277,12 +279,13 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     @Override
     public void modoModificar() {
         jTextArea1.setEnabled(true);
-        txtNombreMaquina.setEnabled(false);
+        txtNombreMaquina.setEnabled(true);
         btnBorrar.setEnabled(true);
         btnModificarVM.setEnabled(true);
     }
 
     public void cargarLlave(String llave) throws Exception {
+        this.llave = llave;
         String descripcion = ProyectoFitness.maquinas.get(llave);
         txtNombreMaquina.setText(llave);
         jTextArea1.setText(descripcion);

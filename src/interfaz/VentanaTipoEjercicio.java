@@ -15,6 +15,7 @@ import proyectofitness.*;
  * @author scsaenz
  */
 public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVentana {
+    private String llave;
 
     /**
      * Creates new form VentanaTipoEjercicio
@@ -204,7 +205,7 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
     private void btnGuardarVTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVTEActionPerformed
         try {
             if(btnModificarVTE.isEnabled())
-                ProyectoFitness.modificarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
+                ProyectoFitness.modificarTipoEjercicio(llave,txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
             else 
                 ProyectoFitness.agregarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
             VentanaPrincipal.llenarTabla();
@@ -306,10 +307,11 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
         comboMaquina.setEnabled(true);
         txtDescripcionVTE.setEnabled(true);
         btnGuardarVTE.setEnabled(true);
-        txtNombre.setEnabled(false);
+        txtNombre.setEnabled(true);
     }
 
     public void cargarLlave(String llave) throws Exception {
+        this.llave = llave;
         TipoEjercicio tipoEjercicio = ProyectoFitness.getTipoEjercicio(llave);
         txtDescripcionVTE.setText(tipoEjercicio.getDescripcion());
         comboMaquina.setSelectedItem(tipoEjercicio.getTipoMaquina());

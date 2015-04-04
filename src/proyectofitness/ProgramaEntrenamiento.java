@@ -36,6 +36,7 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
     public String toCommand(String cedula) {
         String result = "#Agregando el programa de entrenamiento de " + cedula + "...\n"
                 + "agregar programa\n"
+                + cedula + "\n"
                 + fechaInicio.format(ProyectoFitness.formatoFecha) + "\n"
                 + fechaFin.format(ProyectoFitness.formatoFecha) + "\n"
                 + descripcion + "\n"

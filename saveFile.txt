@@ -30,7 +30,7 @@ very Fitness wOw
 #Agregando maquina: Biceps peso integrado...
 agregar maquina
 Biceps peso integrado
-very Fitness wOw
+very Fitness wOwi
 #Agregando maquina: Pull down Isolateral...
 agregar maquina
 Pull down Isolateral
@@ -302,9 +302,9 @@ Remo
 remo con apoyo
 Remo con apoyo
 
-#Agregando tipo de ejercicio: Alzar con poder...
+#Agregando tipo de ejercicio: Alzar con podersh...
 agregar tipo-ejercicio
-Alzar con poder
+Alzar con podersh
 alzar 
 Mancuernas cosi
 
@@ -335,6 +335,13 @@ M
 23-06-1912
 37337000
 alanturing@apple.eat
+#Agregando el programa de entrenamiento de 373373373...
+agregar programa
+373373373
+01-01-1111
+01-01-2222
+h
+h
 
 #Agregando mediciones a usuario 373373373...
 

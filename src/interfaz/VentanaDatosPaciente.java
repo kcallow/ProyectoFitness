@@ -19,7 +19,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
    
     VentanaMedicion vMedicion = new VentanaMedicion();
     VentanaProgramaEntrenamiento vProgramaEntrenamiento = new VentanaProgramaEntrenamiento();
-    private String llave;
+    private String llave = "";
     
     /**
      * Creates new form VentanaDatosPaciente

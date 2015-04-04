@@ -239,7 +239,7 @@ public class ProyectoFitness {
         tiposEjercicio.put(nombre, new TipoEjercicio(descripcion, maquina));
     }
 
-    private static void agregarPrograma(String cedula, String fechaInicio, String fechaFin, String descripcion, String objetivos) throws Exception {
+    public static void agregarPrograma(String cedula, String fechaInicio, String fechaFin, String descripcion, String objetivos) throws Exception {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para agregar programa de entrenamiento.");

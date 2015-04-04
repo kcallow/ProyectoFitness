@@ -310,6 +310,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         tabla.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_LAST_COLUMN);
         tabla.setAutoscrolls(false);
+        tabla.setGridColor(new java.awt.Color(255, 255, 255));
         tabla.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tablaMouseClicked(evt);

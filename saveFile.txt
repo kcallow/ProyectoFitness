@@ -296,13 +296,29 @@ agregar maquina
 Combo Silla romana/hiperextensiones
 very Fitness wOw
 #Agregando tipos de ejercicio del sistema...
+<<<<<<< HEAD
+=======
+#Agregando tipo de ejercicio: Remo...
+agregar tipo-ejercicio
+Remo
+remo con apoyo
+Remo con apoyo
+
+>>>>>>> ce3208d31ecca85b3bd04f9380d162cbd917ec5a
 #Agregando tipo de ejercicio: Alzar con poder...
 agregar tipo-ejercicio
 Alzar con poder
 alzar 
 Mancuernas cosi
 
+#Agregando tipo de ejercicio: Ejercicio cosi...
+agregar tipo-ejercicio
+Ejercicio cosi
+Solo para tipas y tipos cosi
+Mancuernas cosi
+
 #Agregando a todos los pacientes...
+<<<<<<< HEAD
 #Agregando paciente Santa Esmeralda, cedula 235649877...
 agregar paciente
 235649877
@@ -313,6 +329,30 @@ F
 house@neworleans.usa
 
 #Agregando mediciones a usuario 235649877...
+=======
+#Agregando paciente Doctor Who, cedula 424242420...
+agregar paciente
+424242420
+Doctor Who
+M
+11-11-1963
+42 423 42424242
+doctorwho@tardis.uk
+
+#Agregando mediciones a usuario 424242420...
+
+
+#Agregando paciente Alan Turing, cedula 373373373...
+agregar paciente
+373373373
+Alan Turing
+M
+23-06-1912
+37337000
+alanturing@apple.eat
+
+#Agregando mediciones a usuario 373373373...
+>>>>>>> ce3208d31ecca85b3bd04f9380d162cbd917ec5a
 
 
 #Agregando paciente Juana Luana Della Sabana, cedula 166669999...
@@ -327,6 +367,7 @@ jldsabi@aol.com
 #Agregando mediciones a usuario 166669999...
 
 
+<<<<<<< HEAD
 #Agregando paciente Karim Brenes Barrantes, cedula 113254568...
 agregar paciente
 113254568
@@ -361,6 +402,42 @@ M
 herny_less_than_three@yahoo.ni
 
 #Agregando mediciones a usuario 222236523...
+=======
+#Agregando paciente John Carmack, cedula 859330231...
+agregar paciente
+859330231
+John Carmack
+M
+31-12-1965
+425 1253
+quake@idsoftware.wolf
+
+#Agregando mediciones a usuario 859330231...
+
+
+#Agregando paciente Augusto Pinochet, cedula 119119119...
+agregar paciente
+119119119
+Augusto Pinochet
+M
+11-09-1973
+119 1199
+golpedeestado@allende.cl
+
+#Agregando mediciones a usuario 119119119...
+
+
+#Agregando paciente Ada Lovecraft, cedula 869503493...
+agregar paciente
+869503493
+Ada Lovecraft
+F
+12-08-2019
+57482038
+adalovecraft@cthulhu.com
+
+#Agregando mediciones a usuario 869503493...
+>>>>>>> ce3208d31ecca85b3bd04f9380d162cbd917ec5a
 
 
 #Agregando paciente Hyori Sakagumi, cedula 201589456...
@@ -399,6 +476,18 @@ kcallow@ic-itcr.ac.cr
 #Agregando mediciones a usuario 116210602...
 
 
+#Agregando paciente Federico Tinoco, cedula 849209321...
+agregar paciente
+849209321
+Federico Tinoco
+M
+11-10-1889
+123432123
+tinoco@golpe.net
+
+#Agregando mediciones a usuario 849209321...
+
+
 #Agregando paciente Ramira Ramirez Ramirete, cedula 753129854...
 agregar paciente
 753129854
@@ -411,6 +500,7 @@ rrrrr@hotmail.com
 #Agregando mediciones a usuario 753129854...
 
 
+<<<<<<< HEAD
 #Agregando paciente Fabian Monge Carrazo, cedula 506464444...
 agregar paciente
 506464444
@@ -433,6 +523,30 @@ F
 lunithaaa@retrica.com
 
 #Agregando mediciones a usuario 856472311...
+=======
+#Agregando paciente Gabe Newell, cedula 333333333...
+agregar paciente
+333333333
+Gabe Newell
+M
+03-03-3333
+3 333 333 3333
+half-life3@valve.dream
+
+#Agregando mediciones a usuario 333333333...
+
+
+#Agregando paciente James t Kirk, cedula 123412346...
+agregar paciente
+123412346
+James t Kirk
+M
+01-05-2150
+777-777-7777-7777
+enterprise@star-trek.com
+
+#Agregando mediciones a usuario 123412346...
+>>>>>>> ce3208d31ecca85b3bd04f9380d162cbd917ec5a
 
 
 #Agregando paciente Bruce Callow Barnecut, cedula 123456798...
@@ -447,6 +561,7 @@ mundodecccc@yahoo.uk
 #Agregando mediciones a usuario 123456798...
 
 
+<<<<<<< HEAD
 #Agregando paciente Gustava Guerin, cedula 321516542...
 agregar paciente
 321516542
@@ -541,6 +656,102 @@ M
 kannabhis@gmail.com
 
 #Agregando mediciones a usuario 106012611...
+=======
+#Agregando paciente Margaret Thatcher, cedula 666616666...
+agregar paciente
+666616666
+Margaret Thatcher
+F
+06-06-1666
+666 666 6166 6166
+falklands@uk.me
+
+#Agregando mediciones a usuario 666616666...
+
+
+#Agregando paciente Eva Peron, cedula 098323982...
+agregar paciente
+098323982
+Eva Peron
+F
+12-04-1998
+22824249
+uncorreok@ark.go
+
+#Agregando mediciones a usuario 098323982...
+
+
+#Agregando paciente Adolf Hitler, cedula 987654321...
+agregar paciente
+987654321
+Adolf Hitler
+M
+07-06-1234
+1234567
+pcmasterrace@nazi.ger
+
+#Agregando mediciones a usuario 987654321...
+
+
+#Agregando paciente Sherlock Holmes, cedula 221221221...
+agregar paciente
+221221221
+Sherlock Holmes
+M
+07-07-1876
+2 221 22122212
+bakerstreet@correo.uk
+
+#Agregando mediciones a usuario 221221221...
+
+
+#Agregando paciente Michael Bay, cedula 948312136...
+agregar paciente
+948312136
+Michael Bay
+M
+12-12-1212
+38962355
+transformers@explosion.mov
+
+#Agregando mediciones a usuario 948312136...
+
+
+#Agregando paciente Frodo Baggins, cedula 950467595...
+agregar paciente
+950467595
+Frodo Baggins
+M
+07-04-1512
+1859348
+fbaggins@bag.end
+
+#Agregando mediciones a usuario 950467595...
+
+
+#Agregando paciente Hannibal Lecter, cedula 950466603...
+agregar paciente
+950466603
+Hannibal Lecter
+M
+07-06-1994
+364364634
+human_meat@my.mouth
+
+#Agregando mediciones a usuario 950466603...
+
+
+#Agregando paciente Yazuki Zepeda, cedula 888888889...
+agregar paciente
+888888889
+Yazuki Zepeda
+M
+01-10-1875
+(405) 876 5435
+yazzzepeda@facebook.com
+
+#Agregando mediciones a usuario 888888889...
+>>>>>>> ce3208d31ecca85b3bd04f9380d162cbd917ec5a
 
 
 salir

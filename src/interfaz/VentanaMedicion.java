@@ -618,6 +618,9 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
             for(int i = 0; i < nombreMedicion.length; i++)
                 ProyectoFitness.agregarMedicion(cedula, nombreMedicion[i], valor[i]);
             
+            clear();
+            dispose();
+            
         } catch (Exception ex) {
             Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -656,6 +659,19 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
                 new VentanaMedicion().setVisible(true);
             }
         });
+    }
+    
+    private void clear(){
+        javax.swing.JTextField [] campos = new javax.swing.JTextField [] {
+                txtEstatura, txtPeso, txtTriceps, txtSubescapular,
+                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
+                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
+                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
+                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
+                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica
+        };
+        for(int i = 0; i < campos.length; i++)
+            campos[i].setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -331,6 +331,12 @@ agregar programa
 11-12-2013
 LOl
 45646	
+#Agregando dia #42
+agregar dia
+424242420
+42
+#Agregando ejercicios a 424242420...
+
 
 #Agregando mediciones a usuario 424242420...
 #Agregando medicion 'Circunferencia Muslo izq', con valor4.0

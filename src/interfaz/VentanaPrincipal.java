@@ -37,6 +37,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
+       
         super.dispose();
         System.exit(0);
     }

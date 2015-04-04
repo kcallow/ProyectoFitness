@@ -288,7 +288,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     }//GEN-LAST:event_btnBorrarVEActionPerformed
 
     private void btnModificarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVEActionPerformed
-        // TODO add your handling code here:
+        modoModificar();
     }//GEN-LAST:event_btnModificarVEActionPerformed
 
     /**
@@ -370,6 +370,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
         comboMaquina.setEnabled(true);
         btnBorrarVE.setEnabled(false);
         btnModificarVE.setEnabled(false);
+        btnGuardarVE.setEnabled(true);
         for(int i = 0; i < elementos.length; i++)
             elementos[i].setEnabled(true);
     
@@ -382,6 +383,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
         comboMaquina.setEnabled(false);
         btnBorrarVE.setEnabled(true);
         btnModificarVE.setEnabled(true);
+        btnGuardarVE.setEnabled(false);
         for(int i = 0; i < elementos.length; i++)
             elementos[i].setEnabled(false);
     }
@@ -393,6 +395,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
         comboMaquina.setEnabled(true);
         btnBorrarVE.setEnabled(true);
         btnModificarVE.setEnabled(true);
+        btnGuardarVE.setEnabled(true);
         for(int i = 0; i < elementos.length; i++)
             elementos[i].setEnabled(true);
     }

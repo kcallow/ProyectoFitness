@@ -506,6 +506,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         btnModificar.setEnabled(true);
         radioHombre.setEnabled(false);
         radioMujer.setEnabled(false);
+        btnGuardar.setEnabled(false);
     }
 
     @Override
@@ -519,6 +520,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         btnModificar.setEnabled(true);
         radioHombre.setEnabled(true);
         radioMujer.setEnabled(true);
+        btnGuardar.setEnabled(true);
     }
 
     public void cargarLlave(String llave) throws Exception {

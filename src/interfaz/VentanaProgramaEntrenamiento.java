@@ -29,7 +29,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     public VentanaProgramaEntrenamiento() {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        llenarTabla();
+        
     }
 
     /**
@@ -505,6 +505,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             txtFechaFinalizacion.setText(programaEntrenamiento.getFechaFin().format(ProyectoFitness.formatoFecha));
             txtObjetivosVPE.setText(programaEntrenamiento.getObjetivos());
             txtAsistencia.setText(programaEntrenamiento.getAsistencia() + "");
+            llenarTabla();
     }
 
 

@@ -18,7 +18,8 @@ import proyectofitness.ProyectoFitness;
  */
 public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
-    private String llave = "", numeroDia;
+    private String llave = "";
+    private static String numeroDia;
     private Dia dia;
 
     /**
@@ -28,7 +29,9 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         initComponents();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
-
+    public static String  getNumeroDia(){
+        return numeroDia;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -179,6 +182,8 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
 
     private void addEjercicioDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEjercicioDiaActionPerformed
         vEjercicio.setVisible(true);
+        vEjercicio.modoAgregar();
+        vEjercicio.cargarLlave(llave);
     }//GEN-LAST:event_addEjercicioDiaActionPerformed
 
     private void btnSalirDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirDiaActionPerformed
@@ -271,7 +276,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     private javax.swing.JTextField txtNumeroDia;
     // End of variables declaration//GEN-END:variables
 
-    void clear() {
+    private void clear() {
         txtNumeroDia.setText("");
     }
 
@@ -279,6 +284,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         this.llave = llave;
     }
 
+    
 
     public void modoAgregar() {
         btnBorrarDia.setEnabled(false);

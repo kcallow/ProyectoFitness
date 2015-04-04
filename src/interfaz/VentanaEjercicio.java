@@ -5,6 +5,9 @@
  */
 package interfaz;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import proyectofitness.*;
 
 /**
@@ -13,6 +16,7 @@ import proyectofitness.*;
  */
 public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana  {
 
+    private String llave = "";
     /**
      * Creates new form VentanaEjercicio
      */
@@ -56,6 +60,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
         btnModificarVE = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         comboEjercicio = new javax.swing.JComboBox();
+        txtNumeroEjercicio = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ejercicio");
@@ -135,6 +140,9 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
 
         comboEjercicio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        txtNumeroEjercicio.setBackground(new java.awt.Color(204, 204, 204));
+        txtNumeroEjercicio.setText("0");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -156,7 +164,9 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
                         .addComponent(jLabel2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNumeroEjercicio, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,7 +213,9 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtNumeroEjercicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -280,7 +292,14 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     }//GEN-LAST:event_btnCancelarVEActionPerformed
 
     private void btnGuardarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVEActionPerformed
-        // TODO add your handling code here:
+    
+        try {
+            ProyectoFitness.agregarEjercicio(llave, VentanaDia.getNumeroDia(), txtNumeroEjercicio.getText(),
+                    comboEjercicio.getSelectedItem().toString(), txtSeries.getText(), txtRepeticiones.getText(), txtPeso1.getText(),
+                    txtPeso2.getText(), txtPeso3.getText(), txtDescanso.getText());
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(rootPane, "Los datos son inválidos");
+        }
     }//GEN-LAST:event_btnGuardarVEActionPerformed
 
     private void btnBorrarVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVEActionPerformed
@@ -348,6 +367,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtDescanso;
     private javax.swing.JTextArea txtDescripcion;
+    private javax.swing.JTextField txtNumeroEjercicio;
     private javax.swing.JTextField txtPeso1;
     private javax.swing.JTextField txtPeso2;
     private javax.swing.JTextField txtPeso3;
@@ -362,6 +382,10 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
         txtRepeticiones,
         txtSeries,
             };
+    
+    void cargarLlave(String llave) {
+        this.llave = llave;
+    }
     
     @Override
     public void modoAgregar() {
@@ -403,6 +427,7 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     public void cargarLlave(String llave, String numeroDia, String numeroEjercicio) throws Exception {
         Ejercicio ejercicio = ProyectoFitness.getEjercicio(llave, numeroDia, numeroEjercicio);
         String s = "";
+        this.llave = llave;
         txtDescanso.setText(s + ejercicio.getTiempoDescanso());
         txtPeso1.setText(s + ejercicio.getPeso1());
         txtPeso2.setText(s + ejercicio.getPeso2());

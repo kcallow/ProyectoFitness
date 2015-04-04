@@ -376,7 +376,6 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     public void modoAgregar() {
         txtDescripcion.setEnabled(true);
         comboEjercicio.setEnabled(true);
-        comboMaquina.setEnabled(true);
         btnBorrarVE.setEnabled(false);
         btnModificarVE.setEnabled(false);
         btnGuardarVE.setEnabled(true);
@@ -389,7 +388,6 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     public void modoVer() {
         txtDescripcion.setEnabled(false);
         comboEjercicio.setEnabled(false);
-        comboMaquina.setEnabled(false);
         btnBorrarVE.setEnabled(true);
         btnModificarVE.setEnabled(true);
         btnGuardarVE.setEnabled(false);
@@ -401,7 +399,6 @@ public class VentanaEjercicio extends javax.swing.JFrame implements ModosVentana
     public void modoModificar() {
         txtDescripcion.setEnabled(true);
         comboEjercicio.setEnabled(true);
-        comboMaquina.setEnabled(true);
         btnBorrarVE.setEnabled(true);
         btnModificarVE.setEnabled(true);
         btnGuardarVE.setEnabled(true);

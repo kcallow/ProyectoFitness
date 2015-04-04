@@ -377,10 +377,10 @@ hyo_saka1957@ifconf.ig.it
 #Agregando mediciones a usuario 201589456...
 
 
-#Agregando paciente Ramira Ramirez, cedula 753129854...
+#Agregando paciente Ramira Ramirez Ramirete, cedula 753129854...
 agregar paciente
 753129854
-Ramira Ramirez
+Ramira Ramirez Ramirete
 F
 21-02-1987
 2563 9584

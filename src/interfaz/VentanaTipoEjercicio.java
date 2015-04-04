@@ -204,9 +204,8 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
     private void btnGuardarVTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVTEActionPerformed
         try {
             if(btnModificarVTE.isEnabled())
-                ProyectoFitness.modificarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
-            else 
-                ProyectoFitness.agregarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
+                ProyectoFitness.borrarTipoEjercicio(txtNombre.getText());
+            ProyectoFitness.agregarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
             VentanaPrincipal.llenarTabla();
             clear();
             dispose();

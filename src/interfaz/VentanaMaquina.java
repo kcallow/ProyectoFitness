@@ -169,9 +169,8 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         try {
             if(btnModificarVM.isEnabled())
-                ProyectoFitness.modificarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
-            else
-                ProyectoFitness.agregarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
+                ProyectoFitness.borrarMaquina(txtNombreMaquina.getText());
+            ProyectoFitness.agregarMaquina(txtNombreMaquina.getText(), jTextArea1.getText());
             VentanaPrincipal.llenarTabla();
             clear();
             dispose();

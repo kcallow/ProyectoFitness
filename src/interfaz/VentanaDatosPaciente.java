@@ -382,9 +382,9 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         try {    
             int opcion = JOptionPane.showConfirmDialog(null, 
-                                 "“El paciente " + txtNombre.getText() + " será eliminado del sistema. Cuenta con <cantidad de mediciones> mediciones"
+                                 "El paciente " + txtNombre.getText() + " será eliminado del sistema. Cuenta con <cantidad de mediciones> mediciones"
                                          + " \ny <cantidad de programas de entrenamiento> programas de entrenamiento. "
-                                         + "\n¿Está seguro que desea eliminarlo?”", 
+                                         + "\n¿Está seguro que desea eliminarlo?", 
                                   "", 
                                   JOptionPane.YES_NO_OPTION); 
             if (opcion == JOptionPane.YES_OPTION) {

@@ -5,8 +5,12 @@
  */
 package interfaz;
 
+<<<<<<< HEAD
 import java.util.logging.Level;
 import java.util.logging.Logger;
+=======
+import proyectofitness.Dia;
+>>>>>>> de77aa8d8c311425a4aa1da624d3c3d025f08573
 import proyectofitness.ProyectoFitness;
 
 /**
@@ -16,6 +20,7 @@ import proyectofitness.ProyectoFitness;
 public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     VentanaEjercicio vEjercicio = new VentanaEjercicio();
     private String llave = "";
+    private Dia dia;
 
     /**
      * Creates new form VentanaDia
@@ -86,6 +91,11 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
             }
         });
         jScrollPane2.setViewportView(jTable1);
@@ -165,6 +175,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         
     }//GEN-LAST:event_btnBorrarDiaActionPerformed
 
+<<<<<<< HEAD
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         try {
             ProyectoFitness.agregarDia(llave,"");
@@ -173,6 +184,11 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
             Logger.getLogger(VentanaDia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
+=======
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable1MouseClicked
+>>>>>>> de77aa8d8c311425a4aa1da624d3c3d025f08573
 
     /**
      * @param args the command line arguments
@@ -227,6 +243,7 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         this.llave = llave;
     }
 
+<<<<<<< HEAD
     @Override
     public void modoAgregar() {
         btnBorrarDia.setEnabled(false);
@@ -242,5 +259,9 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     @Override
     public void modoModificar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+=======
+    void cargarDia(String numeroDia) throws Exception {
+        this.dia = ProyectoFitness.getDia(llave, numeroDia);
+>>>>>>> de77aa8d8c311425a4aa1da624d3c3d025f08573
     }
 }

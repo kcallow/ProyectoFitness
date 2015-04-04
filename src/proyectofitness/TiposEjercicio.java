@@ -1,5 +1,6 @@
 package proyectofitness;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -29,13 +30,16 @@ public class TiposEjercicio extends HashMap<String,TipoEjercicio> {
                 tipoEjercicio.setTipoMaquina(nombreNuevo);
     }
 
-    public void borrarTiposConMaquina(String nombreMaquina) {
+    public ArrayList<String> borrarTiposConMaquina(String nombreMaquina) {
+        ArrayList<String> tiposBorrados = new ArrayList();
         for (Iterator<Map.Entry<String, TipoEjercicio>> iterator = entrySet().iterator(); iterator.hasNext();){
             String nombreActual = iterator.next().getValue().getTipoMaquina();
-            if(nombreActual.equals(nombreMaquina))
+            if(nombreActual.equals(nombreMaquina)) {
+                tiposBorrados.add(nombreActual);
                 iterator.remove();
+            }
         }
-
+        return tiposBorrados;
     }
     
 }

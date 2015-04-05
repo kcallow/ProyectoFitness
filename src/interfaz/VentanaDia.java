@@ -28,8 +28,10 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
      */
     public VentanaDia() {
         initComponents();
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         llenarTabla();
+        
     }
     public static String  getNumeroDia(){
         return numeroDia;

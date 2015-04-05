@@ -46,6 +46,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
+        setLocationRelativeTo(null);
         //Es necesario que se dispose al cerrar para poder llamar al metodo overriden dispose()
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         llenarTabla();

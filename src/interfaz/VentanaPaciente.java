@@ -20,6 +20,7 @@ public class VentanaPaciente extends javax.swing.JFrame {
      */
     public VentanaPaciente() {
         initComponents();
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
  public static void main(String args[]) {

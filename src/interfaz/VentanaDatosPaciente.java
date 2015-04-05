@@ -26,6 +26,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
      */
     public VentanaDatosPaciente() {
         initComponents();
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
     

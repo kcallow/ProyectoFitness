@@ -23,6 +23,7 @@ public class VentanaMaquina extends javax.swing.JFrame  implements ModosVentana 
      */
     public VentanaMaquina() {
         initComponents();
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 

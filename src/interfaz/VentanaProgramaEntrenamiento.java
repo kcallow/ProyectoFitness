@@ -63,6 +63,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         txtDescripcionVPE = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtObjetivosVPE = new javax.swing.JTextArea();
+        btnAsistencia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Programa de entrenamiento");
@@ -90,7 +91,9 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
 
         jLabel6.setText("Asistencia:");
 
+        txtAsistencia.setEditable(false);
         txtAsistencia.setBackground(new java.awt.Color(204, 204, 204));
+        txtAsistencia.setText("0");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -184,6 +187,13 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         txtObjetivosVPE.setRows(5);
         jScrollPane3.setViewportView(txtObjetivosVPE);
 
+        btnAsistencia.setText("+");
+        btnAsistencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsistenciaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -214,7 +224,10 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtFechaFinalizacion, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(txtAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(txtAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addContainerGap(142, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane2)
@@ -233,7 +246,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                 .addContainerGap())
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAsistencia, txtFechaFinalizacion, txtFechaInicio});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtFechaFinalizacion, txtFechaInicio});
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBorrarVPE, btnCancelarVPE, btnGuardarVPE});
 
@@ -261,7 +274,8 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txtAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAsistencia))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(4, 4, 4)
@@ -285,7 +299,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -358,6 +372,12 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
     }//GEN-LAST:event_tablaMouseClicked
+
+    private void btnAsistenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaActionPerformed
+        Integer i = Integer.parseInt(txtAsistencia.getText());
+        i++;
+        txtAsistencia.setText(i.toString());
+    }//GEN-LAST:event_btnAsistenciaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -438,6 +458,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddDia;
+    private javax.swing.JButton btnAsistencia;
     private javax.swing.JButton btnBorrarVPE;
     private javax.swing.JButton btnCancelarVPE;
     private javax.swing.JButton btnGuardarVPE;
@@ -473,6 +494,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         txtFechaInicio.setEnabled(true);
         txtObjetivosVPE.setEnabled(true);
         txtDescripcionVPE.setEnabled(true);
+        btnAsistencia.setEnabled(true);
     }
 
     @Override
@@ -487,6 +509,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             txtFechaInicio.setEnabled(false);
             txtObjetivosVPE.setEnabled(false);
             txtDescripcionVPE.setEnabled(false);
+            btnAsistencia.setEnabled(false);
         } catch (Exception ex) {
             Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
         }

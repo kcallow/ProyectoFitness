@@ -651,6 +651,32 @@ Remo
 111
 111
 
+#Agregando ejercicio #1:  Remo
+agregar ejercicio
+166669999
+2
+1
+Remo
+4
+4
+4
+4
+4
+4
+
+#Agregando ejercicio #2:  Alzar con podersh
+agregar ejercicio
+166669999
+2
+2
+Alzar con podersh
+5
+5
+5
+5
+5
+5
+
 
 #Agregando dia #3
 agregar dia

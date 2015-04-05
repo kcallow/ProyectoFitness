@@ -134,11 +134,8 @@
           <SubComponents>
             <Component class="javax.swing.JTable" name="tabla">
               <Properties>
-                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="2" rowCount="4">
-                    <Column editable="false" title="Title 1" type="java.lang.Object"/>
-                    <Column editable="false" title="Title 2" type="java.lang.Object"/>
-                  </Table>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] { {null,null}},&#xa;    new String [] {&#xa;        &quot;N&#xfa;mero de ejercicio&quot;, &quot;Ejercicio&quot;, &quot;Series&quot;, &quot;Repeticiones&quot;, &quot;Peso 1&quot;, &quot;Peso 2&quot;, &quot;Peso 3&quot;, &quot;Tiempo de descanso&quot;&#xa;    }&#xa;) {&#xa;    boolean[] canEdit = new boolean [] {&#xa;        false, false&#xa;    };&#xa;&#xa;    public boolean isCellEditable(int rowIndex, int columnIndex) {&#xa;        return canEdit [columnIndex];&#xa;    }&#xa;}" type="code"/>
                 </Property>
               </Properties>
               <Events>

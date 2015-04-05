@@ -83,14 +83,9 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
         });
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
+            new Object [][] { {null,null}},
             new String [] {
-                "Title 1", "Title 2"
+                "Número de ejercicio", "Ejercicio", "Series", "Repeticiones", "Peso 1", "Peso 2", "Peso 3", "Tiempo de descanso"
             }
         ) {
             boolean[] canEdit = new boolean [] {

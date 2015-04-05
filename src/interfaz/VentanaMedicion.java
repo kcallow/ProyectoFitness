@@ -754,6 +754,10 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
         };
         for(int i = 0; i < campos.length; i++)
             campos[i].setText("");
+        txtPGM.setText("");
+        txtPMM.setText("");
+        FrecuenciaCardiacaTrabajo.setText("");
+        txtRelacionCC.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -867,7 +871,11 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
             el[i].setEditable(false);
         for(int i = 0; i < el.length; i++)
             el[i].setText(ProyectoFitness.getMedicion(cedula,nombreMedicion[i]).toString());
-        
+        try {
+            calcularMediciones();
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override
@@ -887,7 +895,15 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
     public void cargarLlave(String cedula) {
         this.cedula = cedula;
-        
-            
     }
+
+    private void calcularMediciones() throws Exception {
+        Mediciones mediciones = ProyectoFitness.getMediciones(cedula);
+        txtPGM.setText(mediciones.getPorcentajeMasaMuscular().toString());
+        txtPMM.setText(mediciones.getPorcentajeMasaMuscular().toString());
+        Integer edad = ProyectoFitness.getPaciente(cedula).getEdad();
+        FrecuenciaCardiacaTrabajo.setText(mediciones.getFrecuenciaCardiaca(edad).toString());
+        txtRelacionCC.setText(mediciones.getRelacionCinturaCadera().toString());
+    }
+
 }

@@ -24,24 +24,29 @@ public class Mediciones extends HashMap<String, Double> {
         return resultado;
     }
 
-    public double getPorcentajeGrasaCorporal() {
+    public Double getPorcentajeGrasaCorporal() {
         Double estatura = get("Estatura");
         Double peso = get("Peso");
         return peso / estatura / estatura;
     }
 
-    public double getPorcentajeMasaMuscular() {
+    public Double getPorcentajeMasaMuscular() {
         Double estatura = get("Estatura");
         Double cintura = get("Circunferencia Cintura 1");
         Double cuello = get("Circunferencia Cuello 1");
-        return 495/(1.0324-0.19077*(log(cintura-cuello))+0.15456*(log(estatura)))-450;
+        Double resultado = 0.0;
+        try{
+                resultado = 495/(1.0324-0.19077*(log(cintura-cuello))+0.15456*(log(estatura)))-450;
+        } 
+        catch (Exception e) { }
+        return resultado;
     }
 
-    public double getFrecuenciaCardiaca(Integer edad) {
+    public Integer getFrecuenciaCardiaca(Integer edad) {
         return 220 - edad;
     }
 
-    public double getRelacionCinturaCadera() {
+    public Double getRelacionCinturaCadera() {
         Double cintura = get("Circunferencia Cintura 1");
         Double cadera = get("Circunferencia Cadera");
         return cintura / cadera;

@@ -18,6 +18,10 @@ public class Paciente {
         this.telefono = telefono;
         this.correo = correo;
     }
+
+    public int getEdad() {
+        return LocalDate.now().compareTo(fechaDeNacimiento);
+    }
     
     public ProgramaEntrenamiento getProgramaEntrenamiento() {
         return programaEntrenamiento;

@@ -864,11 +864,11 @@ agregar medicion
 859330231
 Circunferencia Muslo der
 11.0
-#Agregando medicion 'Circunferencia Cintura 1', con valor11.0
+#Agregando medicion 'Circunferencia Cintura 1', con valor11.01
 agregar medicion
 859330231
 Circunferencia Cintura 1
-11.0
+11.01
 #Agregando medicion 'Circunferencia Cintura 2', con valor11.0
 agregar medicion
 859330231

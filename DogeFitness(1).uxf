@@ -3,91 +3,165 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>290</x>
+      <x>270</x>
       <y>0</y>
-      <w>170</w>
-      <h>190</h>
+      <w>230</w>
+      <h>400</h>
     </coordinates>
     <panel_attributes>Paciente
 --
-
+- programaEntrenamiento : ProgramaEntrenamiento
+- mediciones : ConjuntoMediciones
+- nombre : String
+- correo : Correo
+- fechaDeNacimiento : LocalDate
+- nombre : String
+- sexo : String
+- telefono : Telefono
 --
++ Paciente(nombre: String, sexo: String, 
+    fechaDeNacimiento : LocalDate, 
+    telefono : Telefono, correo : Correo)
+    agregarProgramaEntrenamiento(
+    fechaCreacion : LocalDate,
+    fechaInicio : LocalDate, fechaFin: LocalDate, 
+    descripcion : String, objetivos : String)
+ borrarProgramaEntrenamiento()
+ + getCorreo() : Correo
+ + getEdad() : int
+ + getFechaDeNacimiento() : LocalDate
+ + getMediciones() : ConjuntoMediciones
+ + getNombre() : String
+ + getProgramaEntrenamiento() : 
+    ProgramaEntrenamiento
+ + getSexo() : String
+ + getTelefono() : String
+ + getCorreo() : String
+ + setFechaDeNacimiento(fechaDeNacimiento : 
+    LocalDate) : void
+ + setNombre(nombre : String) : void
+ + setSexo(sexo  : String) : void
+ + setTelefono(telefono : String) : void
+ + setCorreo(correo : String) : void
+ + toCommand(cedula : String) : String
+ + toString() : String
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>720</x>
+      <x>830</x>
       <y>0</y>
-      <w>160</w>
+      <w>90</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>Dia
 --
 
 --
-</panel_attributes>
++ toCommand
+   (cedula : String, 
+   numeroDia 
+   Integer) :
+   String
++ toString() : 
+   String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>930</x>
+      <x>990</x>
       <y>0</y>
       <w>150</w>
-      <h>190</h>
+      <h>350</h>
     </coordinates>
     <panel_attributes>Ejercicio
 --
-
+-peso1 : int
+- peso2 : int
+- peso3 : int
+- repeticiones : int
+- series : int
+- tiempoDescanso : int
+- tipoEjercicio : String
 --
++ Ejercicio(tipoEjercicio : String, 
+    series : int, repeticiones : int, 
+    peso1 : int, peso2 : int, peso3 :
+     int, tiempoDescanso : int)
++ getPeso1() : int
++ getPeso2() : int
++ getPeso3() : int
++ getRepeticiones() : int
++ getTiempoDescanso() : int
++ getSeries() : int
++ getTipoEjercicio() : String
++ setPeso1(peso1 : int)
++ setPeso2(peso2 : int)
++ setPeso3(peso3 : int)
++ setRepeticiones(
+    repeticiones : int)
++ setSeries(series : int)
++ setTiempoDescanso(
+    tiempoDecanso : int)
++ setTipo(tipoEjercicio : String)
++ toCommand() : String
++ toString() : String
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>560</x>
-      <y>360</y>
+      <x>500</x>
+      <y>450</y>
       <w>210</w>
-      <h>140</h>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>Maquina
+    <panel_attributes>Maquinas
 --
 
 --
-</panel_attributes>
++ toCommand() : String
++ toString() : String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>290</x>
-      <y>230</y>
+      <x>540</x>
+      <y>370</y>
       <w>180</w>
-      <h>190</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>TipoMedicion
 --
 
 --
-</panel_attributes>
++ TiposMedicion()
+-fill() : void
++ toString() : String
++ toStringArray() : Object[]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>870</x>
-      <y>360</y>
-      <w>210</w>
-      <h>190</h>
+      <x>740</x>
+      <y>480</y>
+      <w>340</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>TipoEjercicio
 --
 
 --
-</panel_attributes>
++ borrarTiposConMaquina(nombreMaquina : String) : ArrayList&lt;String&gt;
++ toCommand() : String
++ toString() : String
++ updateTipoMaquina(nombreViejo : String, nombreNuevo : String) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -150,93 +224,117 @@ modificarTipoEjercicio(): void
     <coordinates>
       <x>130</x>
       <y>430</y>
-      <w>760</w>
+      <w>630</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m2=*</panel_attributes>
-    <additional_attributes>30;30;30;100;740;100</additional_attributes>
+    <additional_attributes>30;30;30;100;610;100</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>200</x>
       <y>420</y>
-      <w>380</w>
+      <w>320</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m2=*</panel_attributes>
-    <additional_attributes>30;30;360;30</additional_attributes>
+    <additional_attributes>30;30;300;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>200</x>
       <y>50</y>
-      <w>110</w>
+      <w>90</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m2=*</panel_attributes>
-    <additional_attributes>30;30;90;30</additional_attributes>
+    <additional_attributes>30;30;70;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>200</x>
-      <y>250</y>
-      <w>110</w>
+      <y>390</y>
+      <w>360</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m2=*</panel_attributes>
-    <additional_attributes>30;30;90;30</additional_attributes>
+    <additional_attributes>30;30;30;30;340;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>850</x>
+      <x>890</x>
+      <y>50</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=*</panel_attributes>
+    <additional_attributes>30;30;100;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>470</x>
       <y>50</y>
       <w>100</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m2=*</panel_attributes>
-    <additional_attributes>30;30;80;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>430</x>
-      <y>50</y>
-      <w>100</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m2=1</panel_attributes>
     <additional_attributes>30;30;80;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>510</x>
+      <x>550</x>
       <y>0</y>
-      <w>160</w>
-      <h>190</h>
+      <w>230</w>
+      <h>310</h>
     </coordinates>
     <panel_attributes>Programa
 Entrenamiento
 --
-
+- asistencia : Integer
+- descipcion : String
+- fechaCreacion : LocalDate
+- fechaFin : LocalDate
+- fechaInicio : LocalDate
+- objetivos : String
 --
++ ProgramaEntrenamiento(fechaCreacion :
+    LocalDate, fechaInicio : LocalDate, 
+    fechaFin : LocalDate, descripcion : String, 
+    objetivos : String)
++ clear()  
++ getAsistencia() : int
++ getDescripcion() : String
++ getFechaCreacion() : LocalDate
++ getFechaFin() : LocalDate
++ getFechaInicio() : LocalDate
++ getObjetivos() : String
++ setAsistencia(Integer asistencia)
++ setDescripcion(descripcion : String)
++ setFechaCreacion(fechaCreacion : LocalDate)
++ setFechaFin(fechaFin : LocalDate)
++ setFechaInicio(fechaIncio : LocalDate)
++ setObjetivos(objetivos : String)
++ toCommand(cedula : String) : String
++ toString() : String
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>640</x>
+      <x>750</x>
       <y>50</y>
       <w>100</w>
       <h>50</h>

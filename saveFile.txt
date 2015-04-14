@@ -416,6 +416,19 @@ agregar dia
 424242420
 0
 #Agregando ejercicios a 424242420...
+#Agregando ejercicio #0:  Dominadas neutro
+agregar ejercicio
+424242420
+0
+0
+Dominadas neutro
+5
+6
+10
+10
+10
+8
+
 
 #Agregando dia #42
 agregar dia

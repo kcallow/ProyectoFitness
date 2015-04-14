@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package interfaz;
 
 import java.util.logging.Level;
@@ -12,10 +7,6 @@ import proyectofitness.Dia;
 
 import proyectofitness.ProyectoFitness;
 
-/**
- *
- * @author scsaenz
- */
 public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     static VentanaEjercicio vEjercicio = new VentanaEjercicio();
     private String llave = "";
@@ -23,9 +14,6 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     private static Dia dia;
 
 
-    /**
-     * Creates new form VentanaDia
-     */
     public VentanaDia() {
         initComponents();
         setLocationRelativeTo(null);
@@ -224,7 +212,14 @@ public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
-        // TODO add your handling code here:
+        try {
+            String numeroEjercicio = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
+            vEjercicio.cargarLlave(llave, numeroDia, numeroEjercicio);
+            vEjercicio.modoVer();
+            vEjercicio.setVisible(true);
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_tablaMouseClicked
 
 

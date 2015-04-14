@@ -28,19 +28,20 @@ public class Mediciones extends HashMap<String, Double> {
     public Double getPorcentajeGrasaCorporal() {
         Double estatura = get("Estatura");
         Double peso = get("Peso");
+        System.out.println(peso + " " + " " + estatura + " " + peso / estatura / estatura);
         return peso / estatura / estatura;
     }
 
     public Double getPorcentajeMasaMuscular() {
         Double estatura = get("Estatura");
         Double cintura = get("Circunferencia Cintura 1");
-        Double cuello = get("Circunferencia Cuello 1");
+        Double cuello = get("Circunferencia Cuello");
         Double resultado = 0.0;
         try{
                 resultado = 495/(1.0324-0.19077*(log(cintura-cuello))+0.15456*(log(estatura)))-450;
-                return resultado;
         } 
         catch (Exception e) { }
+        System.out.println(estatura + " " + cintura + " " + cuello + " " + resultado);
         return resultado;
     }
 

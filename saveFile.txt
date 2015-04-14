@@ -417,12 +417,6 @@ agregar dia
 0
 #Agregando ejercicios a 424242420...
 
-#Agregando dia #3
-agregar dia
-424242420
-3
-#Agregando ejercicios a 424242420...
-
 #Agregando dia #42
 agregar dia
 424242420

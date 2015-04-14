@@ -859,7 +859,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
     private void calcularMediciones() throws Exception {
         Mediciones mediciones = ProyectoFitness.getMediciones(cedula, fechaCreacion);
-        txtPGM.setText(mediciones.getPorcentajeMasaMuscular().toString());
+        txtPGM.setText(mediciones.getPorcentajeGrasaCorporal().toString());
         txtPMM.setText(mediciones.getPorcentajeMasaMuscular().toString());
         Integer edad = ProyectoFitness.getPaciente(cedula).getEdad();
         FrecuenciaCardiacaTrabajo.setText(mediciones.getFrecuenciaCardiaca(edad).toString());

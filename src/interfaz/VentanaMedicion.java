@@ -693,9 +693,7 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
     private void btnBorrarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVMActionPerformed
             try {  
-                for(int i = 0; i < nombreMedicion.length; i++)
-                    ProyectoFitness.borrarMedicion(cedula, fechaCreacion, nombreMedicion[i].toString());
-
+                ProyectoFitness.borrarMediciones(cedula, fechaCreacion);
                 VentanaDatosPaciente.llenarTabla();
                 clear();
                 dispose();

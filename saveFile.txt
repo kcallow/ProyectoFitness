@@ -430,6 +430,161 @@ agregar dia
 #Agregando ejercicios a 424242420...
 
 
+agregar mediciones
+424242420
+13-04-2015
+#Agregando mediciones del 13-04-2015 a usuario 424242420...
+#Agregando medicion 'Circunferencia Muslo izq', con valor54.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Muslo izq
+54.0
+#Agregando medicion 'Circunferencia Cuello', con valor54.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Cuello
+54.0
+#Agregando medicion 'Circunferencia Cadera', con valor45.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Cadera
+45.0
+#Agregando medicion 'Pliegues Triceps', con valor45.0
+agregar medicion
+424242420
+13-04-2015
+Pliegues Triceps
+45.0
+#Agregando medicion 'Presion Arterial Diastolica', con valor45.0
+agregar medicion
+424242420
+13-04-2015
+Presion Arterial Diastolica
+45.0
+#Agregando medicion 'Peso', con valor45.0
+agregar medicion
+424242420
+13-04-2015
+Peso
+45.0
+#Agregando medicion 'Circunferencia Muslo der', con valor54.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Muslo der
+54.0
+#Agregando medicion 'Circunferencia Cintura 1', con valor45.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Cintura 1
+45.0
+#Agregando medicion 'Circunferencia Cintura 2', con valor45.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Cintura 2
+45.0
+#Agregando medicion 'Circunferencia Cintura 3', con valor45785.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Cintura 3
+45785.0
+#Agregando medicion 'Presion Arterial Sistolica', con valor88.0
+agregar medicion
+424242420
+13-04-2015
+Presion Arterial Sistolica
+88.0
+#Agregando medicion 'Pliegues Pantorrilla', con valor5.0
+agregar medicion
+424242420
+13-04-2015
+Pliegues Pantorrilla
+5.0
+#Agregando medicion 'Circunferencia Espalda', con valor58.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Espalda
+58.0
+#Agregando medicion 'Pliegues Pectoral', con valor8.0
+agregar medicion
+424242420
+13-04-2015
+Pliegues Pectoral
+8.0
+#Agregando medicion 'Circunferencia Biceps der', con valor7577.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Biceps der
+7577.0
+#Agregando medicion 'Circunferencia Pantorrilla der', con valor5757.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Pantorrilla der
+5757.0
+#Agregando medicion 'Circunferencia Pantorrilla izq', con valor58.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Pantorrilla izq
+58.0
+#Agregando medicion 'Frecuencia Cardiaca', con valor85.0
+agregar medicion
+424242420
+13-04-2015
+Frecuencia Cardiaca
+85.0
+#Agregando medicion 'Circunferencia Pectoral', con valor57.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Pectoral
+57.0
+#Agregando medicion 'Pliegues Abdomen', con valor5.0
+agregar medicion
+424242420
+13-04-2015
+Pliegues Abdomen
+5.0
+#Agregando medicion 'Pliegues Muslo', con valor58.0
+agregar medicion
+424242420
+13-04-2015
+Pliegues Muslo
+58.0
+#Agregando medicion 'Pliegues Subescapular', con valor558.0
+agregar medicion
+424242420
+13-04-2015
+Pliegues Subescapular
+558.0
+#Agregando medicion 'Circunferencia Biceps izq', con valor54.0
+agregar medicion
+424242420
+13-04-2015
+Circunferencia Biceps izq
+54.0
+#Agregando medicion 'Estatura', con valor8.0
+agregar medicion
+424242420
+13-04-2015
+Estatura
+8.0
+#Agregando medicion 'Pliegues Iliaco', con valor8.0
+agregar medicion
+424242420
+13-04-2015
+Pliegues Iliaco
+8.0
+
 
 
 #Agregando paciente Alan Turing, cedula 373373373...

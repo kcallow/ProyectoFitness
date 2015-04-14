@@ -365,6 +365,13 @@ public class ProyectoFitness {
         pacientes.remove(cedula);
     }
 
+    public static void borrarMediciones(String cedula, String fechaCreacion) throws Exception {
+        Paciente paciente = pacientes.get(new Cedula(cedula));
+        if(paciente == null)
+            throw new Exception("Paciente invalido para borrar medicion.");
+        paciente.getMediciones().remove(LocalDate.parse(fechaCreacion, formatoFecha));
+    }
+    
     public static void borrarMedicion(String cedula, String fechaCreacion, String nombreMedicion) throws Exception {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)

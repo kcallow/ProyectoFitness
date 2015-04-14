@@ -38,6 +38,7 @@ public class Mediciones extends HashMap<String, Double> {
         Double resultado = 0.0;
         try{
                 resultado = 495/(1.0324-0.19077*(log(cintura-cuello))+0.15456*(log(estatura)))-450;
+                return resultado;
         } 
         catch (Exception e) { }
         return resultado;

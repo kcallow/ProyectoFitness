@@ -15,6 +15,10 @@ public class TiposMedicion extends HashMap<String,String> {
         return resultado;
     }
 
+    public Object [] toStringArray() {
+        return keySet().toArray();
+    }
+
     private void fill() {
         put("Estatura", "metros");
         put("Peso", "kilogramos");

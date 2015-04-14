@@ -65,6 +65,8 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         jScrollPane3 = new javax.swing.JScrollPane();
         txtObjetivosVPE = new javax.swing.JTextArea();
         btnAsistencia = new javax.swing.JButton();
+        disminuirAsistencia = new javax.swing.JButton();
+        modificar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Programa de entrenamiento");
@@ -138,10 +140,10 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnAddDia)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane4))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -195,61 +197,78 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             }
         });
 
+        disminuirAsistencia.setText("-");
+        disminuirAsistencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                disminuirAsistenciaActionPerformed(evt);
+            }
+        });
+
+        modificar.setText("Modificar");
+        modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(6, 6, 6))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addComponent(modificar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtFechaCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel4))
+                                .addComponent(btnBorrarVPE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnGuardarVPE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnCancelarVPE)
+                                .addGap(20, 20, 20))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(0, 0, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel3)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel1)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtFechaCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jLabel2))
+                                    .addGap(114, 114, 114))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel6)
+                                        .addComponent(jLabel4))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(txtFechaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtFechaFinalizacion, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(142, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addContainerGap())))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(disminuirAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(btnAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel5)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtFechaFinalizacion)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnBorrarVPE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnGuardarVPE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCancelarVPE))
-                    .addComponent(jScrollPane3))
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtFechaFinalizacion, txtFechaInicio});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBorrarVPE, btnCancelarVPE, btnGuardarVPE, modificar});
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBorrarVPE, btnCancelarVPE, btnGuardarVPE});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAsistencia, disminuirAsistencia});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,14 +295,16 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAsistencia))
+                    .addComponent(btnAsistencia)
+                    .addComponent(disminuirAsistencia))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(4, 4, 4)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelarVPE)
                     .addComponent(btnGuardarVPE)
-                    .addComponent(btnBorrarVPE))
+                    .addComponent(btnBorrarVPE)
+                    .addComponent(modificar))
                 .addContainerGap())
         );
 
@@ -293,7 +314,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -344,17 +365,28 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     }//GEN-LAST:event_btnBorrarVPEActionPerformed
 
     private void btnGuardarVPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVPEActionPerformed
+        if(disminuirAsistencia.isEnabled()){
+            try {
+
+                ProyectoFitness.agregarPrograma(llave, LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-uuuu")), txtFechaInicio.getText(), 
+                        txtFechaFinalizacion.getText(), txtDescripcionVPE.getText(), 
+                        txtObjetivosVPE.getText());
+                ProyectoFitness.getPrograma(llave).setAsistencia(Integer.parseInt(txtAsistencia.getText()));
+                clear();
+                dispose();
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+            }
+        } else {
+            try {
+                ProyectoFitness.getPrograma(llave).setAsistencia(Integer.parseInt(txtAsistencia.getText()));
+                clear();
+                dispose();
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+            }
         
-        try {
-            
-            ProyectoFitness.agregarPrograma(llave, LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-uuuu")), txtFechaInicio.getText(), 
-                    txtFechaFinalizacion.getText(), txtDescripcionVPE.getText(), 
-                    txtObjetivosVPE.getText());
-            clear();
-            dispose();
-            
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
     }//GEN-LAST:event_btnGuardarVPEActionPerformed
 
@@ -379,6 +411,17 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         i++;
         txtAsistencia.setText(i.toString());
     }//GEN-LAST:event_btnAsistenciaActionPerformed
+
+    private void disminuirAsistenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disminuirAsistenciaActionPerformed
+        Integer i = Integer.parseInt(txtAsistencia.getText());
+        if(i > 0)
+            i--;
+        txtAsistencia.setText(i.toString());
+    }//GEN-LAST:event_disminuirAsistenciaActionPerformed
+
+    private void modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarActionPerformed
+        modoModificar();
+    }//GEN-LAST:event_modificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -450,11 +493,17 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     }
     
     private void clear(){
-        txtAsistencia.setText("");
+        txtAsistencia.setText("0");
         txtFechaFinalizacion.setText("");
         txtFechaInicio.setText("");
         txtObjetivosVPE.setText("");
         txtDescripcionVPE.setText("");
+        
+        tabla.setModel(new javax.swing.table.DefaultTableModel(new Object[][] {{null,null}} , new String [] {
+                "Número de día", "Ejercicios"
+            }));
+                
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -463,6 +512,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private javax.swing.JButton btnBorrarVPE;
     private javax.swing.JButton btnCancelarVPE;
     private javax.swing.JButton btnGuardarVPE;
+    private javax.swing.JButton disminuirAsistencia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -474,6 +524,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JButton modificar;
     private static javax.swing.JTable tabla;
     private javax.swing.JTextField txtAsistencia;
     private javax.swing.JTextArea txtDescripcionVPE;
@@ -487,6 +538,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
     
     @Override
     public void modoAgregar() {
+        modificar.setEnabled(false);
         btnGuardarVPE.setEnabled(true);
         btnBorrarVPE.setEnabled(false);
         btnAddDia.setEnabled(false);
@@ -496,11 +548,14 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
         txtObjetivosVPE.setEnabled(true);
         txtDescripcionVPE.setEnabled(true);
         btnAsistencia.setEnabled(true);
+        disminuirAsistencia.setEnabled(true);
+        clear();
     }
 
     @Override
     public void modoVer() {
         try {
+            modificar.setEnabled(true);
             btnGuardarVPE.setEnabled(false);
             txtFechaCreacion.setText(ProyectoFitness.getPrograma(llave).getFechaCreacion().toString());
             btnAddDia.setEnabled(true);
@@ -511,6 +566,7 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
             txtObjetivosVPE.setEnabled(false);
             txtDescripcionVPE.setEnabled(false);
             btnAsistencia.setEnabled(false);
+            disminuirAsistencia.setEnabled(false);
         } catch (Exception ex) {
             Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -518,6 +574,22 @@ public class VentanaProgramaEntrenamiento extends javax.swing.JFrame implements 
 
     @Override
     public void modoModificar() {
+        try {
+            modificar.setEnabled(false);
+            btnGuardarVPE.setEnabled(true);
+            txtFechaCreacion.setText(ProyectoFitness.getPrograma(llave).getFechaCreacion().toString());
+            btnAddDia.setEnabled(true);
+            btnBorrarVPE.setEnabled(true);
+            txtAsistencia.setEnabled(false);
+            txtFechaFinalizacion.setEnabled(false);
+            txtFechaInicio.setEnabled(false);
+            txtObjetivosVPE.setEnabled(false);
+            txtDescripcionVPE.setEnabled(false);
+            btnAsistencia.setEnabled(true);
+            disminuirAsistencia.setEnabled(false);
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaProgramaEntrenamiento.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public void cargarLlave(String llave) throws Exception {

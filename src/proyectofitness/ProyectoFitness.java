@@ -7,9 +7,6 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -105,8 +102,11 @@ public class ProyectoFitness {
 			case "paciente":
 				agregarPaciente(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
+			case "mediciones":
+				agregarFechaMediciones( scanner.nextLine(),scanner.nextLine());
+				break;
 			case "medicion":
-				agregarMedicion(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
+				agregarMedicion(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "tipo-ejercicio":
 				agregarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
@@ -135,7 +135,7 @@ public class ProyectoFitness {
 				modificarPaciente(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
                 break;
 			case "medicion":
-				modificarMedicion(scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
+				modificarMedicion(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
 				break;
 			case "tipo-ejercicio":
 				modificarTipoEjercicio(scanner.nextLine(),scanner.nextLine(),scanner.nextLine(),scanner.nextLine());
@@ -158,7 +158,7 @@ public class ProyectoFitness {
 				borrarPaciente(scanner.nextLine());
 				break;
 			case "medicion":
-				borrarMedicion(scanner.nextLine(),scanner.nextLine());
+				borrarMedicion(scanner.nextLine(), scanner.nextLine(),scanner.nextLine());
 				break;
 			case "tipo-ejercicio":
 				borrarTipoEjercicio(scanner.nextLine());
@@ -187,10 +187,10 @@ public class ProyectoFitness {
                 System.out.println(getPaciente(scanner.nextLine()));
 				break;
 			case "medicion":
-                System.out.println(getMedicion(scanner.nextLine(),scanner.nextLine()));
+                System.out.println(getMedicion(scanner.nextLine(),scanner.nextLine(),scanner.nextLine()));
 				break;
 			case "mediciones":
-                System.out.println(getMediciones(scanner.nextLine()));
+                System.out.println(getMediciones(scanner.nextLine(),scanner.nextLine()));
 				break;
 			case "tipo-ejercicio":
 				System.out.println(getTipoEjercicio(scanner.nextLine()));
@@ -230,18 +230,22 @@ public class ProyectoFitness {
         pacientes.put(cedula, new Paciente(nombre, sexo, fecha, new Telefono(telefono), new Correo(correo)));
     }
 
-    public static void agregarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {
+    public static void agregarMedicion(String cedula, String fechaCreacion, String nombreMedicion, String valor) throws Exception {
         System.out.println(cedula + " " + nombreMedicion + " " + valor);
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para agregar medicion.");
-        paciente.getMediciones().put(nombreMedicion, Double.parseDouble(valor));
+        Mediciones mediciones = paciente.getMediciones().get(LocalDate.parse(fechaCreacion, formatoFecha));
+        if(mediciones == null)
+            throw new Exception("No existen mediciones para la fecha dada.");
+        mediciones.put(nombreMedicion, Double.parseDouble(valor));
     }
 
-    public static void agregarMediciones(String cedula, String [] valores) throws Exception{
+    public static void agregarMediciones(String cedula, String fechaCreacion, String [] valores) throws Exception{
+        agregarFechaMediciones(cedula, fechaCreacion);
         int i = 0;
         for(String nombreMedicion : tiposMedicion.keySet())
-            agregarMedicion(cedula,nombreMedicion,valores[++i]);
+            agregarMedicion(cedula,fechaCreacion,nombreMedicion,valores[i++]);
     }
 
     public static void agregarTipoEjercicio(String nombre, String descripcion, String maquina) throws Exception {
@@ -254,8 +258,6 @@ public class ProyectoFitness {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para agregar programa de entrenamiento.");
-        if(paciente.getProgramaEntrenamiento() != null)
-            throw new Exception("Paciente ya tiene programa de entrenamiento.  No se puede agregar.");
         paciente.agregarProgramaEntrenamiento(LocalDate.parse(fechaCreacion, DateTimeFormatter.ofPattern("dd-MM-uuuu")), LocalDate.parse(fechaInicio, DateTimeFormatter.ofPattern("dd-MM-uuuu")), LocalDate.parse(fechaFin, DateTimeFormatter.ofPattern("dd-MM-uuuu")), descripcion, objetivos);
     }
 
@@ -304,15 +306,16 @@ public class ProyectoFitness {
         }
     }
 
-    public static void modificarMedicion(String cedula, String nombreMedicion, String valor) throws Exception {
+    public static void modificarMedicion(String cedula, String fechaCreacion, String nombreMedicion, String valor) throws Exception {
         if(!tiposMedicion.containsKey(nombreMedicion))
             throw new Exception("Nombre de medicion no esta disponible.");
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para modificar medicion.");
-        if(!paciente.getMediciones().containsKey(nombreMedicion))
+        Mediciones mediciones = getMediciones(cedula, fechaCreacion);
+        if(!mediciones.containsKey(nombreMedicion))
             throw new Exception("El nombre de medicion dado no corresponde a ninguna medicion del paciente.");
-        paciente.getMediciones().put(nombreMedicion, Double.parseDouble(valor));
+        mediciones.put(nombreMedicion, Double.parseDouble(valor));
     }
 
     public static void modificarTipoEjercicio(String nombreViejo, String nombreNuevo, String descripcion, String maquina) throws Exception {
@@ -362,13 +365,14 @@ public class ProyectoFitness {
         pacientes.remove(cedula);
     }
 
-    public static void borrarMedicion(String cedula, String nombreMedicion) throws Exception {
+    public static void borrarMedicion(String cedula, String fechaCreacion, String nombreMedicion) throws Exception {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para borrar medicion.");
-        if(!paciente.getMediciones().containsKey(nombreMedicion))
-            throw new Exception("Nombre no corresponde a ninguna medicion.  No se puede borrar.");
-        paciente.getMediciones().remove(nombreMedicion);
+        Mediciones mediciones = getMediciones(cedula, fechaCreacion);
+        if(!mediciones.containsKey(nombreMedicion))
+            throw new Exception("El nombre de medicion dado no corresponde a ninguna medicion del paciente.");
+        mediciones.remove(nombreMedicion);
     }
 
     public static void borrarTipoEjercicio(String nombre) throws Exception {
@@ -431,18 +435,20 @@ public class ProyectoFitness {
         return pacientes.get(cedula);
     }
 
-    public static Double getMedicion(String cedula, String nombreMedicion) throws Exception {
-        Mediciones mediciones = getMediciones(cedula);
+    public static Double getMedicion(String cedula, String fechaCreacion, String nombreMedicion) throws Exception {
+        Mediciones mediciones = getMediciones(cedula, fechaCreacion);
+        if(mediciones == null)
+            throw new Exception("No existen mediciones para esta fecha.");
         if(!mediciones.containsKey(nombreMedicion))
             throw new Exception("Nombre no corresponde a ninguna medicion.  No se puede get.");
         return mediciones.get(nombreMedicion);
     }
 
-    public static Mediciones getMediciones(String cedula) throws Exception {
+    public static Mediciones getMediciones(String cedula, String fechaCreacion) throws Exception {
         Paciente paciente = pacientes.get(new Cedula(cedula));
         if(paciente == null)
             throw new Exception("Paciente invalido para get mediciones.");
-        return paciente.getMediciones();
+        return paciente.getMediciones().get(LocalDate.parse(fechaCreacion,formatoFecha));
     }
 
     public static TipoEjercicio getTipoEjercicio(String nombre) throws Exception {
@@ -491,5 +497,10 @@ public class ProyectoFitness {
         if(!maquinas.containsKey(nombre))
             throw new Exception("Nombre no corresponde a ninguna maquina.  No se puede get.");
         return maquinas.get(nombre);
+    }
+
+    private static void agregarFechaMediciones(String cedula, String fechaCreacion) throws Exception {
+        Paciente paciente  = getPaciente(cedula);
+        paciente.getMediciones().put(LocalDate.parse(fechaCreacion, formatoFecha), new Mediciones());
     }
 }

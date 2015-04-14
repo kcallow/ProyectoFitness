@@ -26,13 +26,16 @@ public class Pacientes extends HashMap<Cedula, Paciente> {
     }
     
     public void borrarEjerciciosDeTipo(String tipoEjercicio) {
-        for(Paciente paciente : values())
-            if(paciente.getProgramaEntrenamiento() != null)
-                for(Dia dia : paciente.getProgramaEntrenamiento().values())
+        ProgramaEntrenamiento programa;
+        for(Paciente paciente : values()) {
+            programa = paciente.getProgramaEntrenamiento(); 
+            if( programa != null )
+                for(Dia dia : programa.values())
                     for(Iterator<Entry<Integer, Ejercicio>> iterator = dia.entrySet().iterator(); iterator.hasNext();){
                         String tipoActual = iterator.next().getValue().getTipoEjercicio();
                         if(tipoActual.equals(tipoEjercicio))
                             iterator.remove();
             }
+        }
     }
 }

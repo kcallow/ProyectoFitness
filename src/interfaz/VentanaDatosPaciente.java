@@ -1,29 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package interfaz;
 
+import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import proyectofitness.*;
 
-/**
- *
- * @author scsaenz
- */
 public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVentana  {
 
    
     VentanaMedicion vMedicion = new VentanaMedicion();
     VentanaProgramaEntrenamiento vProgramaEntrenamiento = new VentanaProgramaEntrenamiento();
-    private String llave = "";
+    private static String llave = "";
+    private final static String [] columnas = new String[]{
+        "Fecha creacion", "Valores"
+    };
     
-    /**
-     * Creates new form VentanaDatosPaciente
-     */
     public VentanaDatosPaciente() {
         initComponents();
         setLocationRelativeTo(null);
@@ -62,10 +54,11 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         btnGuardar = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        btnVerMediciones = new javax.swing.JButton();
         btnProgramas = new javax.swing.JButton();
         btnAddMedicion = new javax.swing.JButton();
         btnAddProgramaEntrenamiento = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla = new javax.swing.JTable();
         btnBorrar = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -155,13 +148,6 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btnVerMediciones.setText("Ver Mediciones");
-        btnVerMediciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVerMedicionesActionPerformed(evt);
-            }
-        });
-
         btnProgramas.setText("Ver Programa de entrenamiento");
         btnProgramas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,6 +169,19 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             }
         });
 
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {},
+            new String [] {
+                "Fecha de medicion", "Valores"
+            }
+        ));
+        tabla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tabla);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -190,31 +189,27 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 477, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnVerMediciones, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnProgramas))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnAddMedicion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAddProgramaEntrenamiento)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                        .addComponent(btnAddMedicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAddProgramaEntrenamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 238, Short.MAX_VALUE)
+                            .addComponent(btnProgramas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
-
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAddMedicion, btnAddProgramaEntrenamiento, btnProgramas, btnVerMediciones});
-
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVerMediciones)
-                    .addComponent(btnProgramas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnProgramas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddMedicion)
                     .addComponent(btnAddProgramaEntrenamiento))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnBorrar.setText("Borrar");
@@ -233,7 +228,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 30, Short.MAX_VALUE)
                         .addComponent(btnBorrar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnModificar)
@@ -296,8 +291,8 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(radioMujer)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelar)
                     .addComponent(btnGuardar)
@@ -336,7 +331,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
         vMedicion.setVisible(true);
         vMedicion.modoAgregar();
         try {
-            vMedicion.cargarLlave(llave);
+            vMedicion.cargarLlave(llave, LocalDate.now().format(ProyectoFitness.formatoFecha));
         } catch (Exception ex) {
             Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -345,6 +340,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     private void btnAddProgramaEntrenamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProgramaEntrenamientoActionPerformed
         vProgramaEntrenamiento.setVisible(true);
         vProgramaEntrenamiento.setCedula(txtCedula.getText());
+        vProgramaEntrenamiento.modoAgregar();
         
         
     }//GEN-LAST:event_btnAddProgramaEntrenamientoActionPerformed
@@ -407,19 +403,16 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             }
     }//GEN-LAST:event_btnProgramasActionPerformed
 
-    private void btnVerMedicionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerMedicionesActionPerformed
-
+    private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
         try {
-            vMedicion.cargarLlave(llave);
+            String fechaCreacion = tabla.getValueAt(tabla.getSelectedRow(), 0).toString();
+            vMedicion.cargarLlave(llave, fechaCreacion);
             vMedicion.modoVer();
             vMedicion.setVisible(true);
-            
         } catch (Exception ex) {
-                            JOptionPane.showMessageDialog(rootPane, "EL paciente no tiene mediciones");
-
+            Logger.getLogger(VentanaDatosPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-    }//GEN-LAST:event_btnVerMedicionesActionPerformed
+    }//GEN-LAST:event_tablaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -473,7 +466,6 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnProgramas;
-    private javax.swing.JButton btnVerMediciones;
     private javax.swing.ButtonGroup grupoSexo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -483,10 +475,12 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JRadioButton radioHombre;
     private javax.swing.JRadioButton radioMujer;
+    private static javax.swing.JTable tabla;
     private javax.swing.JTextField txtCedula;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtFechaNacimiento;
@@ -539,6 +533,7 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
             radioMujer.setSelected(true);
             radioHombre.setSelected(false);
         }
+        llenarTabla();
         
     }
 
@@ -546,4 +541,35 @@ public class VentanaDatosPaciente extends javax.swing.JFrame implements ModosVen
     public void modoAgregar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static void llenarTabla() throws Exception {
+        Object[][] objetos;
+        ConjuntoMediciones mediciones = ProyectoFitness.getPaciente(llave).getMediciones();
+        if(mediciones != null) {
+            int rows = mediciones.size();
+            final int columns = columnas.length;
+            objetos = new Object[rows][columns];
+            int i = 0;
+            for(LocalDate key: mediciones.keySet()){
+                objetos[i][0] = key.format(ProyectoFitness.formatoFecha);
+                objetos[i][1] = mediciones.values().toArray()[i].toString();
+                i++;
+            }
+            boolean[] canEditTable = new boolean [columns];
+            for(i = 0; i < columns; i++){
+                canEditTable[i] = false;
+            }
+            
+            tabla.setModel(new javax.swing.table.DefaultTableModel(objetos, columnas){
+                boolean [] canEdit = canEditTable;
+                
+                @Override
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit [columnIndex];
+            }
+        });
+        }
+
+    }
+
 }

@@ -884,22 +884,22 @@
     </Component>
     <Component class="javax.swing.JLabel" name="txtPGM">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel35"/>
+        <Property name="text" type="java.lang.String" value="0.0"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="txtPMM">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel36"/>
+        <Property name="text" type="java.lang.String" value="0.0"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="FrecuenciaCardiacaTrabajo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel37"/>
+        <Property name="text" type="java.lang.String" value="0.0"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="txtRelacionCC">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel38"/>
+        <Property name="text" type="java.lang.String" value="0.0"/>
       </Properties>
     </Component>
   </SubComponents>

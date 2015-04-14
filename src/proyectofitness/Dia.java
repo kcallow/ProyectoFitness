@@ -3,6 +3,7 @@ package proyectofitness;
 import java.util.HashMap;
 
 public class Dia extends HashMap<Integer,Ejercicio>{
+
     @Override
     public String toString(){
         String resultado = "";

@@ -1,42 +1,66 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package interfaz;
 
 import proyectofitness.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 
-/**
- *
- * @author scsaenz
- */
 public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana {
     
     
     private String cedula = "";
-    String [] nombreMedicion = new String[]{
-        "Estatura", "Peso", "Pliegues Triceps", "Pliegues Subescapular", "Pliegues Abdomen",
-        "Pliegues Muslo", "Pliegues Pantorrilla", "Pliegues Pectoral", "Circunferencia Cuello",
-        "Circunferencia Biceps der", "Circunferencia Biceps izq", "Circunferencia Pectoral",
-        "Circunferencia Espalda", "Circunferencia Cintura 1", "Circunferencia Cintura 2",
-        "Circunferencia Cintura 3", "Circunferencia Cadera", "Circunferencia Muslo der",
-        "Circunferencia Muslo izq", "Circunferencia Pantorrilla der", "Circunferencia Pantorrilla izq",
-        "Frecuencia Cardiaca", "Presion Arterial Sistolica", "Presion Arterial Diastolica", "Pliegues Iliaco"
-    };
-
-    /**
-     * Creates new form VentanaMedicion
-     */
-    
+    private String fechaCreacion;
+    private Object [] nombreMedicion;        
+    private javax.swing.JTextField [] el; 
     
     public VentanaMedicion() {
+        el = getEl();
+        this.nombreMedicion = ProyectoFitness.tiposMedicion.toStringArray();
         initComponents();
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+
+    public javax.swing.JTextField [] getEl(){
+        return new javax.swing.JTextField [] {
+         txtEstatura, txtPeso, txtTriceps, txtSubescapular,
+            txtAbdomen, txtMuslo, txtPantorrila, txtPectoral, txtIliaco,
+            txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
+            txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
+            txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
+            txtFrecuenciaCardiaca, txtSistolica, txtDiastolica
+        };
+    }
+    
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(VentanaMedicion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(VentanaMedicion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(VentanaMedicion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(VentanaMedicion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new VentanaMedicion().setVisible(true);
+            }
+        });
     }
 
     /**
@@ -570,13 +594,13 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
         jLabel34.setText("Relacion Cintura/Cadera:");
 
-        txtPGM.setText("jLabel35");
+        txtPGM.setText("0.0");
 
-        txtPMM.setText("jLabel36");
+        txtPMM.setText("0.0");
 
-        FrecuenciaCardiacaTrabajo.setText("jLabel37");
+        FrecuenciaCardiacaTrabajo.setText("0.0");
 
-        txtRelacionCC.setText("jLabel38");
+        txtRelacionCC.setText("0.0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -654,16 +678,12 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    public void setCedula(String cedula){
-        this.cedula = cedula;
-    }
     
     private void txtPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPesoActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtPesoActionPerformed
 
     private void btnCancelarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarVMActionPerformed
+        clear();
         dispose();
     }//GEN-LAST:event_btnCancelarVMActionPerformed
 
@@ -672,94 +692,38 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
     }//GEN-LAST:event_btnModificarVMActionPerformed
 
     private void btnBorrarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarVMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBorrarVMActionPerformed
-
-    private void btnGuardarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVMActionPerformed
-         String [] valor = new String[] {
-                    txtEstatura.getText(), txtPeso.getText(), txtTriceps.getText(), txtSubescapular.getText(),
-                    txtAbdomen.getText(), txtMuslo.getText(), txtPantorrila.getText(), txtPectoral.getText(),
-                    txtCuello.getText(), txtBicepsDer.getText(), txtBicepsIzq.getText(), txtPectoralCircunferencia.getText(),
-                    txtEspalda.getText(), txtCintura1.getText(), txtCintura2.getText(), txtCintura3.getText(), txtCadera.getText(),
-                    txtMusloDer.getText(), txtMusloIzq.getText(), txtPantorrillaDer.getText(), txtPantorrilaIzq.getText(),
-                    txtFrecuenciaCardiaca.getText(), txtSistolica.getText(), txtDiastolica.getText(), txtIliaco.getText()
-                };
-        if(!btnModificarVM.isEnabled()){
-            try {
-                
+            try {  
                 for(int i = 0; i < nombreMedicion.length; i++)
-                    ProyectoFitness.agregarMedicion(cedula, nombreMedicion[i], valor[i]);
+                    ProyectoFitness.borrarMedicion(cedula, fechaCreacion, nombreMedicion[i].toString());
 
+                VentanaDatosPaciente.llenarTabla();
                 clear();
                 dispose();
 
             } catch (Exception ex) {
                 Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } else {
-            try{
-                for(int i = 0; i < nombreMedicion.length; i++)
-                    ProyectoFitness.modificarMedicion(cedula, nombreMedicion[i], valor[i]);
-                clear();
-                dispose();
-            } catch (Exception ex){
-                Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
+
+    }//GEN-LAST:event_btnBorrarVMActionPerformed
+
+    private void btnGuardarVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVMActionPerformed
+        String [] valor = getValores();
+        try {
+            if(!btnModificarVM.isEnabled()){
+                    ProyectoFitness.agregarMediciones(cedula,  fechaCreacion, valor);
+                    clear();
+                    dispose();
+            } else {
+                    for(int i = 0; i < valor.length; i++)
+                        ProyectoFitness.modificarMedicion(cedula, fechaCreacion, nombreMedicion[i].toString(), valor[i]);
+                    clear();
+                    dispose();
             }
+            VentanaDatosPaciente.llenarTabla();
+        } catch (Exception ex) {
+            Logger.getLogger(VentanaMedicion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnGuardarVMActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaMedicion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaMedicion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaMedicion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaMedicion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaMedicion().setVisible(true);
-            }
-        });
-    }
-    
-    private void clear(){
-        javax.swing.JTextField [] campos = new javax.swing.JTextField [] {
-                txtEstatura, txtPeso, txtTriceps, txtSubescapular,
-                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
-                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
-                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
-                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
-                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
-        };
-        for(int i = 0; i < campos.length; i++)
-            campos[i].setText("");
-        txtPGM.setText("");
-        txtPMM.setText("");
-        FrecuenciaCardiacaTrabajo.setText("");
-        txtRelacionCC.setText("");
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FrecuenciaCardiacaTrabajo;
     private javax.swing.JButton btnBorrarVM;
@@ -838,17 +802,28 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
     
    
+
+    private String [] getValores() {
+        el = getEl();
+        String [] valores = new String[el.length];
+        for(int i = 0; i < el.length; i++)
+            valores[i] = el[i].getText();
+        return valores;
+    }
+    
+    private void clear(){
+        el = getEl();
+        for(int i = 0; i < el.length; i++)
+            el[i].setText("");
+        txtPGM.setText("");
+        txtPMM.setText("");
+        FrecuenciaCardiacaTrabajo.setText("");
+        txtRelacionCC.setText("");
+    }
     
     @Override
     public void modoAgregar() {
-        javax.swing.JTextField [] el = new javax.swing.JTextField [] {
-             txtEstatura, txtPeso, txtTriceps, txtSubescapular,
-                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
-                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
-                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
-                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
-                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
-            }; 
+        el = getEl();
         btnBorrarVM.setEnabled(false);
         btnModificarVM.setEnabled(false);
         for(int i = 0; i < el.length; i++)
@@ -857,20 +832,13 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
     @Override
     public void modoVer() throws Exception {
-        javax.swing.JTextField [] el = new javax.swing.JTextField [] {
-             txtEstatura, txtPeso, txtTriceps, txtSubescapular,
-                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
-                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
-                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
-                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
-                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
-            }; 
+        el = getEl();
         btnBorrarVM.setEnabled(true);
         btnModificarVM.setEnabled(true);
         for(int i = 0; i < el.length; i++)
             el[i].setEditable(false);
         for(int i = 0; i < el.length; i++)
-            el[i].setText(ProyectoFitness.getMedicion(cedula,nombreMedicion[i]).toString());
+            el[i].setText(ProyectoFitness.getMedicion(cedula, fechaCreacion,nombreMedicion[i].toString()).toString());
         try {
             calcularMediciones();
         } catch (Exception ex) {
@@ -880,25 +848,19 @@ public class VentanaMedicion extends javax.swing.JFrame implements ModosVentana 
 
     @Override
     public void modoModificar() {
-        javax.swing.JTextField [] el = new javax.swing.JTextField [] {
-             txtEstatura, txtPeso, txtTriceps, txtSubescapular,
-                txtAbdomen, txtMuslo, txtPantorrila, txtPectoral,
-                txtCuello, txtBicepsDer, txtBicepsIzq, txtPectoralCircunferencia,
-                txtEspalda, txtCintura1, txtCintura2, txtCintura3, txtCadera,
-                txtMusloDer, txtMusloIzq, txtPantorrillaDer, txtPantorrilaIzq,
-                txtFrecuenciaCardiaca, txtSistolica, txtDiastolica, txtIliaco
-            }; 
+        el = getEl();
         for(int i = 0; i < el.length; i++)
             el[i].setEditable(true);
         btnBorrarVM.setEnabled(false);
     }
 
-    public void cargarLlave(String cedula) {
+    public void cargarLlave(String cedula, String fechaCreacion) {
         this.cedula = cedula;
+        this.fechaCreacion = fechaCreacion;
     }
 
     private void calcularMediciones() throws Exception {
-        Mediciones mediciones = ProyectoFitness.getMediciones(cedula);
+        Mediciones mediciones = ProyectoFitness.getMediciones(cedula, fechaCreacion);
         txtPGM.setText(mediciones.getPorcentajeMasaMuscular().toString());
         txtPMM.setText(mediciones.getPorcentajeMasaMuscular().toString());
         Integer edad = ProyectoFitness.getPaciente(cedula).getEdad();

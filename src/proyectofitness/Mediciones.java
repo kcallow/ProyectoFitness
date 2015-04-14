@@ -9,16 +9,17 @@ public class Mediciones extends HashMap<String, Double> {
     public String toString(){
         String resultado = "";
         for(String nombre : this.keySet())
-            resultado += nombre + ": " + get(nombre).toString() + "\n";
+            resultado += nombre + ": " + get(nombre).toString() + ",";
         return resultado;
     }
 
-    String toCommand(String cedula) {
-        String resultado = "#Agregando mediciones a usuario " + cedula + "...\n";
+    String toCommand(String cedula, String fechaCreacion) {
+        String resultado = "#Agregando mediciones del "+ fechaCreacion +" a usuario " + cedula + "...\n";
         for(String nombre : this.keySet())
             resultado += "#Agregando medicion '" + nombre + "', con valor" + get(nombre) + "\n"
                     + "agregar medicion\n"
                     + cedula + "\n"
+                    + fechaCreacion + "\n"
                     + nombre + "\n" 
                     + get(nombre) + "\n";
         return resultado;

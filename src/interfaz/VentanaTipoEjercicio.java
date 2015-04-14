@@ -219,6 +219,7 @@ public class VentanaTipoEjercicio extends javax.swing.JFrame implements ModosVen
             else 
                 ProyectoFitness.agregarTipoEjercicio(txtNombre.getText(), txtDescripcionVTE.getText(), comboMaquina.getSelectedItem().toString());
             VentanaPrincipal.llenarTabla();
+            VentanaDia.vEjercicio.updateTiposEjercicioDisponibles();
             clear();
             dispose();
             

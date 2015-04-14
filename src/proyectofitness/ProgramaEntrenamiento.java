@@ -57,7 +57,7 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
         super.clear();
         fechaCreacion = fechaInicio = fechaFin = null;
         descripcion = objetivos = null;
-        asistencia = null;
+        setAsistencia(null);
     }
 
     public LocalDate getFechaInicio() {
@@ -96,7 +96,8 @@ public class ProgramaEntrenamiento extends HashMap<Integer, Dia> {
         return asistencia;
     }
 
-    public void incrementarAsistencia() {
-        asistencia++;
+    public void setAsistencia(Integer asistencia) {
+        this.asistencia = asistencia;
     }
+
 }

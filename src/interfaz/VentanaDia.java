@@ -17,7 +17,7 @@ import proyectofitness.ProyectoFitness;
  * @author scsaenz
  */
 public class VentanaDia extends javax.swing.JFrame implements ModosVentana {
-    VentanaEjercicio vEjercicio = new VentanaEjercicio();
+    static VentanaEjercicio vEjercicio = new VentanaEjercicio();
     private String llave = "";
     private static String numeroDia;
     private static Dia dia;

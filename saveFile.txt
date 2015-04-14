@@ -429,6 +429,19 @@ Dominadas neutro
 10
 8
 
+#Agregando ejercicio #1:  press pecho plano con barra
+agregar ejercicio
+424242420
+0
+1
+press pecho plano con barra
+5
+6
+10
+10
+10
+8
+
 
 #Agregando dia #42
 agregar dia
